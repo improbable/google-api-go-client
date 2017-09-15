@@ -2075,9 +2075,9 @@ func (meth *Method) generateCode() {
 		pn(`})`)
 	}
 	if meth.supportsMediaUpload() && meth.api.Name == "storage" {
-		pn("return gensupport.SendRequestWithRetry(c.ctx_, c.s.client, req)")
+		pn("return gensupport.SendRequestWithRetry(googleapi.MethodIDToContext(c.ctx_, %q), c.s.client, req)", meth.m.ID)
 	} else {
-		pn("return gensupport.SendRequest(c.ctx_, c.s.client, req)")
+		pn("return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, %q), c.s.client, req)", meth.m.ID)
 	}
 	pn("}")
 

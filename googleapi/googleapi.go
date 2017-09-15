@@ -16,6 +16,8 @@ import (
 	"net/url"
 	"strings"
 
+	"golang.org/x/net/context"
+
 	"google.golang.org/api/internal/third_party/uritemplates"
 )
 
@@ -418,3 +420,22 @@ type traceTok string
 func (t traceTok) Get() (string, string) { return "trace", "token:" + string(t) }
 
 // TODO: Fields too
+
+type ctxMarker struct{}
+
+var methodMarker = &ctxMarker{}
+
+func MethodIDToContext(ctx context.Context, methodID string) context.Context {
+	if ctx == nil {
+		return nil
+	}
+	return context.WithValue(ctx, methodMarker, methodID)
+}
+
+func MethodIDFromContext(ctx context.Context) string {
+	if ctx == nil {
+		return ""
+	}
+	s, _ := ctx.Value(methodMarker).(string)
+	return s
+}
