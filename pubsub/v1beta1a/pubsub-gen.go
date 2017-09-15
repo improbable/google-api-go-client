@@ -926,7 +926,7 @@ func (c *SubscriptionsAcknowledgeCall) doRequest(alt string) (*http.Response, er
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.acknowledge"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.acknowledge" call.
@@ -1054,7 +1054,7 @@ func (c *SubscriptionsCreateCall) doRequest(alt string) (*http.Response, error) 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.create"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.create" call.
@@ -1177,7 +1177,7 @@ func (c *SubscriptionsDeleteCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"subscription": c.subscription,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.delete"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.delete" call.
@@ -1317,7 +1317,7 @@ func (c *SubscriptionsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"subscription": c.subscription,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.get"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.get" call.
@@ -1474,7 +1474,7 @@ func (c *SubscriptionsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.list"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.list" call.
@@ -1631,7 +1631,7 @@ func (c *SubscriptionsModifyAckDeadlineCall) doRequest(alt string) (*http.Respon
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.modifyAckDeadline"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.modifyAckDeadline" call.
@@ -1760,7 +1760,7 @@ func (c *SubscriptionsModifyPushConfigCall) doRequest(alt string) (*http.Respons
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.modifyPushConfig"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.modifyPushConfig" call.
@@ -1888,7 +1888,7 @@ func (c *SubscriptionsPullCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.pull"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.pull" call.
@@ -2014,7 +2014,7 @@ func (c *SubscriptionsPullBatchCall) doRequest(alt string) (*http.Response, erro
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.pullBatch"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.pullBatch" call.
@@ -2135,7 +2135,7 @@ func (c *TopicsCreateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.create"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.create" call.
@@ -2258,7 +2258,7 @@ func (c *TopicsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"topic": c.topic,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.delete"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.delete" call.
@@ -2403,7 +2403,7 @@ func (c *TopicsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"topic": c.topic,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.get"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.get" call.
@@ -2560,7 +2560,7 @@ func (c *TopicsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.list"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.list" call.
@@ -2718,7 +2718,7 @@ func (c *TopicsPublishCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.publish"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.publish" call.
@@ -2841,7 +2841,7 @@ func (c *TopicsPublishBatchCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.publishBatch"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.publishBatch" call.

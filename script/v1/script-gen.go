@@ -569,7 +569,7 @@ func (c *ScriptsRunCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"scriptId": c.scriptId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "script.scripts.run"), c.s.client, req)
 }
 
 // Do executes the "script.scripts.run" call.

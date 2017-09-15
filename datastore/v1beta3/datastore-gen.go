@@ -1662,7 +1662,7 @@ func (c *ProjectsAllocateIdsCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.allocateIds"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.allocateIds" call.
@@ -1797,7 +1797,7 @@ func (c *ProjectsBeginTransactionCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.beginTransaction"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.beginTransaction" call.
@@ -1934,7 +1934,7 @@ func (c *ProjectsCommitCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.commit"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.commit" call.
@@ -2069,7 +2069,7 @@ func (c *ProjectsLookupCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.lookup"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.lookup" call.
@@ -2204,7 +2204,7 @@ func (c *ProjectsRollbackCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.rollback"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.rollback" call.
@@ -2339,7 +2339,7 @@ func (c *ProjectsRunQueryCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.runQuery"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.runQuery" call.

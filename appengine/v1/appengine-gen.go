@@ -2672,7 +2672,7 @@ func (c *AppsCreateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.create"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.create" call.
@@ -2804,7 +2804,7 @@ func (c *AppsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.get" call.
@@ -2949,7 +2949,7 @@ func (c *AppsPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.patch"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.patch" call.
@@ -3093,7 +3093,7 @@ func (c *AppsRepairCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.repair"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.repair" call.
@@ -3237,7 +3237,7 @@ func (c *AppsLocationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":      c.appsId,
 		"locationsId": c.locationsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.locations.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.locations.get" call.
@@ -3406,7 +3406,7 @@ func (c *AppsLocationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.locations.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.locations.list" call.
@@ -3588,7 +3588,7 @@ func (c *AppsOperationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":       c.appsId,
 		"operationsId": c.operationsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.operations.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.operations.get" call.
@@ -3765,7 +3765,7 @@ func (c *AppsOperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.operations.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.operations.list" call.
@@ -3931,7 +3931,7 @@ func (c *AppsServicesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":     c.appsId,
 		"servicesId": c.servicesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.delete"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.delete" call.
@@ -4079,7 +4079,7 @@ func (c *AppsServicesGetCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":     c.appsId,
 		"servicesId": c.servicesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.get" call.
@@ -4240,7 +4240,7 @@ func (c *AppsServicesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.list" call.
@@ -4435,7 +4435,7 @@ func (c *AppsServicesPatchCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":     c.appsId,
 		"servicesId": c.servicesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.patch"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.patch" call.
@@ -4590,7 +4590,7 @@ func (c *AppsServicesVersionsCreateCall) doRequest(alt string) (*http.Response, 
 		"appsId":     c.appsId,
 		"servicesId": c.servicesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.versions.create"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.versions.create" call.
@@ -4730,7 +4730,7 @@ func (c *AppsServicesVersionsDeleteCall) doRequest(alt string) (*http.Response, 
 		"servicesId": c.servicesId,
 		"versionsId": c.versionsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.versions.delete"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.versions.delete" call.
@@ -4901,7 +4901,7 @@ func (c *AppsServicesVersionsGetCall) doRequest(alt string) (*http.Response, err
 		"servicesId": c.servicesId,
 		"versionsId": c.versionsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.versions.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.versions.get" call.
@@ -5092,7 +5092,7 @@ func (c *AppsServicesVersionsListCall) doRequest(alt string) (*http.Response, er
 		"appsId":     c.appsId,
 		"servicesId": c.servicesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.versions.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.versions.list" call.
@@ -5308,7 +5308,7 @@ func (c *AppsServicesVersionsPatchCall) doRequest(alt string) (*http.Response, e
 		"servicesId": c.servicesId,
 		"versionsId": c.versionsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.versions.patch"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.versions.patch" call.
@@ -5477,7 +5477,7 @@ func (c *AppsServicesVersionsInstancesDebugCall) doRequest(alt string) (*http.Re
 		"versionsId":  c.versionsId,
 		"instancesId": c.instancesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.versions.instances.debug"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.versions.instances.debug" call.
@@ -5634,7 +5634,7 @@ func (c *AppsServicesVersionsInstancesDeleteCall) doRequest(alt string) (*http.R
 		"versionsId":  c.versionsId,
 		"instancesId": c.instancesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.versions.instances.delete"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.versions.instances.delete" call.
@@ -5802,7 +5802,7 @@ func (c *AppsServicesVersionsInstancesGetCall) doRequest(alt string) (*http.Resp
 		"versionsId":  c.versionsId,
 		"instancesId": c.instancesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.versions.instances.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.versions.instances.get" call.
@@ -5986,7 +5986,7 @@ func (c *AppsServicesVersionsInstancesListCall) doRequest(alt string) (*http.Res
 		"servicesId": c.servicesId,
 		"versionsId": c.versionsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.services.versions.instances.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.services.versions.instances.list" call.

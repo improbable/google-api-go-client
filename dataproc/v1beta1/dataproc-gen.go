@@ -2073,7 +2073,7 @@ func (c *OperationsCancelCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "dataproc.operations.cancel" call.
@@ -2204,7 +2204,7 @@ func (c *OperationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.operations.delete" call.
@@ -2345,7 +2345,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.operations.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.operations.get" call.
@@ -2509,7 +2509,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.operations.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.operations.list" call.
@@ -2678,7 +2678,7 @@ func (c *ProjectsClustersCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.clusters.create"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.clusters.create" call.
@@ -2808,7 +2808,7 @@ func (c *ProjectsClustersDeleteCall) doRequest(alt string) (*http.Response, erro
 		"projectId":   c.projectId,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.clusters.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.clusters.delete" call.
@@ -2951,7 +2951,7 @@ func (c *ProjectsClustersDiagnoseCall) doRequest(alt string) (*http.Response, er
 		"projectId":   c.projectId,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.clusters.diagnose"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.clusters.diagnose" call.
@@ -3102,7 +3102,7 @@ func (c *ProjectsClustersGetCall) doRequest(alt string) (*http.Response, error) 
 		"projectId":   c.projectId,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.clusters.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.clusters.get" call.
@@ -3270,7 +3270,7 @@ func (c *ProjectsClustersListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.clusters.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.clusters.list" call.
@@ -3474,7 +3474,7 @@ func (c *ProjectsClustersPatchCall) doRequest(alt string) (*http.Response, error
 		"projectId":   c.projectId,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.clusters.patch"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.clusters.patch" call.
@@ -3625,7 +3625,7 @@ func (c *ProjectsJobsCancelCall) doRequest(alt string) (*http.Response, error) {
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.jobs.cancel"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.jobs.cancel" call.
@@ -3763,7 +3763,7 @@ func (c *ProjectsJobsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.jobs.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.jobs.delete" call.
@@ -3911,7 +3911,7 @@ func (c *ProjectsJobsGetCall) doRequest(alt string) (*http.Response, error) {
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.jobs.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.jobs.get" call.
@@ -4100,7 +4100,7 @@ func (c *ProjectsJobsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.jobs.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.jobs.list" call.
@@ -4298,7 +4298,7 @@ func (c *ProjectsJobsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.jobs.patch"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.jobs.patch" call.
@@ -4445,7 +4445,7 @@ func (c *ProjectsJobsSubmitCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.jobs.submit"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.jobs.submit" call.

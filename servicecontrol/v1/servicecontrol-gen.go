@@ -2328,7 +2328,7 @@ func (c *ServicesAllocateQuotaCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.allocateQuota"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.allocateQuota" call.
@@ -2480,7 +2480,7 @@ func (c *ServicesCheckCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.check"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.check" call.
@@ -2623,7 +2623,7 @@ func (c *ServicesEndReconciliationCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.endReconciliation"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.endReconciliation" call.
@@ -2776,7 +2776,7 @@ func (c *ServicesReleaseQuotaCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.releaseQuota"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.releaseQuota" call.
@@ -2930,7 +2930,7 @@ func (c *ServicesReportCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.report"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.report" call.
@@ -3106,7 +3106,7 @@ func (c *ServicesStartReconciliationCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.startReconciliation"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.startReconciliation" call.

@@ -1028,7 +1028,7 @@ func (c *MetricDescriptorsCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudmonitoring.metricDescriptors.create"), c.s.client, req)
 }
 
 // Do executes the "cloudmonitoring.metricDescriptors.create" call.
@@ -1158,7 +1158,7 @@ func (c *MetricDescriptorsDeleteCall) doRequest(alt string) (*http.Response, err
 		"project": c.project,
 		"metric":  c.metric,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudmonitoring.metricDescriptors.delete"), c.s.client, req)
 }
 
 // Do executes the "cloudmonitoring.metricDescriptors.delete" call.
@@ -1337,7 +1337,7 @@ func (c *MetricDescriptorsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudmonitoring.metricDescriptors.list"), c.s.client, req)
 }
 
 // Do executes the "cloudmonitoring.metricDescriptors.list" call.
@@ -1615,7 +1615,7 @@ func (c *TimeseriesListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"metric":  c.metric,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudmonitoring.timeseries.list"), c.s.client, req)
 }
 
 // Do executes the "cloudmonitoring.timeseries.list" call.
@@ -1846,7 +1846,7 @@ func (c *TimeseriesWriteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudmonitoring.timeseries.write"), c.s.client, req)
 }
 
 // Do executes the "cloudmonitoring.timeseries.write" call.
@@ -2085,7 +2085,7 @@ func (c *TimeseriesDescriptorsListCall) doRequest(alt string) (*http.Response, e
 		"project": c.project,
 		"metric":  c.metric,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudmonitoring.timeseriesDescriptors.list"), c.s.client, req)
 }
 
 // Do executes the "cloudmonitoring.timeseriesDescriptors.list" call.

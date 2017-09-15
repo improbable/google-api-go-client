@@ -16267,7 +16267,7 @@ func (c *AcceleratorTypesAggregatedListCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.acceleratorTypes.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.acceleratorTypes.aggregatedList" call.
@@ -16458,7 +16458,7 @@ func (c *AcceleratorTypesGetCall) doRequest(alt string) (*http.Response, error) 
 		"zone":            c.zone,
 		"acceleratorType": c.acceleratorType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.acceleratorTypes.get"), c.s.client, req)
 }
 
 // Do executes the "compute.acceleratorTypes.get" call.
@@ -16685,7 +16685,7 @@ func (c *AcceleratorTypesListCall) doRequest(alt string) (*http.Response, error)
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.acceleratorTypes.list"), c.s.client, req)
 }
 
 // Do executes the "compute.acceleratorTypes.list" call.
@@ -16945,7 +16945,7 @@ func (c *AddressesAggregatedListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.addresses.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.addresses.aggregatedList" call.
@@ -17138,7 +17138,7 @@ func (c *AddressesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"region":  c.region,
 		"address": c.address,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.addresses.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.addresses.delete" call.
@@ -17305,7 +17305,7 @@ func (c *AddressesGetCall) doRequest(alt string) (*http.Response, error) {
 		"region":  c.region,
 		"address": c.address,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.addresses.get"), c.s.client, req)
 }
 
 // Do executes the "compute.addresses.get" call.
@@ -17475,7 +17475,7 @@ func (c *AddressesInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.addresses.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.addresses.insert" call.
@@ -17702,7 +17702,7 @@ func (c *AddressesListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.addresses.list"), c.s.client, req)
 }
 
 // Do executes the "compute.addresses.list" call.
@@ -17910,7 +17910,7 @@ func (c *AddressesSetLabelsCall) doRequest(alt string) (*http.Response, error) {
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.addresses.setLabels"), c.s.client, req)
 }
 
 // Do executes the "compute.addresses.setLabels" call.
@@ -18073,7 +18073,7 @@ func (c *AddressesTestIamPermissionsCall) doRequest(alt string) (*http.Response,
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.addresses.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.addresses.testIamPermissions" call.
@@ -18299,7 +18299,7 @@ func (c *AutoscalersAggregatedListCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.autoscalers.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.autoscalers.aggregatedList" call.
@@ -18491,7 +18491,7 @@ func (c *AutoscalersDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"zone":       c.zone,
 		"autoscaler": c.autoscaler,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.autoscalers.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.autoscalers.delete" call.
@@ -18658,7 +18658,7 @@ func (c *AutoscalersGetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":       c.zone,
 		"autoscaler": c.autoscaler,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.autoscalers.get"), c.s.client, req)
 }
 
 // Do executes the "compute.autoscalers.get" call.
@@ -18827,7 +18827,7 @@ func (c *AutoscalersInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.autoscalers.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.autoscalers.insert" call.
@@ -19053,7 +19053,7 @@ func (c *AutoscalersListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.autoscalers.list"), c.s.client, req)
 }
 
 // Do executes the "compute.autoscalers.list" call.
@@ -19265,7 +19265,7 @@ func (c *AutoscalersPatchCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.autoscalers.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.autoscalers.patch" call.
@@ -19427,7 +19427,7 @@ func (c *AutoscalersTestIamPermissionsCall) doRequest(alt string) (*http.Respons
 		"zone":     c.zone,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.autoscalers.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.autoscalers.testIamPermissions" call.
@@ -19606,7 +19606,7 @@ func (c *AutoscalersUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.autoscalers.update"), c.s.client, req)
 }
 
 // Do executes the "compute.autoscalers.update" call.
@@ -19772,7 +19772,7 @@ func (c *BackendBucketsDeleteCall) doRequest(alt string) (*http.Response, error)
 		"project":       c.project,
 		"backendBucket": c.backendBucket,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendBuckets.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.backendBuckets.delete" call.
@@ -19928,7 +19928,7 @@ func (c *BackendBucketsGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":       c.project,
 		"backendBucket": c.backendBucket,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendBuckets.get"), c.s.client, req)
 }
 
 // Do executes the "compute.backendBuckets.get" call.
@@ -20086,7 +20086,7 @@ func (c *BackendBucketsInsertCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendBuckets.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.backendBuckets.insert" call.
@@ -20301,7 +20301,7 @@ func (c *BackendBucketsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendBuckets.list"), c.s.client, req)
 }
 
 // Do executes the "compute.backendBuckets.list" call.
@@ -20498,7 +20498,7 @@ func (c *BackendBucketsPatchCall) doRequest(alt string) (*http.Response, error) 
 		"project":       c.project,
 		"backendBucket": c.backendBucket,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendBuckets.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.backendBuckets.patch" call.
@@ -20667,7 +20667,7 @@ func (c *BackendBucketsUpdateCall) doRequest(alt string) (*http.Response, error)
 		"project":       c.project,
 		"backendBucket": c.backendBucket,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendBuckets.update"), c.s.client, req)
 }
 
 // Do executes the "compute.backendBuckets.update" call.
@@ -20890,7 +20890,7 @@ func (c *BackendServicesAggregatedListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendServices.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.backendServices.aggregatedList" call.
@@ -21080,7 +21080,7 @@ func (c *BackendServicesDeleteCall) doRequest(alt string) (*http.Response, error
 		"project":        c.project,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendServices.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.backendServices.delete" call.
@@ -21237,7 +21237,7 @@ func (c *BackendServicesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":        c.project,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendServices.get"), c.s.client, req)
 }
 
 // Do executes the "compute.backendServices.get" call.
@@ -21383,7 +21383,7 @@ func (c *BackendServicesGetHealthCall) doRequest(alt string) (*http.Response, er
 		"project":        c.project,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendServices.getHealth"), c.s.client, req)
 }
 
 // Do executes the "compute.backendServices.getHealth" call.
@@ -21546,7 +21546,7 @@ func (c *BackendServicesInsertCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendServices.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.backendServices.insert" call.
@@ -21762,7 +21762,7 @@ func (c *BackendServicesListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendServices.list"), c.s.client, req)
 }
 
 // Do executes the "compute.backendServices.list" call.
@@ -21963,7 +21963,7 @@ func (c *BackendServicesPatchCall) doRequest(alt string) (*http.Response, error)
 		"project":        c.project,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendServices.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.backendServices.patch" call.
@@ -22116,7 +22116,7 @@ func (c *BackendServicesTestIamPermissionsCall) doRequest(alt string) (*http.Res
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendServices.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.backendServices.testIamPermissions" call.
@@ -22283,7 +22283,7 @@ func (c *BackendServicesUpdateCall) doRequest(alt string) (*http.Response, error
 		"project":        c.project,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.backendServices.update"), c.s.client, req)
 }
 
 // Do executes the "compute.backendServices.update" call.
@@ -22506,7 +22506,7 @@ func (c *DiskTypesAggregatedListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.diskTypes.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.diskTypes.aggregatedList" call.
@@ -22698,7 +22698,7 @@ func (c *DiskTypesGetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":     c.zone,
 		"diskType": c.diskType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.diskTypes.get"), c.s.client, req)
 }
 
 // Do executes the "compute.diskTypes.get" call.
@@ -22926,7 +22926,7 @@ func (c *DiskTypesListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.diskTypes.list"), c.s.client, req)
 }
 
 // Do executes the "compute.diskTypes.list" call.
@@ -23186,7 +23186,7 @@ func (c *DisksAggregatedListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.disks.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.disks.aggregatedList" call.
@@ -23392,7 +23392,7 @@ func (c *DisksCreateSnapshotCall) doRequest(alt string) (*http.Response, error) 
 		"zone":    c.zone,
 		"disk":    c.disk,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.disks.createSnapshot"), c.s.client, req)
 }
 
 // Do executes the "compute.disks.createSnapshot" call.
@@ -23571,7 +23571,7 @@ func (c *DisksDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"zone":    c.zone,
 		"disk":    c.disk,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.disks.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.disks.delete" call.
@@ -23738,7 +23738,7 @@ func (c *DisksGetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":    c.zone,
 		"disk":    c.disk,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.disks.get"), c.s.client, req)
 }
 
 // Do executes the "compute.disks.get" call.
@@ -23918,7 +23918,7 @@ func (c *DisksInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.disks.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.disks.insert" call.
@@ -24150,7 +24150,7 @@ func (c *DisksListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.disks.list"), c.s.client, req)
 }
 
 // Do executes the "compute.disks.list" call.
@@ -24357,7 +24357,7 @@ func (c *DisksResizeCall) doRequest(alt string) (*http.Response, error) {
 		"zone":    c.zone,
 		"disk":    c.disk,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.disks.resize"), c.s.client, req)
 }
 
 // Do executes the "compute.disks.resize" call.
@@ -24536,7 +24536,7 @@ func (c *DisksSetLabelsCall) doRequest(alt string) (*http.Response, error) {
 		"zone":     c.zone,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.disks.setLabels"), c.s.client, req)
 }
 
 // Do executes the "compute.disks.setLabels" call.
@@ -24699,7 +24699,7 @@ func (c *DisksTestIamPermissionsCall) doRequest(alt string) (*http.Response, err
 		"zone":     c.zone,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.disks.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.disks.testIamPermissions" call.
@@ -24864,7 +24864,7 @@ func (c *FirewallsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"firewall": c.firewall,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.firewalls.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.firewalls.delete" call.
@@ -25020,7 +25020,7 @@ func (c *FirewallsGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"firewall": c.firewall,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.firewalls.get"), c.s.client, req)
 }
 
 // Do executes the "compute.firewalls.get" call.
@@ -25179,7 +25179,7 @@ func (c *FirewallsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.firewalls.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.firewalls.insert" call.
@@ -25395,7 +25395,7 @@ func (c *FirewallsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.firewalls.list"), c.s.client, req)
 }
 
 // Do executes the "compute.firewalls.list" call.
@@ -25593,7 +25593,7 @@ func (c *FirewallsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"firewall": c.firewall,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.firewalls.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.firewalls.patch" call.
@@ -25746,7 +25746,7 @@ func (c *FirewallsTestIamPermissionsCall) doRequest(alt string) (*http.Response,
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.firewalls.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.firewalls.testIamPermissions" call.
@@ -25913,7 +25913,7 @@ func (c *FirewallsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"firewall": c.firewall,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.firewalls.update"), c.s.client, req)
 }
 
 // Do executes the "compute.firewalls.update" call.
@@ -26136,7 +26136,7 @@ func (c *ForwardingRulesAggregatedListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.forwardingRules.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.forwardingRules.aggregatedList" call.
@@ -26329,7 +26329,7 @@ func (c *ForwardingRulesDeleteCall) doRequest(alt string) (*http.Response, error
 		"region":         c.region,
 		"forwardingRule": c.forwardingRule,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.forwardingRules.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.forwardingRules.delete" call.
@@ -26496,7 +26496,7 @@ func (c *ForwardingRulesGetCall) doRequest(alt string) (*http.Response, error) {
 		"region":         c.region,
 		"forwardingRule": c.forwardingRule,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.forwardingRules.get"), c.s.client, req)
 }
 
 // Do executes the "compute.forwardingRules.get" call.
@@ -26666,7 +26666,7 @@ func (c *ForwardingRulesInsertCall) doRequest(alt string) (*http.Response, error
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.forwardingRules.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.forwardingRules.insert" call.
@@ -26893,7 +26893,7 @@ func (c *ForwardingRulesListCall) doRequest(alt string) (*http.Response, error) 
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.forwardingRules.list"), c.s.client, req)
 }
 
 // Do executes the "compute.forwardingRules.list" call.
@@ -27101,7 +27101,7 @@ func (c *ForwardingRulesSetLabelsCall) doRequest(alt string) (*http.Response, er
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.forwardingRules.setLabels"), c.s.client, req)
 }
 
 // Do executes the "compute.forwardingRules.setLabels" call.
@@ -27281,7 +27281,7 @@ func (c *ForwardingRulesSetTargetCall) doRequest(alt string) (*http.Response, er
 		"region":         c.region,
 		"forwardingRule": c.forwardingRule,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.forwardingRules.setTarget"), c.s.client, req)
 }
 
 // Do executes the "compute.forwardingRules.setTarget" call.
@@ -27444,7 +27444,7 @@ func (c *ForwardingRulesTestIamPermissionsCall) doRequest(alt string) (*http.Res
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.forwardingRules.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.forwardingRules.testIamPermissions" call.
@@ -27609,7 +27609,7 @@ func (c *GlobalAddressesDeleteCall) doRequest(alt string) (*http.Response, error
 		"project": c.project,
 		"address": c.address,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalAddresses.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.globalAddresses.delete" call.
@@ -27766,7 +27766,7 @@ func (c *GlobalAddressesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"address": c.address,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalAddresses.get"), c.s.client, req)
 }
 
 // Do executes the "compute.globalAddresses.get" call.
@@ -27925,7 +27925,7 @@ func (c *GlobalAddressesInsertCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalAddresses.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.globalAddresses.insert" call.
@@ -28140,7 +28140,7 @@ func (c *GlobalAddressesListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalAddresses.list"), c.s.client, req)
 }
 
 // Do executes the "compute.globalAddresses.list" call.
@@ -28321,7 +28321,7 @@ func (c *GlobalAddressesSetLabelsCall) doRequest(alt string) (*http.Response, er
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalAddresses.setLabels"), c.s.client, req)
 }
 
 // Do executes the "compute.globalAddresses.setLabels" call.
@@ -28468,7 +28468,7 @@ func (c *GlobalAddressesTestIamPermissionsCall) doRequest(alt string) (*http.Res
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalAddresses.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.globalAddresses.testIamPermissions" call.
@@ -28625,7 +28625,7 @@ func (c *GlobalForwardingRulesDeleteCall) doRequest(alt string) (*http.Response,
 		"project":        c.project,
 		"forwardingRule": c.forwardingRule,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalForwardingRules.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.globalForwardingRules.delete" call.
@@ -28782,7 +28782,7 @@ func (c *GlobalForwardingRulesGetCall) doRequest(alt string) (*http.Response, er
 		"project":        c.project,
 		"forwardingRule": c.forwardingRule,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalForwardingRules.get"), c.s.client, req)
 }
 
 // Do executes the "compute.globalForwardingRules.get" call.
@@ -28941,7 +28941,7 @@ func (c *GlobalForwardingRulesInsertCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalForwardingRules.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.globalForwardingRules.insert" call.
@@ -29157,7 +29157,7 @@ func (c *GlobalForwardingRulesListCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalForwardingRules.list"), c.s.client, req)
 }
 
 // Do executes the "compute.globalForwardingRules.list" call.
@@ -29338,7 +29338,7 @@ func (c *GlobalForwardingRulesSetLabelsCall) doRequest(alt string) (*http.Respon
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalForwardingRules.setLabels"), c.s.client, req)
 }
 
 // Do executes the "compute.globalForwardingRules.setLabels" call.
@@ -29502,7 +29502,7 @@ func (c *GlobalForwardingRulesSetTargetCall) doRequest(alt string) (*http.Respon
 		"project":        c.project,
 		"forwardingRule": c.forwardingRule,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalForwardingRules.setTarget"), c.s.client, req)
 }
 
 // Do executes the "compute.globalForwardingRules.setTarget" call.
@@ -29654,7 +29654,7 @@ func (c *GlobalForwardingRulesTestIamPermissionsCall) doRequest(alt string) (*ht
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalForwardingRules.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.globalForwardingRules.testIamPermissions" call.
@@ -29873,7 +29873,7 @@ func (c *GlobalOperationsAggregatedListCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalOperations.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.globalOperations.aggregatedList" call.
@@ -30047,7 +30047,7 @@ func (c *GlobalOperationsDeleteCall) doRequest(alt string) (*http.Response, erro
 		"project":   c.project,
 		"operation": c.operation,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalOperations.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.globalOperations.delete" call.
@@ -30171,7 +30171,7 @@ func (c *GlobalOperationsGetCall) doRequest(alt string) (*http.Response, error) 
 		"project":   c.project,
 		"operation": c.operation,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalOperations.get"), c.s.client, req)
 }
 
 // Do executes the "compute.globalOperations.get" call.
@@ -30388,7 +30388,7 @@ func (c *GlobalOperationsListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.globalOperations.list"), c.s.client, req)
 }
 
 // Do executes the "compute.globalOperations.list" call.
@@ -30577,7 +30577,7 @@ func (c *HealthChecksDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project":     c.project,
 		"healthCheck": c.healthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.healthChecks.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.healthChecks.delete" call.
@@ -30733,7 +30733,7 @@ func (c *HealthChecksGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":     c.project,
 		"healthCheck": c.healthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.healthChecks.get"), c.s.client, req)
 }
 
 // Do executes the "compute.healthChecks.get" call.
@@ -30891,7 +30891,7 @@ func (c *HealthChecksInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.healthChecks.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.healthChecks.insert" call.
@@ -31106,7 +31106,7 @@ func (c *HealthChecksListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.healthChecks.list"), c.s.client, req)
 }
 
 // Do executes the "compute.healthChecks.list" call.
@@ -31304,7 +31304,7 @@ func (c *HealthChecksPatchCall) doRequest(alt string) (*http.Response, error) {
 		"project":     c.project,
 		"healthCheck": c.healthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.healthChecks.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.healthChecks.patch" call.
@@ -31457,7 +31457,7 @@ func (c *HealthChecksTestIamPermissionsCall) doRequest(alt string) (*http.Respon
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.healthChecks.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.healthChecks.testIamPermissions" call.
@@ -31621,7 +31621,7 @@ func (c *HealthChecksUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"project":     c.project,
 		"healthCheck": c.healthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.healthChecks.update"), c.s.client, req)
 }
 
 // Do executes the "compute.healthChecks.update" call.
@@ -31782,7 +31782,7 @@ func (c *HttpHealthChecksDeleteCall) doRequest(alt string) (*http.Response, erro
 		"project":         c.project,
 		"httpHealthCheck": c.httpHealthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpHealthChecks.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.httpHealthChecks.delete" call.
@@ -31939,7 +31939,7 @@ func (c *HttpHealthChecksGetCall) doRequest(alt string) (*http.Response, error) 
 		"project":         c.project,
 		"httpHealthCheck": c.httpHealthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpHealthChecks.get"), c.s.client, req)
 }
 
 // Do executes the "compute.httpHealthChecks.get" call.
@@ -32098,7 +32098,7 @@ func (c *HttpHealthChecksInsertCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpHealthChecks.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.httpHealthChecks.insert" call.
@@ -32314,7 +32314,7 @@ func (c *HttpHealthChecksListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpHealthChecks.list"), c.s.client, req)
 }
 
 // Do executes the "compute.httpHealthChecks.list" call.
@@ -32513,7 +32513,7 @@ func (c *HttpHealthChecksPatchCall) doRequest(alt string) (*http.Response, error
 		"project":         c.project,
 		"httpHealthCheck": c.httpHealthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpHealthChecks.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.httpHealthChecks.patch" call.
@@ -32666,7 +32666,7 @@ func (c *HttpHealthChecksTestIamPermissionsCall) doRequest(alt string) (*http.Re
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpHealthChecks.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.httpHealthChecks.testIamPermissions" call.
@@ -32831,7 +32831,7 @@ func (c *HttpHealthChecksUpdateCall) doRequest(alt string) (*http.Response, erro
 		"project":         c.project,
 		"httpHealthCheck": c.httpHealthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpHealthChecks.update"), c.s.client, req)
 }
 
 // Do executes the "compute.httpHealthChecks.update" call.
@@ -32991,7 +32991,7 @@ func (c *HttpsHealthChecksDeleteCall) doRequest(alt string) (*http.Response, err
 		"project":          c.project,
 		"httpsHealthCheck": c.httpsHealthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpsHealthChecks.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.httpsHealthChecks.delete" call.
@@ -33147,7 +33147,7 @@ func (c *HttpsHealthChecksGetCall) doRequest(alt string) (*http.Response, error)
 		"project":          c.project,
 		"httpsHealthCheck": c.httpsHealthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpsHealthChecks.get"), c.s.client, req)
 }
 
 // Do executes the "compute.httpsHealthChecks.get" call.
@@ -33305,7 +33305,7 @@ func (c *HttpsHealthChecksInsertCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpsHealthChecks.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.httpsHealthChecks.insert" call.
@@ -33520,7 +33520,7 @@ func (c *HttpsHealthChecksListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpsHealthChecks.list"), c.s.client, req)
 }
 
 // Do executes the "compute.httpsHealthChecks.list" call.
@@ -33718,7 +33718,7 @@ func (c *HttpsHealthChecksPatchCall) doRequest(alt string) (*http.Response, erro
 		"project":          c.project,
 		"httpsHealthCheck": c.httpsHealthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpsHealthChecks.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.httpsHealthChecks.patch" call.
@@ -33871,7 +33871,7 @@ func (c *HttpsHealthChecksTestIamPermissionsCall) doRequest(alt string) (*http.R
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpsHealthChecks.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.httpsHealthChecks.testIamPermissions" call.
@@ -34035,7 +34035,7 @@ func (c *HttpsHealthChecksUpdateCall) doRequest(alt string) (*http.Response, err
 		"project":          c.project,
 		"httpsHealthCheck": c.httpsHealthCheck,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.httpsHealthChecks.update"), c.s.client, req)
 }
 
 // Do executes the "compute.httpsHealthChecks.update" call.
@@ -34196,7 +34196,7 @@ func (c *ImagesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"image":   c.image,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.images.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.images.delete" call.
@@ -34364,7 +34364,7 @@ func (c *ImagesDeprecateCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"image":   c.image,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.images.deprecate"), c.s.client, req)
 }
 
 // Do executes the "compute.images.deprecate" call.
@@ -34524,7 +34524,7 @@ func (c *ImagesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"image":   c.image,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.images.get"), c.s.client, req)
 }
 
 // Do executes the "compute.images.get" call.
@@ -34676,7 +34676,7 @@ func (c *ImagesGetFromFamilyCall) doRequest(alt string) (*http.Response, error) 
 		"project": c.project,
 		"family":  c.family,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.images.getFromFamily"), c.s.client, req)
 }
 
 // Do executes the "compute.images.getFromFamily" call.
@@ -34835,7 +34835,7 @@ func (c *ImagesInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.images.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.images.insert" call.
@@ -35059,7 +35059,7 @@ func (c *ImagesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.images.list"), c.s.client, req)
 }
 
 // Do executes the "compute.images.list" call.
@@ -35240,7 +35240,7 @@ func (c *ImagesSetLabelsCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.images.setLabels"), c.s.client, req)
 }
 
 // Do executes the "compute.images.setLabels" call.
@@ -35387,7 +35387,7 @@ func (c *ImagesTestIamPermissionsCall) doRequest(alt string) (*http.Response, er
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.images.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.images.testIamPermissions" call.
@@ -35569,7 +35569,7 @@ func (c *InstanceGroupManagersAbandonInstancesCall) doRequest(alt string) (*http
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.abandonInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.abandonInstances" call.
@@ -35798,7 +35798,7 @@ func (c *InstanceGroupManagersAggregatedListCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.aggregatedList" call.
@@ -35994,7 +35994,7 @@ func (c *InstanceGroupManagersDeleteCall) doRequest(alt string) (*http.Response,
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.delete" call.
@@ -36182,7 +36182,7 @@ func (c *InstanceGroupManagersDeleteInstancesCall) doRequest(alt string) (*http.
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.deleteInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.deleteInstances" call.
@@ -36351,7 +36351,7 @@ func (c *InstanceGroupManagersGetCall) doRequest(alt string) (*http.Response, er
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.get"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.get" call.
@@ -36526,7 +36526,7 @@ func (c *InstanceGroupManagersInsertCall) doRequest(alt string) (*http.Response,
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.insert" call.
@@ -36751,7 +36751,7 @@ func (c *InstanceGroupManagersListCall) doRequest(alt string) (*http.Response, e
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.list"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.list" call.
@@ -36963,7 +36963,7 @@ func (c *InstanceGroupManagersListManagedInstancesCall) doRequest(alt string) (*
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.listManagedInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.listManagedInstances" call.
@@ -37179,7 +37179,7 @@ func (c *InstanceGroupManagersPatchCall) doRequest(alt string) (*http.Response, 
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.patch" call.
@@ -37370,7 +37370,7 @@ func (c *InstanceGroupManagersRecreateInstancesCall) doRequest(alt string) (*htt
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.recreateInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.recreateInstances" call.
@@ -37550,7 +37550,7 @@ func (c *InstanceGroupManagersResizeCall) doRequest(alt string) (*http.Response,
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.resize"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.resize" call.
@@ -37745,7 +37745,7 @@ func (c *InstanceGroupManagersResizeAdvancedCall) doRequest(alt string) (*http.R
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.resizeAdvanced"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.resizeAdvanced" call.
@@ -37921,7 +37921,7 @@ func (c *InstanceGroupManagersSetAutoHealingPoliciesCall) doRequest(alt string) 
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.setAutoHealingPolicies"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.setAutoHealingPolicies" call.
@@ -38099,7 +38099,7 @@ func (c *InstanceGroupManagersSetInstanceTemplateCall) doRequest(alt string) (*h
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.setInstanceTemplate"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.setInstanceTemplate" call.
@@ -38281,7 +38281,7 @@ func (c *InstanceGroupManagersSetTargetPoolsCall) doRequest(alt string) (*http.R
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.setTargetPools"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.setTargetPools" call.
@@ -38442,7 +38442,7 @@ func (c *InstanceGroupManagersTestIamPermissionsCall) doRequest(alt string) (*ht
 		"zone":     c.zone,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.testIamPermissions" call.
@@ -38620,7 +38620,7 @@ func (c *InstanceGroupManagersUpdateCall) doRequest(alt string) (*http.Response,
 		"zone":                 c.zone,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroupManagers.update"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroupManagers.update" call.
@@ -38798,7 +38798,7 @@ func (c *InstanceGroupsAddInstancesCall) doRequest(alt string) (*http.Response, 
 		"zone":          c.zone,
 		"instanceGroup": c.instanceGroup,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.addInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.addInstances" call.
@@ -39027,7 +39027,7 @@ func (c *InstanceGroupsAggregatedListCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.aggregatedList" call.
@@ -39222,7 +39222,7 @@ func (c *InstanceGroupsDeleteCall) doRequest(alt string) (*http.Response, error)
 		"zone":          c.zone,
 		"instanceGroup": c.instanceGroup,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.delete" call.
@@ -39387,7 +39387,7 @@ func (c *InstanceGroupsGetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":          c.zone,
 		"instanceGroup": c.instanceGroup,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.get"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.get" call.
@@ -39554,7 +39554,7 @@ func (c *InstanceGroupsInsertCall) doRequest(alt string) (*http.Response, error)
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.insert" call.
@@ -39779,7 +39779,7 @@ func (c *InstanceGroupsListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.list"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.list" call.
@@ -40036,7 +40036,7 @@ func (c *InstanceGroupsListInstancesCall) doRequest(alt string) (*http.Response,
 		"zone":          c.zone,
 		"instanceGroup": c.instanceGroup,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.listInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.listInstances" call.
@@ -40257,7 +40257,7 @@ func (c *InstanceGroupsRemoveInstancesCall) doRequest(alt string) (*http.Respons
 		"zone":          c.zone,
 		"instanceGroup": c.instanceGroup,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.removeInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.removeInstances" call.
@@ -40433,7 +40433,7 @@ func (c *InstanceGroupsSetNamedPortsCall) doRequest(alt string) (*http.Response,
 		"zone":          c.zone,
 		"instanceGroup": c.instanceGroup,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.setNamedPorts"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.setNamedPorts" call.
@@ -40594,7 +40594,7 @@ func (c *InstanceGroupsTestIamPermissionsCall) doRequest(alt string) (*http.Resp
 		"zone":     c.zone,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceGroups.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceGroups.testIamPermissions" call.
@@ -40763,7 +40763,7 @@ func (c *InstanceTemplatesDeleteCall) doRequest(alt string) (*http.Response, err
 		"project":          c.project,
 		"instanceTemplate": c.instanceTemplate,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceTemplates.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceTemplates.delete" call.
@@ -40920,7 +40920,7 @@ func (c *InstanceTemplatesGetCall) doRequest(alt string) (*http.Response, error)
 		"project":          c.project,
 		"instanceTemplate": c.instanceTemplate,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceTemplates.get"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceTemplates.get" call.
@@ -41082,7 +41082,7 @@ func (c *InstanceTemplatesInsertCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceTemplates.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceTemplates.insert" call.
@@ -41298,7 +41298,7 @@ func (c *InstanceTemplatesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceTemplates.list"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceTemplates.list" call.
@@ -41479,7 +41479,7 @@ func (c *InstanceTemplatesTestIamPermissionsCall) doRequest(alt string) (*http.R
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instanceTemplates.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.instanceTemplates.testIamPermissions" call.
@@ -41648,7 +41648,7 @@ func (c *InstancesAddAccessConfigCall) doRequest(alt string) (*http.Response, er
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.addAccessConfig"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.addAccessConfig" call.
@@ -41886,7 +41886,7 @@ func (c *InstancesAggregatedListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.aggregatedList" call.
@@ -42089,7 +42089,7 @@ func (c *InstancesAttachDiskCall) doRequest(alt string) (*http.Response, error) 
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.attachDisk"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.attachDisk" call.
@@ -42262,7 +42262,7 @@ func (c *InstancesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.delete" call.
@@ -42434,7 +42434,7 @@ func (c *InstancesDeleteAccessConfigCall) doRequest(alt string) (*http.Response,
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.deleteAccessConfig"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.deleteAccessConfig" call.
@@ -42618,7 +42618,7 @@ func (c *InstancesDetachDiskCall) doRequest(alt string) (*http.Response, error) 
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.detachDisk"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.detachDisk" call.
@@ -42793,7 +42793,7 @@ func (c *InstancesGetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.get"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.get" call.
@@ -42975,7 +42975,7 @@ func (c *InstancesGetSerialPortOutputCall) doRequest(alt string) (*http.Response
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.getSerialPortOutput"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.getSerialPortOutput" call.
@@ -43160,7 +43160,7 @@ func (c *InstancesInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.insert" call.
@@ -43387,7 +43387,7 @@ func (c *InstancesListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.list"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.list" call.
@@ -43653,7 +43653,7 @@ func (c *InstancesListReferrersCall) doRequest(alt string) (*http.Response, erro
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.listReferrers"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.listReferrers" call.
@@ -43863,7 +43863,7 @@ func (c *InstancesResetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.reset"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.reset" call.
@@ -44035,7 +44035,7 @@ func (c *InstancesSetDiskAutoDeleteCall) doRequest(alt string) (*http.Response, 
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.setDiskAutoDelete"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.setDiskAutoDelete" call.
@@ -44226,7 +44226,7 @@ func (c *InstancesSetLabelsCall) doRequest(alt string) (*http.Response, error) {
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.setLabels"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.setLabels" call.
@@ -44405,7 +44405,7 @@ func (c *InstancesSetMachineResourcesCall) doRequest(alt string) (*http.Response
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.setMachineResources"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.setMachineResources" call.
@@ -44584,7 +44584,7 @@ func (c *InstancesSetMachineTypeCall) doRequest(alt string) (*http.Response, err
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.setMachineType"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.setMachineType" call.
@@ -44764,7 +44764,7 @@ func (c *InstancesSetMetadataCall) doRequest(alt string) (*http.Response, error)
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.setMetadata"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.setMetadata" call.
@@ -44943,7 +44943,7 @@ func (c *InstancesSetMinCpuPlatformCall) doRequest(alt string) (*http.Response, 
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.setMinCpuPlatform"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.setMinCpuPlatform" call.
@@ -45122,7 +45122,7 @@ func (c *InstancesSetSchedulingCall) doRequest(alt string) (*http.Response, erro
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.setScheduling"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.setScheduling" call.
@@ -45302,7 +45302,7 @@ func (c *InstancesSetServiceAccountCall) doRequest(alt string) (*http.Response, 
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.setServiceAccount"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.setServiceAccount" call.
@@ -45482,7 +45482,7 @@ func (c *InstancesSetTagsCall) doRequest(alt string) (*http.Response, error) {
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.setTags"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.setTags" call.
@@ -45656,7 +45656,7 @@ func (c *InstancesStartCall) doRequest(alt string) (*http.Response, error) {
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.start"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.start" call.
@@ -45833,7 +45833,7 @@ func (c *InstancesStartWithEncryptionKeyCall) doRequest(alt string) (*http.Respo
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.startWithEncryptionKey"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.startWithEncryptionKey" call.
@@ -46011,7 +46011,7 @@ func (c *InstancesStopCall) doRequest(alt string) (*http.Response, error) {
 		"zone":     c.zone,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.stop"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.stop" call.
@@ -46171,7 +46171,7 @@ func (c *InstancesTestIamPermissionsCall) doRequest(alt string) (*http.Response,
 		"zone":     c.zone,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.instances.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.instances.testIamPermissions" call.
@@ -46335,7 +46335,7 @@ func (c *LicensesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"license": c.license,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.licenses.get"), c.s.client, req)
 }
 
 // Do executes the "compute.licenses.get" call.
@@ -46551,7 +46551,7 @@ func (c *MachineTypesAggregatedListCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.machineTypes.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.machineTypes.aggregatedList" call.
@@ -46743,7 +46743,7 @@ func (c *MachineTypesGetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":        c.zone,
 		"machineType": c.machineType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.machineTypes.get"), c.s.client, req)
 }
 
 // Do executes the "compute.machineTypes.get" call.
@@ -46971,7 +46971,7 @@ func (c *MachineTypesListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.machineTypes.list"), c.s.client, req)
 }
 
 // Do executes the "compute.machineTypes.list" call.
@@ -47175,7 +47175,7 @@ func (c *NetworksAddPeeringCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"network": c.network,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.networks.addPeering"), c.s.client, req)
 }
 
 // Do executes the "compute.networks.addPeering" call.
@@ -47336,7 +47336,7 @@ func (c *NetworksDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"network": c.network,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.networks.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.networks.delete" call.
@@ -47493,7 +47493,7 @@ func (c *NetworksGetCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"network": c.network,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.networks.get"), c.s.client, req)
 }
 
 // Do executes the "compute.networks.get" call.
@@ -47652,7 +47652,7 @@ func (c *NetworksInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.networks.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.networks.insert" call.
@@ -47868,7 +47868,7 @@ func (c *NetworksListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.networks.list"), c.s.client, req)
 }
 
 // Do executes the "compute.networks.list" call.
@@ -48064,7 +48064,7 @@ func (c *NetworksRemovePeeringCall) doRequest(alt string) (*http.Response, error
 		"project": c.project,
 		"network": c.network,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.networks.removePeering"), c.s.client, req)
 }
 
 // Do executes the "compute.networks.removePeering" call.
@@ -48225,7 +48225,7 @@ func (c *NetworksSwitchToCustomModeCall) doRequest(alt string) (*http.Response, 
 		"project": c.project,
 		"network": c.network,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.networks.switchToCustomMode"), c.s.client, req)
 }
 
 // Do executes the "compute.networks.switchToCustomMode" call.
@@ -48374,7 +48374,7 @@ func (c *NetworksTestIamPermissionsCall) doRequest(alt string) (*http.Response, 
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.networks.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.networks.testIamPermissions" call.
@@ -48527,7 +48527,7 @@ func (c *ProjectsDisableXpnHostCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.disableXpnHost"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.disableXpnHost" call.
@@ -48681,7 +48681,7 @@ func (c *ProjectsDisableXpnResourceCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.disableXpnResource"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.disableXpnResource" call.
@@ -48830,7 +48830,7 @@ func (c *ProjectsEnableXpnHostCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.enableXpnHost"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.enableXpnHost" call.
@@ -48986,7 +48986,7 @@ func (c *ProjectsEnableXpnResourceCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.enableXpnResource"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.enableXpnResource" call.
@@ -49134,7 +49134,7 @@ func (c *ProjectsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.get"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.get" call.
@@ -49275,7 +49275,7 @@ func (c *ProjectsGetXpnHostCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.getXpnHost"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.getXpnHost" call.
@@ -49439,7 +49439,7 @@ func (c *ProjectsGetXpnResourcesCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.getXpnResources"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.getXpnResources" call.
@@ -49637,7 +49637,7 @@ func (c *ProjectsListXpnHostsCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.listXpnHosts"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.listXpnHosts" call.
@@ -49829,7 +49829,7 @@ func (c *ProjectsMoveDiskCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.moveDisk"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.moveDisk" call.
@@ -49986,7 +49986,7 @@ func (c *ProjectsMoveInstanceCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.moveInstance"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.moveInstance" call.
@@ -50144,7 +50144,7 @@ func (c *ProjectsSetCommonInstanceMetadataCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.setCommonInstanceMetadata"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.setCommonInstanceMetadata" call.
@@ -50304,7 +50304,7 @@ func (c *ProjectsSetUsageExportBucketCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.projects.setUsageExportBucket"), c.s.client, req)
 }
 
 // Do executes the "compute.projects.setUsageExportBucket" call.
@@ -50462,7 +50462,7 @@ func (c *RegionAutoscalersDeleteCall) doRequest(alt string) (*http.Response, err
 		"region":     c.region,
 		"autoscaler": c.autoscaler,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionAutoscalers.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.regionAutoscalers.delete" call.
@@ -50628,7 +50628,7 @@ func (c *RegionAutoscalersGetCall) doRequest(alt string) (*http.Response, error)
 		"region":     c.region,
 		"autoscaler": c.autoscaler,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionAutoscalers.get"), c.s.client, req)
 }
 
 // Do executes the "compute.regionAutoscalers.get" call.
@@ -50797,7 +50797,7 @@ func (c *RegionAutoscalersInsertCall) doRequest(alt string) (*http.Response, err
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionAutoscalers.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.regionAutoscalers.insert" call.
@@ -51023,7 +51023,7 @@ func (c *RegionAutoscalersListCall) doRequest(alt string) (*http.Response, error
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionAutoscalers.list"), c.s.client, req)
 }
 
 // Do executes the "compute.regionAutoscalers.list" call.
@@ -51235,7 +51235,7 @@ func (c *RegionAutoscalersPatchCall) doRequest(alt string) (*http.Response, erro
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionAutoscalers.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.regionAutoscalers.patch" call.
@@ -51397,7 +51397,7 @@ func (c *RegionAutoscalersTestIamPermissionsCall) doRequest(alt string) (*http.R
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionAutoscalers.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.regionAutoscalers.testIamPermissions" call.
@@ -51576,7 +51576,7 @@ func (c *RegionAutoscalersUpdateCall) doRequest(alt string) (*http.Response, err
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionAutoscalers.update"), c.s.client, req)
 }
 
 // Do executes the "compute.regionAutoscalers.update" call.
@@ -51745,7 +51745,7 @@ func (c *RegionBackendServicesDeleteCall) doRequest(alt string) (*http.Response,
 		"region":         c.region,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionBackendServices.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.regionBackendServices.delete" call.
@@ -51911,7 +51911,7 @@ func (c *RegionBackendServicesGetCall) doRequest(alt string) (*http.Response, er
 		"region":         c.region,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionBackendServices.get"), c.s.client, req)
 }
 
 // Do executes the "compute.regionBackendServices.get" call.
@@ -52067,7 +52067,7 @@ func (c *RegionBackendServicesGetHealthCall) doRequest(alt string) (*http.Respon
 		"region":         c.region,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionBackendServices.getHealth"), c.s.client, req)
 }
 
 // Do executes the "compute.regionBackendServices.getHealth" call.
@@ -52241,7 +52241,7 @@ func (c *RegionBackendServicesInsertCall) doRequest(alt string) (*http.Response,
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionBackendServices.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.regionBackendServices.insert" call.
@@ -52467,7 +52467,7 @@ func (c *RegionBackendServicesListCall) doRequest(alt string) (*http.Response, e
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionBackendServices.list"), c.s.client, req)
 }
 
 // Do executes the "compute.regionBackendServices.list" call.
@@ -52678,7 +52678,7 @@ func (c *RegionBackendServicesPatchCall) doRequest(alt string) (*http.Response, 
 		"region":         c.region,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionBackendServices.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.regionBackendServices.patch" call.
@@ -52842,7 +52842,7 @@ func (c *RegionBackendServicesTestIamPermissionsCall) doRequest(alt string) (*ht
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionBackendServices.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.regionBackendServices.testIamPermissions" call.
@@ -53019,7 +53019,7 @@ func (c *RegionBackendServicesUpdateCall) doRequest(alt string) (*http.Response,
 		"region":         c.region,
 		"backendService": c.backendService,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionBackendServices.update"), c.s.client, req)
 }
 
 // Do executes the "compute.regionBackendServices.update" call.
@@ -53249,7 +53249,7 @@ func (c *RegionCommitmentsAggregatedListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionCommitments.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.regionCommitments.aggregatedList" call.
@@ -53440,7 +53440,7 @@ func (c *RegionCommitmentsGetCall) doRequest(alt string) (*http.Response, error)
 		"region":     c.region,
 		"commitment": c.commitment,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionCommitments.get"), c.s.client, req)
 }
 
 // Do executes the "compute.regionCommitments.get" call.
@@ -53609,7 +53609,7 @@ func (c *RegionCommitmentsInsertCall) doRequest(alt string) (*http.Response, err
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionCommitments.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.regionCommitments.insert" call.
@@ -53835,7 +53835,7 @@ func (c *RegionCommitmentsListCall) doRequest(alt string) (*http.Response, error
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionCommitments.list"), c.s.client, req)
 }
 
 // Do executes the "compute.regionCommitments.list" call.
@@ -54058,7 +54058,7 @@ func (c *RegionInstanceGroupManagersAbandonInstancesCall) doRequest(alt string) 
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.abandonInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.abandonInstances" call.
@@ -54228,7 +54228,7 @@ func (c *RegionInstanceGroupManagersDeleteCall) doRequest(alt string) (*http.Res
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.delete" call.
@@ -54416,7 +54416,7 @@ func (c *RegionInstanceGroupManagersDeleteInstancesCall) doRequest(alt string) (
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.deleteInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.deleteInstances" call.
@@ -54584,7 +54584,7 @@ func (c *RegionInstanceGroupManagersGetCall) doRequest(alt string) (*http.Respon
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.get"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.get" call.
@@ -54758,7 +54758,7 @@ func (c *RegionInstanceGroupManagersInsertCall) doRequest(alt string) (*http.Res
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.insert" call.
@@ -54983,7 +54983,7 @@ func (c *RegionInstanceGroupManagersListCall) doRequest(alt string) (*http.Respo
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.list"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.list" call.
@@ -55193,7 +55193,7 @@ func (c *RegionInstanceGroupManagersListManagedInstancesCall) doRequest(alt stri
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.listManagedInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.listManagedInstances" call.
@@ -55409,7 +55409,7 @@ func (c *RegionInstanceGroupManagersPatchCall) doRequest(alt string) (*http.Resp
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.patch" call.
@@ -55600,7 +55600,7 @@ func (c *RegionInstanceGroupManagersRecreateInstancesCall) doRequest(alt string)
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.recreateInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.recreateInstances" call.
@@ -55781,7 +55781,7 @@ func (c *RegionInstanceGroupManagersResizeCall) doRequest(alt string) (*http.Res
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.resize"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.resize" call.
@@ -55964,7 +55964,7 @@ func (c *RegionInstanceGroupManagersSetAutoHealingPoliciesCall) doRequest(alt st
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.setAutoHealingPolicies"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.setAutoHealingPolicies" call.
@@ -56142,7 +56142,7 @@ func (c *RegionInstanceGroupManagersSetInstanceTemplateCall) doRequest(alt strin
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.setInstanceTemplate"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.setInstanceTemplate" call.
@@ -56320,7 +56320,7 @@ func (c *RegionInstanceGroupManagersSetTargetPoolsCall) doRequest(alt string) (*
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.setTargetPools"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.setTargetPools" call.
@@ -56481,7 +56481,7 @@ func (c *RegionInstanceGroupManagersTestIamPermissionsCall) doRequest(alt string
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.testIamPermissions" call.
@@ -56659,7 +56659,7 @@ func (c *RegionInstanceGroupManagersUpdateCall) doRequest(alt string) (*http.Res
 		"region":               c.region,
 		"instanceGroupManager": c.instanceGroupManager,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroupManagers.update"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroupManagers.update" call.
@@ -56826,7 +56826,7 @@ func (c *RegionInstanceGroupsGetCall) doRequest(alt string) (*http.Response, err
 		"region":        c.region,
 		"instanceGroup": c.instanceGroup,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroups.get"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroups.get" call.
@@ -57051,7 +57051,7 @@ func (c *RegionInstanceGroupsListCall) doRequest(alt string) (*http.Response, er
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroups.list"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroups.list" call.
@@ -57311,7 +57311,7 @@ func (c *RegionInstanceGroupsListInstancesCall) doRequest(alt string) (*http.Res
 		"region":        c.region,
 		"instanceGroup": c.instanceGroup,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroups.listInstances"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroups.listInstances" call.
@@ -57529,7 +57529,7 @@ func (c *RegionInstanceGroupsSetNamedPortsCall) doRequest(alt string) (*http.Res
 		"region":        c.region,
 		"instanceGroup": c.instanceGroup,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroups.setNamedPorts"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroups.setNamedPorts" call.
@@ -57690,7 +57690,7 @@ func (c *RegionInstanceGroupsTestIamPermissionsCall) doRequest(alt string) (*htt
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionInstanceGroups.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.regionInstanceGroups.testIamPermissions" call.
@@ -57842,7 +57842,7 @@ func (c *RegionOperationsDeleteCall) doRequest(alt string) (*http.Response, erro
 		"region":    c.region,
 		"operation": c.operation,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionOperations.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.regionOperations.delete" call.
@@ -57976,7 +57976,7 @@ func (c *RegionOperationsGetCall) doRequest(alt string) (*http.Response, error) 
 		"region":    c.region,
 		"operation": c.operation,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionOperations.get"), c.s.client, req)
 }
 
 // Do executes the "compute.regionOperations.get" call.
@@ -58204,7 +58204,7 @@ func (c *RegionOperationsListCall) doRequest(alt string) (*http.Response, error)
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regionOperations.list"), c.s.client, req)
 }
 
 // Do executes the "compute.regionOperations.list" call.
@@ -58401,7 +58401,7 @@ func (c *RegionsGetCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regions.get"), c.s.client, req)
 }
 
 // Do executes the "compute.regions.get" call.
@@ -58618,7 +58618,7 @@ func (c *RegionsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.regions.list"), c.s.client, req)
 }
 
 // Do executes the "compute.regions.list" call.
@@ -58869,7 +58869,7 @@ func (c *RoutersAggregatedListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.aggregatedList" call.
@@ -59061,7 +59061,7 @@ func (c *RoutersDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"region":  c.region,
 		"router":  c.router,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.delete" call.
@@ -59228,7 +59228,7 @@ func (c *RoutersGetCall) doRequest(alt string) (*http.Response, error) {
 		"region":  c.region,
 		"router":  c.router,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.get"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.get" call.
@@ -59391,7 +59391,7 @@ func (c *RoutersGetRouterStatusCall) doRequest(alt string) (*http.Response, erro
 		"region":  c.region,
 		"router":  c.router,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.getRouterStatus"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.getRouterStatus" call.
@@ -59560,7 +59560,7 @@ func (c *RoutersInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.insert" call.
@@ -59786,7 +59786,7 @@ func (c *RoutersListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.list"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.list" call.
@@ -59994,7 +59994,7 @@ func (c *RoutersPatchCall) doRequest(alt string) (*http.Response, error) {
 		"region":  c.region,
 		"router":  c.router,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.patch" call.
@@ -60159,7 +60159,7 @@ func (c *RoutersPreviewCall) doRequest(alt string) (*http.Response, error) {
 		"region":  c.region,
 		"router":  c.router,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.preview"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.preview" call.
@@ -60318,7 +60318,7 @@ func (c *RoutersTestIamPermissionsCall) doRequest(alt string) (*http.Response, e
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.testIamPermissions" call.
@@ -60493,7 +60493,7 @@ func (c *RoutersUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"region":  c.region,
 		"router":  c.router,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routers.update"), c.s.client, req)
 }
 
 // Do executes the "compute.routers.update" call.
@@ -60662,7 +60662,7 @@ func (c *RoutesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"route":   c.route,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routes.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.routes.delete" call.
@@ -60819,7 +60819,7 @@ func (c *RoutesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"route":   c.route,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routes.get"), c.s.client, req)
 }
 
 // Do executes the "compute.routes.get" call.
@@ -60978,7 +60978,7 @@ func (c *RoutesInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routes.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.routes.insert" call.
@@ -61194,7 +61194,7 @@ func (c *RoutesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routes.list"), c.s.client, req)
 }
 
 // Do executes the "compute.routes.list" call.
@@ -61375,7 +61375,7 @@ func (c *RoutesTestIamPermissionsCall) doRequest(alt string) (*http.Response, er
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.routes.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.routes.testIamPermissions" call.
@@ -61538,7 +61538,7 @@ func (c *SnapshotsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"snapshot": c.snapshot,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.snapshots.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.snapshots.delete" call.
@@ -61695,7 +61695,7 @@ func (c *SnapshotsGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"snapshot": c.snapshot,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.snapshots.get"), c.s.client, req)
 }
 
 // Do executes the "compute.snapshots.get" call.
@@ -61912,7 +61912,7 @@ func (c *SnapshotsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.snapshots.list"), c.s.client, req)
 }
 
 // Do executes the "compute.snapshots.list" call.
@@ -62093,7 +62093,7 @@ func (c *SnapshotsSetLabelsCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.snapshots.setLabels"), c.s.client, req)
 }
 
 // Do executes the "compute.snapshots.setLabels" call.
@@ -62240,7 +62240,7 @@ func (c *SnapshotsTestIamPermissionsCall) doRequest(alt string) (*http.Response,
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.snapshots.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.snapshots.testIamPermissions" call.
@@ -62396,7 +62396,7 @@ func (c *SslCertificatesDeleteCall) doRequest(alt string) (*http.Response, error
 		"project":        c.project,
 		"sslCertificate": c.sslCertificate,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.sslCertificates.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.sslCertificates.delete" call.
@@ -62552,7 +62552,7 @@ func (c *SslCertificatesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":        c.project,
 		"sslCertificate": c.sslCertificate,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.sslCertificates.get"), c.s.client, req)
 }
 
 // Do executes the "compute.sslCertificates.get" call.
@@ -62710,7 +62710,7 @@ func (c *SslCertificatesInsertCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.sslCertificates.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.sslCertificates.insert" call.
@@ -62925,7 +62925,7 @@ func (c *SslCertificatesListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.sslCertificates.list"), c.s.client, req)
 }
 
 // Do executes the "compute.sslCertificates.list" call.
@@ -63106,7 +63106,7 @@ func (c *SslCertificatesTestIamPermissionsCall) doRequest(alt string) (*http.Res
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.sslCertificates.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.sslCertificates.testIamPermissions" call.
@@ -63324,7 +63324,7 @@ func (c *SubnetworksAggregatedListCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.aggregatedList" call.
@@ -63516,7 +63516,7 @@ func (c *SubnetworksDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"region":     c.region,
 		"subnetwork": c.subnetwork,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.delete" call.
@@ -63692,7 +63692,7 @@ func (c *SubnetworksExpandIpCidrRangeCall) doRequest(alt string) (*http.Response
 		"region":     c.region,
 		"subnetwork": c.subnetwork,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.expandIpCidrRange"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.expandIpCidrRange" call.
@@ -63862,7 +63862,7 @@ func (c *SubnetworksGetCall) doRequest(alt string) (*http.Response, error) {
 		"region":     c.region,
 		"subnetwork": c.subnetwork,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.get"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.get" call.
@@ -64025,7 +64025,7 @@ func (c *SubnetworksGetIamPolicyCall) doRequest(alt string) (*http.Response, err
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.getIamPolicy" call.
@@ -64194,7 +64194,7 @@ func (c *SubnetworksInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.insert" call.
@@ -64420,7 +64420,7 @@ func (c *SubnetworksListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.list"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.list" call.
@@ -64612,7 +64612,7 @@ func (c *SubnetworksSetIamPolicyCall) doRequest(alt string) (*http.Response, err
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.setIamPolicy" call.
@@ -64787,7 +64787,7 @@ func (c *SubnetworksSetPrivateIpGoogleAccessCall) doRequest(alt string) (*http.R
 		"region":     c.region,
 		"subnetwork": c.subnetwork,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.setPrivateIpGoogleAccess"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.setPrivateIpGoogleAccess" call.
@@ -64950,7 +64950,7 @@ func (c *SubnetworksTestIamPermissionsCall) doRequest(alt string) (*http.Respons
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.subnetworks.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.subnetworks.testIamPermissions" call.
@@ -65115,7 +65115,7 @@ func (c *TargetHttpProxiesDeleteCall) doRequest(alt string) (*http.Response, err
 		"project":         c.project,
 		"targetHttpProxy": c.targetHttpProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpProxies.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpProxies.delete" call.
@@ -65272,7 +65272,7 @@ func (c *TargetHttpProxiesGetCall) doRequest(alt string) (*http.Response, error)
 		"project":         c.project,
 		"targetHttpProxy": c.targetHttpProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpProxies.get"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpProxies.get" call.
@@ -65431,7 +65431,7 @@ func (c *TargetHttpProxiesInsertCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpProxies.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpProxies.insert" call.
@@ -65647,7 +65647,7 @@ func (c *TargetHttpProxiesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpProxies.list"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpProxies.list" call.
@@ -65844,7 +65844,7 @@ func (c *TargetHttpProxiesSetUrlMapCall) doRequest(alt string) (*http.Response, 
 		"project":         c.project,
 		"targetHttpProxy": c.targetHttpProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpProxies.setUrlMap"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpProxies.setUrlMap" call.
@@ -65996,7 +65996,7 @@ func (c *TargetHttpProxiesTestIamPermissionsCall) doRequest(alt string) (*http.R
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpProxies.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpProxies.testIamPermissions" call.
@@ -66152,7 +66152,7 @@ func (c *TargetHttpsProxiesDeleteCall) doRequest(alt string) (*http.Response, er
 		"project":          c.project,
 		"targetHttpsProxy": c.targetHttpsProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpsProxies.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpsProxies.delete" call.
@@ -66308,7 +66308,7 @@ func (c *TargetHttpsProxiesGetCall) doRequest(alt string) (*http.Response, error
 		"project":          c.project,
 		"targetHttpsProxy": c.targetHttpsProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpsProxies.get"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpsProxies.get" call.
@@ -66466,7 +66466,7 @@ func (c *TargetHttpsProxiesInsertCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpsProxies.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpsProxies.insert" call.
@@ -66681,7 +66681,7 @@ func (c *TargetHttpsProxiesListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpsProxies.list"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpsProxies.list" call.
@@ -66877,7 +66877,7 @@ func (c *TargetHttpsProxiesSetSslCertificatesCall) doRequest(alt string) (*http.
 		"project":          c.project,
 		"targetHttpsProxy": c.targetHttpsProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpsProxies.setSslCertificates"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpsProxies.setSslCertificates" call.
@@ -67044,7 +67044,7 @@ func (c *TargetHttpsProxiesSetUrlMapCall) doRequest(alt string) (*http.Response,
 		"project":          c.project,
 		"targetHttpsProxy": c.targetHttpsProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpsProxies.setUrlMap"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpsProxies.setUrlMap" call.
@@ -67196,7 +67196,7 @@ func (c *TargetHttpsProxiesTestIamPermissionsCall) doRequest(alt string) (*http.
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetHttpsProxies.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.targetHttpsProxies.testIamPermissions" call.
@@ -67415,7 +67415,7 @@ func (c *TargetInstancesAggregatedListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetInstances.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.targetInstances.aggregatedList" call.
@@ -67608,7 +67608,7 @@ func (c *TargetInstancesDeleteCall) doRequest(alt string) (*http.Response, error
 		"zone":           c.zone,
 		"targetInstance": c.targetInstance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetInstances.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.targetInstances.delete" call.
@@ -67776,7 +67776,7 @@ func (c *TargetInstancesGetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":           c.zone,
 		"targetInstance": c.targetInstance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetInstances.get"), c.s.client, req)
 }
 
 // Do executes the "compute.targetInstances.get" call.
@@ -67946,7 +67946,7 @@ func (c *TargetInstancesInsertCall) doRequest(alt string) (*http.Response, error
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetInstances.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.targetInstances.insert" call.
@@ -68173,7 +68173,7 @@ func (c *TargetInstancesListCall) doRequest(alt string) (*http.Response, error) 
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetInstances.list"), c.s.client, req)
 }
 
 // Do executes the "compute.targetInstances.list" call.
@@ -68365,7 +68365,7 @@ func (c *TargetInstancesTestIamPermissionsCall) doRequest(alt string) (*http.Res
 		"zone":     c.zone,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetInstances.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.targetInstances.testIamPermissions" call.
@@ -68540,7 +68540,7 @@ func (c *TargetPoolsAddHealthCheckCall) doRequest(alt string) (*http.Response, e
 		"region":     c.region,
 		"targetPool": c.targetPool,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.addHealthCheck"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.addHealthCheck" call.
@@ -68719,7 +68719,7 @@ func (c *TargetPoolsAddInstanceCall) doRequest(alt string) (*http.Response, erro
 		"region":     c.region,
 		"targetPool": c.targetPool,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.addInstance"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.addInstance" call.
@@ -68950,7 +68950,7 @@ func (c *TargetPoolsAggregatedListCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.aggregatedList" call.
@@ -69143,7 +69143,7 @@ func (c *TargetPoolsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"region":     c.region,
 		"targetPool": c.targetPool,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.delete" call.
@@ -69311,7 +69311,7 @@ func (c *TargetPoolsGetCall) doRequest(alt string) (*http.Response, error) {
 		"region":     c.region,
 		"targetPool": c.targetPool,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.get"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.get" call.
@@ -69468,7 +69468,7 @@ func (c *TargetPoolsGetHealthCall) doRequest(alt string) (*http.Response, error)
 		"region":     c.region,
 		"targetPool": c.targetPool,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.getHealth"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.getHealth" call.
@@ -69641,7 +69641,7 @@ func (c *TargetPoolsInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.insert" call.
@@ -69868,7 +69868,7 @@ func (c *TargetPoolsListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.list"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.list" call.
@@ -70076,7 +70076,7 @@ func (c *TargetPoolsRemoveHealthCheckCall) doRequest(alt string) (*http.Response
 		"region":     c.region,
 		"targetPool": c.targetPool,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.removeHealthCheck"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.removeHealthCheck" call.
@@ -70255,7 +70255,7 @@ func (c *TargetPoolsRemoveInstanceCall) doRequest(alt string) (*http.Response, e
 		"region":     c.region,
 		"targetPool": c.targetPool,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.removeInstance"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.removeInstance" call.
@@ -70441,7 +70441,7 @@ func (c *TargetPoolsSetBackupCall) doRequest(alt string) (*http.Response, error)
 		"region":     c.region,
 		"targetPool": c.targetPool,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.setBackup"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.setBackup" call.
@@ -70610,7 +70610,7 @@ func (c *TargetPoolsTestIamPermissionsCall) doRequest(alt string) (*http.Respons
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetPools.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.targetPools.testIamPermissions" call.
@@ -70774,7 +70774,7 @@ func (c *TargetSslProxiesDeleteCall) doRequest(alt string) (*http.Response, erro
 		"project":        c.project,
 		"targetSslProxy": c.targetSslProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetSslProxies.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.targetSslProxies.delete" call.
@@ -70930,7 +70930,7 @@ func (c *TargetSslProxiesGetCall) doRequest(alt string) (*http.Response, error) 
 		"project":        c.project,
 		"targetSslProxy": c.targetSslProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetSslProxies.get"), c.s.client, req)
 }
 
 // Do executes the "compute.targetSslProxies.get" call.
@@ -71088,7 +71088,7 @@ func (c *TargetSslProxiesInsertCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetSslProxies.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.targetSslProxies.insert" call.
@@ -71303,7 +71303,7 @@ func (c *TargetSslProxiesListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetSslProxies.list"), c.s.client, req)
 }
 
 // Do executes the "compute.targetSslProxies.list" call.
@@ -71499,7 +71499,7 @@ func (c *TargetSslProxiesSetBackendServiceCall) doRequest(alt string) (*http.Res
 		"project":        c.project,
 		"targetSslProxy": c.targetSslProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetSslProxies.setBackendService"), c.s.client, req)
 }
 
 // Do executes the "compute.targetSslProxies.setBackendService" call.
@@ -71666,7 +71666,7 @@ func (c *TargetSslProxiesSetProxyHeaderCall) doRequest(alt string) (*http.Respon
 		"project":        c.project,
 		"targetSslProxy": c.targetSslProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetSslProxies.setProxyHeader"), c.s.client, req)
 }
 
 // Do executes the "compute.targetSslProxies.setProxyHeader" call.
@@ -71833,7 +71833,7 @@ func (c *TargetSslProxiesSetSslCertificatesCall) doRequest(alt string) (*http.Re
 		"project":        c.project,
 		"targetSslProxy": c.targetSslProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetSslProxies.setSslCertificates"), c.s.client, req)
 }
 
 // Do executes the "compute.targetSslProxies.setSslCertificates" call.
@@ -71985,7 +71985,7 @@ func (c *TargetSslProxiesTestIamPermissionsCall) doRequest(alt string) (*http.Re
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetSslProxies.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.targetSslProxies.testIamPermissions" call.
@@ -72141,7 +72141,7 @@ func (c *TargetTcpProxiesDeleteCall) doRequest(alt string) (*http.Response, erro
 		"project":        c.project,
 		"targetTcpProxy": c.targetTcpProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetTcpProxies.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.targetTcpProxies.delete" call.
@@ -72297,7 +72297,7 @@ func (c *TargetTcpProxiesGetCall) doRequest(alt string) (*http.Response, error) 
 		"project":        c.project,
 		"targetTcpProxy": c.targetTcpProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetTcpProxies.get"), c.s.client, req)
 }
 
 // Do executes the "compute.targetTcpProxies.get" call.
@@ -72455,7 +72455,7 @@ func (c *TargetTcpProxiesInsertCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetTcpProxies.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.targetTcpProxies.insert" call.
@@ -72670,7 +72670,7 @@ func (c *TargetTcpProxiesListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetTcpProxies.list"), c.s.client, req)
 }
 
 // Do executes the "compute.targetTcpProxies.list" call.
@@ -72866,7 +72866,7 @@ func (c *TargetTcpProxiesSetBackendServiceCall) doRequest(alt string) (*http.Res
 		"project":        c.project,
 		"targetTcpProxy": c.targetTcpProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetTcpProxies.setBackendService"), c.s.client, req)
 }
 
 // Do executes the "compute.targetTcpProxies.setBackendService" call.
@@ -73033,7 +73033,7 @@ func (c *TargetTcpProxiesSetProxyHeaderCall) doRequest(alt string) (*http.Respon
 		"project":        c.project,
 		"targetTcpProxy": c.targetTcpProxy,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetTcpProxies.setProxyHeader"), c.s.client, req)
 }
 
 // Do executes the "compute.targetTcpProxies.setProxyHeader" call.
@@ -73255,7 +73255,7 @@ func (c *TargetVpnGatewaysAggregatedListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetVpnGateways.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.targetVpnGateways.aggregatedList" call.
@@ -73447,7 +73447,7 @@ func (c *TargetVpnGatewaysDeleteCall) doRequest(alt string) (*http.Response, err
 		"region":           c.region,
 		"targetVpnGateway": c.targetVpnGateway,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetVpnGateways.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.targetVpnGateways.delete" call.
@@ -73614,7 +73614,7 @@ func (c *TargetVpnGatewaysGetCall) doRequest(alt string) (*http.Response, error)
 		"region":           c.region,
 		"targetVpnGateway": c.targetVpnGateway,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetVpnGateways.get"), c.s.client, req)
 }
 
 // Do executes the "compute.targetVpnGateways.get" call.
@@ -73783,7 +73783,7 @@ func (c *TargetVpnGatewaysInsertCall) doRequest(alt string) (*http.Response, err
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetVpnGateways.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.targetVpnGateways.insert" call.
@@ -74009,7 +74009,7 @@ func (c *TargetVpnGatewaysListCall) doRequest(alt string) (*http.Response, error
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetVpnGateways.list"), c.s.client, req)
 }
 
 // Do executes the "compute.targetVpnGateways.list" call.
@@ -74201,7 +74201,7 @@ func (c *TargetVpnGatewaysTestIamPermissionsCall) doRequest(alt string) (*http.R
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.targetVpnGateways.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.targetVpnGateways.testIamPermissions" call.
@@ -74366,7 +74366,7 @@ func (c *UrlMapsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"urlMap":  c.urlMap,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.urlMaps.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.urlMaps.delete" call.
@@ -74523,7 +74523,7 @@ func (c *UrlMapsGetCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"urlMap":  c.urlMap,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.urlMaps.get"), c.s.client, req)
 }
 
 // Do executes the "compute.urlMaps.get" call.
@@ -74682,7 +74682,7 @@ func (c *UrlMapsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.urlMaps.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.urlMaps.insert" call.
@@ -74842,7 +74842,7 @@ func (c *UrlMapsInvalidateCacheCall) doRequest(alt string) (*http.Response, erro
 		"project": c.project,
 		"urlMap":  c.urlMap,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.urlMaps.invalidateCache"), c.s.client, req)
 }
 
 // Do executes the "compute.urlMaps.invalidateCache" call.
@@ -75066,7 +75066,7 @@ func (c *UrlMapsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.urlMaps.list"), c.s.client, req)
 }
 
 // Do executes the "compute.urlMaps.list" call.
@@ -75264,7 +75264,7 @@ func (c *UrlMapsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"urlMap":  c.urlMap,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.urlMaps.patch"), c.s.client, req)
 }
 
 // Do executes the "compute.urlMaps.patch" call.
@@ -75417,7 +75417,7 @@ func (c *UrlMapsTestIamPermissionsCall) doRequest(alt string) (*http.Response, e
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.urlMaps.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.urlMaps.testIamPermissions" call.
@@ -75582,7 +75582,7 @@ func (c *UrlMapsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"urlMap":  c.urlMap,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.urlMaps.update"), c.s.client, req)
 }
 
 // Do executes the "compute.urlMaps.update" call.
@@ -75736,7 +75736,7 @@ func (c *UrlMapsValidateCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"urlMap":  c.urlMap,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.urlMaps.validate"), c.s.client, req)
 }
 
 // Do executes the "compute.urlMaps.validate" call.
@@ -75953,7 +75953,7 @@ func (c *VpnTunnelsAggregatedListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.vpnTunnels.aggregatedList"), c.s.client, req)
 }
 
 // Do executes the "compute.vpnTunnels.aggregatedList" call.
@@ -76145,7 +76145,7 @@ func (c *VpnTunnelsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"region":    c.region,
 		"vpnTunnel": c.vpnTunnel,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.vpnTunnels.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.vpnTunnels.delete" call.
@@ -76312,7 +76312,7 @@ func (c *VpnTunnelsGetCall) doRequest(alt string) (*http.Response, error) {
 		"region":    c.region,
 		"vpnTunnel": c.vpnTunnel,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.vpnTunnels.get"), c.s.client, req)
 }
 
 // Do executes the "compute.vpnTunnels.get" call.
@@ -76481,7 +76481,7 @@ func (c *VpnTunnelsInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.vpnTunnels.insert"), c.s.client, req)
 }
 
 // Do executes the "compute.vpnTunnels.insert" call.
@@ -76707,7 +76707,7 @@ func (c *VpnTunnelsListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"region":  c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.vpnTunnels.list"), c.s.client, req)
 }
 
 // Do executes the "compute.vpnTunnels.list" call.
@@ -76899,7 +76899,7 @@ func (c *VpnTunnelsTestIamPermissionsCall) doRequest(alt string) (*http.Response
 		"region":   c.region,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.vpnTunnels.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "compute.vpnTunnels.testIamPermissions" call.
@@ -77051,7 +77051,7 @@ func (c *ZoneOperationsDeleteCall) doRequest(alt string) (*http.Response, error)
 		"zone":      c.zone,
 		"operation": c.operation,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.zoneOperations.delete"), c.s.client, req)
 }
 
 // Do executes the "compute.zoneOperations.delete" call.
@@ -77185,7 +77185,7 @@ func (c *ZoneOperationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":      c.zone,
 		"operation": c.operation,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.zoneOperations.get"), c.s.client, req)
 }
 
 // Do executes the "compute.zoneOperations.get" call.
@@ -77413,7 +77413,7 @@ func (c *ZoneOperationsListCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.zoneOperations.list"), c.s.client, req)
 }
 
 // Do executes the "compute.zoneOperations.list" call.
@@ -77610,7 +77610,7 @@ func (c *ZonesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"zone":    c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.zones.get"), c.s.client, req)
 }
 
 // Do executes the "compute.zones.get" call.
@@ -77827,7 +77827,7 @@ func (c *ZonesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "compute.zones.list"), c.s.client, req)
 }
 
 // Do executes the "compute.zones.list" call.

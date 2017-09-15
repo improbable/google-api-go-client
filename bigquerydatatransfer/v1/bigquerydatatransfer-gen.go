@@ -1092,7 +1092,7 @@ func (c *ProjectsIsEnabledCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.isEnabled"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.isEnabled" call.
@@ -1232,7 +1232,7 @@ func (c *ProjectsSetEnabledCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.setEnabled"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.setEnabled" call.
@@ -1366,7 +1366,7 @@ func (c *ProjectsDataSourcesCheckValidCredsCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.dataSources.checkValidCreds"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.dataSources.checkValidCreds" call.
@@ -1510,7 +1510,7 @@ func (c *ProjectsDataSourcesGetCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.dataSources.get"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.dataSources.get" call.
@@ -1668,7 +1668,7 @@ func (c *ProjectsDataSourcesListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.dataSources.list"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.dataSources.list" call.
@@ -1863,7 +1863,7 @@ func (c *ProjectsTransferConfigsCreateCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.create"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.create" call.
@@ -1997,7 +1997,7 @@ func (c *ProjectsTransferConfigsDeleteCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.delete"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.delete" call.
@@ -2136,7 +2136,7 @@ func (c *ProjectsTransferConfigsGetCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.get"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.get" call.
@@ -2301,7 +2301,7 @@ func (c *ProjectsTransferConfigsListCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.list"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.list" call.
@@ -2510,7 +2510,7 @@ func (c *ProjectsTransferConfigsPatchCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.patch"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.patch" call.
@@ -2661,7 +2661,7 @@ func (c *ProjectsTransferConfigsScheduleRunsCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.scheduleRuns"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.scheduleRuns" call.
@@ -2789,7 +2789,7 @@ func (c *ProjectsTransferConfigsRunsDeleteCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.runs.delete"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.runs.delete" call.
@@ -2928,7 +2928,7 @@ func (c *ProjectsTransferConfigsRunsGetCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.runs.get"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.runs.get" call.
@@ -3112,7 +3112,7 @@ func (c *ProjectsTransferConfigsRunsListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.runs.list"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.runs.list" call.
@@ -3339,7 +3339,7 @@ func (c *ProjectsTransferConfigsRunsTransferLogsListCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "bigquerydatatransfer.projects.transferConfigs.runs.transferLogs.list"), c.s.client, req)
 }
 
 // Do executes the "bigquerydatatransfer.projects.transferConfigs.runs.transferLogs.list" call.

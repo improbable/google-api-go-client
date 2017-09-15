@@ -2563,7 +2563,7 @@ func (c *ProjectsGetSettingsCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.getSettings"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.getSettings" call.
@@ -2710,7 +2710,7 @@ func (c *ProjectsInitializeSettingsCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.initializeSettings"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.initializeSettings" call.
@@ -2855,7 +2855,7 @@ func (c *ProjectsHistoriesCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.create"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.create" call.
@@ -3006,7 +3006,7 @@ func (c *ProjectsHistoriesGetCall) doRequest(alt string) (*http.Response, error)
 		"projectId": c.projectId,
 		"historyId": c.historyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.get"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.get" call.
@@ -3182,7 +3182,7 @@ func (c *ProjectsHistoriesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.list"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.list" call.
@@ -3367,7 +3367,7 @@ func (c *ProjectsHistoriesExecutionsCreateCall) doRequest(alt string) (*http.Res
 		"projectId": c.projectId,
 		"historyId": c.historyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.create"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.create" call.
@@ -3528,7 +3528,7 @@ func (c *ProjectsHistoriesExecutionsGetCall) doRequest(alt string) (*http.Respon
 		"historyId":   c.historyId,
 		"executionId": c.executionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.get"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.get" call.
@@ -3706,7 +3706,7 @@ func (c *ProjectsHistoriesExecutionsListCall) doRequest(alt string) (*http.Respo
 		"projectId": c.projectId,
 		"historyId": c.historyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.list"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.list" call.
@@ -3896,7 +3896,7 @@ func (c *ProjectsHistoriesExecutionsPatchCall) doRequest(alt string) (*http.Resp
 		"historyId":   c.historyId,
 		"executionId": c.executionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.patch"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.patch" call.
@@ -4070,7 +4070,7 @@ func (c *ProjectsHistoriesExecutionsStepsCreateCall) doRequest(alt string) (*htt
 		"historyId":   c.historyId,
 		"executionId": c.executionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.create"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.create" call.
@@ -4241,7 +4241,7 @@ func (c *ProjectsHistoriesExecutionsStepsGetCall) doRequest(alt string) (*http.R
 		"executionId": c.executionId,
 		"stepId":      c.stepId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.get"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.get" call.
@@ -4408,7 +4408,7 @@ func (c *ProjectsHistoriesExecutionsStepsGetPerfMetricsSummaryCall) doRequest(al
 		"executionId": c.executionId,
 		"stepId":      c.stepId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.getPerfMetricsSummary"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.getPerfMetricsSummary" call.
@@ -4598,7 +4598,7 @@ func (c *ProjectsHistoriesExecutionsStepsListCall) doRequest(alt string) (*http.
 		"historyId":   c.historyId,
 		"executionId": c.executionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.list"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.list" call.
@@ -4800,7 +4800,7 @@ func (c *ProjectsHistoriesExecutionsStepsPatchCall) doRequest(alt string) (*http
 		"executionId": c.executionId,
 		"stepId":      c.stepId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.patch"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.patch" call.
@@ -4973,7 +4973,7 @@ func (c *ProjectsHistoriesExecutionsStepsPublishXunitXmlFilesCall) doRequest(alt
 		"executionId": c.executionId,
 		"stepId":      c.stepId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.publishXunitXmlFiles"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.publishXunitXmlFiles" call.
@@ -5137,7 +5137,7 @@ func (c *ProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateCall) doRequest
 		"executionId": c.executionId,
 		"stepId":      c.stepId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.perfMetricsSummary.create"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.perfMetricsSummary.create" call.
@@ -5301,7 +5301,7 @@ func (c *ProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateCall) doRequest(a
 		"executionId": c.executionId,
 		"stepId":      c.stepId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.perfSampleSeries.create"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.perfSampleSeries.create" call.
@@ -5474,7 +5474,7 @@ func (c *ProjectsHistoriesExecutionsStepsPerfSampleSeriesGetCall) doRequest(alt 
 		"stepId":         c.stepId,
 		"sampleSeriesId": c.sampleSeriesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.perfSampleSeries.get"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.perfSampleSeries.get" call.
@@ -5666,7 +5666,7 @@ func (c *ProjectsHistoriesExecutionsStepsPerfSampleSeriesListCall) doRequest(alt
 		"executionId": c.executionId,
 		"stepId":      c.stepId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.perfSampleSeries.list"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.perfSampleSeries.list" call.
@@ -5855,7 +5855,7 @@ func (c *ProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreateCall)
 		"stepId":         c.stepId,
 		"sampleSeriesId": c.sampleSeriesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.perfSampleSeries.samples.batchCreate"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.perfSampleSeries.samples.batchCreate" call.
@@ -6057,7 +6057,7 @@ func (c *ProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListCall) doRequ
 		"stepId":         c.stepId,
 		"sampleSeriesId": c.sampleSeriesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.perfSampleSeries.samples.list"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.perfSampleSeries.samples.list" call.
@@ -6283,7 +6283,7 @@ func (c *ProjectsHistoriesExecutionsStepsThumbnailsListCall) doRequest(alt strin
 		"executionId": c.executionId,
 		"stepId":      c.stepId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "toolresults.projects.histories.executions.steps.thumbnails.list"), c.s.client, req)
 }
 
 // Do executes the "toolresults.projects.histories.executions.steps.thumbnails.list" call.

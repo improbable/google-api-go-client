@@ -603,7 +603,7 @@ func (c *ChangesCreateCall) doRequest(alt string) (*http.Response, error) {
 		"project":     c.project,
 		"managedZone": c.managedZone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dns.changes.create"), c.s.client, req)
 }
 
 // Do executes the "dns.changes.create" call.
@@ -757,7 +757,7 @@ func (c *ChangesGetCall) doRequest(alt string) (*http.Response, error) {
 		"managedZone": c.managedZone,
 		"changeId":    c.changeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dns.changes.get"), c.s.client, req)
 }
 
 // Do executes the "dns.changes.get" call.
@@ -947,7 +947,7 @@ func (c *ChangesListCall) doRequest(alt string) (*http.Response, error) {
 		"project":     c.project,
 		"managedZone": c.managedZone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dns.changes.list"), c.s.client, req)
 }
 
 // Do executes the "dns.changes.list" call.
@@ -1136,7 +1136,7 @@ func (c *ManagedZonesCreateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dns.managedZones.create"), c.s.client, req)
 }
 
 // Do executes the "dns.managedZones.create" call.
@@ -1266,7 +1266,7 @@ func (c *ManagedZonesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project":     c.project,
 		"managedZone": c.managedZone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dns.managedZones.delete"), c.s.client, req)
 }
 
 // Do executes the "dns.managedZones.delete" call.
@@ -1386,7 +1386,7 @@ func (c *ManagedZonesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":     c.project,
 		"managedZone": c.managedZone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dns.managedZones.get"), c.s.client, req)
 }
 
 // Do executes the "dns.managedZones.get" call.
@@ -1557,7 +1557,7 @@ func (c *ManagedZonesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dns.managedZones.list"), c.s.client, req)
 }
 
 // Do executes the "dns.managedZones.list" call.
@@ -1734,7 +1734,7 @@ func (c *ProjectsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dns.projects.get"), c.s.client, req)
 }
 
 // Do executes the "dns.projects.get" call.
@@ -1909,7 +1909,7 @@ func (c *ResourceRecordSetsListCall) doRequest(alt string) (*http.Response, erro
 		"project":     c.project,
 		"managedZone": c.managedZone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dns.resourceRecordSets.list"), c.s.client, req)
 }
 
 // Do executes the "dns.resourceRecordSets.list" call.

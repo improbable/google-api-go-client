@@ -2989,7 +2989,7 @@ func (c *DevicesGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.get" call.
@@ -3151,7 +3151,7 @@ func (c *DevicesGetStateCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.getState"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.getState" call.
@@ -3305,7 +3305,7 @@ func (c *DevicesListCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.list" call.
@@ -3453,7 +3453,7 @@ func (c *DevicesSetStateCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.setState"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.setState" call.
@@ -3598,7 +3598,7 @@ func (c *EnterprisesAcknowledgeNotificationSetCall) doRequest(alt string) (*http
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.acknowledgeNotificationSet"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.acknowledgeNotificationSet" call.
@@ -3700,7 +3700,7 @@ func (c *EnterprisesCompleteSignupCall) doRequest(alt string) (*http.Response, e
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.completeSignup"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.completeSignup" call.
@@ -3835,7 +3835,7 @@ func (c *EnterprisesCreateWebTokenCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.createWebToken"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.createWebToken" call.
@@ -3964,7 +3964,7 @@ func (c *EnterprisesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.delete" call.
@@ -4062,7 +4062,7 @@ func (c *EnterprisesEnrollCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.enroll"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.enroll" call.
@@ -4198,7 +4198,7 @@ func (c *EnterprisesGenerateSignupUrlCall) doRequest(alt string) (*http.Response
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.generateSignupUrl"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.generateSignupUrl" call.
@@ -4331,7 +4331,7 @@ func (c *EnterprisesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.get" call.
@@ -4494,7 +4494,7 @@ func (c *EnterprisesGetServiceAccountCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.getServiceAccount"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.getServiceAccount" call.
@@ -4646,7 +4646,7 @@ func (c *EnterprisesGetStoreLayoutCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.getStoreLayout"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.getStoreLayout" call.
@@ -4773,7 +4773,7 @@ func (c *EnterprisesInsertCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.insert" call.
@@ -4913,7 +4913,7 @@ func (c *EnterprisesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.list" call.
@@ -5067,7 +5067,7 @@ func (c *EnterprisesPullNotificationSetCall) doRequest(alt string) (*http.Respon
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.pullNotificationSet"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.pullNotificationSet" call.
@@ -5196,7 +5196,7 @@ func (c *EnterprisesSendTestPushNotificationCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.sendTestPushNotification"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.sendTestPushNotification" call.
@@ -5329,7 +5329,7 @@ func (c *EnterprisesSetAccountCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.setAccount"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.setAccount" call.
@@ -5469,7 +5469,7 @@ func (c *EnterprisesSetStoreLayoutCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.setStoreLayout"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.setStoreLayout" call.
@@ -5595,7 +5595,7 @@ func (c *EnterprisesUnenrollCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.unenroll"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.unenroll" call.
@@ -5696,7 +5696,7 @@ func (c *EntitlementsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"userId":        c.userId,
 		"entitlementId": c.entitlementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.delete" call.
@@ -5825,7 +5825,7 @@ func (c *EntitlementsGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId":        c.userId,
 		"entitlementId": c.entitlementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.get" call.
@@ -5980,7 +5980,7 @@ func (c *EntitlementsListCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.list" call.
@@ -6134,7 +6134,7 @@ func (c *EntitlementsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"userId":        c.userId,
 		"entitlementId": c.entitlementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.patch" call.
@@ -6302,7 +6302,7 @@ func (c *EntitlementsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"userId":        c.userId,
 		"entitlementId": c.entitlementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.update" call.
@@ -6465,7 +6465,7 @@ func (c *GrouplicensesGetCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId":   c.enterpriseId,
 		"groupLicenseId": c.groupLicenseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.grouplicenses.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.grouplicenses.get" call.
@@ -6610,7 +6610,7 @@ func (c *GrouplicensesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.grouplicenses.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.grouplicenses.list" call.
@@ -6751,7 +6751,7 @@ func (c *GrouplicenseusersListCall) doRequest(alt string) (*http.Response, error
 		"enterpriseId":   c.enterpriseId,
 		"groupLicenseId": c.groupLicenseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.grouplicenseusers.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.grouplicenseusers.list" call.
@@ -6892,7 +6892,7 @@ func (c *InstallsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"deviceId":     c.deviceId,
 		"installId":    c.installId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.delete" call.
@@ -7031,7 +7031,7 @@ func (c *InstallsGetCall) doRequest(alt string) (*http.Response, error) {
 		"deviceId":     c.deviceId,
 		"installId":    c.installId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.get" call.
@@ -7196,7 +7196,7 @@ func (c *InstallsListCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.list" call.
@@ -7351,7 +7351,7 @@ func (c *InstallsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"deviceId":     c.deviceId,
 		"installId":    c.installId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.patch" call.
@@ -7516,7 +7516,7 @@ func (c *InstallsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"deviceId":     c.deviceId,
 		"installId":    c.installId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.update" call.
@@ -7673,7 +7673,7 @@ func (c *ManagedconfigurationsfordeviceDeleteCall) doRequest(alt string) (*http.
 		"deviceId":                        c.deviceId,
 		"managedConfigurationForDeviceId": c.managedConfigurationForDeviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.delete" call.
@@ -7812,7 +7812,7 @@ func (c *ManagedconfigurationsfordeviceGetCall) doRequest(alt string) (*http.Res
 		"deviceId":                        c.deviceId,
 		"managedConfigurationForDeviceId": c.managedConfigurationForDeviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.get" call.
@@ -7977,7 +7977,7 @@ func (c *ManagedconfigurationsfordeviceListCall) doRequest(alt string) (*http.Re
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.list" call.
@@ -8133,7 +8133,7 @@ func (c *ManagedconfigurationsfordevicePatchCall) doRequest(alt string) (*http.R
 		"deviceId":                        c.deviceId,
 		"managedConfigurationForDeviceId": c.managedConfigurationForDeviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.patch" call.
@@ -8297,7 +8297,7 @@ func (c *ManagedconfigurationsfordeviceUpdateCall) doRequest(alt string) (*http.
 		"deviceId":                        c.deviceId,
 		"managedConfigurationForDeviceId": c.managedConfigurationForDeviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.update" call.
@@ -8451,7 +8451,7 @@ func (c *ManagedconfigurationsforuserDeleteCall) doRequest(alt string) (*http.Re
 		"userId":                        c.userId,
 		"managedConfigurationForUserId": c.managedConfigurationForUserId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.delete" call.
@@ -8581,7 +8581,7 @@ func (c *ManagedconfigurationsforuserGetCall) doRequest(alt string) (*http.Respo
 		"userId":                        c.userId,
 		"managedConfigurationForUserId": c.managedConfigurationForUserId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.get" call.
@@ -8736,7 +8736,7 @@ func (c *ManagedconfigurationsforuserListCall) doRequest(alt string) (*http.Resp
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.list" call.
@@ -8882,7 +8882,7 @@ func (c *ManagedconfigurationsforuserPatchCall) doRequest(alt string) (*http.Res
 		"userId":                        c.userId,
 		"managedConfigurationForUserId": c.managedConfigurationForUserId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.patch" call.
@@ -9036,7 +9036,7 @@ func (c *ManagedconfigurationsforuserUpdateCall) doRequest(alt string) (*http.Re
 		"userId":                        c.userId,
 		"managedConfigurationForUserId": c.managedConfigurationForUserId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.update" call.
@@ -9198,7 +9198,7 @@ func (c *PermissionsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"permissionId": c.permissionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.permissions.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.permissions.get" call.
@@ -9342,7 +9342,7 @@ func (c *ProductsApproveCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.approve"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.approve" call.
@@ -9468,7 +9468,7 @@ func (c *ProductsGenerateApprovalUrlCall) doRequest(alt string) (*http.Response,
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.generateApprovalUrl"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.generateApprovalUrl" call.
@@ -9629,7 +9629,7 @@ func (c *ProductsGetCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.get" call.
@@ -9794,7 +9794,7 @@ func (c *ProductsGetAppRestrictionsSchemaCall) doRequest(alt string) (*http.Resp
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.getAppRestrictionsSchema"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.getAppRestrictionsSchema" call.
@@ -9947,7 +9947,7 @@ func (c *ProductsGetPermissionsCall) doRequest(alt string) (*http.Response, erro
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.getPermissions"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.getPermissions" call.
@@ -10136,7 +10136,7 @@ func (c *ProductsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.list" call.
@@ -10289,7 +10289,7 @@ func (c *ProductsUnapproveCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.unapprove"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.unapprove" call.
@@ -10398,7 +10398,7 @@ func (c *ServiceaccountkeysDeleteCall) doRequest(alt string) (*http.Response, er
 		"enterpriseId": c.enterpriseId,
 		"keyId":        c.keyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.serviceaccountkeys.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.serviceaccountkeys.delete" call.
@@ -10514,7 +10514,7 @@ func (c *ServiceaccountkeysInsertCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.serviceaccountkeys.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.serviceaccountkeys.insert" call.
@@ -10658,7 +10658,7 @@ func (c *ServiceaccountkeysListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.serviceaccountkeys.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.serviceaccountkeys.list" call.
@@ -10787,7 +10787,7 @@ func (c *StorelayoutclustersDeleteCall) doRequest(alt string) (*http.Response, e
 		"pageId":       c.pageId,
 		"clusterId":    c.clusterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.delete" call.
@@ -10916,7 +10916,7 @@ func (c *StorelayoutclustersGetCall) doRequest(alt string) (*http.Response, erro
 		"pageId":       c.pageId,
 		"clusterId":    c.clusterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.get" call.
@@ -11063,7 +11063,7 @@ func (c *StorelayoutclustersInsertCall) doRequest(alt string) (*http.Response, e
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.insert" call.
@@ -11213,7 +11213,7 @@ func (c *StorelayoutclustersListCall) doRequest(alt string) (*http.Response, err
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.list" call.
@@ -11356,7 +11356,7 @@ func (c *StorelayoutclustersPatchCall) doRequest(alt string) (*http.Response, er
 		"pageId":       c.pageId,
 		"clusterId":    c.clusterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.patch" call.
@@ -11509,7 +11509,7 @@ func (c *StorelayoutclustersUpdateCall) doRequest(alt string) (*http.Response, e
 		"pageId":       c.pageId,
 		"clusterId":    c.clusterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.update" call.
@@ -11652,7 +11652,7 @@ func (c *StorelayoutpagesDeleteCall) doRequest(alt string) (*http.Response, erro
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.delete" call.
@@ -11771,7 +11771,7 @@ func (c *StorelayoutpagesGetCall) doRequest(alt string) (*http.Response, error) 
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.get" call.
@@ -11908,7 +11908,7 @@ func (c *StorelayoutpagesInsertCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.insert" call.
@@ -12048,7 +12048,7 @@ func (c *StorelayoutpagesListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.list" call.
@@ -12182,7 +12182,7 @@ func (c *StorelayoutpagesPatchCall) doRequest(alt string) (*http.Response, error
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.patch" call.
@@ -12325,7 +12325,7 @@ func (c *StorelayoutpagesUpdateCall) doRequest(alt string) (*http.Response, erro
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.update" call.
@@ -12461,7 +12461,7 @@ func (c *UsersDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.delete" call.
@@ -12571,7 +12571,7 @@ func (c *UsersGenerateAuthenticationTokenCall) doRequest(alt string) (*http.Resp
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.generateAuthenticationToken"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.generateAuthenticationToken" call.
@@ -12708,7 +12708,7 @@ func (c *UsersGenerateTokenCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.generateToken"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.generateToken" call.
@@ -12855,7 +12855,7 @@ func (c *UsersGetCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.get" call.
@@ -13003,7 +13003,7 @@ func (c *UsersGetAvailableProductSetCall) doRequest(alt string) (*http.Response,
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.getAvailableProductSet"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.getAvailableProductSet" call.
@@ -13146,7 +13146,7 @@ func (c *UsersInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.insert" call.
@@ -13290,7 +13290,7 @@ func (c *UsersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.list" call.
@@ -13436,7 +13436,7 @@ func (c *UsersPatchCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.patch" call.
@@ -13573,7 +13573,7 @@ func (c *UsersRevokeTokenCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.revokeToken"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.revokeToken" call.
@@ -13688,7 +13688,7 @@ func (c *UsersSetAvailableProductSetCall) doRequest(alt string) (*http.Response,
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.setAvailableProductSet"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.setAvailableProductSet" call.
@@ -13836,7 +13836,7 @@ func (c *UsersUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.update" call.

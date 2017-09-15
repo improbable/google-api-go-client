@@ -842,7 +842,7 @@ func (c *MobileapppanelsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"panelId": c.panelId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.mobileapppanels.get"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.mobileapppanels.get" call.
@@ -994,7 +994,7 @@ func (c *MobileapppanelsListCall) doRequest(alt string) (*http.Response, error) 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.mobileapppanels.list"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.mobileapppanels.list" call.
@@ -1132,7 +1132,7 @@ func (c *MobileapppanelsUpdateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"panelId": c.panelId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.mobileapppanels.update"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.mobileapppanels.update" call.
@@ -1277,7 +1277,7 @@ func (c *ResultsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"surveyUrlId": c.surveyUrlId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.results.get"), c.s.client, req)
 }
 
 // Download fetches the API endpoint's "media" value, instead of the normal
@@ -1422,7 +1422,7 @@ func (c *SurveysDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"surveyUrlId": c.surveyUrlId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.delete"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.delete" call.
@@ -1560,7 +1560,7 @@ func (c *SurveysGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"surveyUrlId": c.surveyUrlId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.get"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.get" call.
@@ -1687,7 +1687,7 @@ func (c *SurveysInsertCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.insert"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.insert" call.
@@ -1830,7 +1830,7 @@ func (c *SurveysListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.list"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.list" call.
@@ -1967,7 +1967,7 @@ func (c *SurveysStartCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"resourceId": c.resourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.start"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.start" call.
@@ -2093,7 +2093,7 @@ func (c *SurveysStopCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"resourceId": c.resourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.stop"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.stop" call.
@@ -2224,7 +2224,7 @@ func (c *SurveysUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"surveyUrlId": c.surveyUrlId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.update"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.update" call.

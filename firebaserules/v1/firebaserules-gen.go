@@ -986,7 +986,7 @@ func (c *ProjectsTestCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.test"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.test" call.
@@ -1157,7 +1157,7 @@ func (c *ProjectsReleasesCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.create"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.create" call.
@@ -1286,7 +1286,7 @@ func (c *ProjectsReleasesDeleteCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.delete"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.delete" call.
@@ -1426,7 +1426,7 @@ func (c *ProjectsReleasesGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.get"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.get" call.
@@ -1635,7 +1635,7 @@ func (c *ProjectsReleasesListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.list"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.list" call.
@@ -1812,7 +1812,7 @@ func (c *ProjectsReleasesUpdateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.update"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.update" call.
@@ -1956,7 +1956,7 @@ func (c *ProjectsRulesetsCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.create"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.create" call.
@@ -2088,7 +2088,7 @@ func (c *ProjectsRulesetsDeleteCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.delete"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.delete" call.
@@ -2228,7 +2228,7 @@ func (c *ProjectsRulesetsGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.get"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.get" call.
@@ -2410,7 +2410,7 @@ func (c *ProjectsRulesetsListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.list"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.list" call.

@@ -1714,7 +1714,7 @@ func (c *ContentInspectCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.content.inspect"), c.s.client, req)
 }
 
 // Do executes the "dlp.content.inspect" call.
@@ -1837,7 +1837,7 @@ func (c *ContentRedactCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.content.redact"), c.s.client, req)
 }
 
 // Do executes the "dlp.content.redact" call.
@@ -1964,7 +1964,7 @@ func (c *InspectOperationsCancelCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.inspect.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "dlp.inspect.operations.cancel" call.
@@ -2095,7 +2095,7 @@ func (c *InspectOperationsCreateCall) doRequest(alt string) (*http.Response, err
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.inspect.operations.create"), c.s.client, req)
 }
 
 // Do executes the "dlp.inspect.operations.create" call.
@@ -2214,7 +2214,7 @@ func (c *InspectOperationsDeleteCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.inspect.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "dlp.inspect.operations.delete" call.
@@ -2357,7 +2357,7 @@ func (c *InspectOperationsGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.inspect.operations.get"), c.s.client, req)
 }
 
 // Do executes the "dlp.inspect.operations.get" call.
@@ -2533,7 +2533,7 @@ func (c *InspectOperationsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.inspect.operations.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.inspect.operations.list" call.
@@ -2745,7 +2745,7 @@ func (c *InspectResultsFindingsListCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.inspect.results.findings.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.inspect.results.findings.list" call.
@@ -2925,7 +2925,7 @@ func (c *RootCategoriesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.rootCategories.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.rootCategories.list" call.
@@ -3069,7 +3069,7 @@ func (c *RootCategoriesInfoTypesListCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"category": c.category,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.rootCategories.infoTypes.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.rootCategories.infoTypes.list" call.

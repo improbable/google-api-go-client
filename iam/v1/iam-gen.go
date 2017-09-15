@@ -1188,7 +1188,7 @@ func (c *ProjectsServiceAccountsCreateCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.create"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.create" call.
@@ -1316,7 +1316,7 @@ func (c *ProjectsServiceAccountsDeleteCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.delete"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.delete" call.
@@ -1455,7 +1455,7 @@ func (c *ProjectsServiceAccountsGetCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.get"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.get" call.
@@ -1582,7 +1582,7 @@ func (c *ProjectsServiceAccountsGetIamPolicyCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.getIamPolicy" call.
@@ -1741,7 +1741,7 @@ func (c *ProjectsServiceAccountsListCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.list"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.list" call.
@@ -1907,7 +1907,7 @@ func (c *ProjectsServiceAccountsSetIamPolicyCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.setIamPolicy" call.
@@ -2043,7 +2043,7 @@ func (c *ProjectsServiceAccountsSignBlobCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.signBlob"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.signBlob" call.
@@ -2185,7 +2185,7 @@ func (c *ProjectsServiceAccountsSignJwtCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.signJwt"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.signJwt" call.
@@ -2322,7 +2322,7 @@ func (c *ProjectsServiceAccountsTestIamPermissionsCall) doRequest(alt string) (*
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.testIamPermissions" call.
@@ -2461,7 +2461,7 @@ func (c *ProjectsServiceAccountsUpdateCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.update"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.update" call.
@@ -2597,7 +2597,7 @@ func (c *ProjectsServiceAccountsKeysCreateCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.keys.create"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.keys.create" call.
@@ -2725,7 +2725,7 @@ func (c *ProjectsServiceAccountsKeysDeleteCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.keys.delete"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.keys.delete" call.
@@ -2878,7 +2878,7 @@ func (c *ProjectsServiceAccountsKeysGetCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.keys.get"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.keys.get" call.
@@ -3041,7 +3041,7 @@ func (c *ProjectsServiceAccountsKeysListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.projects.serviceAccounts.keys.list"), c.s.client, req)
 }
 
 // Do executes the "iam.projects.serviceAccounts.keys.list" call.
@@ -3183,7 +3183,7 @@ func (c *RolesQueryGrantableRolesCall) doRequest(alt string) (*http.Response, er
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "iam.roles.queryGrantableRoles"), c.s.client, req)
 }
 
 // Do executes the "iam.roles.queryGrantableRoles" call.

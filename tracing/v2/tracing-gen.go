@@ -1131,7 +1131,7 @@ func (c *ProjectsTracesBatchWriteCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tracing.projects.traces.batchWrite"), c.s.client, req)
 }
 
 // Do executes the "tracing.projects.traces.batchWrite" call.
@@ -1341,7 +1341,7 @@ func (c *ProjectsTracesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tracing.projects.traces.list"), c.s.client, req)
 }
 
 // Do executes the "tracing.projects.traces.list" call.
@@ -1543,7 +1543,7 @@ func (c *ProjectsTracesListSpansCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tracing.projects.traces.listSpans"), c.s.client, req)
 }
 
 // Do executes the "tracing.projects.traces.listSpans" call.
@@ -1702,7 +1702,7 @@ func (c *ProjectsTracesSpansCreateCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tracing.projects.traces.spans.create"), c.s.client, req)
 }
 
 // Do executes the "tracing.projects.traces.spans.create" call.

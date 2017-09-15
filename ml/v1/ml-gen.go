@@ -2306,7 +2306,7 @@ func (c *ProjectsGetConfigCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.getConfig"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.getConfig" call.
@@ -2441,7 +2441,7 @@ func (c *ProjectsPredictCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.predict"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.predict" call.
@@ -2576,7 +2576,7 @@ func (c *ProjectsJobsCancelCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.jobs.cancel"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.jobs.cancel" call.
@@ -2711,7 +2711,7 @@ func (c *ProjectsJobsCreateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.jobs.create"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.jobs.create" call.
@@ -2853,7 +2853,7 @@ func (c *ProjectsJobsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.jobs.get"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.jobs.get" call.
@@ -3022,7 +3022,7 @@ func (c *ProjectsJobsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.jobs.list"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.jobs.list" call.
@@ -3200,7 +3200,7 @@ func (c *ProjectsModelsCreateCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.models.create"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.models.create" call.
@@ -3335,7 +3335,7 @@ func (c *ProjectsModelsDeleteCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.models.delete"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.models.delete" call.
@@ -3478,7 +3478,7 @@ func (c *ProjectsModelsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.models.get"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.models.get" call.
@@ -3644,7 +3644,7 @@ func (c *ProjectsModelsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.models.list"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.models.list" call.
@@ -3823,7 +3823,7 @@ func (c *ProjectsModelsVersionsCreateCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.models.versions.create"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.models.versions.create" call.
@@ -3959,7 +3959,7 @@ func (c *ProjectsModelsVersionsDeleteCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.models.versions.delete"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.models.versions.delete" call.
@@ -4106,7 +4106,7 @@ func (c *ProjectsModelsVersionsGetCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.models.versions.get"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.models.versions.get" call.
@@ -4274,7 +4274,7 @@ func (c *ProjectsModelsVersionsListCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.models.versions.list"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.models.versions.list" call.
@@ -4450,7 +4450,7 @@ func (c *ProjectsModelsVersionsSetDefaultCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.models.versions.setDefault"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.models.versions.setDefault" call.
@@ -4595,7 +4595,7 @@ func (c *ProjectsOperationsCancelCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.operations.cancel" call.
@@ -4726,7 +4726,7 @@ func (c *ProjectsOperationsDeleteCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.operations.delete" call.
@@ -4869,7 +4869,7 @@ func (c *ProjectsOperationsGetCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.operations.get"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.operations.get" call.
@@ -5045,7 +5045,7 @@ func (c *ProjectsOperationsListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "ml.projects.operations.list"), c.s.client, req)
 }
 
 // Do executes the "ml.projects.operations.list" call.

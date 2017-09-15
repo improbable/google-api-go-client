@@ -843,7 +843,7 @@ func (c *OperationsCancelCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "speech.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "speech.operations.cancel" call.
@@ -977,7 +977,7 @@ func (c *OperationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "speech.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "speech.operations.delete" call.
@@ -1120,7 +1120,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "speech.operations.get"), c.s.client, req)
 }
 
 // Do executes the "speech.operations.get" call.
@@ -1298,7 +1298,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "speech.operations.list"), c.s.client, req)
 }
 
 // Do executes the "speech.operations.list" call.
@@ -1463,7 +1463,7 @@ func (c *SpeechLongrunningrecognizeCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "speech.speech.longrunningrecognize"), c.s.client, req)
 }
 
 // Do executes the "speech.speech.longrunningrecognize" call.
@@ -1585,7 +1585,7 @@ func (c *SpeechRecognizeCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "speech.speech.recognize"), c.s.client, req)
 }
 
 // Do executes the "speech.speech.recognize" call.

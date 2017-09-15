@@ -719,7 +719,7 @@ func (c *AppsLocationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":      c.appsId,
 		"locationsId": c.locationsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.locations.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.locations.get" call.
@@ -888,7 +888,7 @@ func (c *AppsLocationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.locations.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.locations.list" call.
@@ -1070,7 +1070,7 @@ func (c *AppsOperationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":       c.appsId,
 		"operationsId": c.operationsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.operations.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.operations.get" call.
@@ -1247,7 +1247,7 @@ func (c *AppsOperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.operations.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.operations.list" call.

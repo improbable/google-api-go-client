@@ -4571,7 +4571,7 @@ func (c *BookshelvesGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"shelf":  c.shelf,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.bookshelves.get"), c.s.client, req)
 }
 
 // Do executes the "books.bookshelves.get" call.
@@ -4727,7 +4727,7 @@ func (c *BookshelvesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.bookshelves.list"), c.s.client, req)
 }
 
 // Do executes the "books.bookshelves.list" call.
@@ -4901,7 +4901,7 @@ func (c *BookshelvesVolumesListCall) doRequest(alt string) (*http.Response, erro
 		"userId": c.userId,
 		"shelf":  c.shelf,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.bookshelves.volumes.list"), c.s.client, req)
 }
 
 // Do executes the "books.bookshelves.volumes.list" call.
@@ -5077,7 +5077,7 @@ func (c *CloudloadingAddBookCall) doRequest(alt string) (*http.Response, error) 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.cloudloading.addBook"), c.s.client, req)
 }
 
 // Do executes the "books.cloudloading.addBook" call.
@@ -5206,7 +5206,7 @@ func (c *CloudloadingDeleteBookCall) doRequest(alt string) (*http.Response, erro
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.cloudloading.deleteBook"), c.s.client, req)
 }
 
 // Do executes the "books.cloudloading.deleteBook" call.
@@ -5303,7 +5303,7 @@ func (c *CloudloadingUpdateBookCall) doRequest(alt string) (*http.Response, erro
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.cloudloading.updateBook"), c.s.client, req)
 }
 
 // Do executes the "books.cloudloading.updateBook" call.
@@ -5429,7 +5429,7 @@ func (c *DictionaryListOfflineMetadataCall) doRequest(alt string) (*http.Respons
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.dictionary.listOfflineMetadata"), c.s.client, req)
 }
 
 // Do executes the "books.dictionary.listOfflineMetadata" call.
@@ -5583,7 +5583,7 @@ func (c *LayersGetCall) doRequest(alt string) (*http.Response, error) {
 		"volumeId":  c.volumeId,
 		"summaryId": c.summaryId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.layers.get"), c.s.client, req)
 }
 
 // Do executes the "books.layers.get" call.
@@ -5765,7 +5765,7 @@ func (c *LayersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"volumeId": c.volumeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.layers.list"), c.s.client, req)
 }
 
 // Do executes the "books.layers.list" call.
@@ -5976,7 +5976,7 @@ func (c *LayersAnnotationDataGetCall) doRequest(alt string) (*http.Response, err
 		"layerId":          c.layerId,
 		"annotationDataId": c.annotationDataId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.layers.annotationData.get"), c.s.client, req)
 }
 
 // Do executes the "books.layers.annotationData.get" call.
@@ -6246,7 +6246,7 @@ func (c *LayersAnnotationDataListCall) doRequest(alt string) (*http.Response, er
 		"volumeId": c.volumeId,
 		"layerId":  c.layerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.layers.annotationData.list"), c.s.client, req)
 }
 
 // Do executes the "books.layers.annotationData.list" call.
@@ -6497,7 +6497,7 @@ func (c *LayersVolumeAnnotationsGetCall) doRequest(alt string) (*http.Response, 
 		"layerId":      c.layerId,
 		"annotationId": c.annotationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.layers.volumeAnnotations.get"), c.s.client, req)
 }
 
 // Do executes the "books.layers.volumeAnnotations.get" call.
@@ -6751,7 +6751,7 @@ func (c *LayersVolumeAnnotationsListCall) doRequest(alt string) (*http.Response,
 		"volumeId": c.volumeId,
 		"layerId":  c.layerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.layers.volumeAnnotations.list"), c.s.client, req)
 }
 
 // Do executes the "books.layers.volumeAnnotations.list" call.
@@ -6981,7 +6981,7 @@ func (c *MyconfigGetUserSettingsCall) doRequest(alt string) (*http.Response, err
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.myconfig.getUserSettings"), c.s.client, req)
 }
 
 // Do executes the "books.myconfig.getUserSettings" call.
@@ -7104,7 +7104,7 @@ func (c *MyconfigReleaseDownloadAccessCall) doRequest(alt string) (*http.Respons
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.myconfig.releaseDownloadAccess"), c.s.client, req)
 }
 
 // Do executes the "books.myconfig.releaseDownloadAccess" call.
@@ -7263,7 +7263,7 @@ func (c *MyconfigRequestAccessCall) doRequest(alt string) (*http.Response, error
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.myconfig.requestAccess"), c.s.client, req)
 }
 
 // Do executes the "books.myconfig.requestAccess" call.
@@ -7465,7 +7465,7 @@ func (c *MyconfigSyncVolumeLicensesCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.myconfig.syncVolumeLicenses"), c.s.client, req)
 }
 
 // Do executes the "books.myconfig.syncVolumeLicenses" call.
@@ -7639,7 +7639,7 @@ func (c *MyconfigUpdateUserSettingsCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.myconfig.updateUserSettings"), c.s.client, req)
 }
 
 // Do executes the "books.myconfig.updateUserSettings" call.
@@ -7761,7 +7761,7 @@ func (c *MylibraryAnnotationsDeleteCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"annotationId": c.annotationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.annotations.delete"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.annotations.delete" call.
@@ -7892,7 +7892,7 @@ func (c *MylibraryAnnotationsInsertCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.annotations.insert"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.annotations.insert" call.
@@ -8111,7 +8111,7 @@ func (c *MylibraryAnnotationsListCall) doRequest(alt string) (*http.Response, er
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.annotations.list"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.annotations.list" call.
@@ -8297,7 +8297,7 @@ func (c *MylibraryAnnotationsSummaryCall) doRequest(alt string) (*http.Response,
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.annotations.summary"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.annotations.summary" call.
@@ -8442,7 +8442,7 @@ func (c *MylibraryAnnotationsUpdateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"annotationId": c.annotationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.annotations.update"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.annotations.update" call.
@@ -8593,7 +8593,7 @@ func (c *MylibraryBookshelvesAddVolumeCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"shelf": c.shelf,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.bookshelves.addVolume"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.bookshelves.addVolume" call.
@@ -8722,7 +8722,7 @@ func (c *MylibraryBookshelvesClearVolumesCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"shelf": c.shelf,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.bookshelves.clearVolumes"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.bookshelves.clearVolumes" call.
@@ -8844,7 +8844,7 @@ func (c *MylibraryBookshelvesGetCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"shelf": c.shelf,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.bookshelves.get"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.bookshelves.get" call.
@@ -8989,7 +8989,7 @@ func (c *MylibraryBookshelvesListCall) doRequest(alt string) (*http.Response, er
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.bookshelves.list"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.bookshelves.list" call.
@@ -9117,7 +9117,7 @@ func (c *MylibraryBookshelvesMoveVolumeCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"shelf": c.shelf,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.bookshelves.moveVolume"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.bookshelves.moveVolume" call.
@@ -9250,7 +9250,7 @@ func (c *MylibraryBookshelvesRemoveVolumeCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"shelf": c.shelf,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.bookshelves.removeVolume"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.bookshelves.removeVolume" call.
@@ -9435,7 +9435,7 @@ func (c *MylibraryBookshelvesVolumesListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"shelf": c.shelf,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.bookshelves.volumes.list"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.bookshelves.volumes.list" call.
@@ -9633,7 +9633,7 @@ func (c *MylibraryReadingpositionsGetCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"volumeId": c.volumeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.readingpositions.get"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.readingpositions.get" call.
@@ -9804,7 +9804,7 @@ func (c *MylibraryReadingpositionsSetPositionCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"volumeId": c.volumeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.mylibrary.readingpositions.setPosition"), c.s.client, req)
 }
 
 // Do executes the "books.mylibrary.readingpositions.setPosition" call.
@@ -9974,7 +9974,7 @@ func (c *NotificationGetCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.notification.get"), c.s.client, req)
 }
 
 // Do executes the "books.notification.get" call.
@@ -10123,7 +10123,7 @@ func (c *OnboardingListCategoriesCall) doRequest(alt string) (*http.Response, er
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.onboarding.listCategories"), c.s.client, req)
 }
 
 // Do executes the "books.onboarding.listCategories" call.
@@ -10293,7 +10293,7 @@ func (c *OnboardingListCategoryVolumesCall) doRequest(alt string) (*http.Respons
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.onboarding.listCategoryVolumes"), c.s.client, req)
 }
 
 // Do executes the "books.onboarding.listCategoryVolumes" call.
@@ -10500,7 +10500,7 @@ func (c *PersonalizedstreamGetCall) doRequest(alt string) (*http.Response, error
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.personalizedstream.get"), c.s.client, req)
 }
 
 // Do executes the "books.personalizedstream.get" call.
@@ -10682,7 +10682,7 @@ func (c *PromoofferAcceptCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.promooffer.accept"), c.s.client, req)
 }
 
 // Do executes the "books.promooffer.accept" call.
@@ -10845,7 +10845,7 @@ func (c *PromoofferDismissCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.promooffer.dismiss"), c.s.client, req)
 }
 
 // Do executes the "books.promooffer.dismiss" call.
@@ -11012,7 +11012,7 @@ func (c *PromoofferGetCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.promooffer.get"), c.s.client, req)
 }
 
 // Do executes the "books.promooffer.get" call.
@@ -11166,7 +11166,7 @@ func (c *SeriesGetCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.series.get"), c.s.client, req)
 }
 
 // Do executes the "books.series.get" call.
@@ -11314,7 +11314,7 @@ func (c *SeriesMembershipGetCall) doRequest(alt string) (*http.Response, error) 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.series.membership.get"), c.s.client, req)
 }
 
 // Do executes the "books.series.membership.get" call.
@@ -11509,7 +11509,7 @@ func (c *VolumesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"volumeId": c.volumeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.volumes.get"), c.s.client, req)
 }
 
 // Do executes the "books.volumes.get" call.
@@ -11801,7 +11801,7 @@ func (c *VolumesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.volumes.list"), c.s.client, req)
 }
 
 // Do executes the "books.volumes.list" call.
@@ -12110,7 +12110,7 @@ func (c *VolumesAssociatedListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"volumeId": c.volumeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.volumes.associated.list"), c.s.client, req)
 }
 
 // Do executes the "books.volumes.associated.list" call.
@@ -12346,7 +12346,7 @@ func (c *VolumesMybooksListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.volumes.mybooks.list"), c.s.client, req)
 }
 
 // Do executes the "books.volumes.mybooks.list" call.
@@ -12569,7 +12569,7 @@ func (c *VolumesRecommendedListCall) doRequest(alt string) (*http.Response, erro
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.volumes.recommended.list"), c.s.client, req)
 }
 
 // Do executes the "books.volumes.recommended.list" call.
@@ -12718,7 +12718,7 @@ func (c *VolumesRecommendedRateCall) doRequest(alt string) (*http.Response, erro
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.volumes.recommended.rate"), c.s.client, req)
 }
 
 // Do executes the "books.volumes.recommended.rate" call.
@@ -12925,7 +12925,7 @@ func (c *VolumesUseruploadedListCall) doRequest(alt string) (*http.Response, err
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "books.volumes.useruploaded.list"), c.s.client, req)
 }
 
 // Do executes the "books.volumes.useruploaded.list" call.

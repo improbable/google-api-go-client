@@ -3379,7 +3379,7 @@ func (c *AccountsClientsCreateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": strconv.FormatInt(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.create" call.
@@ -3524,7 +3524,7 @@ func (c *AccountsClientsGetCall) doRequest(alt string) (*http.Response, error) {
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.get" call.
@@ -3691,7 +3691,7 @@ func (c *AccountsClientsListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": strconv.FormatInt(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.list" call.
@@ -3858,7 +3858,7 @@ func (c *AccountsClientsUpdateCall) doRequest(alt string) (*http.Response, error
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.update"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.update" call.
@@ -4005,7 +4005,7 @@ func (c *AccountsClientsInvitationsCreateCall) doRequest(alt string) (*http.Resp
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.invitations.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.invitations.create" call.
@@ -4161,7 +4161,7 @@ func (c *AccountsClientsInvitationsGetCall) doRequest(alt string) (*http.Respons
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 		"invitationId":    strconv.FormatInt(c.invitationId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.invitations.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.invitations.get" call.
@@ -4342,7 +4342,7 @@ func (c *AccountsClientsInvitationsListCall) doRequest(alt string) (*http.Respon
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": c.clientAccountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.invitations.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.invitations.list" call.
@@ -4527,7 +4527,7 @@ func (c *AccountsClientsUsersGetCall) doRequest(alt string) (*http.Response, err
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 		"userId":          strconv.FormatInt(c.userId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.users.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.users.get" call.
@@ -4706,7 +4706,7 @@ func (c *AccountsClientsUsersListCall) doRequest(alt string) (*http.Response, er
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": c.clientAccountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.users.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.users.list" call.
@@ -4884,7 +4884,7 @@ func (c *AccountsClientsUsersUpdateCall) doRequest(alt string) (*http.Response, 
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 		"userId":          strconv.FormatInt(c.userId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.users.update"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.users.update" call.
@@ -5048,7 +5048,7 @@ func (c *AccountsCreativesCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.create" call.
@@ -5201,7 +5201,7 @@ func (c *AccountsCreativesGetCall) doRequest(alt string) (*http.Response, error)
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.get" call.
@@ -5394,7 +5394,7 @@ func (c *AccountsCreativesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.list" call.
@@ -5567,7 +5567,7 @@ func (c *AccountsCreativesStopWatchingCall) doRequest(alt string) (*http.Respons
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.stopWatching"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.stopWatching" call.
@@ -5711,7 +5711,7 @@ func (c *AccountsCreativesUpdateCall) doRequest(alt string) (*http.Response, err
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.update"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.update" call.
@@ -5857,7 +5857,7 @@ func (c *AccountsCreativesWatchCall) doRequest(alt string) (*http.Response, erro
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.watch"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.watch" call.
@@ -6001,7 +6001,7 @@ func (c *AccountsCreativesDealAssociationsAddCall) doRequest(alt string) (*http.
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.dealAssociations.add"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.dealAssociations.add" call.
@@ -6194,7 +6194,7 @@ func (c *AccountsCreativesDealAssociationsListCall) doRequest(alt string) (*http
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.dealAssociations.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.dealAssociations.list" call.
@@ -6372,7 +6372,7 @@ func (c *AccountsCreativesDealAssociationsRemoveCall) doRequest(alt string) (*ht
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.dealAssociations.remove"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.dealAssociations.remove" call.
@@ -6524,7 +6524,7 @@ func (c *AccountsFilterSetsCreateCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": strconv.FormatInt(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.create" call.
@@ -6662,7 +6662,7 @@ func (c *AccountsFilterSetsDeleteCall) doRequest(alt string) (*http.Response, er
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.delete"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.delete" call.
@@ -6814,7 +6814,7 @@ func (c *AccountsFilterSetsGetCall) doRequest(alt string) (*http.Response, error
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.get" call.
@@ -6984,7 +6984,7 @@ func (c *AccountsFilterSetsListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": strconv.FormatInt(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.list" call.
@@ -7180,7 +7180,7 @@ func (c *AccountsFilterSetsBidMetricsListCall) doRequest(alt string) (*http.Resp
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.bidMetrics.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.bidMetrics.list" call.
@@ -7386,7 +7386,7 @@ func (c *AccountsFilterSetsBidResponseErrorsListCall) doRequest(alt string) (*ht
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.bidResponseErrors.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.bidResponseErrors.list" call.
@@ -7593,7 +7593,7 @@ func (c *AccountsFilterSetsBidResponsesWithoutBidsListCall) doRequest(alt string
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.bidResponsesWithoutBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.bidResponsesWithoutBids.list" call.
@@ -7800,7 +7800,7 @@ func (c *AccountsFilterSetsFilteredBidRequestsListCall) doRequest(alt string) (*
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.filteredBidRequests.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.filteredBidRequests.list" call.
@@ -8006,7 +8006,7 @@ func (c *AccountsFilterSetsFilteredBidsListCall) doRequest(alt string) (*http.Re
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.filteredBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.filteredBids.list" call.
@@ -8216,7 +8216,7 @@ func (c *AccountsFilterSetsFilteredBidsCreativesListCall) doRequest(alt string) 
 		"filterSetId":      strconv.FormatInt(c.filterSetId, 10),
 		"creativeStatusId": strconv.FormatInt(c.creativeStatusId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.filteredBids.creatives.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.filteredBids.creatives.list" call.
@@ -8441,7 +8441,7 @@ func (c *AccountsFilterSetsFilteredBidsCreativesDetailsListCall) doRequest(alt s
 		"creativeStatusId": strconv.FormatInt(c.creativeStatusId, 10),
 		"creativeId":       c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.filteredBids.creatives.details.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.filteredBids.creatives.details.list" call.
@@ -8668,7 +8668,7 @@ func (c *AccountsFilterSetsFilteredBidsDetailsListCall) doRequest(alt string) (*
 		"filterSetId":      strconv.FormatInt(c.filterSetId, 10),
 		"creativeStatusId": strconv.FormatInt(c.creativeStatusId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.filteredBids.details.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.filteredBids.details.list" call.
@@ -8886,7 +8886,7 @@ func (c *AccountsFilterSetsFilteredImpressionsListCall) doRequest(alt string) (*
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.filteredImpressions.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.filteredImpressions.list" call.
@@ -9091,7 +9091,7 @@ func (c *AccountsFilterSetsImpressionMetricsListCall) doRequest(alt string) (*ht
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.impressionMetrics.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.impressionMetrics.list" call.
@@ -9297,7 +9297,7 @@ func (c *AccountsFilterSetsLosingBidsListCall) doRequest(alt string) (*http.Resp
 		"accountId":   strconv.FormatInt(c.accountId, 10),
 		"filterSetId": strconv.FormatInt(c.filterSetId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.filterSets.losingBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.filterSets.losingBids.list" call.
