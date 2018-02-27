@@ -1159,7 +1159,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.operations.get"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.operations.get" call.
@@ -1337,7 +1337,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.operations.list"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.operations.list" call.
@@ -1531,7 +1531,7 @@ func (c *ProjectsLocationsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.projects.locations.list"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.projects.locations.list" call.
@@ -1702,7 +1702,7 @@ func (c *ProjectsLocationsFunctionsCallCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.projects.locations.functions.call"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.projects.locations.functions.call" call.
@@ -1841,7 +1841,7 @@ func (c *ProjectsLocationsFunctionsCreateCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"location": c.location,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.projects.locations.functions.create"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.projects.locations.functions.create" call.
@@ -1973,7 +1973,7 @@ func (c *ProjectsLocationsFunctionsDeleteCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.projects.locations.functions.delete"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.projects.locations.functions.delete" call.
@@ -2112,7 +2112,7 @@ func (c *ProjectsLocationsFunctionsGenerateDownloadUrlCall) doRequest(alt string
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.projects.locations.functions.generateDownloadUrl"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.projects.locations.functions.generateDownloadUrl" call.
@@ -2268,7 +2268,7 @@ func (c *ProjectsLocationsFunctionsGenerateUploadUrlCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.projects.locations.functions.generateUploadUrl"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.projects.locations.functions.generateUploadUrl" call.
@@ -2411,7 +2411,7 @@ func (c *ProjectsLocationsFunctionsGetCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.projects.locations.functions.get"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.projects.locations.functions.get" call.
@@ -2569,7 +2569,7 @@ func (c *ProjectsLocationsFunctionsListCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.projects.locations.functions.list"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.projects.locations.functions.list" call.
@@ -2740,7 +2740,7 @@ func (c *ProjectsLocationsFunctionsPatchCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudfunctions.projects.locations.functions.patch"), c.s.client, req)
 }
 
 // Do executes the "cloudfunctions.projects.locations.functions.patch" call.

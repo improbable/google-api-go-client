@@ -1219,7 +1219,7 @@ func (c *ProjectsConfigsCreateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.create"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.create" call.
@@ -1353,7 +1353,7 @@ func (c *ProjectsConfigsDeleteCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.delete"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.delete" call.
@@ -1493,7 +1493,7 @@ func (c *ProjectsConfigsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.get"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.get" call.
@@ -1636,7 +1636,7 @@ func (c *ProjectsConfigsGetIamPolicyCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.getIamPolicy" call.
@@ -1792,7 +1792,7 @@ func (c *ProjectsConfigsListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.list"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.list" call.
@@ -1959,7 +1959,7 @@ func (c *ProjectsConfigsSetIamPolicyCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.setIamPolicy" call.
@@ -2105,7 +2105,7 @@ func (c *ProjectsConfigsTestIamPermissionsCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.testIamPermissions" call.
@@ -2242,7 +2242,7 @@ func (c *ProjectsConfigsUpdateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.update"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.update" call.
@@ -2389,7 +2389,7 @@ func (c *ProjectsConfigsOperationsGetCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.operations.get"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.operations.get" call.
@@ -2532,7 +2532,7 @@ func (c *ProjectsConfigsOperationsTestIamPermissionsCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.operations.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.operations.testIamPermissions" call.
@@ -2696,7 +2696,7 @@ func (c *ProjectsConfigsVariablesCreateCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.variables.create"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.variables.create" call.
@@ -2846,7 +2846,7 @@ func (c *ProjectsConfigsVariablesDeleteCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.variables.delete"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.variables.delete" call.
@@ -2991,7 +2991,7 @@ func (c *ProjectsConfigsVariablesGetCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.variables.get"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.variables.get" call.
@@ -3174,7 +3174,7 @@ func (c *ProjectsConfigsVariablesListCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.variables.list"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.variables.list" call.
@@ -3359,7 +3359,7 @@ func (c *ProjectsConfigsVariablesTestIamPermissionsCall) doRequest(alt string) (
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.variables.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.variables.testIamPermissions" call.
@@ -3495,7 +3495,7 @@ func (c *ProjectsConfigsVariablesUpdateCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.variables.update"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.variables.update" call.
@@ -3652,7 +3652,7 @@ func (c *ProjectsConfigsVariablesWatchCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.variables.watch"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.variables.watch" call.
@@ -3814,7 +3814,7 @@ func (c *ProjectsConfigsWaitersCreateCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.waiters.create"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.waiters.create" call.
@@ -3948,7 +3948,7 @@ func (c *ProjectsConfigsWaitersDeleteCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.waiters.delete"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.waiters.delete" call.
@@ -4088,7 +4088,7 @@ func (c *ProjectsConfigsWaitersGetCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.waiters.get"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.waiters.get" call.
@@ -4244,7 +4244,7 @@ func (c *ProjectsConfigsWaitersListCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.waiters.list"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.waiters.list" call.
@@ -4419,7 +4419,7 @@ func (c *ProjectsConfigsWaitersTestIamPermissionsCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.projects.configs.waiters.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.projects.configs.waiters.testIamPermissions" call.

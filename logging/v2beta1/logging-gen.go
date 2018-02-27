@@ -1966,7 +1966,7 @@ func (c *BillingAccountsLogsDeleteCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"logName": c.logName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.billingAccounts.logs.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.billingAccounts.logs.delete" call.
@@ -2126,7 +2126,7 @@ func (c *BillingAccountsLogsListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.billingAccounts.logs.list"), c.s.client, req)
 }
 
 // Do executes the "logging.billingAccounts.logs.list" call.
@@ -2290,7 +2290,7 @@ func (c *EntriesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.entries.list"), c.s.client, req)
 }
 
 // Do executes the "logging.entries.list" call.
@@ -2438,7 +2438,7 @@ func (c *EntriesWriteCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.entries.write"), c.s.client, req)
 }
 
 // Do executes the "logging.entries.write" call.
@@ -2587,7 +2587,7 @@ func (c *MonitoredResourceDescriptorsListCall) doRequest(alt string) (*http.Resp
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.monitoredResourceDescriptors.list"), c.s.client, req)
 }
 
 // Do executes the "logging.monitoredResourceDescriptors.list" call.
@@ -2742,7 +2742,7 @@ func (c *OrganizationsLogsDeleteCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"logName": c.logName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.organizations.logs.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.organizations.logs.delete" call.
@@ -2902,7 +2902,7 @@ func (c *OrganizationsLogsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.organizations.logs.list"), c.s.client, req)
 }
 
 // Do executes the "logging.organizations.logs.list" call.
@@ -3064,7 +3064,7 @@ func (c *ProjectsLogsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"logName": c.logName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.logs.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.logs.delete" call.
@@ -3224,7 +3224,7 @@ func (c *ProjectsLogsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.logs.list"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.logs.list" call.
@@ -3391,7 +3391,7 @@ func (c *ProjectsMetricsCreateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.create"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.create" call.
@@ -3521,7 +3521,7 @@ func (c *ProjectsMetricsDeleteCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"metricName": c.metricName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.delete" call.
@@ -3662,7 +3662,7 @@ func (c *ProjectsMetricsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"metricName": c.metricName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.get"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.get" call.
@@ -3823,7 +3823,7 @@ func (c *ProjectsMetricsListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.list"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.list" call.
@@ -3990,7 +3990,7 @@ func (c *ProjectsMetricsUpdateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"metricName": c.metricName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.update"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.update" call.
@@ -4148,7 +4148,7 @@ func (c *ProjectsSinksCreateCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.create"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.create" call.
@@ -4283,7 +4283,7 @@ func (c *ProjectsSinksDeleteCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"sinkName": c.sinkNameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.delete" call.
@@ -4423,7 +4423,7 @@ func (c *ProjectsSinksGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"sinkName": c.sinkName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.get"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.get" call.
@@ -4584,7 +4584,7 @@ func (c *ProjectsSinksListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.list"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.list" call.
@@ -4785,7 +4785,7 @@ func (c *ProjectsSinksUpdateCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"sinkName": c.sinkNameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.update"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.update" call.

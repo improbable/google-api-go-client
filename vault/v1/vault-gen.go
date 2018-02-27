@@ -832,7 +832,7 @@ func (c *MattersAddPermissionsCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.addPermissions"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.addPermissions" call.
@@ -967,7 +967,7 @@ func (c *MattersCloseCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.close"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.close" call.
@@ -1100,7 +1100,7 @@ func (c *MattersCreateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.create"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.create" call.
@@ -1219,7 +1219,7 @@ func (c *MattersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.delete"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.delete" call.
@@ -1369,7 +1369,7 @@ func (c *MattersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.get"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.get" call.
@@ -1554,7 +1554,7 @@ func (c *MattersListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.list"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.list" call.
@@ -1731,7 +1731,7 @@ func (c *MattersRemovePermissionsCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.removePermissions"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.removePermissions" call.
@@ -1866,7 +1866,7 @@ func (c *MattersReopenCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.reopen"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.reopen" call.
@@ -2001,7 +2001,7 @@ func (c *MattersUndeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.undelete"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.undelete" call.
@@ -2139,7 +2139,7 @@ func (c *MattersUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.update"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.update" call.
@@ -2273,7 +2273,7 @@ func (c *MattersHoldsCreateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.holds.create"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.holds.create" call.
@@ -2404,7 +2404,7 @@ func (c *MattersHoldsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"matterId": c.matterId,
 		"holdId":   c.holdId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.holds.delete"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.holds.delete" call.
@@ -2564,7 +2564,7 @@ func (c *MattersHoldsGetCall) doRequest(alt string) (*http.Response, error) {
 		"matterId": c.matterId,
 		"holdId":   c.holdId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.holds.get"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.holds.get" call.
@@ -2750,7 +2750,7 @@ func (c *MattersHoldsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"matterId": c.matterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.holds.list"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.holds.list" call.
@@ -2931,7 +2931,7 @@ func (c *MattersHoldsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"matterId": c.matterId,
 		"holdId":   c.holdId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.holds.update"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.holds.update" call.
@@ -3079,7 +3079,7 @@ func (c *MattersHoldsAccountsCreateCall) doRequest(alt string) (*http.Response, 
 		"matterId": c.matterId,
 		"holdId":   c.holdId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.holds.accounts.create"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.holds.accounts.create" call.
@@ -3221,7 +3221,7 @@ func (c *MattersHoldsAccountsDeleteCall) doRequest(alt string) (*http.Response, 
 		"holdId":    c.holdId,
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.holds.accounts.delete"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.holds.accounts.delete" call.
@@ -3380,7 +3380,7 @@ func (c *MattersHoldsAccountsListCall) doRequest(alt string) (*http.Response, er
 		"matterId": c.matterId,
 		"holdId":   c.holdId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vault.matters.holds.accounts.list"), c.s.client, req)
 }
 
 // Do executes the "vault.matters.holds.accounts.list" call.

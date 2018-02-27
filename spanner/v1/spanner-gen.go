@@ -3684,7 +3684,7 @@ func (c *ProjectsInstanceConfigsGetCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instanceConfigs.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instanceConfigs.get" call.
@@ -3842,7 +3842,7 @@ func (c *ProjectsInstanceConfigsListCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instanceConfigs.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instanceConfigs.list" call.
@@ -4047,7 +4047,7 @@ func (c *ProjectsInstancesCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.create"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.create" call.
@@ -4187,7 +4187,7 @@ func (c *ProjectsInstancesDeleteCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.delete"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.delete" call.
@@ -4327,7 +4327,7 @@ func (c *ProjectsInstancesGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.get" call.
@@ -4466,7 +4466,7 @@ func (c *ProjectsInstancesGetIamPolicyCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.getIamPolicy" call.
@@ -4654,7 +4654,7 @@ func (c *ProjectsInstancesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.list" call.
@@ -4872,7 +4872,7 @@ func (c *ProjectsInstancesPatchCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.patch"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.patch" call.
@@ -5013,7 +5013,7 @@ func (c *ProjectsInstancesSetIamPolicyCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.setIamPolicy" call.
@@ -5158,7 +5158,7 @@ func (c *ProjectsInstancesTestIamPermissionsCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.testIamPermissions" call.
@@ -5303,7 +5303,7 @@ func (c *ProjectsInstancesDatabasesCreateCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.create"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.create" call.
@@ -5432,7 +5432,7 @@ func (c *ProjectsInstancesDatabasesDropDatabaseCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.dropDatabase"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.dropDatabase" call.
@@ -5572,7 +5572,7 @@ func (c *ProjectsInstancesDatabasesGetCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.get" call.
@@ -5716,7 +5716,7 @@ func (c *ProjectsInstancesDatabasesGetDdlCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.getDdl"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.getDdl" call.
@@ -5856,7 +5856,7 @@ func (c *ProjectsInstancesDatabasesGetIamPolicyCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.getIamPolicy" call.
@@ -6016,7 +6016,7 @@ func (c *ProjectsInstancesDatabasesListCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.list" call.
@@ -6187,7 +6187,7 @@ func (c *ProjectsInstancesDatabasesSetIamPolicyCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.setIamPolicy" call.
@@ -6332,7 +6332,7 @@ func (c *ProjectsInstancesDatabasesTestIamPermissionsCall) doRequest(alt string)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.testIamPermissions" call.
@@ -6477,7 +6477,7 @@ func (c *ProjectsInstancesDatabasesUpdateDdlCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.updateDdl"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.updateDdl" call.
@@ -6623,7 +6623,7 @@ func (c *ProjectsInstancesDatabasesOperationsCancelCall) doRequest(alt string) (
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.operations.cancel" call.
@@ -6755,7 +6755,7 @@ func (c *ProjectsInstancesDatabasesOperationsDeleteCall) doRequest(alt string) (
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.operations.delete" call.
@@ -6899,7 +6899,7 @@ func (c *ProjectsInstancesDatabasesOperationsGetCall) doRequest(alt string) (*ht
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.operations.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.operations.get" call.
@@ -7076,7 +7076,7 @@ func (c *ProjectsInstancesDatabasesOperationsListCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.operations.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.operations.list" call.
@@ -7250,7 +7250,7 @@ func (c *ProjectsInstancesDatabasesSessionsBeginTransactionCall) doRequest(alt s
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.beginTransaction"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.beginTransaction" call.
@@ -7397,7 +7397,7 @@ func (c *ProjectsInstancesDatabasesSessionsCommitCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.commit"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.commit" call.
@@ -7563,7 +7563,7 @@ func (c *ProjectsInstancesDatabasesSessionsCreateCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.create"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.create" call.
@@ -7693,7 +7693,7 @@ func (c *ProjectsInstancesDatabasesSessionsDeleteCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.delete"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.delete" call.
@@ -7839,7 +7839,7 @@ func (c *ProjectsInstancesDatabasesSessionsExecuteSqlCall) doRequest(alt string)
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.executeSql"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.executeSql" call.
@@ -7980,7 +7980,7 @@ func (c *ProjectsInstancesDatabasesSessionsExecuteStreamingSqlCall) doRequest(al
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.executeStreamingSql"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.executeStreamingSql" call.
@@ -8127,7 +8127,7 @@ func (c *ProjectsInstancesDatabasesSessionsGetCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.get" call.
@@ -8301,7 +8301,7 @@ func (c *ProjectsInstancesDatabasesSessionsListCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.list" call.
@@ -8484,7 +8484,7 @@ func (c *ProjectsInstancesDatabasesSessionsPartitionQueryCall) doRequest(alt str
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.partitionQuery"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.partitionQuery" call.
@@ -8632,7 +8632,7 @@ func (c *ProjectsInstancesDatabasesSessionsPartitionReadCall) doRequest(alt stri
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.partitionRead"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.partitionRead" call.
@@ -8783,7 +8783,7 @@ func (c *ProjectsInstancesDatabasesSessionsReadCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.read"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.read" call.
@@ -8928,7 +8928,7 @@ func (c *ProjectsInstancesDatabasesSessionsRollbackCall) doRequest(alt string) (
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.rollback"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.rollback" call.
@@ -9068,7 +9068,7 @@ func (c *ProjectsInstancesDatabasesSessionsStreamingReadCall) doRequest(alt stri
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.streamingRead"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.streamingRead" call.
@@ -9214,7 +9214,7 @@ func (c *ProjectsInstancesOperationsCancelCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.operations.cancel" call.
@@ -9346,7 +9346,7 @@ func (c *ProjectsInstancesOperationsDeleteCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.operations.delete" call.
@@ -9490,7 +9490,7 @@ func (c *ProjectsInstancesOperationsGetCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.operations.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.operations.get" call.
@@ -9667,7 +9667,7 @@ func (c *ProjectsInstancesOperationsListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.operations.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.operations.list" call.

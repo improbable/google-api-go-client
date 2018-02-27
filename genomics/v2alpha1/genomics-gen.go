@@ -1827,7 +1827,7 @@ func (c *PipelinesRunCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.pipelines.run"), c.s.client, req)
 }
 
 // Do executes the "genomics.pipelines.run" call.
@@ -1957,7 +1957,7 @@ func (c *ProjectsOperationsCancelCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.projects.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "genomics.projects.operations.cancel" call.
@@ -2104,7 +2104,7 @@ func (c *ProjectsOperationsGetCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.projects.operations.get"), c.s.client, req)
 }
 
 // Do executes the "genomics.projects.operations.get" call.
@@ -2299,7 +2299,7 @@ func (c *ProjectsOperationsListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.projects.operations.list"), c.s.client, req)
 }
 
 // Do executes the "genomics.projects.operations.list" call.
@@ -2471,7 +2471,7 @@ func (c *WorkersCheckInCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"id": c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.workers.checkIn"), c.s.client, req)
 }
 
 // Do executes the "genomics.workers.checkIn" call.

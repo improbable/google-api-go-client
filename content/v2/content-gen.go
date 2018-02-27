@@ -8494,7 +8494,7 @@ func (c *AccountsAuthinfoCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounts.authinfo"), c.s.client, req)
 }
 
 // Do executes the "content.accounts.authinfo" call.
@@ -8618,7 +8618,7 @@ func (c *AccountsClaimwebsiteCall) doRequest(alt string) (*http.Response, error)
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounts.claimwebsite"), c.s.client, req)
 }
 
 // Do executes the "content.accounts.claimwebsite" call.
@@ -8765,7 +8765,7 @@ func (c *AccountsCustombatchCall) doRequest(alt string) (*http.Response, error) 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounts.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.accounts.custombatch" call.
@@ -8904,7 +8904,7 @@ func (c *AccountsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounts.delete"), c.s.client, req)
 }
 
 // Do executes the "content.accounts.delete" call.
@@ -9036,7 +9036,7 @@ func (c *AccountsGetCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounts.get"), c.s.client, req)
 }
 
 // Do executes the "content.accounts.get" call.
@@ -9182,7 +9182,7 @@ func (c *AccountsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounts.insert"), c.s.client, req)
 }
 
 // Do executes the "content.accounts.insert" call.
@@ -9342,7 +9342,7 @@ func (c *AccountsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounts.list"), c.s.client, req)
 }
 
 // Do executes the "content.accounts.list" call.
@@ -9516,7 +9516,7 @@ func (c *AccountsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounts.patch"), c.s.client, req)
 }
 
 // Do executes the "content.accounts.patch" call.
@@ -9673,7 +9673,7 @@ func (c *AccountsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounts.update"), c.s.client, req)
 }
 
 // Do executes the "content.accounts.update" call.
@@ -9815,7 +9815,7 @@ func (c *AccountstatusesCustombatchCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accountstatuses.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.accountstatuses.custombatch" call.
@@ -9947,7 +9947,7 @@ func (c *AccountstatusesGetCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accountstatuses.get"), c.s.client, req)
 }
 
 // Do executes the "content.accountstatuses.get" call.
@@ -10109,7 +10109,7 @@ func (c *AccountstatusesListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accountstatuses.list"), c.s.client, req)
 }
 
 // Do executes the "content.accountstatuses.list" call.
@@ -10275,7 +10275,7 @@ func (c *AccounttaxCustombatchCall) doRequest(alt string) (*http.Response, error
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounttax.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.accounttax.custombatch" call.
@@ -10414,7 +10414,7 @@ func (c *AccounttaxGetCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounttax.get"), c.s.client, req)
 }
 
 // Do executes the "content.accounttax.get" call.
@@ -10575,7 +10575,7 @@ func (c *AccounttaxListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounttax.list"), c.s.client, req)
 }
 
 // Do executes the "content.accounttax.list" call.
@@ -10749,7 +10749,7 @@ func (c *AccounttaxPatchCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounttax.patch"), c.s.client, req)
 }
 
 // Do executes the "content.accounttax.patch" call.
@@ -10906,7 +10906,7 @@ func (c *AccounttaxUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.accounttax.update"), c.s.client, req)
 }
 
 // Do executes the "content.accounttax.update" call.
@@ -11055,7 +11055,7 @@ func (c *DatafeedsCustombatchCall) doRequest(alt string) (*http.Response, error)
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeeds.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.datafeeds.custombatch" call.
@@ -11187,7 +11187,7 @@ func (c *DatafeedsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"datafeedId": strconv.FormatUint(c.datafeedId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeeds.delete"), c.s.client, req)
 }
 
 // Do executes the "content.datafeeds.delete" call.
@@ -11314,7 +11314,7 @@ func (c *DatafeedsGetCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"datafeedId": strconv.FormatUint(c.datafeedId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeeds.get"), c.s.client, req)
 }
 
 // Do executes the "content.datafeeds.get" call.
@@ -11461,7 +11461,7 @@ func (c *DatafeedsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeeds.insert"), c.s.client, req)
 }
 
 // Do executes the "content.datafeeds.insert" call.
@@ -11622,7 +11622,7 @@ func (c *DatafeedsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeeds.list"), c.s.client, req)
 }
 
 // Do executes the "content.datafeeds.list" call.
@@ -11796,7 +11796,7 @@ func (c *DatafeedsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"datafeedId": strconv.FormatUint(c.datafeedId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeeds.patch"), c.s.client, req)
 }
 
 // Do executes the "content.datafeeds.patch" call.
@@ -11954,7 +11954,7 @@ func (c *DatafeedsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"datafeedId": strconv.FormatUint(c.datafeedId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeeds.update"), c.s.client, req)
 }
 
 // Do executes the "content.datafeeds.update" call.
@@ -12096,7 +12096,7 @@ func (c *DatafeedstatusesCustombatchCall) doRequest(alt string) (*http.Response,
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeedstatuses.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.datafeedstatuses.custombatch" call.
@@ -12249,7 +12249,7 @@ func (c *DatafeedstatusesGetCall) doRequest(alt string) (*http.Response, error) 
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"datafeedId": strconv.FormatUint(c.datafeedId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeedstatuses.get"), c.s.client, req)
 }
 
 // Do executes the "content.datafeedstatuses.get" call.
@@ -12420,7 +12420,7 @@ func (c *DatafeedstatusesListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.datafeedstatuses.list"), c.s.client, req)
 }
 
 // Do executes the "content.datafeedstatuses.list" call.
@@ -12587,7 +12587,7 @@ func (c *InventoryCustombatchCall) doRequest(alt string) (*http.Response, error)
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.inventory.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.inventory.custombatch" call.
@@ -12730,7 +12730,7 @@ func (c *InventorySetCall) doRequest(alt string) (*http.Response, error) {
 		"storeCode":  c.storeCode,
 		"productId":  c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.inventory.set"), c.s.client, req)
 }
 
 // Do executes the "content.inventory.set" call.
@@ -12886,7 +12886,7 @@ func (c *OrdersAcknowledgeCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.acknowledge"), c.s.client, req)
 }
 
 // Do executes the "content.orders.acknowledge" call.
@@ -13024,7 +13024,7 @@ func (c *OrdersAdvancetestorderCall) doRequest(alt string) (*http.Response, erro
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.advancetestorder"), c.s.client, req)
 }
 
 // Do executes the "content.orders.advancetestorder" call.
@@ -13165,7 +13165,7 @@ func (c *OrdersCancelCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.cancel"), c.s.client, req)
 }
 
 // Do executes the "content.orders.cancel" call.
@@ -13309,7 +13309,7 @@ func (c *OrdersCancellineitemCall) doRequest(alt string) (*http.Response, error)
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.cancellineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.cancellineitem" call.
@@ -13450,7 +13450,7 @@ func (c *OrdersCreatetestorderCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.createtestorder"), c.s.client, req)
 }
 
 // Do executes the "content.orders.createtestorder" call.
@@ -13580,7 +13580,7 @@ func (c *OrdersCustombatchCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.orders.custombatch" call.
@@ -13712,7 +13712,7 @@ func (c *OrdersGetCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.get"), c.s.client, req)
 }
 
 // Do executes the "content.orders.get" call.
@@ -13860,7 +13860,7 @@ func (c *OrdersGetbymerchantorderidCall) doRequest(alt string) (*http.Response, 
 		"merchantId":      strconv.FormatUint(c.merchantId, 10),
 		"merchantOrderId": c.merchantOrderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.getbymerchantorderid"), c.s.client, req)
 }
 
 // Do executes the "content.orders.getbymerchantorderid" call.
@@ -14010,7 +14010,7 @@ func (c *OrdersGettestordertemplateCall) doRequest(alt string) (*http.Response, 
 		"merchantId":   strconv.FormatUint(c.merchantId, 10),
 		"templateName": c.templateName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.gettestordertemplate"), c.s.client, req)
 }
 
 // Do executes the "content.orders.gettestordertemplate" call.
@@ -14165,7 +14165,7 @@ func (c *OrdersInstorerefundlineitemCall) doRequest(alt string) (*http.Response,
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.instorerefundlineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.instorerefundlineitem" call.
@@ -14398,7 +14398,7 @@ func (c *OrdersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.list"), c.s.client, req)
 }
 
 // Do executes the "content.orders.list" call.
@@ -14624,7 +14624,7 @@ func (c *OrdersRefundCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.refund"), c.s.client, req)
 }
 
 // Do executes the "content.orders.refund" call.
@@ -14768,7 +14768,7 @@ func (c *OrdersRejectreturnlineitemCall) doRequest(alt string) (*http.Response, 
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.rejectreturnlineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.rejectreturnlineitem" call.
@@ -14913,7 +14913,7 @@ func (c *OrdersReturnlineitemCall) doRequest(alt string) (*http.Response, error)
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.returnlineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.returnlineitem" call.
@@ -15058,7 +15058,7 @@ func (c *OrdersReturnrefundlineitemCall) doRequest(alt string) (*http.Response, 
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.returnrefundlineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.returnrefundlineitem" call.
@@ -15204,7 +15204,7 @@ func (c *OrdersSetlineitemmetadataCall) doRequest(alt string) (*http.Response, e
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.setlineitemmetadata"), c.s.client, req)
 }
 
 // Do executes the "content.orders.setlineitemmetadata" call.
@@ -15349,7 +15349,7 @@ func (c *OrdersShiplineitemsCall) doRequest(alt string) (*http.Response, error) 
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.shiplineitems"), c.s.client, req)
 }
 
 // Do executes the "content.orders.shiplineitems" call.
@@ -15494,7 +15494,7 @@ func (c *OrdersUpdatelineitemshippingdetailsCall) doRequest(alt string) (*http.R
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.updatelineitemshippingdetails"), c.s.client, req)
 }
 
 // Do executes the "content.orders.updatelineitemshippingdetails" call.
@@ -15641,7 +15641,7 @@ func (c *OrdersUpdatemerchantorderidCall) doRequest(alt string) (*http.Response,
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.updatemerchantorderid"), c.s.client, req)
 }
 
 // Do executes the "content.orders.updatemerchantorderid" call.
@@ -15787,7 +15787,7 @@ func (c *OrdersUpdateshipmentCall) doRequest(alt string) (*http.Response, error)
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.updateshipment"), c.s.client, req)
 }
 
 // Do executes the "content.orders.updateshipment" call.
@@ -16970,7 +16970,7 @@ func (c *ProductsCustombatchCall) doRequest(alt string) (*http.Response, error) 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.products.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.products.custombatch" call.
@@ -17102,7 +17102,7 @@ func (c *ProductsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"productId":  c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.products.delete"), c.s.client, req)
 }
 
 // Do executes the "content.products.delete" call.
@@ -17227,7 +17227,7 @@ func (c *ProductsGetCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"productId":  c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.products.get"), c.s.client, req)
 }
 
 // Do executes the "content.products.get" call.
@@ -17374,7 +17374,7 @@ func (c *ProductsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.products.insert"), c.s.client, req)
 }
 
 // Do executes the "content.products.insert" call.
@@ -17543,7 +17543,7 @@ func (c *ProductsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.products.list"), c.s.client, req)
 }
 
 // Do executes the "content.products.list" call.
@@ -17715,7 +17715,7 @@ func (c *ProductstatusesCustombatchCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.productstatuses.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.productstatuses.custombatch" call.
@@ -17863,7 +17863,7 @@ func (c *ProductstatusesGetCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"productId":  c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.productstatuses.get"), c.s.client, req)
 }
 
 // Do executes the "content.productstatuses.get" call.
@@ -18046,7 +18046,7 @@ func (c *ProductstatusesListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.productstatuses.list"), c.s.client, req)
 }
 
 // Do executes the "content.productstatuses.list" call.
@@ -18222,7 +18222,7 @@ func (c *ShippingsettingsCustombatchCall) doRequest(alt string) (*http.Response,
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.shippingsettings.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.shippingsettings.custombatch" call.
@@ -18362,7 +18362,7 @@ func (c *ShippingsettingsGetCall) doRequest(alt string) (*http.Response, error) 
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.shippingsettings.get"), c.s.client, req)
 }
 
 // Do executes the "content.shippingsettings.get" call.
@@ -18509,7 +18509,7 @@ func (c *ShippingsettingsGetsupportedcarriersCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.shippingsettings.getsupportedcarriers"), c.s.client, req)
 }
 
 // Do executes the "content.shippingsettings.getsupportedcarriers" call.
@@ -18649,7 +18649,7 @@ func (c *ShippingsettingsGetsupportedholidaysCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.shippingsettings.getsupportedholidays"), c.s.client, req)
 }
 
 // Do executes the "content.shippingsettings.getsupportedholidays" call.
@@ -18805,7 +18805,7 @@ func (c *ShippingsettingsListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.shippingsettings.list"), c.s.client, req)
 }
 
 // Do executes the "content.shippingsettings.list" call.
@@ -18979,7 +18979,7 @@ func (c *ShippingsettingsPatchCall) doRequest(alt string) (*http.Response, error
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.shippingsettings.patch"), c.s.client, req)
 }
 
 // Do executes the "content.shippingsettings.patch" call.
@@ -19136,7 +19136,7 @@ func (c *ShippingsettingsUpdateCall) doRequest(alt string) (*http.Response, erro
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"accountId":  strconv.FormatUint(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.shippingsettings.update"), c.s.client, req)
 }
 
 // Do executes the "content.shippingsettings.update" call.
