@@ -3236,7 +3236,7 @@ func (c *AnalyticsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.analytics.list"), c.s.client, req)
 }
 
 // Do executes the "partners.analytics.list" call.
@@ -3421,7 +3421,7 @@ func (c *ClientMessagesLogCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.clientMessages.log"), c.s.client, req)
 }
 
 // Do executes the "partners.clientMessages.log" call.
@@ -3652,7 +3652,7 @@ func (c *CompaniesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"companyId": c.companyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.companies.get"), c.s.client, req)
 }
 
 // Do executes the "partners.companies.get" call.
@@ -4112,7 +4112,7 @@ func (c *CompaniesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.companies.list"), c.s.client, req)
 }
 
 // Do executes the "partners.companies.list" call.
@@ -4429,7 +4429,7 @@ func (c *CompaniesLeadsCreateCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"companyId": c.companyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.companies.leads.create"), c.s.client, req)
 }
 
 // Do executes the "partners.companies.leads.create" call.
@@ -4651,7 +4651,7 @@ func (c *LeadsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.leads.list"), c.s.client, req)
 }
 
 // Do executes the "partners.leads.list" call.
@@ -4906,7 +4906,7 @@ func (c *OffersListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.offers.list"), c.s.client, req)
 }
 
 // Do executes the "partners.offers.list" call.
@@ -5158,7 +5158,7 @@ func (c *OffersHistoryListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.offers.history.list"), c.s.client, req)
 }
 
 // Do executes the "partners.offers.history.list" call.
@@ -5351,7 +5351,7 @@ func (c *UserEventsLogCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.userEvents.log"), c.s.client, req)
 }
 
 // Do executes the "partners.userEvents.log" call.
@@ -5535,7 +5535,7 @@ func (c *UserStatesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.userStates.list"), c.s.client, req)
 }
 
 // Do executes the "partners.userStates.list" call.
@@ -5752,7 +5752,7 @@ func (c *UsersCreateCompanyRelationCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.users.createCompanyRelation"), c.s.client, req)
 }
 
 // Do executes the "partners.users.createCompanyRelation" call.
@@ -5973,7 +5973,7 @@ func (c *UsersDeleteCompanyRelationCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.users.deleteCompanyRelation"), c.s.client, req)
 }
 
 // Do executes the "partners.users.deleteCompanyRelation" call.
@@ -6216,7 +6216,7 @@ func (c *UsersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.users.get"), c.s.client, req)
 }
 
 // Do executes the "partners.users.get" call.
@@ -6447,7 +6447,7 @@ func (c *UsersUpdateProfileCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("PATCH", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.users.updateProfile"), c.s.client, req)
 }
 
 // Do executes the "partners.users.updateProfile" call.
@@ -6671,7 +6671,7 @@ func (c *V2GetPartnersstatusCall) doRequest(alt string) (*http.Response, error) 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.getPartnersstatus"), c.s.client, req)
 }
 
 // Do executes the "partners.getPartnersstatus" call.
@@ -6892,7 +6892,7 @@ func (c *V2UpdateCompaniesCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("PATCH", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.updateCompanies"), c.s.client, req)
 }
 
 // Do executes the "partners.updateCompanies" call.
@@ -7121,7 +7121,7 @@ func (c *V2UpdateLeadsCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("PATCH", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "partners.updateLeads"), c.s.client, req)
 }
 
 // Do executes the "partners.updateLeads" call.

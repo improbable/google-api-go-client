@@ -2627,7 +2627,7 @@ func (c *BackupRunsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"instance": c.instance,
 		"id":       strconv.FormatInt(c.id, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.backupRuns.delete"), c.s.client, req)
 }
 
 // Do executes the "sql.backupRuns.delete" call.
@@ -2786,7 +2786,7 @@ func (c *BackupRunsGetCall) doRequest(alt string) (*http.Response, error) {
 		"instance": c.instance,
 		"id":       strconv.FormatInt(c.id, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.backupRuns.get"), c.s.client, req)
 }
 
 // Do executes the "sql.backupRuns.get" call.
@@ -2936,7 +2936,7 @@ func (c *BackupRunsInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.backupRuns.insert"), c.s.client, req)
 }
 
 // Do executes the "sql.backupRuns.insert" call.
@@ -3104,7 +3104,7 @@ func (c *BackupRunsListCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.backupRuns.list"), c.s.client, req)
 }
 
 // Do executes the "sql.backupRuns.list" call.
@@ -3273,7 +3273,7 @@ func (c *DatabasesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"instance": c.instance,
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.databases.delete"), c.s.client, req)
 }
 
 // Do executes the "sql.databases.delete" call.
@@ -3432,7 +3432,7 @@ func (c *DatabasesGetCall) doRequest(alt string) (*http.Response, error) {
 		"instance": c.instance,
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.databases.get"), c.s.client, req)
 }
 
 // Do executes the "sql.databases.get" call.
@@ -3581,7 +3581,7 @@ func (c *DatabasesInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.databases.insert"), c.s.client, req)
 }
 
 // Do executes the "sql.databases.insert" call.
@@ -3732,7 +3732,7 @@ func (c *DatabasesListCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.databases.list"), c.s.client, req)
 }
 
 // Do executes the "sql.databases.list" call.
@@ -3877,7 +3877,7 @@ func (c *DatabasesPatchCall) doRequest(alt string) (*http.Response, error) {
 		"instance": c.instance,
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.databases.patch"), c.s.client, req)
 }
 
 // Do executes the "sql.databases.patch" call.
@@ -4032,7 +4032,7 @@ func (c *DatabasesUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"instance": c.instance,
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.databases.update"), c.s.client, req)
 }
 
 // Do executes the "sql.databases.update" call.
@@ -4191,7 +4191,7 @@ func (c *FlagsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.flags.list"), c.s.client, req)
 }
 
 // Do executes the "sql.flags.list" call.
@@ -4322,7 +4322,7 @@ func (c *InstancesCloneCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.clone"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.clone" call.
@@ -4459,7 +4459,7 @@ func (c *InstancesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.delete"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.delete" call.
@@ -4600,7 +4600,7 @@ func (c *InstancesDemoteMasterCall) doRequest(alt string) (*http.Response, error
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.demoteMaster"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.demoteMaster" call.
@@ -4745,7 +4745,7 @@ func (c *InstancesExportCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.export"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.export" call.
@@ -4888,7 +4888,7 @@ func (c *InstancesFailoverCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.failover"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.failover" call.
@@ -5040,7 +5040,7 @@ func (c *InstancesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.get"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.get" call.
@@ -5182,7 +5182,7 @@ func (c *InstancesImportCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.import"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.import" call.
@@ -5322,7 +5322,7 @@ func (c *InstancesInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.insert"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.insert" call.
@@ -5486,7 +5486,7 @@ func (c *InstancesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.list"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.list" call.
@@ -5660,7 +5660,7 @@ func (c *InstancesPatchCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.patch"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.patch" call.
@@ -5798,7 +5798,7 @@ func (c *InstancesPromoteReplicaCall) doRequest(alt string) (*http.Response, err
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.promoteReplica"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.promoteReplica" call.
@@ -5936,7 +5936,7 @@ func (c *InstancesResetSslConfigCall) doRequest(alt string) (*http.Response, err
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.resetSslConfig"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.resetSslConfig" call.
@@ -6070,7 +6070,7 @@ func (c *InstancesRestartCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.restart"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.restart" call.
@@ -6211,7 +6211,7 @@ func (c *InstancesRestoreBackupCall) doRequest(alt string) (*http.Response, erro
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.restoreBackup"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.restoreBackup" call.
@@ -6348,7 +6348,7 @@ func (c *InstancesStartReplicaCall) doRequest(alt string) (*http.Response, error
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.startReplica"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.startReplica" call.
@@ -6482,7 +6482,7 @@ func (c *InstancesStopReplicaCall) doRequest(alt string) (*http.Response, error)
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.stopReplica"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.stopReplica" call.
@@ -6623,7 +6623,7 @@ func (c *InstancesTruncateLogCall) doRequest(alt string) (*http.Response, error)
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.truncateLog"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.truncateLog" call.
@@ -6769,7 +6769,7 @@ func (c *InstancesUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.instances.update"), c.s.client, req)
 }
 
 // Do executes the "sql.instances.update" call.
@@ -6922,7 +6922,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":   c.project,
 		"operation": c.operation,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.operations.get"), c.s.client, req)
 }
 
 // Do executes the "sql.operations.get" call.
@@ -7085,7 +7085,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.operations.list"), c.s.client, req)
 }
 
 // Do executes the "sql.operations.list" call.
@@ -7261,7 +7261,7 @@ func (c *SslCertsCreateEphemeralCall) doRequest(alt string) (*http.Response, err
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.sslCerts.createEphemeral"), c.s.client, req)
 }
 
 // Do executes the "sql.sslCerts.createEphemeral" call.
@@ -7402,7 +7402,7 @@ func (c *SslCertsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"instance":        c.instance,
 		"sha1Fingerprint": c.sha1Fingerprint,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.sslCerts.delete"), c.s.client, req)
 }
 
 // Do executes the "sql.sslCerts.delete" call.
@@ -7562,7 +7562,7 @@ func (c *SslCertsGetCall) doRequest(alt string) (*http.Response, error) {
 		"instance":        c.instance,
 		"sha1Fingerprint": c.sha1Fingerprint,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.sslCerts.get"), c.s.client, req)
 }
 
 // Do executes the "sql.sslCerts.get" call.
@@ -7712,7 +7712,7 @@ func (c *SslCertsInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.sslCerts.insert"), c.s.client, req)
 }
 
 // Do executes the "sql.sslCerts.insert" call.
@@ -7863,7 +7863,7 @@ func (c *SslCertsListCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.sslCerts.list"), c.s.client, req)
 }
 
 // Do executes the "sql.sslCerts.list" call.
@@ -8009,7 +8009,7 @@ func (c *TiersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.tiers.list"), c.s.client, req)
 }
 
 // Do executes the "sql.tiers.list" call.
@@ -8138,7 +8138,7 @@ func (c *UsersDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.users.delete"), c.s.client, req)
 }
 
 // Do executes the "sql.users.delete" call.
@@ -8293,7 +8293,7 @@ func (c *UsersInsertCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.users.insert"), c.s.client, req)
 }
 
 // Do executes the "sql.users.insert" call.
@@ -8444,7 +8444,7 @@ func (c *UsersListCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.users.list"), c.s.client, req)
 }
 
 // Do executes the "sql.users.list" call.
@@ -8587,7 +8587,7 @@ func (c *UsersUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"project":  c.project,
 		"instance": c.instance,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "sql.users.update"), c.s.client, req)
 }
 
 // Do executes the "sql.users.update" call.

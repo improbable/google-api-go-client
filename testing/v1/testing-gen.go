@@ -2472,7 +2472,7 @@ func (c *ApplicationDetailServiceGetApkDetailsCall) doRequest(alt string) (*http
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "testing.applicationDetailService.getApkDetails"), c.s.client, req)
 }
 
 // Do executes the "testing.applicationDetailService.getApkDetails" call.
@@ -2603,7 +2603,7 @@ func (c *ProjectsTestMatricesCancelCall) doRequest(alt string) (*http.Response, 
 		"projectId":    c.projectId,
 		"testMatrixId": c.testMatrixId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "testing.projects.testMatrices.cancel"), c.s.client, req)
 }
 
 // Do executes the "testing.projects.testMatrices.cancel" call.
@@ -2765,7 +2765,7 @@ func (c *ProjectsTestMatricesCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "testing.projects.testMatrices.create"), c.s.client, req)
 }
 
 // Do executes the "testing.projects.testMatrices.create" call.
@@ -2920,7 +2920,7 @@ func (c *ProjectsTestMatricesGetCall) doRequest(alt string) (*http.Response, err
 		"projectId":    c.projectId,
 		"testMatrixId": c.testMatrixId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "testing.projects.testMatrices.get"), c.s.client, req)
 }
 
 // Do executes the "testing.projects.testMatrices.get" call.
@@ -3080,7 +3080,7 @@ func (c *TestEnvironmentCatalogGetCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"environmentType": c.environmentType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "testing.testEnvironmentCatalog.get"), c.s.client, req)
 }
 
 // Do executes the "testing.testEnvironmentCatalog.get" call.

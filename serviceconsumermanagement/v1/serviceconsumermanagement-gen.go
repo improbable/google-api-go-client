@@ -4833,7 +4833,7 @@ func (c *OperationsCancelCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.operations.cancel" call.
@@ -4968,7 +4968,7 @@ func (c *OperationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.operations.delete" call.
@@ -5112,7 +5112,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.operations.get"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.operations.get" call.
@@ -5289,7 +5289,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.operations.list"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.operations.list" call.
@@ -5515,7 +5515,7 @@ func (c *ServicesSearchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.services.search"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.services.search" call.
@@ -5691,7 +5691,7 @@ func (c *ServicesTenancyUnitsAddProjectCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.services.tenancyUnits.addProject"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.services.tenancyUnits.addProject" call.
@@ -5826,7 +5826,7 @@ func (c *ServicesTenancyUnitsCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.services.tenancyUnits.create"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.services.tenancyUnits.create" call.
@@ -5957,7 +5957,7 @@ func (c *ServicesTenancyUnitsDeleteCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.services.tenancyUnits.delete"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.services.tenancyUnits.delete" call.
@@ -6125,7 +6125,7 @@ func (c *ServicesTenancyUnitsListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.services.tenancyUnits.list"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.services.tenancyUnits.list" call.
@@ -6300,7 +6300,7 @@ func (c *ServicesTenancyUnitsRemoveProjectCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceconsumermanagement.services.tenancyUnits.removeProject"), c.s.client, req)
 }
 
 // Do executes the "serviceconsumermanagement.services.tenancyUnits.removeProject" call.

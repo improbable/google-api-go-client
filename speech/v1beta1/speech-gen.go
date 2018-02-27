@@ -748,7 +748,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "speech.operations.get"), c.s.client, req)
 }
 
 // Do executes the "speech.operations.get" call.
@@ -883,7 +883,7 @@ func (c *SpeechAsyncrecognizeCall) doRequest(alt string) (*http.Response, error)
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "speech.speech.asyncrecognize"), c.s.client, req)
 }
 
 // Do executes the "speech.speech.asyncrecognize" call.
@@ -1005,7 +1005,7 @@ func (c *SpeechSyncrecognizeCall) doRequest(alt string) (*http.Response, error) 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "speech.speech.syncrecognize"), c.s.client, req)
 }
 
 // Do executes the "speech.speech.syncrecognize" call.

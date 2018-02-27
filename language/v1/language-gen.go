@@ -1593,7 +1593,7 @@ func (c *DocumentsAnalyzeEntitiesCall) doRequest(alt string) (*http.Response, er
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.documents.analyzeEntities"), c.s.client, req)
 }
 
 // Do executes the "language.documents.analyzeEntities" call.
@@ -1716,7 +1716,7 @@ func (c *DocumentsAnalyzeEntitySentimentCall) doRequest(alt string) (*http.Respo
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.documents.analyzeEntitySentiment"), c.s.client, req)
 }
 
 // Do executes the "language.documents.analyzeEntitySentiment" call.
@@ -1837,7 +1837,7 @@ func (c *DocumentsAnalyzeSentimentCall) doRequest(alt string) (*http.Response, e
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.documents.analyzeSentiment"), c.s.client, req)
 }
 
 // Do executes the "language.documents.analyzeSentiment" call.
@@ -1962,7 +1962,7 @@ func (c *DocumentsAnalyzeSyntaxCall) doRequest(alt string) (*http.Response, erro
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.documents.analyzeSyntax"), c.s.client, req)
 }
 
 // Do executes the "language.documents.analyzeSyntax" call.
@@ -2085,7 +2085,7 @@ func (c *DocumentsAnnotateTextCall) doRequest(alt string) (*http.Response, error
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.documents.annotateText"), c.s.client, req)
 }
 
 // Do executes the "language.documents.annotateText" call.
@@ -2206,7 +2206,7 @@ func (c *DocumentsClassifyTextCall) doRequest(alt string) (*http.Response, error
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.documents.classifyText"), c.s.client, req)
 }
 
 // Do executes the "language.documents.classifyText" call.
