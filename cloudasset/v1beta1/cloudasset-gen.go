@@ -1173,7 +1173,7 @@ func (c *OrganizationsBatchGetAssetsHistoryCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudasset.organizations.batchGetAssetsHistory"), c.s.client, req)
 }
 
 // Do executes the "cloudasset.organizations.batchGetAssetsHistory" call.
@@ -1339,7 +1339,7 @@ func (c *OrganizationsExportAssetsCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudasset.organizations.exportAssets"), c.s.client, req)
 }
 
 // Do executes the "cloudasset.organizations.exportAssets" call.
@@ -1486,7 +1486,7 @@ func (c *OrganizationsOperationsGetCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudasset.organizations.operations.get"), c.s.client, req)
 }
 
 // Do executes the "cloudasset.organizations.operations.get" call.
@@ -1681,7 +1681,7 @@ func (c *ProjectsBatchGetAssetsHistoryCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudasset.projects.batchGetAssetsHistory"), c.s.client, req)
 }
 
 // Do executes the "cloudasset.projects.batchGetAssetsHistory" call.
@@ -1847,7 +1847,7 @@ func (c *ProjectsExportAssetsCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudasset.projects.exportAssets"), c.s.client, req)
 }
 
 // Do executes the "cloudasset.projects.exportAssets" call.
@@ -1994,7 +1994,7 @@ func (c *ProjectsOperationsGetCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudasset.projects.operations.get"), c.s.client, req)
 }
 
 // Do executes the "cloudasset.projects.operations.get" call.

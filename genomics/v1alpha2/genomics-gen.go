@@ -2287,7 +2287,7 @@ func (c *OperationsCancelCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "genomics.operations.cancel" call.
@@ -2438,7 +2438,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.operations.get"), c.s.client, req)
 }
 
 // Do executes the "genomics.operations.get" call.
@@ -2641,7 +2641,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.operations.list"), c.s.client, req)
 }
 
 // Do executes the "genomics.operations.list" call.
@@ -2814,7 +2814,7 @@ func (c *PipelinesCreateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.pipelines.create"), c.s.client, req)
 }
 
 // Do executes the "genomics.pipelines.create" call.
@@ -2936,7 +2936,7 @@ func (c *PipelinesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"pipelineId": c.pipelineId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.pipelines.delete"), c.s.client, req)
 }
 
 // Do executes the "genomics.pipelines.delete" call.
@@ -3078,7 +3078,7 @@ func (c *PipelinesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"pipelineId": c.pipelineId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.pipelines.get"), c.s.client, req)
 }
 
 // Do executes the "genomics.pipelines.get" call.
@@ -3228,7 +3228,7 @@ func (c *PipelinesGetControllerConfigCall) doRequest(alt string) (*http.Response
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.pipelines.getControllerConfig"), c.s.client, req)
 }
 
 // Do executes the "genomics.pipelines.getControllerConfig" call.
@@ -3401,7 +3401,7 @@ func (c *PipelinesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.pipelines.list"), c.s.client, req)
 }
 
 // Do executes the "genomics.pipelines.list" call.
@@ -3576,7 +3576,7 @@ func (c *PipelinesRunCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.pipelines.run"), c.s.client, req)
 }
 
 // Do executes the "genomics.pipelines.run" call.
@@ -3703,7 +3703,7 @@ func (c *PipelinesSetOperationStatusCall) doRequest(alt string) (*http.Response,
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("PUT", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "genomics.pipelines.setOperationStatus"), c.s.client, req)
 }
 
 // Do executes the "genomics.pipelines.setOperationStatus" call.

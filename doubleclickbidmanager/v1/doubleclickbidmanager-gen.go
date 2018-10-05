@@ -1728,7 +1728,7 @@ func (c *LineitemsDownloadlineitemsCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclickbidmanager.lineitems.downloadlineitems"), c.s.client, req)
 }
 
 // Do executes the "doubleclickbidmanager.lineitems.downloadlineitems" call.
@@ -1847,7 +1847,7 @@ func (c *LineitemsUploadlineitemsCall) doRequest(alt string) (*http.Response, er
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclickbidmanager.lineitems.uploadlineitems"), c.s.client, req)
 }
 
 // Do executes the "doubleclickbidmanager.lineitems.uploadlineitems" call.
@@ -1965,7 +1965,7 @@ func (c *QueriesCreatequeryCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclickbidmanager.queries.createquery"), c.s.client, req)
 }
 
 // Do executes the "doubleclickbidmanager.queries.createquery" call.
@@ -2082,7 +2082,7 @@ func (c *QueriesDeletequeryCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"queryId": strconv.FormatInt(c.queryId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclickbidmanager.queries.deletequery"), c.s.client, req)
 }
 
 // Do executes the "doubleclickbidmanager.queries.deletequery" call.
@@ -2193,7 +2193,7 @@ func (c *QueriesGetqueryCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"queryId": strconv.FormatInt(c.queryId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclickbidmanager.queries.getquery"), c.s.client, req)
 }
 
 // Do executes the "doubleclickbidmanager.queries.getquery" call.
@@ -2327,7 +2327,7 @@ func (c *QueriesListqueriesCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclickbidmanager.queries.listqueries"), c.s.client, req)
 }
 
 // Do executes the "doubleclickbidmanager.queries.listqueries" call.
@@ -2447,7 +2447,7 @@ func (c *QueriesRunqueryCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"queryId": strconv.FormatInt(c.queryId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclickbidmanager.queries.runquery"), c.s.client, req)
 }
 
 // Do executes the "doubleclickbidmanager.queries.runquery" call.
@@ -2561,7 +2561,7 @@ func (c *ReportsListreportsCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"queryId": strconv.FormatInt(c.queryId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclickbidmanager.reports.listreports"), c.s.client, req)
 }
 
 // Do executes the "doubleclickbidmanager.reports.listreports" call.
@@ -2688,7 +2688,7 @@ func (c *SdfDownloadCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclickbidmanager.sdf.download"), c.s.client, req)
 }
 
 // Do executes the "doubleclickbidmanager.sdf.download" call.

@@ -2153,7 +2153,7 @@ func (c *UsersGetProfileCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.getProfile"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.getProfile" call.
@@ -2282,7 +2282,7 @@ func (c *UsersStopCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.stop"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.stop" call.
@@ -2390,7 +2390,7 @@ func (c *UsersWatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.watch"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.watch" call.
@@ -2579,7 +2579,7 @@ func (c *UsersDraftsCreateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.drafts.create"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.drafts.create" call.
@@ -2747,7 +2747,7 @@ func (c *UsersDraftsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.drafts.delete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.drafts.delete" call.
@@ -2883,7 +2883,7 @@ func (c *UsersDraftsGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.drafts.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.drafts.get" call.
@@ -3080,7 +3080,7 @@ func (c *UsersDraftsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.drafts.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.drafts.list" call.
@@ -3311,7 +3311,7 @@ func (c *UsersDraftsSendCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.drafts.send"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.drafts.send" call.
@@ -3536,7 +3536,7 @@ func (c *UsersDraftsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.drafts.update"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.drafts.update" call.
@@ -3773,7 +3773,7 @@ func (c *UsersHistoryListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.history.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.history.list" call.
@@ -3970,7 +3970,7 @@ func (c *UsersLabelsCreateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.labels.create"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.labels.create" call.
@@ -4104,7 +4104,7 @@ func (c *UsersLabelsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.labels.delete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.labels.delete" call.
@@ -4227,7 +4227,7 @@ func (c *UsersLabelsGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.labels.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.labels.get" call.
@@ -4377,7 +4377,7 @@ func (c *UsersLabelsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.labels.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.labels.list" call.
@@ -4517,7 +4517,7 @@ func (c *UsersLabelsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.labels.patch"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.labels.patch" call.
@@ -4664,7 +4664,7 @@ func (c *UsersLabelsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.labels.update"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.labels.update" call.
@@ -4810,7 +4810,7 @@ func (c *UsersMessagesBatchDeleteCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.batchDelete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.batchDelete" call.
@@ -4917,7 +4917,7 @@ func (c *UsersMessagesBatchModifyCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.batchModify"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.batchModify" call.
@@ -5022,7 +5022,7 @@ func (c *UsersMessagesDeleteCall) doRequest(alt string) (*http.Response, error) 
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.delete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.delete" call.
@@ -5163,7 +5163,7 @@ func (c *UsersMessagesGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.get" call.
@@ -5417,7 +5417,7 @@ func (c *UsersMessagesImportCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.import"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.import" call.
@@ -5692,7 +5692,7 @@ func (c *UsersMessagesInsertCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.insert"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.insert" call.
@@ -5928,7 +5928,7 @@ func (c *UsersMessagesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.list" call.
@@ -6116,7 +6116,7 @@ func (c *UsersMessagesModifyCall) doRequest(alt string) (*http.Response, error) 
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.modify"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.modify" call.
@@ -6311,7 +6311,7 @@ func (c *UsersMessagesSendCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.send"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.send" call.
@@ -6479,7 +6479,7 @@ func (c *UsersMessagesTrashCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.trash"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.trash" call.
@@ -6615,7 +6615,7 @@ func (c *UsersMessagesUntrashCall) doRequest(alt string) (*http.Response, error)
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.untrash"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.untrash" call.
@@ -6768,7 +6768,7 @@ func (c *UsersMessagesAttachmentsGetCall) doRequest(alt string) (*http.Response,
 		"messageId": c.messageId,
 		"id":        c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.messages.attachments.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.messages.attachments.get" call.
@@ -6924,7 +6924,7 @@ func (c *UsersSettingsGetAutoForwardingCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.getAutoForwarding"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.getAutoForwarding" call.
@@ -7066,7 +7066,7 @@ func (c *UsersSettingsGetImapCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.getImap"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.getImap" call.
@@ -7208,7 +7208,7 @@ func (c *UsersSettingsGetPopCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.getPop"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.getPop" call.
@@ -7350,7 +7350,7 @@ func (c *UsersSettingsGetVacationCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.getVacation"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.getVacation" call.
@@ -7490,7 +7490,7 @@ func (c *UsersSettingsUpdateAutoForwardingCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.updateAutoForwarding"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.updateAutoForwarding" call.
@@ -7625,7 +7625,7 @@ func (c *UsersSettingsUpdateImapCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.updateImap"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.updateImap" call.
@@ -7760,7 +7760,7 @@ func (c *UsersSettingsUpdatePopCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.updatePop"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.updatePop" call.
@@ -7895,7 +7895,7 @@ func (c *UsersSettingsUpdateVacationCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.updateVacation"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.updateVacation" call.
@@ -8047,7 +8047,7 @@ func (c *UsersSettingsDelegatesCreateCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.delegates.create"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.delegates.create" call.
@@ -8186,7 +8186,7 @@ func (c *UsersSettingsDelegatesDeleteCall) doRequest(alt string) (*http.Response
 		"userId":        c.userId,
 		"delegateEmail": c.delegateEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.delegates.delete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.delegates.delete" call.
@@ -8313,7 +8313,7 @@ func (c *UsersSettingsDelegatesGetCall) doRequest(alt string) (*http.Response, e
 		"userId":        c.userId,
 		"delegateEmail": c.delegateEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.delegates.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.delegates.get" call.
@@ -8465,7 +8465,7 @@ func (c *UsersSettingsDelegatesListCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.delegates.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.delegates.list" call.
@@ -8600,7 +8600,7 @@ func (c *UsersSettingsFiltersCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.filters.create"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.filters.create" call.
@@ -8731,7 +8731,7 @@ func (c *UsersSettingsFiltersDeleteCall) doRequest(alt string) (*http.Response, 
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.filters.delete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.filters.delete" call.
@@ -8852,7 +8852,7 @@ func (c *UsersSettingsFiltersGetCall) doRequest(alt string) (*http.Response, err
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.filters.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.filters.get" call.
@@ -9001,7 +9001,7 @@ func (c *UsersSettingsFiltersListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.filters.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.filters.list" call.
@@ -9142,7 +9142,7 @@ func (c *UsersSettingsForwardingAddressesCreateCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.forwardingAddresses.create"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.forwardingAddresses.create" call.
@@ -9277,7 +9277,7 @@ func (c *UsersSettingsForwardingAddressesDeleteCall) doRequest(alt string) (*htt
 		"userId":          c.userId,
 		"forwardingEmail": c.forwardingEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.forwardingAddresses.delete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.forwardingAddresses.delete" call.
@@ -9398,7 +9398,7 @@ func (c *UsersSettingsForwardingAddressesGetCall) doRequest(alt string) (*http.R
 		"userId":          c.userId,
 		"forwardingEmail": c.forwardingEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.forwardingAddresses.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.forwardingAddresses.get" call.
@@ -9547,7 +9547,7 @@ func (c *UsersSettingsForwardingAddressesListCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.forwardingAddresses.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.forwardingAddresses.list" call.
@@ -9692,7 +9692,7 @@ func (c *UsersSettingsSendAsCreateCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.create"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.create" call.
@@ -9827,7 +9827,7 @@ func (c *UsersSettingsSendAsDeleteCall) doRequest(alt string) (*http.Response, e
 		"userId":      c.userId,
 		"sendAsEmail": c.sendAsEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.delete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.delete" call.
@@ -9949,7 +9949,7 @@ func (c *UsersSettingsSendAsGetCall) doRequest(alt string) (*http.Response, erro
 		"userId":      c.userId,
 		"sendAsEmail": c.sendAsEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.get" call.
@@ -10100,7 +10100,7 @@ func (c *UsersSettingsSendAsListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.list" call.
@@ -10243,7 +10243,7 @@ func (c *UsersSettingsSendAsPatchCall) doRequest(alt string) (*http.Response, er
 		"userId":      c.userId,
 		"sendAsEmail": c.sendAsEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.patch"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.patch" call.
@@ -10394,7 +10394,7 @@ func (c *UsersSettingsSendAsUpdateCall) doRequest(alt string) (*http.Response, e
 		"userId":      c.userId,
 		"sendAsEmail": c.sendAsEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.update"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.update" call.
@@ -10537,7 +10537,7 @@ func (c *UsersSettingsSendAsVerifyCall) doRequest(alt string) (*http.Response, e
 		"userId":      c.userId,
 		"sendAsEmail": c.sendAsEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.verify"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.verify" call.
@@ -10648,7 +10648,7 @@ func (c *UsersSettingsSendAsSmimeInfoDeleteCall) doRequest(alt string) (*http.Re
 		"sendAsEmail": c.sendAsEmail,
 		"id":          c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.smimeInfo.delete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.smimeInfo.delete" call.
@@ -10781,7 +10781,7 @@ func (c *UsersSettingsSendAsSmimeInfoGetCall) doRequest(alt string) (*http.Respo
 		"sendAsEmail": c.sendAsEmail,
 		"id":          c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.smimeInfo.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.smimeInfo.get" call.
@@ -10935,7 +10935,7 @@ func (c *UsersSettingsSendAsSmimeInfoInsertCall) doRequest(alt string) (*http.Re
 		"userId":      c.userId,
 		"sendAsEmail": c.sendAsEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.smimeInfo.insert"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.smimeInfo.insert" call.
@@ -11088,7 +11088,7 @@ func (c *UsersSettingsSendAsSmimeInfoListCall) doRequest(alt string) (*http.Resp
 		"userId":      c.userId,
 		"sendAsEmail": c.sendAsEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.smimeInfo.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.smimeInfo.list" call.
@@ -11231,7 +11231,7 @@ func (c *UsersSettingsSendAsSmimeInfoSetDefaultCall) doRequest(alt string) (*htt
 		"sendAsEmail": c.sendAsEmail,
 		"id":          c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.settings.sendAs.smimeInfo.setDefault"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.settings.sendAs.smimeInfo.setDefault" call.
@@ -11347,7 +11347,7 @@ func (c *UsersThreadsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.threads.delete"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.threads.delete" call.
@@ -11487,7 +11487,7 @@ func (c *UsersThreadsGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.threads.get"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.threads.get" call.
@@ -11696,7 +11696,7 @@ func (c *UsersThreadsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.threads.list"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.threads.list" call.
@@ -11885,7 +11885,7 @@ func (c *UsersThreadsModifyCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.threads.modify"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.threads.modify" call.
@@ -12024,7 +12024,7 @@ func (c *UsersThreadsTrashCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.threads.trash"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.threads.trash" call.
@@ -12160,7 +12160,7 @@ func (c *UsersThreadsUntrashCall) doRequest(alt string) (*http.Response, error) 
 		"userId": c.userId,
 		"id":     c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gmail.users.threads.untrash"), c.s.client, req)
 }
 
 // Do executes the "gmail.users.threads.untrash" call.

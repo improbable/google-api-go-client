@@ -715,7 +715,7 @@ func (c *UsersEnvironmentsAuthorizeCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudshell.users.environments.authorize"), c.s.client, req)
 }
 
 // Do executes the "cloudshell.users.environments.authorize" call.
@@ -859,7 +859,7 @@ func (c *UsersEnvironmentsGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudshell.users.environments.get"), c.s.client, req)
 }
 
 // Do executes the "cloudshell.users.environments.get" call.
@@ -999,7 +999,7 @@ func (c *UsersEnvironmentsPatchCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudshell.users.environments.patch"), c.s.client, req)
 }
 
 // Do executes the "cloudshell.users.environments.patch" call.
@@ -1151,7 +1151,7 @@ func (c *UsersEnvironmentsStartCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudshell.users.environments.start"), c.s.client, req)
 }
 
 // Do executes the "cloudshell.users.environments.start" call.
@@ -1293,7 +1293,7 @@ func (c *UsersEnvironmentsPublicKeysCreateCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudshell.users.environments.publicKeys.create"), c.s.client, req)
 }
 
 // Do executes the "cloudshell.users.environments.publicKeys.create" call.
@@ -1425,7 +1425,7 @@ func (c *UsersEnvironmentsPublicKeysDeleteCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudshell.users.environments.publicKeys.delete"), c.s.client, req)
 }
 
 // Do executes the "cloudshell.users.environments.publicKeys.delete" call.

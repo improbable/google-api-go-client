@@ -3128,7 +3128,7 @@ func (c *ProjectsLocationsWorkflowTemplatesCreateCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.create"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.create" call.
@@ -3266,7 +3266,7 @@ func (c *ProjectsLocationsWorkflowTemplatesDeleteCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.delete" call.
@@ -3421,7 +3421,7 @@ func (c *ProjectsLocationsWorkflowTemplatesGetCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.get" call.
@@ -3569,7 +3569,7 @@ func (c *ProjectsLocationsWorkflowTemplatesGetIamPolicyCall) doRequest(alt strin
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.getIamPolicy" call.
@@ -3709,7 +3709,7 @@ func (c *ProjectsLocationsWorkflowTemplatesInstantiateCall) doRequest(alt string
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.instantiate"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.instantiate" call.
@@ -3873,7 +3873,7 @@ func (c *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall) doRequest(alt 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.instantiateInline"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.instantiateInline" call.
@@ -4040,7 +4040,7 @@ func (c *ProjectsLocationsWorkflowTemplatesListCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.list" call.
@@ -4206,7 +4206,7 @@ func (c *ProjectsLocationsWorkflowTemplatesSetIamPolicyCall) doRequest(alt strin
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.setIamPolicy" call.
@@ -4347,7 +4347,7 @@ func (c *ProjectsLocationsWorkflowTemplatesTestIamPermissionsCall) doRequest(alt
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.testIamPermissions" call.
@@ -4484,7 +4484,7 @@ func (c *ProjectsLocationsWorkflowTemplatesUpdateCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.update"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.update" call.
@@ -4637,7 +4637,7 @@ func (c *ProjectsRegionsClustersCreateCall) doRequest(alt string) (*http.Respons
 		"projectId": c.projectId,
 		"region":    c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.create"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.create" call.
@@ -4805,7 +4805,7 @@ func (c *ProjectsRegionsClustersDeleteCall) doRequest(alt string) (*http.Respons
 		"region":      c.region,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.delete" call.
@@ -4969,7 +4969,7 @@ func (c *ProjectsRegionsClustersDiagnoseCall) doRequest(alt string) (*http.Respo
 		"region":      c.region,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.diagnose"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.diagnose" call.
@@ -5131,7 +5131,7 @@ func (c *ProjectsRegionsClustersGetCall) doRequest(alt string) (*http.Response, 
 		"region":      c.region,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.get" call.
@@ -5286,7 +5286,7 @@ func (c *ProjectsRegionsClustersGetIamPolicyCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.getIamPolicy" call.
@@ -5461,7 +5461,7 @@ func (c *ProjectsRegionsClustersListCall) doRequest(alt string) (*http.Response,
 		"projectId": c.projectId,
 		"region":    c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.list" call.
@@ -5735,7 +5735,7 @@ func (c *ProjectsRegionsClustersPatchCall) doRequest(alt string) (*http.Response
 		"region":      c.region,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.patch"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.patch" call.
@@ -5902,7 +5902,7 @@ func (c *ProjectsRegionsClustersSetIamPolicyCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.setIamPolicy" call.
@@ -6043,7 +6043,7 @@ func (c *ProjectsRegionsClustersTestIamPermissionsCall) doRequest(alt string) (*
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.testIamPermissions" call.
@@ -6187,7 +6187,7 @@ func (c *ProjectsRegionsJobsCancelCall) doRequest(alt string) (*http.Response, e
 		"region":    c.region,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.cancel"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.cancel" call.
@@ -6336,7 +6336,7 @@ func (c *ProjectsRegionsJobsDeleteCall) doRequest(alt string) (*http.Response, e
 		"region":    c.region,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.delete" call.
@@ -6495,7 +6495,7 @@ func (c *ProjectsRegionsJobsGetCall) doRequest(alt string) (*http.Response, erro
 		"region":    c.region,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.get" call.
@@ -6650,7 +6650,7 @@ func (c *ProjectsRegionsJobsGetIamPolicyCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.getIamPolicy" call.
@@ -6841,7 +6841,7 @@ func (c *ProjectsRegionsJobsListCall) doRequest(alt string) (*http.Response, err
 		"projectId": c.projectId,
 		"region":    c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.list" call.
@@ -7050,7 +7050,7 @@ func (c *ProjectsRegionsJobsPatchCall) doRequest(alt string) (*http.Response, er
 		"region":    c.region,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.patch"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.patch" call.
@@ -7206,7 +7206,7 @@ func (c *ProjectsRegionsJobsSetIamPolicyCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.setIamPolicy" call.
@@ -7345,7 +7345,7 @@ func (c *ProjectsRegionsJobsSubmitCall) doRequest(alt string) (*http.Response, e
 		"projectId": c.projectId,
 		"region":    c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.submit"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.submit" call.
@@ -7492,7 +7492,7 @@ func (c *ProjectsRegionsJobsTestIamPermissionsCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.testIamPermissions" call.
@@ -7630,7 +7630,7 @@ func (c *ProjectsRegionsOperationsCancelCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.cancel" call.
@@ -7759,7 +7759,7 @@ func (c *ProjectsRegionsOperationsDeleteCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.delete" call.
@@ -7901,7 +7901,7 @@ func (c *ProjectsRegionsOperationsGetCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.get" call.
@@ -8043,7 +8043,7 @@ func (c *ProjectsRegionsOperationsGetIamPolicyCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.getIamPolicy" call.
@@ -8213,7 +8213,7 @@ func (c *ProjectsRegionsOperationsListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.list" call.
@@ -8384,7 +8384,7 @@ func (c *ProjectsRegionsOperationsSetIamPolicyCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.setIamPolicy" call.
@@ -8525,7 +8525,7 @@ func (c *ProjectsRegionsOperationsTestIamPermissionsCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.testIamPermissions" call.
@@ -8661,7 +8661,7 @@ func (c *ProjectsRegionsWorkflowTemplatesCreateCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.create"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.create" call.
@@ -8799,7 +8799,7 @@ func (c *ProjectsRegionsWorkflowTemplatesDeleteCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.delete" call.
@@ -8954,7 +8954,7 @@ func (c *ProjectsRegionsWorkflowTemplatesGetCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.get" call.
@@ -9102,7 +9102,7 @@ func (c *ProjectsRegionsWorkflowTemplatesGetIamPolicyCall) doRequest(alt string)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.getIamPolicy" call.
@@ -9242,7 +9242,7 @@ func (c *ProjectsRegionsWorkflowTemplatesInstantiateCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.instantiate"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.instantiate" call.
@@ -9406,7 +9406,7 @@ func (c *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall) doRequest(alt st
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.instantiateInline"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.instantiateInline" call.
@@ -9573,7 +9573,7 @@ func (c *ProjectsRegionsWorkflowTemplatesListCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.list" call.
@@ -9739,7 +9739,7 @@ func (c *ProjectsRegionsWorkflowTemplatesSetIamPolicyCall) doRequest(alt string)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.setIamPolicy" call.
@@ -9880,7 +9880,7 @@ func (c *ProjectsRegionsWorkflowTemplatesTestIamPermissionsCall) doRequest(alt s
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.testIamPermissions" call.
@@ -10017,7 +10017,7 @@ func (c *ProjectsRegionsWorkflowTemplatesUpdateCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.update"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.update" call.

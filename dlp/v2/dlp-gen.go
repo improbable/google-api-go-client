@@ -1064,6 +1064,109 @@ func (s *GooglePrivacyDlpV2CloudStoragePath) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
+// GooglePrivacyDlpV2CloudStorageRegexFileSet: Message representing a
+// set of files in a Cloud Storage bucket. Regular
+// expressions are used to allow fine-grained control over which files
+// in the
+// bucket to include.
+//
+// Included files are those that match at least one item in
+// `include_regex` and
+// do not match any items in `exclude_regex`. Note that a file that
+// matches
+// items from both lists will _not_ be included. For a match to occur,
+// the
+// entire file path (i.e., everything in the url after the bucket name)
+// must
+// match the regular expression.
+//
+// For example, given the input `{bucket_name: "mybucket",
+// include_regex:
+// ["directory1/.*"], exclude_regex:
+// ["directory1/excluded.*"]}`:
+//
+// * `gs://mybucket/directory1/myfile` will be included
+// * `gs://mybucket/directory1/directory2/myfile` will be included (`.*`
+// matches
+// across `/`)
+// * `gs://mybucket/directory0/directory1/myfile` will _not_ be included
+// (the
+// full path doesn't match any items in `include_regex`)
+// * `gs://mybucket/directory1/excludedfile` will _not_ be included (the
+// path
+// matches an item in `exclude_regex`)
+//
+// If `include_regex` is left empty, it will match all files by
+// default
+// (this is equivalent to setting `include_regex: [".*"]`).
+//
+// Some other common use cases:
+//
+// * `{bucket_name: "mybucket", exclude_regex: [".*\.pdf"]}` will
+// include all
+// files in `mybucket` except for .pdf files
+// * `{bucket_name: "mybucket", include_regex: ["directory/[^/]+"]}`
+// will
+// include all files directly under `gs://mybucket/directory/`, without
+// matching
+// across `/`
+type GooglePrivacyDlpV2CloudStorageRegexFileSet struct {
+	// BucketName: The name of a Cloud Storage bucket. Required.
+	BucketName string `json:"bucketName,omitempty"`
+
+	// ExcludeRegex: A list of regular expressions matching file paths to
+	// exclude. All files in
+	// the bucket that match at least one of these regular expressions will
+	// be
+	// excluded from the scan.
+	//
+	// Regular expressions use
+	// RE2
+	// [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be
+	// found
+	// under the google/re2 repository on GitHub.
+	ExcludeRegex []string `json:"excludeRegex,omitempty"`
+
+	// IncludeRegex: A list of regular expressions matching file paths to
+	// include. All files in
+	// the bucket that match at least one of these regular expressions will
+	// be
+	// included in the set of files, except for those that also match an
+	// item in
+	// `exclude_regex`. Leaving this field empty will match all files by
+	// default
+	// (this is equivalent to including `.*` in the list).
+	//
+	// Regular expressions use
+	// RE2
+	// [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be
+	// found
+	// under the google/re2 repository on GitHub.
+	IncludeRegex []string `json:"includeRegex,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "BucketName") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "BucketName") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *GooglePrivacyDlpV2CloudStorageRegexFileSet) MarshalJSON() ([]byte, error) {
+	type NoMethod GooglePrivacyDlpV2CloudStorageRegexFileSet
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
 // GooglePrivacyDlpV2Color: Represents a color in the RGB color space.
 type GooglePrivacyDlpV2Color struct {
 	// Blue: The amount of blue in the color as a value in the interval [0,
@@ -1260,10 +1363,17 @@ func (s *GooglePrivacyDlpV2ContentItem) MarshalJSON() ([]byte, error) {
 type GooglePrivacyDlpV2ContentLocation struct {
 	// ContainerName: Name of the container where the finding is
 	// located.
-	// The top level name is the source file name or table name. Nested
-	// names
-	// could be absent if the embedded object has no string identifier
-	// (for an example an image contained within a document).
+	// The top level name is the source file name or table name. Names of
+	// some
+	// common storage containers are formatted as follows:
+	//
+	// * BigQuery tables:  `<project_id>:<dataset_id>.<table_id>`
+	// * Cloud Storage files: `gs://<bucket>/<path>`
+	// * Datastore namespace: <namespace>
+	//
+	// Nested names could be absent if the embedded object has no
+	// string
+	// identifier (for an example an image contained within a document).
 	ContainerName string `json:"containerName,omitempty"`
 
 	// ContainerTimestamp: Findings container modification timestamp, if
@@ -2891,12 +3001,19 @@ func (s *GooglePrivacyDlpV2FieldTransformation) MarshalJSON() ([]byte, error) {
 
 // GooglePrivacyDlpV2FileSet: Set of files to scan.
 type GooglePrivacyDlpV2FileSet struct {
+	// RegexFileSet: The regex-filtered set of files to scan. Exactly one of
+	// `url` or
+	// `regex_file_set` must be set.
+	RegexFileSet *GooglePrivacyDlpV2CloudStorageRegexFileSet `json:"regexFileSet,omitempty"`
+
 	// Url: The Cloud Storage url of the file(s) to scan, in the
 	// format
 	// `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
+	// Exactly
+	// one of `url` or `regex_file_set` must be set.
 	Url string `json:"url,omitempty"`
 
-	// ForceSendFields is a list of field names (e.g. "Url") to
+	// ForceSendFields is a list of field names (e.g. "RegexFileSet") to
 	// unconditionally include in API requests. By default, fields with
 	// empty values are omitted from API requests. However, any non-pointer,
 	// non-interface field appearing in ForceSendFields will be sent to the
@@ -2904,10 +3021,10 @@ type GooglePrivacyDlpV2FileSet struct {
 	// used to include empty fields in Patch requests.
 	ForceSendFields []string `json:"-"`
 
-	// NullFields is a list of field names (e.g. "Url") to include in API
-	// requests with the JSON null value. By default, fields with empty
-	// values are omitted from API requests. However, any field with an
-	// empty value appearing in NullFields will be sent to the server as
+	// NullFields is a list of field names (e.g. "RegexFileSet") to include
+	// in API requests with the JSON null value. By default, fields with
+	// empty values are omitted from API requests. However, any field with
+	// an empty value appearing in NullFields will be sent to the server as
 	// null. It is an error if a field in this list has a non-empty value.
 	// This may be used to include null fields in Patch requests.
 	NullFields []string `json:"-"`
@@ -7555,7 +7672,7 @@ func (c *InfoTypesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.infoTypes.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.infoTypes.list" call.
@@ -7695,7 +7812,7 @@ func (c *OrganizationsDeidentifyTemplatesCreateCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.deidentifyTemplates.create"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.deidentifyTemplates.create" call.
@@ -7828,7 +7945,7 @@ func (c *OrganizationsDeidentifyTemplatesDeleteCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.deidentifyTemplates.delete"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.deidentifyTemplates.delete" call.
@@ -7971,7 +8088,7 @@ func (c *OrganizationsDeidentifyTemplatesGetCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.deidentifyTemplates.get"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.deidentifyTemplates.get" call.
@@ -8152,7 +8269,7 @@ func (c *OrganizationsDeidentifyTemplatesListCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.deidentifyTemplates.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.deidentifyTemplates.list" call.
@@ -8327,7 +8444,7 @@ func (c *OrganizationsDeidentifyTemplatesPatchCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.deidentifyTemplates.patch"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.deidentifyTemplates.patch" call.
@@ -8468,7 +8585,7 @@ func (c *OrganizationsInspectTemplatesCreateCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.inspectTemplates.create"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.inspectTemplates.create" call.
@@ -8600,7 +8717,7 @@ func (c *OrganizationsInspectTemplatesDeleteCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.inspectTemplates.delete"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.inspectTemplates.delete" call.
@@ -8742,7 +8859,7 @@ func (c *OrganizationsInspectTemplatesGetCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.inspectTemplates.get"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.inspectTemplates.get" call.
@@ -8922,7 +9039,7 @@ func (c *OrganizationsInspectTemplatesListCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.inspectTemplates.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.inspectTemplates.list" call.
@@ -9096,7 +9213,7 @@ func (c *OrganizationsInspectTemplatesPatchCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.inspectTemplates.patch"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.inspectTemplates.patch" call.
@@ -9237,7 +9354,7 @@ func (c *OrganizationsStoredInfoTypesCreateCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.storedInfoTypes.create"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.storedInfoTypes.create" call.
@@ -9369,7 +9486,7 @@ func (c *OrganizationsStoredInfoTypesDeleteCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.storedInfoTypes.delete"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.storedInfoTypes.delete" call.
@@ -9512,7 +9629,7 @@ func (c *OrganizationsStoredInfoTypesGetCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.storedInfoTypes.get"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.storedInfoTypes.get" call.
@@ -9694,7 +9811,7 @@ func (c *OrganizationsStoredInfoTypesListCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.storedInfoTypes.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.storedInfoTypes.list" call.
@@ -9871,7 +9988,7 @@ func (c *OrganizationsStoredInfoTypesPatchCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.organizations.storedInfoTypes.patch"), c.s.client, req)
 }
 
 // Do executes the "dlp.organizations.storedInfoTypes.patch" call.
@@ -10018,7 +10135,7 @@ func (c *ProjectsContentDeidentifyCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.content.deidentify"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.content.deidentify" call.
@@ -10168,7 +10285,7 @@ func (c *ProjectsContentInspectCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.content.inspect"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.content.inspect" call.
@@ -10311,7 +10428,7 @@ func (c *ProjectsContentReidentifyCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.content.reidentify"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.content.reidentify" call.
@@ -10454,7 +10571,7 @@ func (c *ProjectsDeidentifyTemplatesCreateCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.deidentifyTemplates.create"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.deidentifyTemplates.create" call.
@@ -10587,7 +10704,7 @@ func (c *ProjectsDeidentifyTemplatesDeleteCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.deidentifyTemplates.delete"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.deidentifyTemplates.delete" call.
@@ -10730,7 +10847,7 @@ func (c *ProjectsDeidentifyTemplatesGetCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.deidentifyTemplates.get"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.deidentifyTemplates.get" call.
@@ -10911,7 +11028,7 @@ func (c *ProjectsDeidentifyTemplatesListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.deidentifyTemplates.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.deidentifyTemplates.list" call.
@@ -11086,7 +11203,7 @@ func (c *ProjectsDeidentifyTemplatesPatchCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.deidentifyTemplates.patch"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.deidentifyTemplates.patch" call.
@@ -11231,7 +11348,7 @@ func (c *ProjectsDlpJobsCancelCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.dlpJobs.cancel"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.dlpJobs.cancel" call.
@@ -11378,7 +11495,7 @@ func (c *ProjectsDlpJobsCreateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.dlpJobs.create"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.dlpJobs.create" call.
@@ -11515,7 +11632,7 @@ func (c *ProjectsDlpJobsDeleteCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.dlpJobs.delete"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.dlpJobs.delete" call.
@@ -11659,7 +11776,7 @@ func (c *ProjectsDlpJobsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.dlpJobs.get"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.dlpJobs.get" call.
@@ -11883,7 +12000,7 @@ func (c *ProjectsDlpJobsListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.dlpJobs.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.dlpJobs.list" call.
@@ -12080,7 +12197,7 @@ func (c *ProjectsImageRedactCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.image.redact"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.image.redact" call.
@@ -12221,7 +12338,7 @@ func (c *ProjectsInspectTemplatesCreateCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.inspectTemplates.create"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.inspectTemplates.create" call.
@@ -12353,7 +12470,7 @@ func (c *ProjectsInspectTemplatesDeleteCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.inspectTemplates.delete"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.inspectTemplates.delete" call.
@@ -12495,7 +12612,7 @@ func (c *ProjectsInspectTemplatesGetCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.inspectTemplates.get"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.inspectTemplates.get" call.
@@ -12675,7 +12792,7 @@ func (c *ProjectsInspectTemplatesListCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.inspectTemplates.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.inspectTemplates.list" call.
@@ -12849,7 +12966,7 @@ func (c *ProjectsInspectTemplatesPatchCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.inspectTemplates.patch"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.inspectTemplates.patch" call.
@@ -12990,7 +13107,7 @@ func (c *ProjectsJobTriggersCreateCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.jobTriggers.create"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.jobTriggers.create" call.
@@ -13121,7 +13238,7 @@ func (c *ProjectsJobTriggersDeleteCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.jobTriggers.delete"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.jobTriggers.delete" call.
@@ -13263,7 +13380,7 @@ func (c *ProjectsJobTriggersGetCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.jobTriggers.get"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.jobTriggers.get" call.
@@ -13444,7 +13561,7 @@ func (c *ProjectsJobTriggersListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.jobTriggers.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.jobTriggers.list" call.
@@ -13618,7 +13735,7 @@ func (c *ProjectsJobTriggersPatchCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.jobTriggers.patch"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.jobTriggers.patch" call.
@@ -13758,7 +13875,7 @@ func (c *ProjectsStoredInfoTypesCreateCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.storedInfoTypes.create"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.storedInfoTypes.create" call.
@@ -13890,7 +14007,7 @@ func (c *ProjectsStoredInfoTypesDeleteCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.storedInfoTypes.delete"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.storedInfoTypes.delete" call.
@@ -14033,7 +14150,7 @@ func (c *ProjectsStoredInfoTypesGetCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.storedInfoTypes.get"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.storedInfoTypes.get" call.
@@ -14215,7 +14332,7 @@ func (c *ProjectsStoredInfoTypesListCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.storedInfoTypes.list"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.storedInfoTypes.list" call.
@@ -14392,7 +14509,7 @@ func (c *ProjectsStoredInfoTypesPatchCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dlp.projects.storedInfoTypes.patch"), c.s.client, req)
 }
 
 // Do executes the "dlp.projects.storedInfoTypes.patch" call.

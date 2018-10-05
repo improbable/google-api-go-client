@@ -2957,7 +2957,7 @@ func (c *ProjectsAllocateIdsCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.allocateIds"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.allocateIds" call.
@@ -3093,7 +3093,7 @@ func (c *ProjectsBeginTransactionCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.beginTransaction"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.beginTransaction" call.
@@ -3231,7 +3231,7 @@ func (c *ProjectsCommitCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.commit"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.commit" call.
@@ -3381,7 +3381,7 @@ func (c *ProjectsExportCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.export"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.export" call.
@@ -3526,7 +3526,7 @@ func (c *ProjectsImportCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.import"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.import" call.
@@ -3662,7 +3662,7 @@ func (c *ProjectsLookupCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.lookup"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.lookup" call.
@@ -3800,7 +3800,7 @@ func (c *ProjectsReserveIdsCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.reserveIds"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.reserveIds" call.
@@ -3936,7 +3936,7 @@ func (c *ProjectsRollbackCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.rollback"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.rollback" call.
@@ -4072,7 +4072,7 @@ func (c *ProjectsRunQueryCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.runQuery"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.runQuery" call.
@@ -4218,7 +4218,7 @@ func (c *ProjectsIndexesGetCall) doRequest(alt string) (*http.Response, error) {
 		"projectId": c.projectId,
 		"indexId":   c.indexId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.indexes.get"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.indexes.get" call.
@@ -4390,7 +4390,7 @@ func (c *ProjectsIndexesListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.indexes.list"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.indexes.list" call.
@@ -4571,7 +4571,7 @@ func (c *ProjectsOperationsCancelCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.operations.cancel" call.
@@ -4704,7 +4704,7 @@ func (c *ProjectsOperationsDeleteCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.operations.delete" call.
@@ -4849,7 +4849,7 @@ func (c *ProjectsOperationsGetCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.operations.get"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.operations.get" call.
@@ -5027,7 +5027,7 @@ func (c *ProjectsOperationsListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "datastore.projects.operations.list"), c.s.client, req)
 }
 
 // Do executes the "datastore.projects.operations.list" call.

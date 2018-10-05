@@ -1455,7 +1455,7 @@ func (c *BillingAccountsCreateCall) doRequest(alt string) (*http.Response, error
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.billingAccounts.create"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.billingAccounts.create" call.
@@ -1593,7 +1593,7 @@ func (c *BillingAccountsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.billingAccounts.get"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.billingAccounts.get" call.
@@ -1740,7 +1740,7 @@ func (c *BillingAccountsGetIamPolicyCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.billingAccounts.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.billingAccounts.getIamPolicy" call.
@@ -1913,7 +1913,7 @@ func (c *BillingAccountsListCall) doRequest(alt string) (*http.Response, error) 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.billingAccounts.list"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.billingAccounts.list" call.
@@ -2090,7 +2090,7 @@ func (c *BillingAccountsPatchCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.billingAccounts.patch"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.billingAccounts.patch" call.
@@ -2240,7 +2240,7 @@ func (c *BillingAccountsSetIamPolicyCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.billingAccounts.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.billingAccounts.setIamPolicy" call.
@@ -2380,7 +2380,7 @@ func (c *BillingAccountsTestIamPermissionsCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.billingAccounts.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.billingAccounts.testIamPermissions" call.
@@ -2549,7 +2549,7 @@ func (c *BillingAccountsProjectsListCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.billingAccounts.projects.list"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.billingAccounts.projects.list" call.
@@ -2727,7 +2727,7 @@ func (c *ProjectsGetBillingInfoCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.projects.getBillingInfo"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.projects.getBillingInfo" call.
@@ -2915,7 +2915,7 @@ func (c *ProjectsUpdateBillingInfoCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.projects.updateBillingInfo"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.projects.updateBillingInfo" call.
@@ -3070,7 +3070,7 @@ func (c *ServicesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.services.list"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.services.list" call.
@@ -3291,7 +3291,7 @@ func (c *ServicesSkusListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudbilling.services.skus.list"), c.s.client, req)
 }
 
 // Do executes the "cloudbilling.services.skus.list" call.

@@ -2295,7 +2295,7 @@ func (c *ActivitiesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"activityId": c.activityId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "plus.activities.get"), c.s.client, req)
 }
 
 // Do executes the "plus.activities.get" call.
@@ -2456,7 +2456,7 @@ func (c *ActivitiesListCall) doRequest(alt string) (*http.Response, error) {
 		"userId":     c.userId,
 		"collection": c.collection,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "plus.activities.list"), c.s.client, req)
 }
 
 // Do executes the "plus.activities.list" call.
@@ -2679,7 +2679,7 @@ func (c *ActivitiesSearchCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "plus.activities.search"), c.s.client, req)
 }
 
 // Do executes the "plus.activities.search" call.
@@ -2873,7 +2873,7 @@ func (c *CommentsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "plus.comments.get"), c.s.client, req)
 }
 
 // Do executes the "plus.comments.get" call.
@@ -3041,7 +3041,7 @@ func (c *CommentsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"activityId": c.activityId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "plus.comments.list"), c.s.client, req)
 }
 
 // Do executes the "plus.comments.list" call.
@@ -3231,7 +3231,7 @@ func (c *PeopleGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "plus.people.get"), c.s.client, req)
 }
 
 // Do executes the "plus.people.get" call.
@@ -3404,7 +3404,7 @@ func (c *PeopleListCall) doRequest(alt string) (*http.Response, error) {
 		"userId":     c.userId,
 		"collection": c.collection,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "plus.people.list"), c.s.client, req)
 }
 
 // Do executes the "plus.people.list" call.
@@ -3628,7 +3628,7 @@ func (c *PeopleListByActivityCall) doRequest(alt string) (*http.Response, error)
 		"activityId": c.activityId,
 		"collection": c.collection,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "plus.people.listByActivity"), c.s.client, req)
 }
 
 // Do executes the "plus.people.listByActivity" call.
@@ -3840,7 +3840,7 @@ func (c *PeopleSearchCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "plus.people.search"), c.s.client, req)
 }
 
 // Do executes the "plus.people.search" call.

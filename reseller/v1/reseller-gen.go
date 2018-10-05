@@ -902,7 +902,7 @@ func (c *CustomersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.customers.get"), c.s.client, req)
 }
 
 // Do executes the "reseller.customers.get" call.
@@ -1041,7 +1041,7 @@ func (c *CustomersInsertCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.customers.insert"), c.s.client, req)
 }
 
 // Do executes the "reseller.customers.insert" call.
@@ -1172,7 +1172,7 @@ func (c *CustomersPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.customers.patch"), c.s.client, req)
 }
 
 // Do executes the "reseller.customers.patch" call.
@@ -1306,7 +1306,7 @@ func (c *CustomersUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.customers.update"), c.s.client, req)
 }
 
 // Do executes the "reseller.customers.update" call.
@@ -1443,7 +1443,7 @@ func (c *ResellernotifyGetwatchdetailsCall) doRequest(alt string) (*http.Respons
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.resellernotify.getwatchdetails"), c.s.client, req)
 }
 
 // Do executes the "reseller.resellernotify.getwatchdetails" call.
@@ -1561,7 +1561,7 @@ func (c *ResellernotifyRegisterCall) doRequest(alt string) (*http.Response, erro
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.resellernotify.register"), c.s.client, req)
 }
 
 // Do executes the "reseller.resellernotify.register" call.
@@ -1684,7 +1684,7 @@ func (c *ResellernotifyUnregisterCall) doRequest(alt string) (*http.Response, er
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.resellernotify.unregister"), c.s.client, req)
 }
 
 // Do executes the "reseller.resellernotify.unregister" call.
@@ -1808,7 +1808,7 @@ func (c *SubscriptionsActivateCall) doRequest(alt string) (*http.Response, error
 		"customerId":     c.customerId,
 		"subscriptionId": c.subscriptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.activate"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.activate" call.
@@ -1951,7 +1951,7 @@ func (c *SubscriptionsChangePlanCall) doRequest(alt string) (*http.Response, err
 		"customerId":     c.customerId,
 		"subscriptionId": c.subscriptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.changePlan"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.changePlan" call.
@@ -2096,7 +2096,7 @@ func (c *SubscriptionsChangeRenewalSettingsCall) doRequest(alt string) (*http.Re
 		"customerId":     c.customerId,
 		"subscriptionId": c.subscriptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.changeRenewalSettings"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.changeRenewalSettings" call.
@@ -2240,7 +2240,7 @@ func (c *SubscriptionsChangeSeatsCall) doRequest(alt string) (*http.Response, er
 		"customerId":     c.customerId,
 		"subscriptionId": c.subscriptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.changeSeats"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.changeSeats" call.
@@ -2378,7 +2378,7 @@ func (c *SubscriptionsDeleteCall) doRequest(alt string) (*http.Response, error) 
 		"customerId":     c.customerId,
 		"subscriptionId": c.subscriptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.delete"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.delete" call.
@@ -2517,7 +2517,7 @@ func (c *SubscriptionsGetCall) doRequest(alt string) (*http.Response, error) {
 		"customerId":     c.customerId,
 		"subscriptionId": c.subscriptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.get"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.get" call.
@@ -2668,7 +2668,7 @@ func (c *SubscriptionsInsertCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.insert"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.insert" call.
@@ -2863,7 +2863,7 @@ func (c *SubscriptionsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.list"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.list" call.
@@ -3032,7 +3032,7 @@ func (c *SubscriptionsStartPaidServiceCall) doRequest(alt string) (*http.Respons
 		"customerId":     c.customerId,
 		"subscriptionId": c.subscriptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.startPaidService"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.startPaidService" call.
@@ -3166,7 +3166,7 @@ func (c *SubscriptionsSuspendCall) doRequest(alt string) (*http.Response, error)
 		"customerId":     c.customerId,
 		"subscriptionId": c.subscriptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reseller.subscriptions.suspend"), c.s.client, req)
 }
 
 // Do executes the "reseller.subscriptions.suspend" call.

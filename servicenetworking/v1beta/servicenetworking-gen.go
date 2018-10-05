@@ -4278,7 +4278,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicenetworking.operations.get"), c.s.client, req)
 }
 
 // Do executes the "servicenetworking.operations.get" call.
@@ -4424,7 +4424,7 @@ func (c *ServicesAddSubnetworkCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicenetworking.services.addSubnetwork"), c.s.client, req)
 }
 
 // Do executes the "servicenetworking.services.addSubnetwork" call.
@@ -4575,7 +4575,7 @@ func (c *ServicesConnectionsCreateCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicenetworking.services.connections.create"), c.s.client, req)
 }
 
 // Do executes the "servicenetworking.services.connections.create" call.
@@ -4735,7 +4735,7 @@ func (c *ServicesConnectionsListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicenetworking.services.connections.list"), c.s.client, req)
 }
 
 // Do executes the "servicenetworking.services.connections.list" call.

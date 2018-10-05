@@ -1118,7 +1118,7 @@ func (c *PhotoCreateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "streetviewpublish.photo.create"), c.s.client, req)
 }
 
 // Do executes the "streetviewpublish.photo.create" call.
@@ -1244,7 +1244,7 @@ func (c *PhotoDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"photoId": c.photoId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "streetviewpublish.photo.delete"), c.s.client, req)
 }
 
 // Do executes the "streetviewpublish.photo.delete" call.
@@ -1406,7 +1406,7 @@ func (c *PhotoGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"photoId": c.photoId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "streetviewpublish.photo.get"), c.s.client, req)
 }
 
 // Do executes the "streetviewpublish.photo.get" call.
@@ -1567,7 +1567,7 @@ func (c *PhotoStartUploadCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "streetviewpublish.photo.startUpload"), c.s.client, req)
 }
 
 // Do executes the "streetviewpublish.photo.startUpload" call.
@@ -1753,7 +1753,7 @@ func (c *PhotoUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"id": c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "streetviewpublish.photo.update"), c.s.client, req)
 }
 
 // Do executes the "streetviewpublish.photo.update" call.
@@ -1908,7 +1908,7 @@ func (c *PhotosBatchDeleteCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "streetviewpublish.photos.batchDelete"), c.s.client, req)
 }
 
 // Do executes the "streetviewpublish.photos.batchDelete" call.
@@ -2077,7 +2077,7 @@ func (c *PhotosBatchGetCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "streetviewpublish.photos.batchGet"), c.s.client, req)
 }
 
 // Do executes the "streetviewpublish.photos.batchGet" call.
@@ -2244,7 +2244,7 @@ func (c *PhotosBatchUpdateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "streetviewpublish.photos.batchUpdate"), c.s.client, req)
 }
 
 // Do executes the "streetviewpublish.photos.batchUpdate" call.
@@ -2423,7 +2423,7 @@ func (c *PhotosListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "streetviewpublish.photos.list"), c.s.client, req)
 }
 
 // Do executes the "streetviewpublish.photos.list" call.

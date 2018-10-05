@@ -4632,7 +4632,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceusage.operations.get"), c.s.client, req)
 }
 
 // Do executes the "serviceusage.operations.get" call.
@@ -4812,7 +4812,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceusage.operations.list"), c.s.client, req)
 }
 
 // Do executes the "serviceusage.operations.list" call.
@@ -4984,7 +4984,7 @@ func (c *ServicesBatchEnableCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceusage.services.batchEnable"), c.s.client, req)
 }
 
 // Do executes the "serviceusage.services.batchEnable" call.
@@ -5133,7 +5133,7 @@ func (c *ServicesDisableCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceusage.services.disable"), c.s.client, req)
 }
 
 // Do executes the "serviceusage.services.disable" call.
@@ -5273,7 +5273,7 @@ func (c *ServicesEnableCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceusage.services.enable"), c.s.client, req)
 }
 
 // Do executes the "serviceusage.services.enable" call.
@@ -5418,7 +5418,7 @@ func (c *ServicesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceusage.services.get"), c.s.client, req)
 }
 
 // Do executes the "serviceusage.services.get" call.
@@ -5595,7 +5595,7 @@ func (c *ServicesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "serviceusage.services.list"), c.s.client, req)
 }
 
 // Do executes the "serviceusage.services.list" call.

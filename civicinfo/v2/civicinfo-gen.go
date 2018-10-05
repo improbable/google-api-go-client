@@ -1910,7 +1910,7 @@ func (c *DivisionsSearchCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "civicinfo.divisions.search"), c.s.client, req)
 }
 
 // Do executes the "civicinfo.divisions.search" call.
@@ -2041,7 +2041,7 @@ func (c *ElectionsElectionQueryCall) doRequest(alt string) (*http.Response, erro
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "civicinfo.elections.electionQuery"), c.s.client, req)
 }
 
 // Do executes the "civicinfo.elections.electionQuery" call.
@@ -2195,7 +2195,7 @@ func (c *ElectionsVoterInfoQueryCall) doRequest(alt string) (*http.Response, err
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "civicinfo.elections.voterInfoQuery"), c.s.client, req)
 }
 
 // Do executes the "civicinfo.elections.voterInfoQuery" call.
@@ -2407,7 +2407,7 @@ func (c *RepresentativesRepresentativeInfoByAddressCall) doRequest(alt string) (
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "civicinfo.representatives.representativeInfoByAddress"), c.s.client, req)
 }
 
 // Do executes the "civicinfo.representatives.representativeInfoByAddress" call.
@@ -2662,7 +2662,7 @@ func (c *RepresentativesRepresentativeInfoByDivisionCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"ocdId": c.ocdId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "civicinfo.representatives.representativeInfoByDivision"), c.s.client, req)
 }
 
 // Do executes the "civicinfo.representatives.representativeInfoByDivision" call.

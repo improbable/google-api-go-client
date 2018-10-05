@@ -10250,7 +10250,7 @@ func (c *FilesAsyncBatchAnnotateCall) doRequest(alt string) (*http.Response, err
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vision.files.asyncBatchAnnotate"), c.s.client, req)
 }
 
 // Do executes the "vision.files.asyncBatchAnnotate" call.
@@ -10372,7 +10372,7 @@ func (c *ImagesAnnotateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vision.images.annotate"), c.s.client, req)
 }
 
 // Do executes the "vision.images.annotate" call.
@@ -10510,7 +10510,7 @@ func (c *LocationsOperationsGetCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vision.locations.operations.get"), c.s.client, req)
 }
 
 // Do executes the "vision.locations.operations.get" call.
@@ -10661,7 +10661,7 @@ func (c *OperationsCancelCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vision.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "vision.operations.cancel" call.
@@ -10797,7 +10797,7 @@ func (c *OperationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vision.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "vision.operations.delete" call.
@@ -10942,7 +10942,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vision.operations.get"), c.s.client, req)
 }
 
 // Do executes the "vision.operations.get" call.
@@ -11120,7 +11120,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "vision.operations.list"), c.s.client, req)
 }
 
 // Do executes the "vision.operations.list" call.

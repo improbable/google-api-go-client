@@ -455,9 +455,10 @@ type Order struct {
 	// PlacedDate: The date when the order was placed, in ISO 8601 format.
 	PlacedDate string `json:"placedDate,omitempty"`
 
-	// Promotions: The details of the merchant provided promotions applied
-	// to the order. More details about the program are here.
-	Promotions []*OrderPromotion `json:"promotions,omitempty"`
+	// Promotions: Deprecated. The details of the merchant provided
+	// promotions applied to the order. More details about the program are
+	// here.
+	Promotions []*OrderLegacyPromotion `json:"promotions,omitempty"`
 
 	// Refunds: Refunds for the order.
 	Refunds []*OrderRefund `json:"refunds,omitempty"`
@@ -706,6 +707,103 @@ type OrderDeliveryDetails struct {
 
 func (s *OrderDeliveryDetails) MarshalJSON() ([]byte, error) {
 	type NoMethod OrderDeliveryDetails
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+type OrderLegacyPromotion struct {
+	Benefits []*OrderLegacyPromotionBenefit `json:"benefits,omitempty"`
+
+	// EffectiveDates: The date and time frame when the promotion is active
+	// and ready for validation review. Note that the promotion live time
+	// may be delayed for a few hours due to the validation review.
+	// Start date and end date are separated by a forward slash (/). The
+	// start date is specified by the format (YYYY-MM-DD), followed by the
+	// letter ?T?, the time of the day when the sale starts (in Greenwich
+	// Mean Time, GMT), followed by an expression of the time zone for the
+	// sale. The end date is in the same format.
+	EffectiveDates string `json:"effectiveDates,omitempty"`
+
+	// GenericRedemptionCode: Optional. The text code that corresponds to
+	// the promotion when applied on the retailer?s website.
+	GenericRedemptionCode string `json:"genericRedemptionCode,omitempty"`
+
+	// Id: The unique ID of the promotion.
+	Id string `json:"id,omitempty"`
+
+	// LongTitle: The full title of the promotion.
+	LongTitle string `json:"longTitle,omitempty"`
+
+	// ProductApplicability: Whether the promotion is applicable to all
+	// products or only specific products.
+	ProductApplicability string `json:"productApplicability,omitempty"`
+
+	// RedemptionChannel: Indicates that the promotion is valid online.
+	RedemptionChannel string `json:"redemptionChannel,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "Benefits") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "Benefits") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *OrderLegacyPromotion) MarshalJSON() ([]byte, error) {
+	type NoMethod OrderLegacyPromotion
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+type OrderLegacyPromotionBenefit struct {
+	// Discount: The discount in the order price when the promotion is
+	// applied.
+	Discount *Price `json:"discount,omitempty"`
+
+	// OfferIds: The OfferId(s) that were purchased in this order and map to
+	// this specific benefit of the promotion.
+	OfferIds []string `json:"offerIds,omitempty"`
+
+	// SubType: Further describes the benefit of the promotion. Note that we
+	// will expand on this enumeration as we support new promotion
+	// sub-types.
+	SubType string `json:"subType,omitempty"`
+
+	// TaxImpact: The impact on tax when the promotion is applied.
+	TaxImpact *Price `json:"taxImpact,omitempty"`
+
+	// Type: Describes whether the promotion applies to products (e.g. 20%
+	// off) or to shipping (e.g. Free Shipping).
+	Type string `json:"type,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "Discount") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "Discount") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *OrderLegacyPromotionBenefit) MarshalJSON() ([]byte, error) {
+	type NoMethod OrderLegacyPromotionBenefit
 	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
@@ -1070,103 +1168,6 @@ type OrderPaymentMethod struct {
 
 func (s *OrderPaymentMethod) MarshalJSON() ([]byte, error) {
 	type NoMethod OrderPaymentMethod
-	raw := NoMethod(*s)
-	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
-}
-
-type OrderPromotion struct {
-	Benefits []*OrderPromotionBenefit `json:"benefits,omitempty"`
-
-	// EffectiveDates: The date and time frame when the promotion is active
-	// and ready for validation review. Note that the promotion live time
-	// may be delayed for a few hours due to the validation review.
-	// Start date and end date are separated by a forward slash (/). The
-	// start date is specified by the format (YYYY-MM-DD), followed by the
-	// letter ?T?, the time of the day when the sale starts (in Greenwich
-	// Mean Time, GMT), followed by an expression of the time zone for the
-	// sale. The end date is in the same format.
-	EffectiveDates string `json:"effectiveDates,omitempty"`
-
-	// GenericRedemptionCode: Optional. The text code that corresponds to
-	// the promotion when applied on the retailer?s website.
-	GenericRedemptionCode string `json:"genericRedemptionCode,omitempty"`
-
-	// Id: The unique ID of the promotion.
-	Id string `json:"id,omitempty"`
-
-	// LongTitle: The full title of the promotion.
-	LongTitle string `json:"longTitle,omitempty"`
-
-	// ProductApplicability: Whether the promotion is applicable to all
-	// products or only specific products.
-	ProductApplicability string `json:"productApplicability,omitempty"`
-
-	// RedemptionChannel: Indicates that the promotion is valid online.
-	RedemptionChannel string `json:"redemptionChannel,omitempty"`
-
-	// ForceSendFields is a list of field names (e.g. "Benefits") to
-	// unconditionally include in API requests. By default, fields with
-	// empty values are omitted from API requests. However, any non-pointer,
-	// non-interface field appearing in ForceSendFields will be sent to the
-	// server regardless of whether the field is empty or not. This may be
-	// used to include empty fields in Patch requests.
-	ForceSendFields []string `json:"-"`
-
-	// NullFields is a list of field names (e.g. "Benefits") to include in
-	// API requests with the JSON null value. By default, fields with empty
-	// values are omitted from API requests. However, any field with an
-	// empty value appearing in NullFields will be sent to the server as
-	// null. It is an error if a field in this list has a non-empty value.
-	// This may be used to include null fields in Patch requests.
-	NullFields []string `json:"-"`
-}
-
-func (s *OrderPromotion) MarshalJSON() ([]byte, error) {
-	type NoMethod OrderPromotion
-	raw := NoMethod(*s)
-	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
-}
-
-type OrderPromotionBenefit struct {
-	// Discount: The discount in the order price when the promotion is
-	// applied.
-	Discount *Price `json:"discount,omitempty"`
-
-	// OfferIds: The OfferId(s) that were purchased in this order and map to
-	// this specific benefit of the promotion.
-	OfferIds []string `json:"offerIds,omitempty"`
-
-	// SubType: Further describes the benefit of the promotion. Note that we
-	// will expand on this enumeration as we support new promotion
-	// sub-types.
-	SubType string `json:"subType,omitempty"`
-
-	// TaxImpact: The impact on tax when the promotion is applied.
-	TaxImpact *Price `json:"taxImpact,omitempty"`
-
-	// Type: Describes whether the promotion applies to products (e.g. 20%
-	// off) or to shipping (e.g. Free Shipping).
-	Type string `json:"type,omitempty"`
-
-	// ForceSendFields is a list of field names (e.g. "Discount") to
-	// unconditionally include in API requests. By default, fields with
-	// empty values are omitted from API requests. However, any non-pointer,
-	// non-interface field appearing in ForceSendFields will be sent to the
-	// server regardless of whether the field is empty or not. This may be
-	// used to include empty fields in Patch requests.
-	ForceSendFields []string `json:"-"`
-
-	// NullFields is a list of field names (e.g. "Discount") to include in
-	// API requests with the JSON null value. By default, fields with empty
-	// values are omitted from API requests. However, any field with an
-	// empty value appearing in NullFields will be sent to the server as
-	// null. It is an error if a field in this list has a non-empty value.
-	// This may be used to include null fields in Patch requests.
-	NullFields []string `json:"-"`
-}
-
-func (s *OrderPromotionBenefit) MarshalJSON() ([]byte, error) {
-	type NoMethod OrderPromotionBenefit
 	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
@@ -4231,9 +4232,10 @@ type TestOrder struct {
 	// delivery addresses for the delivery.
 	PredefinedDeliveryAddress string `json:"predefinedDeliveryAddress,omitempty"`
 
-	// Promotions: The details of the merchant provided promotions applied
-	// to the order. More details about the program are here.
-	Promotions []*OrderPromotion `json:"promotions,omitempty"`
+	// Promotions: Deprecated. The details of the merchant provided
+	// promotions applied to the order. More details about the program are
+	// here.
+	Promotions []*OrderLegacyPromotion `json:"promotions,omitempty"`
 
 	// ShippingCost: The total cost of shipping for all items.
 	ShippingCost *Price `json:"shippingCost,omitempty"`
@@ -4662,7 +4664,7 @@ func (c *OrderinvoicesCreatechargeinvoiceCall) doRequest(alt string) (*http.Resp
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orderinvoices.createchargeinvoice"), c.s.client, req)
 }
 
 // Do executes the "content.orderinvoices.createchargeinvoice" call.
@@ -4813,7 +4815,7 @@ func (c *OrderinvoicesCreaterefundinvoiceCall) doRequest(alt string) (*http.Resp
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orderinvoices.createrefundinvoice"), c.s.client, req)
 }
 
 // Do executes the "content.orderinvoices.createrefundinvoice" call.
@@ -4961,7 +4963,7 @@ func (c *OrderpaymentsNotifyauthapprovedCall) doRequest(alt string) (*http.Respo
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orderpayments.notifyauthapproved"), c.s.client, req)
 }
 
 // Do executes the "content.orderpayments.notifyauthapproved" call.
@@ -5108,7 +5110,7 @@ func (c *OrderpaymentsNotifyauthdeclinedCall) doRequest(alt string) (*http.Respo
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orderpayments.notifyauthdeclined"), c.s.client, req)
 }
 
 // Do executes the "content.orderpayments.notifyauthdeclined" call.
@@ -5254,7 +5256,7 @@ func (c *OrderpaymentsNotifychargeCall) doRequest(alt string) (*http.Response, e
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orderpayments.notifycharge"), c.s.client, req)
 }
 
 // Do executes the "content.orderpayments.notifycharge" call.
@@ -5400,7 +5402,7 @@ func (c *OrderpaymentsNotifyrefundCall) doRequest(alt string) (*http.Response, e
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orderpayments.notifyrefund"), c.s.client, req)
 }
 
 // Do executes the "content.orderpayments.notifyrefund" call.
@@ -5553,7 +5555,7 @@ func (c *OrderreturnsGetCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"returnId":   c.returnId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orderreturns.get"), c.s.client, req)
 }
 
 // Do executes the "content.orderreturns.get" call.
@@ -5742,7 +5744,7 @@ func (c *OrderreturnsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orderreturns.list"), c.s.client, req)
 }
 
 // Do executes the "content.orderreturns.list" call.
@@ -5932,7 +5934,7 @@ func (c *OrdersAcknowledgeCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.acknowledge"), c.s.client, req)
 }
 
 // Do executes the "content.orders.acknowledge" call.
@@ -6071,7 +6073,7 @@ func (c *OrdersAdvancetestorderCall) doRequest(alt string) (*http.Response, erro
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.advancetestorder"), c.s.client, req)
 }
 
 // Do executes the "content.orders.advancetestorder" call.
@@ -6213,7 +6215,7 @@ func (c *OrdersCancelCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.cancel"), c.s.client, req)
 }
 
 // Do executes the "content.orders.cancel" call.
@@ -6358,7 +6360,7 @@ func (c *OrdersCancellineitemCall) doRequest(alt string) (*http.Response, error)
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.cancellineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.cancellineitem" call.
@@ -6504,7 +6506,7 @@ func (c *OrdersCanceltestorderbycustomerCall) doRequest(alt string) (*http.Respo
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.canceltestorderbycustomer"), c.s.client, req)
 }
 
 // Do executes the "content.orders.canceltestorderbycustomer" call.
@@ -6647,7 +6649,7 @@ func (c *OrdersCreatetestorderCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.createtestorder"), c.s.client, req)
 }
 
 // Do executes the "content.orders.createtestorder" call.
@@ -6785,7 +6787,7 @@ func (c *OrdersCreatetestreturnCall) doRequest(alt string) (*http.Response, erro
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.createtestreturn"), c.s.client, req)
 }
 
 // Do executes the "content.orders.createtestreturn" call.
@@ -6923,7 +6925,7 @@ func (c *OrdersCustombatchCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.custombatch"), c.s.client, req)
 }
 
 // Do executes the "content.orders.custombatch" call.
@@ -7056,7 +7058,7 @@ func (c *OrdersGetCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.get"), c.s.client, req)
 }
 
 // Do executes the "content.orders.get" call.
@@ -7205,7 +7207,7 @@ func (c *OrdersGetbymerchantorderidCall) doRequest(alt string) (*http.Response, 
 		"merchantId":      strconv.FormatUint(c.merchantId, 10),
 		"merchantOrderId": c.merchantOrderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.getbymerchantorderid"), c.s.client, req)
 }
 
 // Do executes the "content.orders.getbymerchantorderid" call.
@@ -7363,7 +7365,7 @@ func (c *OrdersGettestordertemplateCall) doRequest(alt string) (*http.Response, 
 		"merchantId":   strconv.FormatUint(c.merchantId, 10),
 		"templateName": c.templateName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.gettestordertemplate"), c.s.client, req)
 }
 
 // Do executes the "content.orders.gettestordertemplate" call.
@@ -7525,7 +7527,7 @@ func (c *OrdersInstorerefundlineitemCall) doRequest(alt string) (*http.Response,
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.instorerefundlineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.instorerefundlineitem" call.
@@ -7759,7 +7761,7 @@ func (c *OrdersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.list"), c.s.client, req)
 }
 
 // Do executes the "content.orders.list" call.
@@ -7986,7 +7988,7 @@ func (c *OrdersRefundCall) doRequest(alt string) (*http.Response, error) {
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.refund"), c.s.client, req)
 }
 
 // Do executes the "content.orders.refund" call.
@@ -8131,7 +8133,7 @@ func (c *OrdersRejectreturnlineitemCall) doRequest(alt string) (*http.Response, 
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.rejectreturnlineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.rejectreturnlineitem" call.
@@ -8277,7 +8279,7 @@ func (c *OrdersReturnlineitemCall) doRequest(alt string) (*http.Response, error)
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.returnlineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.returnlineitem" call.
@@ -8423,7 +8425,7 @@ func (c *OrdersReturnrefundlineitemCall) doRequest(alt string) (*http.Response, 
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.returnrefundlineitem"), c.s.client, req)
 }
 
 // Do executes the "content.orders.returnrefundlineitem" call.
@@ -8570,7 +8572,7 @@ func (c *OrdersSetlineitemmetadataCall) doRequest(alt string) (*http.Response, e
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.setlineitemmetadata"), c.s.client, req)
 }
 
 // Do executes the "content.orders.setlineitemmetadata" call.
@@ -8716,7 +8718,7 @@ func (c *OrdersShiplineitemsCall) doRequest(alt string) (*http.Response, error) 
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.shiplineitems"), c.s.client, req)
 }
 
 // Do executes the "content.orders.shiplineitems" call.
@@ -8862,7 +8864,7 @@ func (c *OrdersUpdatelineitemshippingdetailsCall) doRequest(alt string) (*http.R
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.updatelineitemshippingdetails"), c.s.client, req)
 }
 
 // Do executes the "content.orders.updatelineitemshippingdetails" call.
@@ -9010,7 +9012,7 @@ func (c *OrdersUpdatemerchantorderidCall) doRequest(alt string) (*http.Response,
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.updatemerchantorderid"), c.s.client, req)
 }
 
 // Do executes the "content.orders.updatemerchantorderid" call.
@@ -9157,7 +9159,7 @@ func (c *OrdersUpdateshipmentCall) doRequest(alt string) (*http.Response, error)
 		"merchantId": strconv.FormatUint(c.merchantId, 10),
 		"orderId":    c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "content.orders.updateshipment"), c.s.client, req)
 }
 
 // Do executes the "content.orders.updateshipment" call.

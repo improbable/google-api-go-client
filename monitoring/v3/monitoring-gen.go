@@ -1680,12 +1680,13 @@ func (s *HttpCheck) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
-// InternalChecker: Nimbus InternalCheckers.
+// InternalChecker: Nimbus InternalCheckers. The API currently only
+// allows reading of internal checkers, creation of internal checkers is
+// a manual process.
 type InternalChecker struct {
-	// CheckerId: The checker ID.
-	CheckerId string `json:"checkerId,omitempty"`
-
-	// DisplayName: The checker's human-readable name.
+	// DisplayName: The checker's human-readable name. The display name
+	// should be unique within a Stackdriver Workspace in order to make it
+	// easier to identify; however, uniqueness is not enforced.
 	DisplayName string `json:"displayName,omitempty"`
 
 	// GcpZone: The GCP zone the uptime check should egress from. Only
@@ -1693,14 +1694,17 @@ type InternalChecker struct {
 	// specified.
 	GcpZone string `json:"gcpZone,omitempty"`
 
-	// Network: The internal network to perform this uptime check on.
+	// Name: A unique resource name for this InternalChecker. The format
+	// is:projects/[PROJECT_ID]/internalCheckers/[CHECKER_ID].PROJECT_ID is
+	// the GCP project ID where the internal resource lives. Not necessarily
+	// the same as the project_id for the config.
+	Name string `json:"name,omitempty"`
+
+	// Network: The GCP VPC network (https://cloud.google.com/vpc/docs/vpc)
+	// where the internal resource lives (ex: "default").
 	Network string `json:"network,omitempty"`
 
-	// ProjectId: The GCP project ID. Not necessarily the same as the
-	// project_id for the config.
-	ProjectId string `json:"projectId,omitempty"`
-
-	// ForceSendFields is a list of field names (e.g. "CheckerId") to
+	// ForceSendFields is a list of field names (e.g. "DisplayName") to
 	// unconditionally include in API requests. By default, fields with
 	// empty values are omitted from API requests. However, any non-pointer,
 	// non-interface field appearing in ForceSendFields will be sent to the
@@ -1708,10 +1712,10 @@ type InternalChecker struct {
 	// used to include empty fields in Patch requests.
 	ForceSendFields []string `json:"-"`
 
-	// NullFields is a list of field names (e.g. "CheckerId") to include in
-	// API requests with the JSON null value. By default, fields with empty
-	// values are omitted from API requests. However, any field with an
-	// empty value appearing in NullFields will be sent to the server as
+	// NullFields is a list of field names (e.g. "DisplayName") to include
+	// in API requests with the JSON null value. By default, fields with
+	// empty values are omitted from API requests. However, any field with
+	// an empty value appearing in NullFields will be sent to the server as
 	// null. It is an error if a field in this list has a non-empty value.
 	// This may be used to include null fields in Patch requests.
 	NullFields []string `json:"-"`
@@ -3681,7 +3685,7 @@ type UptimeCheckConfig struct {
 
 	// DisplayName: A human-friendly name for the uptime check
 	// configuration. The display name should be unique within a Stackdriver
-	// Account in order to make it easier to identify; however, uniqueness
+	// Workspace in order to make it easier to identify; however, uniqueness
 	// is not enforced. Required.
 	DisplayName string `json:"displayName,omitempty"`
 
@@ -3931,7 +3935,7 @@ func (c *ProjectsAlertPoliciesCreateCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.alertPolicies.create"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.alertPolicies.create" call.
@@ -4061,7 +4065,7 @@ func (c *ProjectsAlertPoliciesDeleteCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.alertPolicies.delete"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.alertPolicies.delete" call.
@@ -4202,7 +4206,7 @@ func (c *ProjectsAlertPoliciesGetCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.alertPolicies.get"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.alertPolicies.get" call.
@@ -4378,7 +4382,7 @@ func (c *ProjectsAlertPoliciesListCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.alertPolicies.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.alertPolicies.list" call.
@@ -4582,7 +4586,7 @@ func (c *ProjectsAlertPoliciesPatchCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.alertPolicies.patch"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.alertPolicies.patch" call.
@@ -4728,7 +4732,7 @@ func (c *ProjectsCollectdTimeSeriesCreateCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.collectdTimeSeries.create"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.collectdTimeSeries.create" call.
@@ -4873,7 +4877,7 @@ func (c *ProjectsGroupsCreateCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.groups.create"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.groups.create" call.
@@ -5008,7 +5012,7 @@ func (c *ProjectsGroupsDeleteCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.groups.delete"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.groups.delete" call.
@@ -5149,7 +5153,7 @@ func (c *ProjectsGroupsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.groups.get"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.groups.get" call.
@@ -5337,7 +5341,7 @@ func (c *ProjectsGroupsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.groups.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.groups.list" call.
@@ -5527,7 +5531,7 @@ func (c *ProjectsGroupsUpdateCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.groups.update"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.groups.update" call.
@@ -5719,7 +5723,7 @@ func (c *ProjectsGroupsMembersListCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.groups.members.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.groups.members.list" call.
@@ -5904,7 +5908,7 @@ func (c *ProjectsMetricDescriptorsCreateCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.metricDescriptors.create"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.metricDescriptors.create" call.
@@ -6036,7 +6040,7 @@ func (c *ProjectsMetricDescriptorsDeleteCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.metricDescriptors.delete"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.metricDescriptors.delete" call.
@@ -6178,7 +6182,7 @@ func (c *ProjectsMetricDescriptorsGetCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.metricDescriptors.get"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.metricDescriptors.get" call.
@@ -6349,7 +6353,7 @@ func (c *ProjectsMetricDescriptorsListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.metricDescriptors.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.metricDescriptors.list" call.
@@ -6530,7 +6534,7 @@ func (c *ProjectsMonitoredResourceDescriptorsGetCall) doRequest(alt string) (*ht
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.monitoredResourceDescriptors.get"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.monitoredResourceDescriptors.get" call.
@@ -6701,7 +6705,7 @@ func (c *ProjectsMonitoredResourceDescriptorsListCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.monitoredResourceDescriptors.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.monitoredResourceDescriptors.list" call.
@@ -6885,7 +6889,7 @@ func (c *ProjectsNotificationChannelDescriptorsGetCall) doRequest(alt string) (*
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannelDescriptors.get"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannelDescriptors.get" call.
@@ -7045,7 +7049,7 @@ func (c *ProjectsNotificationChannelDescriptorsListCall) doRequest(alt string) (
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannelDescriptors.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannelDescriptors.list" call.
@@ -7216,7 +7220,7 @@ func (c *ProjectsNotificationChannelsCreateCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannels.create"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannels.create" call.
@@ -7356,7 +7360,7 @@ func (c *ProjectsNotificationChannelsDeleteCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannels.delete"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannels.delete" call.
@@ -7507,7 +7511,7 @@ func (c *ProjectsNotificationChannelsGetCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannels.get"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannels.get" call.
@@ -7662,7 +7666,7 @@ func (c *ProjectsNotificationChannelsGetVerificationCodeCall) doRequest(alt stri
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannels.getVerificationCode"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannels.getVerificationCode" call.
@@ -7844,7 +7848,7 @@ func (c *ProjectsNotificationChannelsListCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannels.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannels.list" call.
@@ -8029,7 +8033,7 @@ func (c *ProjectsNotificationChannelsPatchCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannels.patch"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannels.patch" call.
@@ -8174,7 +8178,7 @@ func (c *ProjectsNotificationChannelsSendVerificationCodeCall) doRequest(alt str
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannels.sendVerificationCode"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannels.sendVerificationCode" call.
@@ -8313,7 +8317,7 @@ func (c *ProjectsNotificationChannelsVerifyCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.notificationChannels.verify"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.notificationChannels.verify" call.
@@ -8453,7 +8457,7 @@ func (c *ProjectsTimeSeriesCreateCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.timeSeries.create"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.timeSeries.create" call.
@@ -8765,7 +8769,7 @@ func (c *ProjectsTimeSeriesListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.timeSeries.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.timeSeries.list" call.
@@ -9022,7 +9026,7 @@ func (c *ProjectsUptimeCheckConfigsCreateCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.uptimeCheckConfigs.create"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.uptimeCheckConfigs.create" call.
@@ -9155,7 +9159,7 @@ func (c *ProjectsUptimeCheckConfigsDeleteCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.uptimeCheckConfigs.delete"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.uptimeCheckConfigs.delete" call.
@@ -9296,7 +9300,7 @@ func (c *ProjectsUptimeCheckConfigsGetCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.uptimeCheckConfigs.get"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.uptimeCheckConfigs.get" call.
@@ -9458,7 +9462,7 @@ func (c *ProjectsUptimeCheckConfigsListCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.uptimeCheckConfigs.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.uptimeCheckConfigs.list" call.
@@ -9638,7 +9642,7 @@ func (c *ProjectsUptimeCheckConfigsPatchCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.projects.uptimeCheckConfigs.patch"), c.s.client, req)
 }
 
 // Do executes the "monitoring.projects.uptimeCheckConfigs.patch" call.
@@ -9803,7 +9807,7 @@ func (c *UptimeCheckIpsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "monitoring.uptimeCheckIps.list"), c.s.client, req)
 }
 
 // Do executes the "monitoring.uptimeCheckIps.list" call.
