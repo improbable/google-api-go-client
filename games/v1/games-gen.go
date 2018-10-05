@@ -5120,7 +5120,7 @@ func (c *AchievementDefinitionsListCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.achievementDefinitions.list"), c.s.client, req)
 }
 
 // Do executes the "games.achievementDefinitions.list" call.
@@ -5287,7 +5287,7 @@ func (c *AchievementsIncrementCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"achievementId": c.achievementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.achievements.increment"), c.s.client, req)
 }
 
 // Do executes the "games.achievements.increment" call.
@@ -5479,7 +5479,7 @@ func (c *AchievementsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"playerId": c.playerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.achievements.list"), c.s.client, req)
 }
 
 // Do executes the "games.achievements.list" call.
@@ -5661,7 +5661,7 @@ func (c *AchievementsRevealCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"achievementId": c.achievementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.achievements.reveal"), c.s.client, req)
 }
 
 // Do executes the "games.achievements.reveal" call.
@@ -5790,7 +5790,7 @@ func (c *AchievementsSetStepsAtLeastCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"achievementId": c.achievementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.achievements.setStepsAtLeast"), c.s.client, req)
 }
 
 // Do executes the "games.achievements.setStepsAtLeast" call.
@@ -5885,6 +5885,13 @@ func (r *AchievementsService) Unlock(achievementId string) *AchievementsUnlockCa
 	return c
 }
 
+// BuiltinGameId sets the optional parameter "builtinGameId": Override
+// used only by built-in games in Play Games application.
+func (c *AchievementsUnlockCall) BuiltinGameId(builtinGameId string) *AchievementsUnlockCall {
+	c.urlParams_.Set("builtinGameId", builtinGameId)
+	return c
+}
+
 // Fields allows partial responses to be retrieved. See
 // https://developers.google.com/gdata/docs/2.0/basics#PartialResponse
 // for more information.
@@ -5926,7 +5933,7 @@ func (c *AchievementsUnlockCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"achievementId": c.achievementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.achievements.unlock"), c.s.client, req)
 }
 
 // Do executes the "games.achievements.unlock" call.
@@ -5979,6 +5986,11 @@ func (c *AchievementsUnlockCall) Do(opts ...googleapi.CallOption) (*AchievementU
 	//       "location": "path",
 	//       "required": true,
 	//       "type": "string"
+	//     },
+	//     "builtinGameId": {
+	//       "description": "Override used only by built-in games in Play Games application.",
+	//       "location": "query",
+	//       "type": "string"
 	//     }
 	//   },
 	//   "path": "achievements/{achievementId}/unlock",
@@ -6008,6 +6020,13 @@ type AchievementsUpdateMultipleCall struct {
 func (r *AchievementsService) UpdateMultiple(achievementupdatemultiplerequest *AchievementUpdateMultipleRequest) *AchievementsUpdateMultipleCall {
 	c := &AchievementsUpdateMultipleCall{s: r.s, urlParams_: make(gensupport.URLParams)}
 	c.achievementupdatemultiplerequest = achievementupdatemultiplerequest
+	return c
+}
+
+// BuiltinGameId sets the optional parameter "builtinGameId": Override
+// used only by built-in games in Play Games application.
+func (c *AchievementsUpdateMultipleCall) BuiltinGameId(builtinGameId string) *AchievementsUpdateMultipleCall {
+	c.urlParams_.Set("builtinGameId", builtinGameId)
 	return c
 }
 
@@ -6054,7 +6073,7 @@ func (c *AchievementsUpdateMultipleCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.achievements.updateMultiple"), c.s.client, req)
 }
 
 // Do executes the "games.achievements.updateMultiple" call.
@@ -6099,6 +6118,13 @@ func (c *AchievementsUpdateMultipleCall) Do(opts ...googleapi.CallOption) (*Achi
 	//   "description": "Updates multiple achievements for the currently authenticated player.",
 	//   "httpMethod": "POST",
 	//   "id": "games.achievements.updateMultiple",
+	//   "parameters": {
+	//     "builtinGameId": {
+	//       "description": "Override used only by built-in games in Play Games application.",
+	//       "location": "query",
+	//       "type": "string"
+	//     }
+	//   },
 	//   "path": "achievements/updateMultiple",
 	//   "request": {
 	//     "$ref": "AchievementUpdateMultipleRequest"
@@ -6209,7 +6235,7 @@ func (c *ApplicationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"applicationId": c.applicationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.applications.get"), c.s.client, req)
 }
 
 // Do executes the "games.applications.get" call.
@@ -6312,6 +6338,13 @@ func (r *ApplicationsService) Played() *ApplicationsPlayedCall {
 	return c
 }
 
+// BuiltinGameId sets the optional parameter "builtinGameId": Override
+// used only by built-in games in Play Games application.
+func (c *ApplicationsPlayedCall) BuiltinGameId(builtinGameId string) *ApplicationsPlayedCall {
+	c.urlParams_.Set("builtinGameId", builtinGameId)
+	return c
+}
+
 // Fields allows partial responses to be retrieved. See
 // https://developers.google.com/gdata/docs/2.0/basics#PartialResponse
 // for more information.
@@ -6350,7 +6383,7 @@ func (c *ApplicationsPlayedCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.applications.played"), c.s.client, req)
 }
 
 // Do executes the "games.applications.played" call.
@@ -6369,6 +6402,13 @@ func (c *ApplicationsPlayedCall) Do(opts ...googleapi.CallOption) error {
 	//   "description": "Indicate that the the currently authenticated user is playing your application.",
 	//   "httpMethod": "POST",
 	//   "id": "games.applications.played",
+	//   "parameters": {
+	//     "builtinGameId": {
+	//       "description": "Override used only by built-in games in Play Games application.",
+	//       "location": "query",
+	//       "type": "string"
+	//     }
+	//   },
 	//   "path": "applications/played",
 	//   "scopes": [
 	//     "https://www.googleapis.com/auth/games",
@@ -6452,7 +6492,7 @@ func (c *ApplicationsVerifyCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"applicationId": c.applicationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.applications.verify"), c.s.client, req)
 }
 
 // Do executes the "games.applications.verify" call.
@@ -6610,7 +6650,7 @@ func (c *EventsListByPlayerCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.events.listByPlayer"), c.s.client, req)
 }
 
 // Do executes the "games.events.listByPlayer" call.
@@ -6798,7 +6838,7 @@ func (c *EventsListDefinitionsCall) doRequest(alt string) (*http.Response, error
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.events.listDefinitions"), c.s.client, req)
 }
 
 // Do executes the "games.events.listDefinitions" call.
@@ -6963,7 +7003,7 @@ func (c *EventsRecordCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.events.record"), c.s.client, req)
 }
 
 // Do executes the "games.events.record" call.
@@ -7108,7 +7148,7 @@ func (c *LeaderboardsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"leaderboardId": c.leaderboardId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.leaderboards.get"), c.s.client, req)
 }
 
 // Do executes the "games.leaderboards.get" call.
@@ -7270,7 +7310,7 @@ func (c *LeaderboardsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.leaderboards.list"), c.s.client, req)
 }
 
 // Do executes the "games.leaderboards.list" call.
@@ -7435,7 +7475,7 @@ func (c *MetagameGetMetagameConfigCall) doRequest(alt string) (*http.Response, e
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.metagame.getMetagameConfig"), c.s.client, req)
 }
 
 // Do executes the "games.metagame.getMetagameConfig" call.
@@ -7590,7 +7630,7 @@ func (c *MetagameListCategoriesByPlayerCall) doRequest(alt string) (*http.Respon
 		"playerId":   c.playerId,
 		"collection": c.collection,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.metagame.listCategoriesByPlayer"), c.s.client, req)
 }
 
 // Do executes the "games.metagame.listCategoriesByPlayer" call.
@@ -7789,7 +7829,7 @@ func (c *PlayersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"playerId": c.playerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.players.get"), c.s.client, req)
 }
 
 // Do executes the "games.players.get" call.
@@ -7957,7 +7997,7 @@ func (c *PlayersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"collection": c.collection,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.players.list"), c.s.client, req)
 }
 
 // Do executes the "games.players.list" call.
@@ -8136,7 +8176,7 @@ func (c *PushtokensRemoveCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.pushtokens.remove"), c.s.client, req)
 }
 
 // Do executes the "games.pushtokens.remove" call.
@@ -8227,7 +8267,7 @@ func (c *PushtokensUpdateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("PUT", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.pushtokens.update"), c.s.client, req)
 }
 
 // Do executes the "games.pushtokens.update" call.
@@ -8322,7 +8362,7 @@ func (c *QuestMilestonesClaimCall) doRequest(alt string) (*http.Response, error)
 		"questId":     c.questId,
 		"milestoneId": c.milestoneId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.questMilestones.claim"), c.s.client, req)
 }
 
 // Do executes the "games.questMilestones.claim" call.
@@ -8442,7 +8482,7 @@ func (c *QuestsAcceptCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"questId": c.questId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.quests.accept"), c.s.client, req)
 }
 
 // Do executes the "games.quests.accept" call.
@@ -8611,7 +8651,7 @@ func (c *QuestsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"playerId": c.playerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.quests.list"), c.s.client, req)
 }
 
 // Do executes the "games.quests.list" call.
@@ -8785,7 +8825,7 @@ func (c *RevisionsCheckCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.revisions.check"), c.s.client, req)
 }
 
 // Do executes the "games.revisions.check" call.
@@ -8920,7 +8960,7 @@ func (c *RoomsCreateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.rooms.create"), c.s.client, req)
 }
 
 // Do executes the "games.rooms.create" call.
@@ -9052,7 +9092,7 @@ func (c *RoomsDeclineCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"roomId": c.roomId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.rooms.decline"), c.s.client, req)
 }
 
 // Do executes the "games.rooms.decline" call.
@@ -9183,7 +9223,7 @@ func (c *RoomsDismissCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"roomId": c.roomId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.rooms.dismiss"), c.s.client, req)
 }
 
 // Do executes the "games.rooms.dismiss" call.
@@ -9301,7 +9341,7 @@ func (c *RoomsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"roomId": c.roomId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.rooms.get"), c.s.client, req)
 }
 
 // Do executes the "games.rooms.get" call.
@@ -9446,7 +9486,7 @@ func (c *RoomsJoinCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"roomId": c.roomId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.rooms.join"), c.s.client, req)
 }
 
 // Do executes the "games.rooms.join" call.
@@ -9594,7 +9634,7 @@ func (c *RoomsLeaveCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"roomId": c.roomId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.rooms.leave"), c.s.client, req)
 }
 
 // Do executes the "games.rooms.leave" call.
@@ -9759,7 +9799,7 @@ func (c *RoomsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.rooms.list"), c.s.client, req)
 }
 
 // Do executes the "games.rooms.list" call.
@@ -9930,7 +9970,7 @@ func (c *RoomsReportStatusCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"roomId": c.roomId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.rooms.reportStatus"), c.s.client, req)
 }
 
 // Do executes the "games.rooms.reportStatus" call.
@@ -10125,7 +10165,7 @@ func (c *ScoresGetCall) doRequest(alt string) (*http.Response, error) {
 		"leaderboardId": c.leaderboardId,
 		"timeSpan":      c.timeSpan,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.scores.get"), c.s.client, req)
 }
 
 // Do executes the "games.scores.get" call.
@@ -10372,7 +10412,7 @@ func (c *ScoresListCall) doRequest(alt string) (*http.Response, error) {
 		"leaderboardId": c.leaderboardId,
 		"collection":    c.collection,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.scores.list"), c.s.client, req)
 }
 
 // Do executes the "games.scores.list" call.
@@ -10630,7 +10670,7 @@ func (c *ScoresListWindowCall) doRequest(alt string) (*http.Response, error) {
 		"leaderboardId": c.leaderboardId,
 		"collection":    c.collection,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.scores.listWindow"), c.s.client, req)
 }
 
 // Do executes the "games.scores.listWindow" call.
@@ -10856,7 +10896,7 @@ func (c *ScoresSubmitCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"leaderboardId": c.leaderboardId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.scores.submit"), c.s.client, req)
 }
 
 // Do executes the "games.scores.submit" call.
@@ -11009,7 +11049,7 @@ func (c *ScoresSubmitMultipleCall) doRequest(alt string) (*http.Response, error)
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.scores.submitMultiple"), c.s.client, req)
 }
 
 // Do executes the "games.scores.submitMultiple" call.
@@ -11154,7 +11194,7 @@ func (c *SnapshotsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"snapshotId": c.snapshotId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.snapshots.get"), c.s.client, req)
 }
 
 // Do executes the "games.snapshots.get" call.
@@ -11323,7 +11363,7 @@ func (c *SnapshotsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"playerId": c.playerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.snapshots.list"), c.s.client, req)
 }
 
 // Do executes the "games.snapshots.list" call.
@@ -11488,7 +11528,7 @@ func (c *TurnBasedMatchesCancelCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.cancel"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.cancel" call.
@@ -11594,7 +11634,7 @@ func (c *TurnBasedMatchesCreateCall) doRequest(alt string) (*http.Response, erro
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.create"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.create" call.
@@ -11725,7 +11765,7 @@ func (c *TurnBasedMatchesDeclineCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.decline"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.decline" call.
@@ -11857,7 +11897,7 @@ func (c *TurnBasedMatchesDismissCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.dismiss"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.dismiss" call.
@@ -11970,7 +12010,7 @@ func (c *TurnBasedMatchesFinishCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.finish"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.finish" call.
@@ -12131,7 +12171,7 @@ func (c *TurnBasedMatchesGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.get"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.get" call.
@@ -12273,7 +12313,7 @@ func (c *TurnBasedMatchesJoinCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.join"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.join" call.
@@ -12411,7 +12451,7 @@ func (c *TurnBasedMatchesLeaveCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.leave"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.leave" call.
@@ -12560,7 +12600,7 @@ func (c *TurnBasedMatchesLeaveTurnCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.leaveTurn"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.leaveTurn" call.
@@ -12755,7 +12795,7 @@ func (c *TurnBasedMatchesListCall) doRequest(alt string) (*http.Response, error)
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.list"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.list" call.
@@ -12942,7 +12982,7 @@ func (c *TurnBasedMatchesRematchCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.rematch"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.rematch" call.
@@ -13133,7 +13173,7 @@ func (c *TurnBasedMatchesSyncCall) doRequest(alt string) (*http.Response, error)
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.sync"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.sync" call.
@@ -13315,7 +13355,7 @@ func (c *TurnBasedMatchesTakeTurnCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"matchId": c.matchId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "games.turnBasedMatches.takeTurn"), c.s.client, req)
 }
 
 // Do executes the "games.turnBasedMatches.takeTurn" call.

@@ -760,12 +760,45 @@ type ExecuteSqlRequest struct {
 	// request that yielded this token.
 	ResumeToken string `json:"resumeToken,omitempty"`
 
+	// Seqno: A per-transaction sequence number used to identify this
+	// request. This
+	// makes each request idempotent such that if the request is received
+	// multiple
+	// times, at most one will succeed.
+	//
+	// The sequence number must be monotonically increasing within
+	// the
+	// transaction. If a request arrives for the first time with an
+	// out-of-order
+	// sequence number, the transaction may be aborted. Replays of
+	// previously
+	// handled requests will yield the same response as the first
+	// execution.
+	//
+	// Required for DML statements. Ignored for queries.
+	Seqno int64 `json:"seqno,omitempty,string"`
+
 	// Sql: Required. The SQL string.
 	Sql string `json:"sql,omitempty"`
 
 	// Transaction: The transaction to use. If none is provided, the default
 	// is a
 	// temporary read-only transaction with strong concurrency.
+	//
+	// The transaction to use.
+	//
+	// For queries, if none is provided, the default is a temporary
+	// read-only
+	// transaction with strong concurrency.
+	//
+	// Standard DML statements require a ReadWrite transaction.
+	// Single-use
+	// transactions are not supported (to avoid replay).  The caller
+	// must
+	// either supply an existing transaction ID or begin a new
+	// transaction.
+	//
+	// Partitioned DML requires an existing PartitionedDml transaction ID.
 	Transaction *TransactionSelector `json:"transaction,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "ParamTypes") to
@@ -1629,6 +1662,9 @@ type PartialResultSet struct {
 	// setting
 	// ExecuteSqlRequest.query_mode and are sent
 	// only once with the last response in the stream.
+	// This field will also be present in the last response for
+	// DML
+	// statements.
 	Stats *ResultSetStats `json:"stats,omitempty"`
 
 	// Values: A streamed result set consists of a stream of values, which
@@ -1881,6 +1917,12 @@ type PartitionQueryRequest struct {
 	// splits, remotely evaluates a subquery independently on each split,
 	// and
 	// then unions all results.
+	//
+	// This must not contain DML commands, such as INSERT, UPDATE,
+	// or
+	// DELETE. Use ExecuteStreamingSql with a
+	// PartitionedDml transaction for large, partition-friendly DML
+	// operations.
 	Sql string `json:"sql,omitempty"`
 
 	// Transaction: Read only snapshot transactions are supported,
@@ -2003,6 +2045,11 @@ func (s *PartitionResponse) MarshalJSON() ([]byte, error) {
 	type NoMethod PartitionResponse
 	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+// PartitionedDml: Message type to initiate a Partitioned DML
+// transaction.
+type PartitionedDml struct {
 }
 
 // PlanNode: Node information for nodes appearing in a
@@ -2446,6 +2493,13 @@ type ResultSet struct {
 	// produced this result set. These can be requested by
 	// setting
 	// ExecuteSqlRequest.query_mode.
+	// DML statements always produce stats containing the number of
+	// rows
+	// modified, unless executed using the
+	// ExecuteSqlRequest.QueryMode.PLAN ExecuteSqlRequest.query_mode.
+	// Other fields may or may not be populated, based on
+	// the
+	// ExecuteSqlRequest.query_mode.
 	Stats *ResultSetStats `json:"stats,omitempty"`
 
 	// ServerResponse contains the HTTP response code and headers from the
@@ -2535,6 +2589,15 @@ type ResultSetStats struct {
 	//       "cpu_time": "1.19 secs"
 	//     }
 	QueryStats googleapi.RawMessage `json:"queryStats,omitempty"`
+
+	// RowCountExact: Standard DML returns an exact count of rows that were
+	// modified.
+	RowCountExact int64 `json:"rowCountExact,omitempty,string"`
+
+	// RowCountLowerBound: Partitioned DML does not offer exactly-once
+	// semantics, so it
+	// returns a lower bound of the rows modified.
+	RowCountLowerBound int64 `json:"rowCountLowerBound,omitempty,string"`
 
 	// ForceSendFields is a list of field names (e.g. "QueryPlan") to
 	// unconditionally include in API requests. By default, fields with
@@ -3006,7 +3069,7 @@ func (s *Transaction) MarshalJSON() ([]byte, error) {
 //
 // # Transaction Modes
 //
-// Cloud Spanner supports two transaction modes:
+// Cloud Spanner supports three transaction modes:
 //
 //   1. Locking read-write. This type of transaction is the only way
 //      to write data into Cloud Spanner. These transactions rely on
@@ -3020,6 +3083,12 @@ func (s *Transaction) MarshalJSON() ([]byte, error) {
 //      read at timestamps in the past. Snapshot read-only
 //      transactions do not need to be committed.
 //
+//   3. Partitioned DML. This type of transaction is used to execute
+//      a single Partitioned DML statement. Partitioned DML partitions
+//      the key space and runs the DML statement over each partition
+//      in parallel using separate, internal transactions that commit
+//      independently. Partitioned DML transactions do not need to be
+//      committed.
 //
 // For transactions that only read, snapshot read-only
 // transactions
@@ -3057,12 +3126,8 @@ func (s *Transaction) MarshalJSON() ([]byte, error) {
 // a
 // transaction's locks and abort it.
 //
-// Reads performed within a transaction acquire locks on the data
-// being read. Writes can only be done at commit time, after all
-// reads
-// have been completed.
 // Conceptually, a read-write transaction consists of zero or more
-// reads or SQL queries followed by
+// reads or SQL statements followed by
 // Commit. At any time before
 // Commit, the client can send a
 // Rollback request to abort the
@@ -3289,8 +3354,102 @@ func (s *Transaction) MarshalJSON() ([]byte, error) {
 // too-old read timestamps fail with the error
 // `FAILED_PRECONDITION`.
 //
-// ##
+// ## Partitioned DML Transactions
+//
+// Partitioned DML transactions are used to execute DML statements with
+// a
+// different execution strategy that provides different, and often
+// better,
+// scalability properties for large, table-wide operations than DML in
+// a
+// ReadWrite transaction. Smaller scoped statements, such as an OLTP
+// workload,
+// should prefer using ReadWrite transactions.
+//
+// Partitioned DML partitions the keyspace and runs the DML statement on
+// each
+// partition in separate, internal transactions. These transactions
+// commit
+// automatically when complete, and run independently from one
+// another.
+//
+// To reduce lock contention, this execution strategy only acquires read
+// locks
+// on rows that match the WHERE clause of the statement. Additionally,
+// the
+// smaller per-partition transactions hold locks for less time.
+//
+// That said, Partitioned DML is not a drop-in replacement for standard
+// DML used
+// in ReadWrite transactions.
+//
+//  - The DML statement must be fully-partitionable. Specifically, the
+// statement
+//    must be expressible as the union of many statements which each
+// access only
+//    a single row of the table.
+//
+//  - The statement is not applied atomically to all rows of the table.
+// Rather,
+//    the statement is applied atomically to partitions of the table,
+// in
+//    independent transactions. Secondary index rows are updated
+// atomically
+//    with the base table rows.
+//
+//  - Partitioned DML does not guarantee exactly-once execution
+// semantics
+//    against a partition. The statement will be applied at least once
+// to each
+//    partition. It is strongly recommended that the DML statement
+// should be
+//    idempotent to avoid unexpected results. For instance, it is
+// potentially
+//    dangerous to run a statement such as
+//    `UPDATE table SET column = column + 1` as it could be run multiple
+// times
+//    against some rows.
+//
+//  - The partitions are committed automatically - there is no support
+// for
+//    Commit or Rollback. If the call returns an error, or if the client
+// issuing
+//    the ExecuteSql call dies, it is possible that some rows had the
+// statement
+//    executed on them successfully. It is also possible that statement
+// was
+//    never executed against other rows.
+//
+//  - Partitioned DML transactions may only contain the execution of a
+// single
+//    DML statement via ExecuteSql or ExecuteStreamingSql.
+//
+//  - If any error is encountered during the execution of the
+// partitioned DML
+//    operation (for instance, a UNIQUE INDEX violation, division by
+// zero, or a
+//    value that cannot be stored due to schema constraints), then the
+//    operation is stopped at that point and an error is returned. It
+// is
+//    possible that at this point, some partitions have been committed
+// (or even
+//    committed multiple times), and other partitions have not been run
+// at all.
+//
+// Given the above, Partitioned DML is good fit for large,
+// database-wide,
+// operations that are idempotent, such as deleting old rows from a very
+// large
+// table.
 type TransactionOptions struct {
+	// PartitionedDml: Partitioned DML transaction.
+	//
+	// Authorization to begin a Partitioned DML transaction
+	// requires
+	// `spanner.databases.beginPartitionedDmlTransaction` permission
+	// on the `session` resource.
+	PartitionedDml *PartitionedDml `json:"partitionedDml,omitempty"`
+
 	// ReadOnly: Transaction will not write.
 	//
 	// Authorization to begin a read-only transaction
@@ -3307,7 +3466,7 @@ type TransactionOptions struct {
 	// on the `session` resource.
 	ReadWrite *ReadWrite `json:"readWrite,omitempty"`
 
-	// ForceSendFields is a list of field names (e.g. "ReadOnly") to
+	// ForceSendFields is a list of field names (e.g. "PartitionedDml") to
 	// unconditionally include in API requests. By default, fields with
 	// empty values are omitted from API requests. However, any non-pointer,
 	// non-interface field appearing in ForceSendFields will be sent to the
@@ -3315,12 +3474,13 @@ type TransactionOptions struct {
 	// used to include empty fields in Patch requests.
 	ForceSendFields []string `json:"-"`
 
-	// NullFields is a list of field names (e.g. "ReadOnly") to include in
-	// API requests with the JSON null value. By default, fields with empty
-	// values are omitted from API requests. However, any field with an
-	// empty value appearing in NullFields will be sent to the server as
-	// null. It is an error if a field in this list has a non-empty value.
-	// This may be used to include null fields in Patch requests.
+	// NullFields is a list of field names (e.g. "PartitionedDml") to
+	// include in API requests with the JSON null value. By default, fields
+	// with empty values are omitted from API requests. However, any field
+	// with an empty value appearing in NullFields will be sent to the
+	// server as null. It is an error if a field in this list has a
+	// non-empty value. This may be used to include null fields in Patch
+	// requests.
 	NullFields []string `json:"-"`
 }
 
@@ -3773,7 +3933,7 @@ func (c *ProjectsInstanceConfigsGetCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instanceConfigs.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instanceConfigs.get" call.
@@ -3932,7 +4092,7 @@ func (c *ProjectsInstanceConfigsListCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instanceConfigs.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instanceConfigs.list" call.
@@ -4138,7 +4298,7 @@ func (c *ProjectsInstancesCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.create"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.create" call.
@@ -4279,7 +4439,7 @@ func (c *ProjectsInstancesDeleteCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.delete"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.delete" call.
@@ -4420,7 +4580,7 @@ func (c *ProjectsInstancesGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.get" call.
@@ -4560,7 +4720,7 @@ func (c *ProjectsInstancesGetIamPolicyCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.getIamPolicy" call.
@@ -4749,7 +4909,7 @@ func (c *ProjectsInstancesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.list" call.
@@ -4968,7 +5128,7 @@ func (c *ProjectsInstancesPatchCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.patch"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.patch" call.
@@ -5110,7 +5270,7 @@ func (c *ProjectsInstancesSetIamPolicyCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.setIamPolicy" call.
@@ -5256,7 +5416,7 @@ func (c *ProjectsInstancesTestIamPermissionsCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.testIamPermissions" call.
@@ -5402,7 +5562,7 @@ func (c *ProjectsInstancesDatabasesCreateCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.create"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.create" call.
@@ -5532,7 +5692,7 @@ func (c *ProjectsInstancesDatabasesDropDatabaseCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.dropDatabase"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.dropDatabase" call.
@@ -5673,7 +5833,7 @@ func (c *ProjectsInstancesDatabasesGetCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.get" call.
@@ -5818,7 +5978,7 @@ func (c *ProjectsInstancesDatabasesGetDdlCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.getDdl"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.getDdl" call.
@@ -5898,10 +6058,10 @@ type ProjectsInstancesDatabasesGetIamPolicyCall struct {
 	header_             http.Header
 }
 
-// GetIamPolicy: Gets the access control policy for a database resource.
-// Returns an empty
-// policy if a database exists but does not have a policy
-// set.
+// GetIamPolicy: Gets the access control policy for a database
+// resource.
+// Returns an empty policy if a database exists but does
+// not have a policy set.
 //
 // Authorization requires `spanner.databases.getIamPolicy` permission
 // on
@@ -5959,7 +6119,7 @@ func (c *ProjectsInstancesDatabasesGetIamPolicyCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.getIamPolicy" call.
@@ -6000,7 +6160,7 @@ func (c *ProjectsInstancesDatabasesGetIamPolicyCall) Do(opts ...googleapi.CallOp
 	}
 	return ret, nil
 	// {
-	//   "description": "Gets the access control policy for a database resource. Returns an empty\npolicy if a database exists but does not have a policy set.\n\nAuthorization requires `spanner.databases.getIamPolicy` permission on\nresource.",
+	//   "description": "Gets the access control policy for a database resource.\nReturns an empty policy if a database exists but does\nnot have a policy set.\n\nAuthorization requires `spanner.databases.getIamPolicy` permission on\nresource.",
 	//   "flatPath": "v1/projects/{projectsId}/instances/{instancesId}/databases/{databasesId}:getIamPolicy",
 	//   "httpMethod": "POST",
 	//   "id": "spanner.projects.instances.databases.getIamPolicy",
@@ -6120,7 +6280,7 @@ func (c *ProjectsInstancesDatabasesListCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.list" call.
@@ -6232,13 +6392,12 @@ type ProjectsInstancesDatabasesSetIamPolicyCall struct {
 	header_             http.Header
 }
 
-// SetIamPolicy: Sets the access control policy on a database resource.
-// Replaces any
-// existing policy.
-//
-// Authorization requires `spanner.databases.setIamPolicy` permission
-// on
+// SetIamPolicy: Sets the access control policy on a database
 // resource.
+// Replaces any existing policy.
+//
+// Authorization requires `spanner.databases.setIamPolicy`
+// permission on resource.
 func (r *ProjectsInstancesDatabasesService) SetIamPolicy(resource string, setiampolicyrequest *SetIamPolicyRequest) *ProjectsInstancesDatabasesSetIamPolicyCall {
 	c := &ProjectsInstancesDatabasesSetIamPolicyCall{s: r.s, urlParams_: make(gensupport.URLParams)}
 	c.resource = resource
@@ -6292,7 +6451,7 @@ func (c *ProjectsInstancesDatabasesSetIamPolicyCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.setIamPolicy" call.
@@ -6333,7 +6492,7 @@ func (c *ProjectsInstancesDatabasesSetIamPolicyCall) Do(opts ...googleapi.CallOp
 	}
 	return ret, nil
 	// {
-	//   "description": "Sets the access control policy on a database resource. Replaces any\nexisting policy.\n\nAuthorization requires `spanner.databases.setIamPolicy` permission on\nresource.",
+	//   "description": "Sets the access control policy on a database resource.\nReplaces any existing policy.\n\nAuthorization requires `spanner.databases.setIamPolicy`\npermission on resource.",
 	//   "flatPath": "v1/projects/{projectsId}/instances/{instancesId}/databases/{databasesId}:setIamPolicy",
 	//   "httpMethod": "POST",
 	//   "id": "spanner.projects.instances.databases.setIamPolicy",
@@ -6378,13 +6537,11 @@ type ProjectsInstancesDatabasesTestIamPermissionsCall struct {
 // TestIamPermissions: Returns permissions that the caller has on the
 // specified database resource.
 //
-// Attempting this RPC on a non-existent Cloud Spanner database will
-// result in
-// a NOT_FOUND error if the user has `spanner.databases.list` permission
-// on
-// the containing Cloud Spanner instance. Otherwise returns an empty set
-// of
-// permissions.
+// Attempting this RPC on a non-existent Cloud Spanner database
+// will
+// result in a NOT_FOUND error if the user has
+// `spanner.databases.list` permission on the containing Cloud
+// Spanner instance. Otherwise returns an empty set of permissions.
 func (r *ProjectsInstancesDatabasesService) TestIamPermissions(resource string, testiampermissionsrequest *TestIamPermissionsRequest) *ProjectsInstancesDatabasesTestIamPermissionsCall {
 	c := &ProjectsInstancesDatabasesTestIamPermissionsCall{s: r.s, urlParams_: make(gensupport.URLParams)}
 	c.resource = resource
@@ -6438,7 +6595,7 @@ func (c *ProjectsInstancesDatabasesTestIamPermissionsCall) doRequest(alt string)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.testIamPermissions" call.
@@ -6479,7 +6636,7 @@ func (c *ProjectsInstancesDatabasesTestIamPermissionsCall) Do(opts ...googleapi.
 	}
 	return ret, nil
 	// {
-	//   "description": "Returns permissions that the caller has on the specified database resource.\n\nAttempting this RPC on a non-existent Cloud Spanner database will result in\na NOT_FOUND error if the user has `spanner.databases.list` permission on\nthe containing Cloud Spanner instance. Otherwise returns an empty set of\npermissions.",
+	//   "description": "Returns permissions that the caller has on the specified database resource.\n\nAttempting this RPC on a non-existent Cloud Spanner database will\nresult in a NOT_FOUND error if the user has\n`spanner.databases.list` permission on the containing Cloud\nSpanner instance. Otherwise returns an empty set of permissions.",
 	//   "flatPath": "v1/projects/{projectsId}/instances/{instancesId}/databases/{databasesId}:testIamPermissions",
 	//   "httpMethod": "POST",
 	//   "id": "spanner.projects.instances.databases.testIamPermissions",
@@ -6584,7 +6741,7 @@ func (c *ProjectsInstancesDatabasesUpdateDdlCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.updateDdl"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.updateDdl" call.
@@ -6731,7 +6888,7 @@ func (c *ProjectsInstancesDatabasesOperationsCancelCall) doRequest(alt string) (
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.operations.cancel" call.
@@ -6864,7 +7021,7 @@ func (c *ProjectsInstancesDatabasesOperationsDeleteCall) doRequest(alt string) (
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.operations.delete" call.
@@ -7009,7 +7166,7 @@ func (c *ProjectsInstancesDatabasesOperationsGetCall) doRequest(alt string) (*ht
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.operations.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.operations.get" call.
@@ -7187,7 +7344,7 @@ func (c *ProjectsInstancesDatabasesOperationsListCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.operations.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.operations.list" call.
@@ -7362,7 +7519,7 @@ func (c *ProjectsInstancesDatabasesSessionsBeginTransactionCall) doRequest(alt s
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.beginTransaction"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.beginTransaction" call.
@@ -7510,7 +7667,7 @@ func (c *ProjectsInstancesDatabasesSessionsCommitCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.commit"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.commit" call.
@@ -7677,7 +7834,7 @@ func (c *ProjectsInstancesDatabasesSessionsCreateCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.create"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.create" call.
@@ -7808,7 +7965,7 @@ func (c *ProjectsInstancesDatabasesSessionsDeleteCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.delete"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.delete" call.
@@ -7955,7 +8112,7 @@ func (c *ProjectsInstancesDatabasesSessionsExecuteSqlCall) doRequest(alt string)
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.executeSql"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.executeSql" call.
@@ -8097,7 +8254,7 @@ func (c *ProjectsInstancesDatabasesSessionsExecuteStreamingSqlCall) doRequest(al
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.executeStreamingSql"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.executeStreamingSql" call.
@@ -8245,7 +8402,7 @@ func (c *ProjectsInstancesDatabasesSessionsGetCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.get" call.
@@ -8420,7 +8577,7 @@ func (c *ProjectsInstancesDatabasesSessionsListCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.list" call.
@@ -8609,7 +8766,7 @@ func (c *ProjectsInstancesDatabasesSessionsPartitionQueryCall) doRequest(alt str
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.partitionQuery"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.partitionQuery" call.
@@ -8768,7 +8925,7 @@ func (c *ProjectsInstancesDatabasesSessionsPartitionReadCall) doRequest(alt stri
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.partitionRead"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.partitionRead" call.
@@ -8920,7 +9077,7 @@ func (c *ProjectsInstancesDatabasesSessionsReadCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.read"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.read" call.
@@ -9066,7 +9223,7 @@ func (c *ProjectsInstancesDatabasesSessionsRollbackCall) doRequest(alt string) (
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.rollback"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.rollback" call.
@@ -9207,7 +9364,7 @@ func (c *ProjectsInstancesDatabasesSessionsStreamingReadCall) doRequest(alt stri
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.session,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.databases.sessions.streamingRead"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.databases.sessions.streamingRead" call.
@@ -9354,7 +9511,7 @@ func (c *ProjectsInstancesOperationsCancelCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.operations.cancel" call.
@@ -9487,7 +9644,7 @@ func (c *ProjectsInstancesOperationsDeleteCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.operations.delete" call.
@@ -9632,7 +9789,7 @@ func (c *ProjectsInstancesOperationsGetCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.operations.get"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.operations.get" call.
@@ -9810,7 +9967,7 @@ func (c *ProjectsInstancesOperationsListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spanner.projects.instances.operations.list"), c.s.client, req)
 }
 
 // Do executes the "spanner.projects.instances.operations.list" call.

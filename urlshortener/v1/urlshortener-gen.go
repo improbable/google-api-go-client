@@ -381,7 +381,7 @@ func (c *UrlGetCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "urlshortener.url.get"), c.s.client, req)
 }
 
 // Do executes the "urlshortener.url.get" call.
@@ -522,7 +522,7 @@ func (c *UrlInsertCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "urlshortener.url.insert"), c.s.client, req)
 }
 
 // Do executes the "urlshortener.url.insert" call.
@@ -665,7 +665,7 @@ func (c *UrlListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "urlshortener.url.list"), c.s.client, req)
 }
 
 // Do executes the "urlshortener.url.list" call.

@@ -1150,8 +1150,6 @@ func (s *ExponentialBuckets) UnmarshalJSON(data []byte) error {
 // defined by the HTTP specification. Product-specific
 // logging
 // information MUST be defined in a separate message.
-//
-// This is an exact copy of HttpRequest message defined in Stackdriver.
 type HttpRequest struct {
 	// CacheFillBytes: The number of HTTP response bytes inserted into
 	// cache. Set only when a
@@ -1202,8 +1200,8 @@ type HttpRequest struct {
 	// headers and the request body.
 	RequestSize int64 `json:"requestSize,omitempty,string"`
 
-	// RequestUrl: The scheme (http, https), the host name, the path and the
-	// query
+	// RequestUrl: The scheme (http, https), the host name, the path, and
+	// the query
 	// portion of the URL that was requested.
 	// Example: "http://example.com/some/info?color=red".
 	RequestUrl string `json:"requestUrl,omitempty"`
@@ -1218,7 +1216,7 @@ type HttpRequest struct {
 	// sent to.
 	ServerIp string `json:"serverIp,omitempty"`
 
-	// Status: The response code indicating the status of
+	// Status: The response code indicating the status of the
 	// response.
 	// Examples: 200, 404.
 	Status int64 `json:"status,omitempty"`
@@ -1381,9 +1379,9 @@ type LogEntry struct {
 
 	// Trace: Optional. Resource name of the trace associated with the log
 	// entry, if any.
-	// If it contains a relative resource name, the name is assumed to be
-	// relative
-	// to `//tracing.googleapis.com`.
+	// If this field contains a relative resource name, you can assume the
+	// name is
+	// relative to `//tracing.googleapis.com`.
 	// Example:
 	// `projects/my-projectid/traces/06796866738c859f2f19b7cfb321482
 	// 4`
@@ -3048,7 +3046,7 @@ func (c *ServicesAllocateQuotaCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.allocateQuota"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.allocateQuota" call.
@@ -3206,7 +3204,7 @@ func (c *ServicesCheckCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.check"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.check" call.
@@ -3350,7 +3348,7 @@ func (c *ServicesEndReconciliationCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.endReconciliation"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.endReconciliation" call.
@@ -3501,7 +3499,7 @@ func (c *ServicesReleaseQuotaCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.releaseQuota"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.releaseQuota" call.
@@ -3656,7 +3654,7 @@ func (c *ServicesReportCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.report"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.report" call.
@@ -3833,7 +3831,7 @@ func (c *ServicesStartReconciliationCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"serviceName": c.serviceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicecontrol.services.startReconciliation"), c.s.client, req)
 }
 
 // Do executes the "servicecontrol.services.startReconciliation" call.

@@ -317,6 +317,12 @@ type GetReleaseExecutableResponse struct {
 	// RulesetName: `Ruleset` name associated with the `Release` executable.
 	RulesetName string `json:"rulesetName,omitempty"`
 
+	// SyncTime: Optional, indicates the freshness of the result. The
+	// response is
+	// guaranteed to be the latest within an interval up to the
+	// sync_time (inclusive).
+	SyncTime string `json:"syncTime,omitempty"`
+
 	// UpdateTime: Timestamp for the most recent `Release.update_time`.
 	UpdateTime string `json:"updateTime,omitempty"`
 
@@ -1121,7 +1127,7 @@ func (c *ProjectsTestCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.test"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.test" call.
@@ -1293,7 +1299,7 @@ func (c *ProjectsReleasesCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.create"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.create" call.
@@ -1423,7 +1429,7 @@ func (c *ProjectsReleasesDeleteCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.delete"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.delete" call.
@@ -1564,7 +1570,7 @@ func (c *ProjectsReleasesGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.get"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.get" call.
@@ -1655,7 +1661,7 @@ func (r *ProjectsReleasesService) GetExecutable(name string) *ProjectsReleasesGe
 
 // ExecutableVersion sets the optional parameter "executableVersion":
 // The requested runtime executable version.
-// Defaults to FIREBASE_RULES_EXECUTABLE_V1
+// Defaults to FIREBASE_RULES_EXECUTABLE_V1.
 //
 // Possible values:
 //   "RELEASE_EXECUTABLE_VERSION_UNSPECIFIED"
@@ -1720,7 +1726,7 @@ func (c *ProjectsReleasesGetExecutableCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.getExecutable"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.getExecutable" call.
@@ -1770,7 +1776,7 @@ func (c *ProjectsReleasesGetExecutableCall) Do(opts ...googleapi.CallOption) (*G
 	//   ],
 	//   "parameters": {
 	//     "executableVersion": {
-	//       "description": "The requested runtime executable version.\nDefaults to FIREBASE_RULES_EXECUTABLE_V1",
+	//       "description": "The requested runtime executable version.\nDefaults to FIREBASE_RULES_EXECUTABLE_V1.",
 	//       "enum": [
 	//         "RELEASE_EXECUTABLE_VERSION_UNSPECIFIED",
 	//         "FIREBASE_RULES_EXECUTABLE_V1",
@@ -1940,7 +1946,7 @@ func (c *ProjectsReleasesListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.list"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.list" call.
@@ -2118,7 +2124,7 @@ func (c *ProjectsReleasesPatchCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.patch"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.patch" call.
@@ -2263,7 +2269,7 @@ func (c *ProjectsRulesetsCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.create"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.create" call.
@@ -2396,7 +2402,7 @@ func (c *ProjectsRulesetsDeleteCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.delete"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.delete" call.
@@ -2537,7 +2543,7 @@ func (c *ProjectsRulesetsGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.get"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.get" call.
@@ -2720,7 +2726,7 @@ func (c *ProjectsRulesetsListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.list"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.list" call.

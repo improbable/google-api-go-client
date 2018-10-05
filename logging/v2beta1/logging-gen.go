@@ -593,10 +593,7 @@ type ListLogEntriesRequest struct {
 	// "bi
 	// llingAccounts/[BILLING_ACCOUNT_ID]"
 	// "folders/[FOLDER_ID]"
-	// Projects listed in the project_ids field are added to this list. Only
-	// one of the permissions, <code>logging.logEntries.list</code> or
-	// <code>logging.privateLogEntries.list</code>, is needed for each
-	// parent resource.
+	// Projects listed in the project_ids field are added to this list.
 	ResourceNames []string `json:"resourceNames,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "Filter") to
@@ -943,6 +940,15 @@ type LogEntry struct {
 	// assumed to be relative to //tracing.googleapis.com. Example:
 	// projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824
 	Trace string `json:"trace,omitempty"`
+
+	// TraceSampled: Optional. The sampling decision of the trace associated
+	// with the log entry. True means that the trace resource name in the
+	// trace field was sampled for storage in a trace backend. False means
+	// that the trace was not sampled for storage when this log entry was
+	// written, or the sampling decision was unknown at the time. A
+	// non-sampled trace value is still useful as a request correlation
+	// identifier. The default is False.
+	TraceSampled bool `json:"traceSampled,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "HttpRequest") to
 	// unconditionally include in API requests. By default, fields with
@@ -1987,14 +1993,15 @@ type WriteLogEntriesRequest struct {
 	// "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[
 	// LOG_ID]"
 	// "folders/[FOLDER_ID]/logs/[LOG_ID]"
-	// [LOG_ID] must be URL-encoded. For example,
-	// "projects/my-project-id/logs/syslog" or
-	// "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Fa
-	// ctivity". The permission <code>logging.logEntries.create</code> is
-	// needed on each project, organization, billing account, or folder that
-	// is receiving new log entries, whether the resource is specified in
-	// <code>logName</code> or in an individual log entry. For more
-	// information about log names, see LogEntry.
+	// [LOG_ID] must be URL-encoded. For
+	// example:
+	// "projects/my-project-id/logs/syslog"
+	// "organizations/123456789
+	// 0/logs/cloudresourcemanager.googleapis.com%2Factivity"
+	// The permission <code>logging.logEntries.create</code> is needed on
+	// each project, organization, billing account, or folder that is
+	// receiving new log entries, whether the resource is specified in
+	// <code>logName</code> or in an individual log entry.
 	LogName string `json:"logName,omitempty"`
 
 	// PartialSuccess: Optional. Whether valid entries should be written
@@ -2105,7 +2112,7 @@ func (c *BillingAccountsLogsDeleteCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"logName": c.logName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.billingAccounts.logs.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.billingAccounts.logs.delete" call.
@@ -2266,7 +2273,7 @@ func (c *BillingAccountsLogsListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.billingAccounts.logs.list"), c.s.client, req)
 }
 
 // Do executes the "logging.billingAccounts.logs.list" call.
@@ -2430,7 +2437,7 @@ func (c *EntriesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.entries.list"), c.s.client, req)
 }
 
 // Do executes the "logging.entries.list" call.
@@ -2580,7 +2587,7 @@ func (c *EntriesWriteCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.entries.write"), c.s.client, req)
 }
 
 // Do executes the "logging.entries.write" call.
@@ -2730,7 +2737,7 @@ func (c *MonitoredResourceDescriptorsListCall) doRequest(alt string) (*http.Resp
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.monitoredResourceDescriptors.list"), c.s.client, req)
 }
 
 // Do executes the "logging.monitoredResourceDescriptors.list" call.
@@ -2886,7 +2893,7 @@ func (c *OrganizationsLogsDeleteCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"logName": c.logName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.organizations.logs.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.organizations.logs.delete" call.
@@ -3047,7 +3054,7 @@ func (c *OrganizationsLogsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.organizations.logs.list"), c.s.client, req)
 }
 
 // Do executes the "logging.organizations.logs.list" call.
@@ -3210,7 +3217,7 @@ func (c *ProjectsLogsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"logName": c.logName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.logs.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.logs.delete" call.
@@ -3371,7 +3378,7 @@ func (c *ProjectsLogsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.logs.list"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.logs.list" call.
@@ -3539,7 +3546,7 @@ func (c *ProjectsMetricsCreateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.create"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.create" call.
@@ -3670,7 +3677,7 @@ func (c *ProjectsMetricsDeleteCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"metricName": c.metricName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.delete" call.
@@ -3812,7 +3819,7 @@ func (c *ProjectsMetricsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"metricName": c.metricName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.get"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.get" call.
@@ -3974,7 +3981,7 @@ func (c *ProjectsMetricsListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.list"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.list" call.
@@ -4142,7 +4149,7 @@ func (c *ProjectsMetricsUpdateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"metricName": c.metricName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.metrics.update"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.metrics.update" call.
@@ -4300,7 +4307,7 @@ func (c *ProjectsSinksCreateCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.create"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.create" call.
@@ -4436,7 +4443,7 @@ func (c *ProjectsSinksDeleteCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"sinkName": c.sinkNameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.delete"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.delete" call.
@@ -4577,7 +4584,7 @@ func (c *ProjectsSinksGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"sinkName": c.sinkName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.get"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.get" call.
@@ -4739,7 +4746,7 @@ func (c *ProjectsSinksListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.list"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.list" call.
@@ -4888,7 +4895,7 @@ func (c *ProjectsSinksUpdateCall) UniqueWriterIdentity(uniqueWriterIdentity bool
 // compatibility purposes:  destination,filter,includeChildren At some
 // point in the future, behavior will be removed and specifying an empty
 // updateMask will be an error.For a detailed FieldMask definition, see
-// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmaskExample:
+// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
 // updateMask=filter.
 func (c *ProjectsSinksUpdateCall) UpdateMask(updateMask string) *ProjectsSinksUpdateCall {
 	c.urlParams_.Set("updateMask", updateMask)
@@ -4941,7 +4948,7 @@ func (c *ProjectsSinksUpdateCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"sinkName": c.sinkNameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "logging.projects.sinks.update"), c.s.client, req)
 }
 
 // Do executes the "logging.projects.sinks.update" call.
@@ -5003,7 +5010,7 @@ func (c *ProjectsSinksUpdateCall) Do(opts ...googleapi.CallOption) (*LogSink, er
 	//       "type": "boolean"
 	//     },
 	//     "updateMask": {
-	//       "description": "Optional. Field mask that specifies the fields in sink that need an update. A sink field will be overwritten if, and only if, it is in the update mask. name and output only fields cannot be updated.An empty updateMask is temporarily treated as using the following mask for backwards compatibility purposes:  destination,filter,includeChildren At some point in the future, behavior will be removed and specifying an empty updateMask will be an error.For a detailed FieldMask definition, see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmaskExample: updateMask=filter.",
+	//       "description": "Optional. Field mask that specifies the fields in sink that need an update. A sink field will be overwritten if, and only if, it is in the update mask. name and output only fields cannot be updated.An empty updateMask is temporarily treated as using the following mask for backwards compatibility purposes:  destination,filter,includeChildren At some point in the future, behavior will be removed and specifying an empty updateMask will be an error.For a detailed FieldMask definition, see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample: updateMask=filter.",
 	//       "format": "google-fieldmask",
 	//       "location": "query",
 	//       "type": "string"

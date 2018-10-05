@@ -916,7 +916,7 @@ func (c *ProjectsGetPolicyCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.getPolicy"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.getPolicy" call.
@@ -1057,7 +1057,7 @@ func (c *ProjectsUpdatePolicyCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.updatePolicy"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.updatePolicy" call.
@@ -1205,7 +1205,7 @@ func (c *ProjectsAttestorsCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.attestors.create"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.attestors.create" call.
@@ -1340,7 +1340,7 @@ func (c *ProjectsAttestorsDeleteCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.attestors.delete"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.attestors.delete" call.
@@ -1481,7 +1481,7 @@ func (c *ProjectsAttestorsGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.attestors.get"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.attestors.get" call.
@@ -1624,7 +1624,7 @@ func (c *ProjectsAttestorsGetIamPolicyCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.attestors.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.attestors.getIamPolicy" call.
@@ -1784,7 +1784,7 @@ func (c *ProjectsAttestorsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.attestors.list"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.attestors.list" call.
@@ -1951,7 +1951,7 @@ func (c *ProjectsAttestorsSetIamPolicyCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.attestors.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.attestors.setIamPolicy" call.
@@ -2097,7 +2097,7 @@ func (c *ProjectsAttestorsTestIamPermissionsCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.attestors.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.attestors.testIamPermissions" call.
@@ -2234,7 +2234,7 @@ func (c *ProjectsAttestorsUpdateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.attestors.update"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.attestors.update" call.
@@ -2380,7 +2380,7 @@ func (c *ProjectsPolicyGetIamPolicyCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.policy.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.policy.getIamPolicy" call.
@@ -2515,7 +2515,7 @@ func (c *ProjectsPolicySetIamPolicyCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.policy.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.policy.setIamPolicy" call.
@@ -2661,7 +2661,7 @@ func (c *ProjectsPolicyTestIamPermissionsCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "binaryauthorization.projects.policy.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "binaryauthorization.projects.policy.testIamPermissions" call.

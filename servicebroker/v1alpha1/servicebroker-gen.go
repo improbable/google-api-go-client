@@ -1405,7 +1405,7 @@ func (c *ProjectsBrokersInstancesGetCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.instances.get"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.instances.get" call.
@@ -1564,7 +1564,7 @@ func (c *ProjectsBrokersInstancesServiceBindingsListCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.instances.service_bindings.list"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.instances.service_bindings.list" call.
@@ -1758,7 +1758,7 @@ func (c *ProjectsBrokersServiceInstancesListCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.service_instances.list"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.service_instances.list" call.
@@ -1954,7 +1954,7 @@ func (c *ProjectsBrokersV2CatalogListCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.catalog.list"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.catalog.list" call.
@@ -2159,7 +2159,7 @@ func (c *ProjectsBrokersV2ServiceInstancesCreateCall) doRequest(alt string) (*ht
 		"parent":      c.parent,
 		"instance_id": c.instanceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.service_instances.create"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.service_instances.create" call.
@@ -2332,7 +2332,7 @@ func (c *ProjectsBrokersV2ServiceInstancesDeleteCall) doRequest(alt string) (*ht
 		"parent":     c.parent,
 		"instanceId": c.instanceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.service_instances.delete"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.service_instances.delete" call.
@@ -2500,7 +2500,7 @@ func (c *ProjectsBrokersV2ServiceInstancesGetCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.service_instances.get"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.service_instances.get" call.
@@ -2667,7 +2667,7 @@ func (c *ProjectsBrokersV2ServiceInstancesGetLastOperationCall) doRequest(alt st
 		"parent":     c.parent,
 		"instanceId": c.instanceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.service_instances.getLast_operation"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.service_instances.getLast_operation" call.
@@ -2836,7 +2836,7 @@ func (c *ProjectsBrokersV2ServiceInstancesPatchCall) doRequest(alt string) (*htt
 		"parent":      c.parent,
 		"instance_id": c.instanceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.service_instances.patch"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.service_instances.patch" call.
@@ -3003,7 +3003,7 @@ func (c *ProjectsBrokersV2ServiceInstancesServiceBindingsCreateCall) doRequest(a
 		"instanceId": c.instanceId,
 		"binding_id": c.bindingId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.service_instances.service_bindings.create"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.service_instances.service_bindings.create" call.
@@ -3188,7 +3188,7 @@ func (c *ProjectsBrokersV2ServiceInstancesServiceBindingsDeleteCall) doRequest(a
 		"instanceId": c.instanceId,
 		"bindingId":  c.bindingId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.service_instances.service_bindings.delete"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.service_instances.service_bindings.delete" call.
@@ -3378,7 +3378,7 @@ func (c *ProjectsBrokersV2ServiceInstancesServiceBindingsGetCall) doRequest(alt 
 		"instanceId": c.instanceId,
 		"bindingId":  c.bindingId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.service_instances.service_bindings.get"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.service_instances.service_bindings.get" call.
@@ -3574,7 +3574,7 @@ func (c *ProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationCall) d
 		"instanceId": c.instanceId,
 		"bindingId":  c.bindingId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.projects.brokers.v2.service_instances.service_bindings.getLast_operation"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.projects.brokers.v2.service_instances.service_bindings.getLast_operation" call.
@@ -3750,7 +3750,7 @@ func (c *V1alpha1GetIamPolicyCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.getIamPolicy" call.
@@ -3885,7 +3885,7 @@ func (c *V1alpha1SetIamPolicyCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.setIamPolicy" call.
@@ -4031,7 +4031,7 @@ func (c *V1alpha1TestIamPermissionsCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "servicebroker.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "servicebroker.testIamPermissions" call.

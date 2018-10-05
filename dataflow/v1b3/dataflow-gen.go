@@ -7108,7 +7108,7 @@ func (c *ProjectsWorkerMessagesCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.workerMessages"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.workerMessages" call.
@@ -7304,7 +7304,7 @@ func (c *ProjectsJobsAggregatedCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.aggregated"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.aggregated" call.
@@ -7525,7 +7525,7 @@ func (c *ProjectsJobsCreateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.create"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.create" call.
@@ -7714,7 +7714,7 @@ func (c *ProjectsJobsGetCall) doRequest(alt string) (*http.Response, error) {
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.get"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.get" call.
@@ -7897,7 +7897,7 @@ func (c *ProjectsJobsGetMetricsCall) doRequest(alt string) (*http.Response, erro
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.getMetrics"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.getMetrics" call.
@@ -8108,7 +8108,7 @@ func (c *ProjectsJobsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.list"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.list" call.
@@ -8312,7 +8312,7 @@ func (c *ProjectsJobsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.update"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.update" call.
@@ -8466,7 +8466,7 @@ func (c *ProjectsJobsDebugGetConfigCall) doRequest(alt string) (*http.Response, 
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.debug.getConfig"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.debug.getConfig" call.
@@ -8614,7 +8614,7 @@ func (c *ProjectsJobsDebugSendCaptureCall) doRequest(alt string) (*http.Response
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.debug.sendCapture"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.debug.sendCapture" call.
@@ -8826,7 +8826,7 @@ func (c *ProjectsJobsMessagesListCall) doRequest(alt string) (*http.Response, er
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.messages.list"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.messages.list" call.
@@ -9033,7 +9033,7 @@ func (c *ProjectsJobsWorkItemsLeaseCall) doRequest(alt string) (*http.Response, 
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.workItems.lease"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.workItems.lease" call.
@@ -9182,7 +9182,7 @@ func (c *ProjectsJobsWorkItemsReportStatusCall) doRequest(alt string) (*http.Res
 		"projectId": c.projectId,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.jobs.workItems.reportStatus"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.jobs.workItems.reportStatus" call.
@@ -9330,7 +9330,7 @@ func (c *ProjectsLocationsWorkerMessagesCall) doRequest(alt string) (*http.Respo
 		"projectId": c.projectId,
 		"location":  c.location,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.workerMessages"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.workerMessages" call.
@@ -9498,7 +9498,7 @@ func (c *ProjectsLocationsJobsCreateCall) doRequest(alt string) (*http.Response,
 		"projectId": c.projectId,
 		"location":  c.location,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.create"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.create" call.
@@ -9685,7 +9685,7 @@ func (c *ProjectsLocationsJobsGetCall) doRequest(alt string) (*http.Response, er
 		"location":  c.location,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.get"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.get" call.
@@ -9866,7 +9866,7 @@ func (c *ProjectsLocationsJobsGetMetricsCall) doRequest(alt string) (*http.Respo
 		"location":  c.location,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.getMetrics"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.getMetrics" call.
@@ -10075,7 +10075,7 @@ func (c *ProjectsLocationsJobsListCall) doRequest(alt string) (*http.Response, e
 		"projectId": c.projectId,
 		"location":  c.location,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.list"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.list" call.
@@ -10277,7 +10277,7 @@ func (c *ProjectsLocationsJobsUpdateCall) doRequest(alt string) (*http.Response,
 		"location":  c.location,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.update"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.update" call.
@@ -10436,7 +10436,7 @@ func (c *ProjectsLocationsJobsDebugGetConfigCall) doRequest(alt string) (*http.R
 		"location":  c.location,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.debug.getConfig"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.debug.getConfig" call.
@@ -10594,7 +10594,7 @@ func (c *ProjectsLocationsJobsDebugSendCaptureCall) doRequest(alt string) (*http
 		"location":  c.location,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.debug.sendCapture"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.debug.sendCapture" call.
@@ -10809,7 +10809,7 @@ func (c *ProjectsLocationsJobsMessagesListCall) doRequest(alt string) (*http.Res
 		"location":  c.location,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.messages.list"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.messages.list" call.
@@ -11021,7 +11021,7 @@ func (c *ProjectsLocationsJobsWorkItemsLeaseCall) doRequest(alt string) (*http.R
 		"location":  c.location,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.workItems.lease"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.workItems.lease" call.
@@ -11180,7 +11180,7 @@ func (c *ProjectsLocationsJobsWorkItemsReportStatusCall) doRequest(alt string) (
 		"location":  c.location,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.jobs.workItems.reportStatus"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.jobs.workItems.reportStatus" call.
@@ -11335,7 +11335,7 @@ func (c *ProjectsLocationsTemplatesCreateCall) doRequest(alt string) (*http.Resp
 		"projectId": c.projectId,
 		"location":  c.location,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.templates.create"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.templates.create" call.
@@ -11509,7 +11509,7 @@ func (c *ProjectsLocationsTemplatesGetCall) doRequest(alt string) (*http.Respons
 		"projectId": c.projectId,
 		"location":  c.location,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.templates.get"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.templates.get" call.
@@ -11684,7 +11684,7 @@ func (c *ProjectsLocationsTemplatesLaunchCall) doRequest(alt string) (*http.Resp
 		"projectId": c.projectId,
 		"location":  c.location,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.locations.templates.launch"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.locations.templates.launch" call.
@@ -11839,7 +11839,7 @@ func (c *ProjectsTemplatesCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.templates.create"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.templates.create" call.
@@ -12010,7 +12010,7 @@ func (c *ProjectsTemplatesGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.templates.get"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.templates.get" call.
@@ -12187,7 +12187,7 @@ func (c *ProjectsTemplatesLaunchCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"projectId": c.projectId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataflow.projects.templates.launch"), c.s.client, req)
 }
 
 // Do executes the "dataflow.projects.templates.launch" call.

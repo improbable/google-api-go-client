@@ -45,6 +45,12 @@ const apiName = "indexing"
 const apiVersion = "v3"
 const basePath = "https://indexing.googleapis.com/"
 
+// OAuth2 scopes used by this API.
+const (
+	// Submit data to Google for indexing
+	IndexingScope = "https://www.googleapis.com/auth/indexing"
+)
+
 func New(client *http.Client) (*Service, error) {
 	if client == nil {
 		return nil, errors.New("client is nil")
@@ -277,7 +283,7 @@ func (c *UrlNotificationsGetMetadataCall) doRequest(alt string) (*http.Response,
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "indexing.urlNotifications.getMetadata"), c.s.client, req)
 }
 
 // Do executes the "indexing.urlNotifications.getMetadata" call.
@@ -333,7 +339,10 @@ func (c *UrlNotificationsGetMetadataCall) Do(opts ...googleapi.CallOption) (*Url
 	//   "path": "v3/urlNotifications/metadata",
 	//   "response": {
 	//     "$ref": "UrlNotificationMetadata"
-	//   }
+	//   },
+	//   "scopes": [
+	//     "https://www.googleapis.com/auth/indexing"
+	//   ]
 	// }
 
 }
@@ -398,7 +407,7 @@ func (c *UrlNotificationsPublishCall) doRequest(alt string) (*http.Response, err
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "indexing.urlNotifications.publish"), c.s.client, req)
 }
 
 // Do executes the "indexing.urlNotifications.publish" call.
@@ -451,7 +460,10 @@ func (c *UrlNotificationsPublishCall) Do(opts ...googleapi.CallOption) (*Publish
 	//   },
 	//   "response": {
 	//     "$ref": "PublishUrlNotificationResponse"
-	//   }
+	//   },
+	//   "scopes": [
+	//     "https://www.googleapis.com/auth/indexing"
+	//   ]
 	// }
 
 }

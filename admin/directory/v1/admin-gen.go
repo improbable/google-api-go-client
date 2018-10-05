@@ -1065,11 +1065,19 @@ type ChromeOsDevice struct {
 	// BootMode: Chromebook boot mode (Read-only)
 	BootMode string `json:"bootMode,omitempty"`
 
+	// CpuStatusReports: Reports of CPU utilization and temperature
+	// (Read-only)
+	CpuStatusReports []*ChromeOsDeviceCpuStatusReports `json:"cpuStatusReports,omitempty"`
+
 	// DeviceFiles: List of device files to download (Read-only)
 	DeviceFiles []*ChromeOsDeviceDeviceFiles `json:"deviceFiles,omitempty"`
 
 	// DeviceId: Unique identifier of Chrome OS Device (Read-only)
 	DeviceId string `json:"deviceId,omitempty"`
+
+	// DiskVolumeReports: Reports of disk space and other info about
+	// mounted/connected volumes.
+	DiskVolumeReports []*ChromeOsDeviceDiskVolumeReports `json:"diskVolumeReports,omitempty"`
 
 	// Etag: ETag of the resource.
 	Etag string `json:"etag,omitempty"`
@@ -1131,6 +1139,13 @@ type ChromeOsDevice struct {
 
 	// SupportEndDate: Final date the device will be supported (Read-only)
 	SupportEndDate string `json:"supportEndDate,omitempty"`
+
+	// SystemRamFreeReports: Reports of amounts of available RAM memory
+	// (Read-only)
+	SystemRamFreeReports []*ChromeOsDeviceSystemRamFreeReports `json:"systemRamFreeReports,omitempty"`
+
+	// SystemRamTotal: Total RAM on the device [in bytes] (Read-only)
+	SystemRamTotal int64 `json:"systemRamTotal,omitempty,string"`
 
 	// TpmVersionInfo: Trusted Platform Module (TPM) (Read-only)
 	TpmVersionInfo *ChromeOsDeviceTpmVersionInfo `json:"tpmVersionInfo,omitempty"`
@@ -1197,6 +1212,69 @@ func (s *ChromeOsDeviceActiveTimeRanges) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
+type ChromeOsDeviceCpuStatusReports struct {
+	// CpuTemperatureInfo: List of CPU temperature samples.
+	CpuTemperatureInfo []*ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo `json:"cpuTemperatureInfo,omitempty"`
+
+	CpuUtilizationPercentageInfo []int64 `json:"cpuUtilizationPercentageInfo,omitempty"`
+
+	// ReportTime: Date and time the report was received.
+	ReportTime string `json:"reportTime,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "CpuTemperatureInfo")
+	// to unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "CpuTemperatureInfo") to
+	// include in API requests with the JSON null value. By default, fields
+	// with empty values are omitted from API requests. However, any field
+	// with an empty value appearing in NullFields will be sent to the
+	// server as null. It is an error if a field in this list has a
+	// non-empty value. This may be used to include null fields in Patch
+	// requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *ChromeOsDeviceCpuStatusReports) MarshalJSON() ([]byte, error) {
+	type NoMethod ChromeOsDeviceCpuStatusReports
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+type ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo struct {
+	// Label: CPU label
+	Label string `json:"label,omitempty"`
+
+	// Temperature: Temperature in Celsius degrees.
+	Temperature int64 `json:"temperature,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "Label") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "Label") to include in API
+	// requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo) MarshalJSON() ([]byte, error) {
+	type NoMethod ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
 type ChromeOsDeviceDeviceFiles struct {
 	// CreateTime: Date and time the file was created
 	CreateTime string `json:"createTime,omitempty"`
@@ -1233,6 +1311,66 @@ func (s *ChromeOsDeviceDeviceFiles) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
+type ChromeOsDeviceDiskVolumeReports struct {
+	// VolumeInfo: Disk volumes
+	VolumeInfo []*ChromeOsDeviceDiskVolumeReportsVolumeInfo `json:"volumeInfo,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "VolumeInfo") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "VolumeInfo") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *ChromeOsDeviceDiskVolumeReports) MarshalJSON() ([]byte, error) {
+	type NoMethod ChromeOsDeviceDiskVolumeReports
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+type ChromeOsDeviceDiskVolumeReportsVolumeInfo struct {
+	// StorageFree: Free disk space [in bytes]
+	StorageFree int64 `json:"storageFree,omitempty,string"`
+
+	// StorageTotal: Total disk space [in bytes]
+	StorageTotal int64 `json:"storageTotal,omitempty,string"`
+
+	// VolumeId: Volume id
+	VolumeId string `json:"volumeId,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "StorageFree") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "StorageFree") to include
+	// in API requests with the JSON null value. By default, fields with
+	// empty values are omitted from API requests. However, any field with
+	// an empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *ChromeOsDeviceDiskVolumeReportsVolumeInfo) MarshalJSON() ([]byte, error) {
+	type NoMethod ChromeOsDeviceDiskVolumeReportsVolumeInfo
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
 type ChromeOsDeviceRecentUsers struct {
 	// Email: Email address of the user. Present only if the user type is
 	// managed
@@ -1260,6 +1398,35 @@ type ChromeOsDeviceRecentUsers struct {
 
 func (s *ChromeOsDeviceRecentUsers) MarshalJSON() ([]byte, error) {
 	type NoMethod ChromeOsDeviceRecentUsers
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+type ChromeOsDeviceSystemRamFreeReports struct {
+	// ReportTime: Date and time the report was received.
+	ReportTime string `json:"reportTime,omitempty"`
+
+	SystemRamFreeInfo googleapi.Int64s `json:"systemRamFreeInfo,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "ReportTime") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "ReportTime") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *ChromeOsDeviceSystemRamFreeReports) MarshalJSON() ([]byte, error) {
+	type NoMethod ChromeOsDeviceSystemRamFreeReports
 	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
@@ -1951,6 +2118,9 @@ func (s *Groups) MarshalJSON() ([]byte, error) {
 
 // Member: JSON template for Member resource in Directory API.
 type Member struct {
+	// DeliverySettings: Delivery settings of member
+	DeliverySettings string `json:"delivery_settings,omitempty"`
+
 	// Email: Email of member (Read-only)
 	Email string `json:"email,omitempty"`
 
@@ -1978,7 +2148,7 @@ type Member struct {
 	// server.
 	googleapi.ServerResponse `json:"-"`
 
-	// ForceSendFields is a list of field names (e.g. "Email") to
+	// ForceSendFields is a list of field names (e.g. "DeliverySettings") to
 	// unconditionally include in API requests. By default, fields with
 	// empty values are omitted from API requests. However, any non-pointer,
 	// non-interface field appearing in ForceSendFields will be sent to the
@@ -1986,12 +2156,13 @@ type Member struct {
 	// used to include empty fields in Patch requests.
 	ForceSendFields []string `json:"-"`
 
-	// NullFields is a list of field names (e.g. "Email") to include in API
-	// requests with the JSON null value. By default, fields with empty
-	// values are omitted from API requests. However, any field with an
-	// empty value appearing in NullFields will be sent to the server as
-	// null. It is an error if a field in this list has a non-empty value.
-	// This may be used to include null fields in Patch requests.
+	// NullFields is a list of field names (e.g. "DeliverySettings") to
+	// include in API requests with the JSON null value. By default, fields
+	// with empty values are omitted from API requests. However, any field
+	// with an empty value appearing in NullFields will be sent to the
+	// server as null. It is an error if a field in this list has a
+	// non-empty value. This may be used to include null fields in Patch
+	// requests.
 	NullFields []string `json:"-"`
 }
 
@@ -3251,7 +3422,7 @@ type User struct {
 	// Aliases: List of aliases (Read-only)
 	Aliases []string `json:"aliases,omitempty"`
 
-	// Archived: Indicates if user is archived
+	// Archived: Indicates if user is archived.
 	Archived bool `json:"archived,omitempty"`
 
 	// ChangePasswordAtNextLogin: Boolean indicating if the user should
@@ -3349,7 +3520,7 @@ type User struct {
 
 	SshPublicKeys interface{} `json:"sshPublicKeys,omitempty"`
 
-	// Suspended: Indicates if user is suspended
+	// Suspended: Indicates if user is suspended.
 	Suspended bool `json:"suspended,omitempty"`
 
 	// SuspensionReason: Suspension reason if user is suspended (Read-only)
@@ -4394,7 +4565,7 @@ func (c *AspsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"userKey": c.userKey,
 		"codeId":  strconv.FormatInt(c.codeId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.asps.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.asps.delete" call.
@@ -4515,7 +4686,7 @@ func (c *AspsGetCall) doRequest(alt string) (*http.Response, error) {
 		"userKey": c.userKey,
 		"codeId":  strconv.FormatInt(c.codeId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.asps.get"), c.s.client, req)
 }
 
 // Do executes the "directory.asps.get" call.
@@ -4661,7 +4832,7 @@ func (c *AspsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.asps.list"), c.s.client, req)
 }
 
 // Do executes the "directory.asps.list" call.
@@ -4787,7 +4958,7 @@ func (c *ChannelsStopCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "admin.channels.stop"), c.s.client, req)
 }
 
 // Do executes the "admin.channels.stop" call.
@@ -4889,7 +5060,7 @@ func (c *ChromeosdevicesActionCall) doRequest(alt string) (*http.Response, error
 		"customerId": c.customerId,
 		"resourceId": c.resourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.chromeosdevices.action"), c.s.client, req)
 }
 
 // Do executes the "directory.chromeosdevices.action" call.
@@ -5024,7 +5195,7 @@ func (c *ChromeosdevicesGetCall) doRequest(alt string) (*http.Response, error) {
 		"customerId": c.customerId,
 		"deviceId":   c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.chromeosdevices.get"), c.s.client, req)
 }
 
 // Do executes the "directory.chromeosdevices.get" call.
@@ -5253,7 +5424,7 @@ func (c *ChromeosdevicesListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.chromeosdevices.list"), c.s.client, req)
 }
 
 // Do executes the "directory.chromeosdevices.list" call.
@@ -5479,7 +5650,7 @@ func (c *ChromeosdevicesMoveDevicesToOuCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.chromeosdevices.moveDevicesToOu"), c.s.client, req)
 }
 
 // Do executes the "directory.chromeosdevices.moveDevicesToOu" call.
@@ -5607,7 +5778,7 @@ func (c *ChromeosdevicesPatchCall) doRequest(alt string) (*http.Response, error)
 		"customerId": c.customerId,
 		"deviceId":   c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.chromeosdevices.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.chromeosdevices.patch" call.
@@ -5776,7 +5947,7 @@ func (c *ChromeosdevicesUpdateCall) doRequest(alt string) (*http.Response, error
 		"customerId": c.customerId,
 		"deviceId":   c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.chromeosdevices.update"), c.s.client, req)
 }
 
 // Do executes the "directory.chromeosdevices.update" call.
@@ -5937,7 +6108,7 @@ func (c *CustomersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerKey": c.customerKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.customers.get"), c.s.client, req)
 }
 
 // Do executes the "directory.customers.get" call.
@@ -6069,7 +6240,7 @@ func (c *CustomersPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerKey": c.customerKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.customers.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.customers.patch" call.
@@ -6203,7 +6374,7 @@ func (c *CustomersUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerKey": c.customerKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.customers.update"), c.s.client, req)
 }
 
 // Do executes the "directory.customers.update" call.
@@ -6333,7 +6504,7 @@ func (c *DomainAliasesDeleteCall) doRequest(alt string) (*http.Response, error) 
 		"customer":        c.customer,
 		"domainAliasName": c.domainAliasName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.domainAliases.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.domainAliases.delete" call.
@@ -6453,7 +6624,7 @@ func (c *DomainAliasesGetCall) doRequest(alt string) (*http.Response, error) {
 		"customer":        c.customer,
 		"domainAliasName": c.domainAliasName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.domainAliases.get"), c.s.client, req)
 }
 
 // Do executes the "directory.domainAliases.get" call.
@@ -6592,7 +6763,7 @@ func (c *DomainAliasesInsertCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.domainAliases.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.domainAliases.insert" call.
@@ -6740,7 +6911,7 @@ func (c *DomainAliasesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.domainAliases.list"), c.s.client, req)
 }
 
 // Do executes the "directory.domainAliases.list" call.
@@ -6873,7 +7044,7 @@ func (c *DomainsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"customer":   c.customer,
 		"domainName": c.domainName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.domains.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.domains.delete" call.
@@ -6993,7 +7164,7 @@ func (c *DomainsGetCall) doRequest(alt string) (*http.Response, error) {
 		"customer":   c.customer,
 		"domainName": c.domainName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.domains.get"), c.s.client, req)
 }
 
 // Do executes the "directory.domains.get" call.
@@ -7132,7 +7303,7 @@ func (c *DomainsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.domains.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.domains.insert" call.
@@ -7273,7 +7444,7 @@ func (c *DomainsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.domains.list"), c.s.client, req)
 }
 
 // Do executes the "directory.domains.list" call.
@@ -7398,7 +7569,7 @@ func (c *GroupsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"groupKey": c.groupKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.groups.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.groups.delete" call.
@@ -7508,7 +7679,7 @@ func (c *GroupsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"groupKey": c.groupKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.groups.get"), c.s.client, req)
 }
 
 // Do executes the "directory.groups.get" call.
@@ -7635,7 +7806,7 @@ func (c *GroupsInsertCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.groups.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.groups.insert" call.
@@ -7829,7 +8000,7 @@ func (c *GroupsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.groups.list"), c.s.client, req)
 }
 
 // Do executes the "directory.groups.list" call.
@@ -8029,7 +8200,7 @@ func (c *GroupsPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"groupKey": c.groupKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.groups.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.groups.patch" call.
@@ -8163,7 +8334,7 @@ func (c *GroupsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"groupKey": c.groupKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.groups.update"), c.s.client, req)
 }
 
 // Do executes the "directory.groups.update" call.
@@ -8293,7 +8464,7 @@ func (c *GroupsAliasesDeleteCall) doRequest(alt string) (*http.Response, error) 
 		"groupKey": c.groupKey,
 		"alias":    c.alias,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.groups.aliases.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.groups.aliases.delete" call.
@@ -8403,7 +8574,7 @@ func (c *GroupsAliasesInsertCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"groupKey": c.groupKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.groups.aliases.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.groups.aliases.insert" call.
@@ -8544,7 +8715,7 @@ func (c *GroupsAliasesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"groupKey": c.groupKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.groups.aliases.list"), c.s.client, req)
 }
 
 // Do executes the "directory.groups.aliases.list" call.
@@ -8673,7 +8844,7 @@ func (c *MembersDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"groupKey":  c.groupKey,
 		"memberKey": c.memberKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.members.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.members.delete" call.
@@ -8794,7 +8965,7 @@ func (c *MembersGetCall) doRequest(alt string) (*http.Response, error) {
 		"groupKey":  c.groupKey,
 		"memberKey": c.memberKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.members.get"), c.s.client, req)
 }
 
 // Do executes the "directory.members.get" call.
@@ -8946,7 +9117,7 @@ func (c *MembersHasMemberCall) doRequest(alt string) (*http.Response, error) {
 		"groupKey":  c.groupKey,
 		"memberKey": c.memberKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.members.hasMember"), c.s.client, req)
 }
 
 // Do executes the "directory.members.hasMember" call.
@@ -9087,7 +9258,7 @@ func (c *MembersInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"groupKey": c.groupKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.members.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.members.insert" call.
@@ -9258,7 +9429,7 @@ func (c *MembersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"groupKey": c.groupKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.members.list"), c.s.client, req)
 }
 
 // Do executes the "directory.members.list" call.
@@ -9439,7 +9610,7 @@ func (c *MembersPatchCall) doRequest(alt string) (*http.Response, error) {
 		"groupKey":  c.groupKey,
 		"memberKey": c.memberKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.members.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.members.patch" call.
@@ -9584,7 +9755,7 @@ func (c *MembersUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"groupKey":  c.groupKey,
 		"memberKey": c.memberKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.members.update"), c.s.client, req)
 }
 
 // Do executes the "directory.members.update" call.
@@ -9729,7 +9900,7 @@ func (c *MobiledevicesActionCall) doRequest(alt string) (*http.Response, error) 
 		"customerId": c.customerId,
 		"resourceId": c.resourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.mobiledevices.action"), c.s.client, req)
 }
 
 // Do executes the "directory.mobiledevices.action" call.
@@ -9839,7 +10010,7 @@ func (c *MobiledevicesDeleteCall) doRequest(alt string) (*http.Response, error) 
 		"customerId": c.customerId,
 		"resourceId": c.resourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.mobiledevices.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.mobiledevices.delete" call.
@@ -9971,7 +10142,7 @@ func (c *MobiledevicesGetCall) doRequest(alt string) (*http.Response, error) {
 		"customerId": c.customerId,
 		"resourceId": c.resourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.mobiledevices.get"), c.s.client, req)
 }
 
 // Do executes the "directory.mobiledevices.get" call.
@@ -10194,7 +10365,7 @@ func (c *MobiledevicesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.mobiledevices.list"), c.s.client, req)
 }
 
 // Do executes the "directory.mobiledevices.list" call.
@@ -10412,7 +10583,7 @@ func (c *NotificationsDeleteCall) doRequest(alt string) (*http.Response, error) 
 		"customer":       c.customer,
 		"notificationId": c.notificationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.notifications.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.notifications.delete" call.
@@ -10532,7 +10703,7 @@ func (c *NotificationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"customer":       c.customer,
 		"notificationId": c.notificationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.notifications.get"), c.s.client, req)
 }
 
 // Do executes the "directory.notifications.get" call.
@@ -10699,7 +10870,7 @@ func (c *NotificationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.notifications.list"), c.s.client, req)
 }
 
 // Do executes the "directory.notifications.list" call.
@@ -10870,7 +11041,7 @@ func (c *NotificationsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"customer":       c.customer,
 		"notificationId": c.notificationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.notifications.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.notifications.patch" call.
@@ -11014,7 +11185,7 @@ func (c *NotificationsUpdateCall) doRequest(alt string) (*http.Response, error) 
 		"customer":       c.customer,
 		"notificationId": c.notificationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.notifications.update"), c.s.client, req)
 }
 
 // Do executes the "directory.notifications.update" call.
@@ -11151,7 +11322,7 @@ func (c *OrgunitsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"customerId":  c.customerId,
 		"orgUnitPath": c.orgUnitPath[0],
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.orgunits.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.orgunits.delete" call.
@@ -11272,7 +11443,7 @@ func (c *OrgunitsGetCall) doRequest(alt string) (*http.Response, error) {
 		"customerId":  c.customerId,
 		"orgUnitPath": c.orgUnitPath[0],
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.orgunits.get"), c.s.client, req)
 }
 
 // Do executes the "directory.orgunits.get" call.
@@ -11412,7 +11583,7 @@ func (c *OrgunitsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.orgunits.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.orgunits.insert" call.
@@ -11571,7 +11742,7 @@ func (c *OrgunitsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.orgunits.list"), c.s.client, req)
 }
 
 // Do executes the "directory.orgunits.list" call.
@@ -11726,7 +11897,7 @@ func (c *OrgunitsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"customerId":  c.customerId,
 		"orgUnitPath": c.orgUnitPath[0],
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.orgunits.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.orgunits.patch" call.
@@ -11871,7 +12042,7 @@ func (c *OrgunitsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"customerId":  c.customerId,
 		"orgUnitPath": c.orgUnitPath[0],
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.orgunits.update"), c.s.client, req)
 }
 
 // Do executes the "directory.orgunits.update" call.
@@ -12020,7 +12191,7 @@ func (c *PrivilegesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.privileges.list"), c.s.client, req)
 }
 
 // Do executes the "directory.privileges.list" call.
@@ -12155,7 +12326,7 @@ func (c *ResolvedAppAccessSettingsGetSettingsCall) doRequest(alt string) (*http.
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resolvedAppAccessSettings.GetSettings"), c.s.client, req)
 }
 
 // Do executes the "directory.resolvedAppAccessSettings.GetSettings" call.
@@ -12275,7 +12446,7 @@ func (c *ResolvedAppAccessSettingsListTrustedAppsCall) doRequest(alt string) (*h
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resolvedAppAccessSettings.ListTrustedApps"), c.s.client, req)
 }
 
 // Do executes the "directory.resolvedAppAccessSettings.ListTrustedApps" call.
@@ -12388,7 +12559,7 @@ func (c *ResourcesBuildingsDeleteCall) doRequest(alt string) (*http.Response, er
 		"customer":   c.customer,
 		"buildingId": c.buildingId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.buildings.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.buildings.delete" call.
@@ -12508,7 +12679,7 @@ func (c *ResourcesBuildingsGetCall) doRequest(alt string) (*http.Response, error
 		"customer":   c.customer,
 		"buildingId": c.buildingId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.buildings.get"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.buildings.get" call.
@@ -12647,7 +12818,7 @@ func (c *ResourcesBuildingsInsertCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.buildings.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.buildings.insert" call.
@@ -12802,7 +12973,7 @@ func (c *ResourcesBuildingsListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.buildings.list"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.buildings.list" call.
@@ -12971,7 +13142,7 @@ func (c *ResourcesBuildingsPatchCall) doRequest(alt string) (*http.Response, err
 		"customer":   c.customer,
 		"buildingId": c.buildingId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.buildings.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.buildings.patch" call.
@@ -13115,7 +13286,7 @@ func (c *ResourcesBuildingsUpdateCall) doRequest(alt string) (*http.Response, er
 		"customer":   c.customer,
 		"buildingId": c.buildingId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.buildings.update"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.buildings.update" call.
@@ -13252,7 +13423,7 @@ func (c *ResourcesCalendarsDeleteCall) doRequest(alt string) (*http.Response, er
 		"customer":           c.customer,
 		"calendarResourceId": c.calendarResourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.calendars.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.calendars.delete" call.
@@ -13372,7 +13543,7 @@ func (c *ResourcesCalendarsGetCall) doRequest(alt string) (*http.Response, error
 		"customer":           c.customer,
 		"calendarResourceId": c.calendarResourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.calendars.get"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.calendars.get" call.
@@ -13511,7 +13682,7 @@ func (c *ResourcesCalendarsInsertCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.calendars.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.calendars.insert" call.
@@ -13692,7 +13863,7 @@ func (c *ResourcesCalendarsListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.calendars.list"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.calendars.list" call.
@@ -13875,7 +14046,7 @@ func (c *ResourcesCalendarsPatchCall) doRequest(alt string) (*http.Response, err
 		"customer":           c.customer,
 		"calendarResourceId": c.calendarResourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.calendars.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.calendars.patch" call.
@@ -14023,7 +14194,7 @@ func (c *ResourcesCalendarsUpdateCall) doRequest(alt string) (*http.Response, er
 		"customer":           c.customer,
 		"calendarResourceId": c.calendarResourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.calendars.update"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.calendars.update" call.
@@ -14160,7 +14331,7 @@ func (c *ResourcesFeaturesDeleteCall) doRequest(alt string) (*http.Response, err
 		"customer":   c.customer,
 		"featureKey": c.featureKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.features.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.features.delete" call.
@@ -14280,7 +14451,7 @@ func (c *ResourcesFeaturesGetCall) doRequest(alt string) (*http.Response, error)
 		"customer":   c.customer,
 		"featureKey": c.featureKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.features.get"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.features.get" call.
@@ -14419,7 +14590,7 @@ func (c *ResourcesFeaturesInsertCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.features.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.features.insert" call.
@@ -14574,7 +14745,7 @@ func (c *ResourcesFeaturesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.features.list"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.features.list" call.
@@ -14743,7 +14914,7 @@ func (c *ResourcesFeaturesPatchCall) doRequest(alt string) (*http.Response, erro
 		"customer":   c.customer,
 		"featureKey": c.featureKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.features.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.features.patch" call.
@@ -14887,7 +15058,7 @@ func (c *ResourcesFeaturesRenameCall) doRequest(alt string) (*http.Response, err
 		"customer": c.customer,
 		"oldName":  c.oldName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.features.rename"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.features.rename" call.
@@ -15003,7 +15174,7 @@ func (c *ResourcesFeaturesUpdateCall) doRequest(alt string) (*http.Response, err
 		"customer":   c.customer,
 		"featureKey": c.featureKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.resources.features.update"), c.s.client, req)
 }
 
 // Do executes the "directory.resources.features.update" call.
@@ -15140,7 +15311,7 @@ func (c *RoleAssignmentsDeleteCall) doRequest(alt string) (*http.Response, error
 		"customer":         c.customer,
 		"roleAssignmentId": c.roleAssignmentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roleAssignments.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.roleAssignments.delete" call.
@@ -15260,7 +15431,7 @@ func (c *RoleAssignmentsGetCall) doRequest(alt string) (*http.Response, error) {
 		"customer":         c.customer,
 		"roleAssignmentId": c.roleAssignmentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roleAssignments.get"), c.s.client, req)
 }
 
 // Do executes the "directory.roleAssignments.get" call.
@@ -15399,7 +15570,7 @@ func (c *RoleAssignmentsInsertCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roleAssignments.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.roleAssignments.insert" call.
@@ -15570,7 +15741,7 @@ func (c *RoleAssignmentsListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roleAssignments.list"), c.s.client, req)
 }
 
 // Do executes the "directory.roleAssignments.list" call.
@@ -15742,7 +15913,7 @@ func (c *RolesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"customer": c.customer,
 		"roleId":   c.roleId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roles.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.roles.delete" call.
@@ -15862,7 +16033,7 @@ func (c *RolesGetCall) doRequest(alt string) (*http.Response, error) {
 		"customer": c.customer,
 		"roleId":   c.roleId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roles.get"), c.s.client, req)
 }
 
 // Do executes the "directory.roles.get" call.
@@ -16001,7 +16172,7 @@ func (c *RolesInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roles.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.roles.insert" call.
@@ -16156,7 +16327,7 @@ func (c *RolesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customer": c.customer,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roles.list"), c.s.client, req)
 }
 
 // Do executes the "directory.roles.list" call.
@@ -16325,7 +16496,7 @@ func (c *RolesPatchCall) doRequest(alt string) (*http.Response, error) {
 		"customer": c.customer,
 		"roleId":   c.roleId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roles.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.roles.patch" call.
@@ -16469,7 +16640,7 @@ func (c *RolesUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"customer": c.customer,
 		"roleId":   c.roleId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.roles.update"), c.s.client, req)
 }
 
 // Do executes the "directory.roles.update" call.
@@ -16606,7 +16777,7 @@ func (c *SchemasDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"customerId": c.customerId,
 		"schemaKey":  c.schemaKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.schemas.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.schemas.delete" call.
@@ -16726,7 +16897,7 @@ func (c *SchemasGetCall) doRequest(alt string) (*http.Response, error) {
 		"customerId": c.customerId,
 		"schemaKey":  c.schemaKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.schemas.get"), c.s.client, req)
 }
 
 // Do executes the "directory.schemas.get" call.
@@ -16865,7 +17036,7 @@ func (c *SchemasInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.schemas.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.schemas.insert" call.
@@ -17006,7 +17177,7 @@ func (c *SchemasListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customerId": c.customerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.schemas.list"), c.s.client, req)
 }
 
 // Do executes the "directory.schemas.list" call.
@@ -17141,7 +17312,7 @@ func (c *SchemasPatchCall) doRequest(alt string) (*http.Response, error) {
 		"customerId": c.customerId,
 		"schemaKey":  c.schemaKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.schemas.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.schemas.patch" call.
@@ -17285,7 +17456,7 @@ func (c *SchemasUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"customerId": c.customerId,
 		"schemaKey":  c.schemaKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.schemas.update"), c.s.client, req)
 }
 
 // Do executes the "directory.schemas.update" call.
@@ -17422,7 +17593,7 @@ func (c *TokensDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"userKey":  c.userKey,
 		"clientId": c.clientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.tokens.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.tokens.delete" call.
@@ -17542,7 +17713,7 @@ func (c *TokensGetCall) doRequest(alt string) (*http.Response, error) {
 		"userKey":  c.userKey,
 		"clientId": c.clientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.tokens.get"), c.s.client, req)
 }
 
 // Do executes the "directory.tokens.get" call.
@@ -17688,7 +17859,7 @@ func (c *TokensListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.tokens.list"), c.s.client, req)
 }
 
 // Do executes the "directory.tokens.list" call.
@@ -17812,7 +17983,7 @@ func (c *UsersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.users.delete" call.
@@ -17954,7 +18125,7 @@ func (c *UsersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.get"), c.s.client, req)
 }
 
 // Do executes the "directory.users.get" call.
@@ -18116,7 +18287,7 @@ func (c *UsersInsertCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.users.insert" call.
@@ -18356,7 +18527,7 @@ func (c *UsersListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.list"), c.s.client, req)
 }
 
 // Do executes the "directory.users.list" call.
@@ -18616,7 +18787,7 @@ func (c *UsersMakeAdminCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.makeAdmin"), c.s.client, req)
 }
 
 // Do executes the "directory.users.makeAdmin" call.
@@ -18722,7 +18893,7 @@ func (c *UsersPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.users.patch" call.
@@ -18856,7 +19027,7 @@ func (c *UsersUndeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.undelete"), c.s.client, req)
 }
 
 // Do executes the "directory.users.undelete" call.
@@ -18962,7 +19133,7 @@ func (c *UsersUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.update"), c.s.client, req)
 }
 
 // Do executes the "directory.users.update" call.
@@ -19205,7 +19376,7 @@ func (c *UsersWatchCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.watch"), c.s.client, req)
 }
 
 // Do executes the "directory.users.watch" call.
@@ -19444,7 +19615,7 @@ func (c *UsersAliasesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"userKey": c.userKey,
 		"alias":   c.alias,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.aliases.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.users.aliases.delete" call.
@@ -19555,7 +19726,7 @@ func (c *UsersAliasesInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.aliases.insert"), c.s.client, req)
 }
 
 // Do executes the "directory.users.aliases.insert" call.
@@ -19708,7 +19879,7 @@ func (c *UsersAliasesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.aliases.list"), c.s.client, req)
 }
 
 // Do executes the "directory.users.aliases.list" call.
@@ -19867,7 +20038,7 @@ func (c *UsersAliasesWatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.aliases.watch"), c.s.client, req)
 }
 
 // Do executes the "directory.users.aliases.watch" call.
@@ -20012,7 +20183,7 @@ func (c *UsersPhotosDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.photos.delete"), c.s.client, req)
 }
 
 // Do executes the "directory.users.photos.delete" call.
@@ -20122,7 +20293,7 @@ func (c *UsersPhotosGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.photos.get"), c.s.client, req)
 }
 
 // Do executes the "directory.users.photos.get" call.
@@ -20255,7 +20426,7 @@ func (c *UsersPhotosPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.photos.patch"), c.s.client, req)
 }
 
 // Do executes the "directory.users.photos.patch" call.
@@ -20389,7 +20560,7 @@ func (c *UsersPhotosUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.users.photos.update"), c.s.client, req)
 }
 
 // Do executes the "directory.users.photos.update" call.
@@ -20516,7 +20687,7 @@ func (c *VerificationCodesGenerateCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.verificationCodes.generate"), c.s.client, req)
 }
 
 // Do executes the "directory.verificationCodes.generate" call.
@@ -20613,7 +20784,7 @@ func (c *VerificationCodesInvalidateCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.verificationCodes.invalidate"), c.s.client, req)
 }
 
 // Do executes the "directory.verificationCodes.invalidate" call.
@@ -20724,7 +20895,7 @@ func (c *VerificationCodesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"userKey": c.userKey,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "directory.verificationCodes.list"), c.s.client, req)
 }
 
 // Do executes the "directory.verificationCodes.list" call.

@@ -977,14 +977,21 @@ func (s *CompensationInfo) MarshalJSON() ([]byte, error) {
 
 // CompensationRange: Compensation range.
 type CompensationRange struct {
-	// MaxCompensation: Required.
+	// MaxCompensation: Optional.
 	//
-	// The maximum amount of compensation.
+	// The maximum amount of compensation. If left empty, the value is
+	// set
+	// to a maximal compensation value and the currency code is set to
+	// match the currency code of
+	// min_compensation.
 	MaxCompensation *Money `json:"maxCompensation,omitempty"`
 
-	// MinCompensation: Required.
+	// MinCompensation: Optional.
 	//
-	// The minimum amount of compensation.
+	// The minimum amount of compensation. If left empty, the value is
+	// set
+	// to zero and the currency code is set to match the
+	// currency code of max_compensation.
 	MinCompensation *Money `json:"minCompensation,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "MaxCompensation") to
@@ -1409,11 +1416,11 @@ type HistogramFacets struct {
 	// allowed.
 	CustomAttributeHistogramFacets []*CustomAttributeHistogramRequest `json:"customAttributeHistogramFacets,omitempty"`
 
-	// SimpleHistogramFacets: Optional. Specifies the simple type of
-	// histogram facets, for example,
-	// `COMPANY_SIZE`, `EMPLOYMENT_TYPE` etc. This field is equivalent
-	// to
-	// GetHistogramRequest.
+	// SimpleHistogramFacets: Optional.
+	//
+	// Specifies the simple type of histogram facets, for
+	// example,
+	// `COMPANY_SIZE`, `EMPLOYMENT_TYPE` etc.
 	//
 	// Possible values:
 	//   "SEARCH_TYPE_UNSPECIFIED" - The default value if search type is not
@@ -1944,7 +1951,11 @@ type Job struct {
 	// Languages](https://tools.ietf.org/html/bcp47){:
 	// class="external" target="_blank" }.
 	//
-	// The default value is `en-US`.
+	// If this field is unspecified and Job.description is present,
+	// detected
+	// language code based on Job.description is assigned,
+	// otherwise
+	// defaults to 'en_US'.
 	LanguageCode string `json:"languageCode,omitempty"`
 
 	// Name: Required during job update.
@@ -2352,32 +2363,33 @@ type JobQuery struct {
 	// the
 	// Job.custom_attributes marked as `filterable`.
 	//
-	// The syntax for this expression is a subset of Google SQL
-	// syntax.
+	// The syntax for this expression is a subset of SQL syntax.
 	//
-	// Supported operators are: =, !=, <, <=, >, >= where the left of the
-	// operator
-	// is a custom field key and the right of the operator is a number or
-	// string
-	// (surrounded by quotes) value.
-	//
-	// Supported functions are LOWER(<field_name>) to
-	// perform case insensitive match and EMPTY(<field_name>) to filter on
+	// Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=` where
 	// the
+	// left of the operator is a custom field key and the right of the
+	// operator
+	// is a number or a quoted string. You must escape backslash (\\)
+	// and
+	// quote (\") characters.
+	//
+	// Supported functions are `LOWER([field_name])` to
+	// perform a case insensitive match and `EMPTY([field_name])` to filter
+	// on the
 	// existence of a key.
 	//
 	// Boolean expressions (AND/OR/NOT) are supported up to 3 levels
 	// of
 	// nesting (for example, "((A AND B AND C) OR NOT D) AND E"), a maximum
 	// of 50
-	// comparisons/functions are allowed in the expression. The
+	// comparisons or functions are allowed in the expression. The
 	// expression
-	// must be < 2000 characters in length.
+	// must be < 3000 characters in length.
 	//
 	// Sample Query:
-	// (LOWER(driving_license)="class a" OR EMPTY(driving_license))
+	// `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license))
 	// AND
-	// driving_years > 10
+	// driving_years > 10`
 	CustomAttributeFilter string `json:"customAttributeFilter,omitempty"`
 
 	// DisableSpellCheck: Optional.
@@ -3628,41 +3640,46 @@ type SearchJobsRequest struct {
 	// "relevance desc".
 	//
 	// Supported options are:
-	//   * "relevance desc": By relevance descending, as determined by the
+	//
+	// * "relevance desc": By relevance descending, as determined by the
 	// API
-	//     algorithms. Relevance thresholding of query results is only
+	// algorithms. Relevance thresholding of query results is only
 	// available
-	//     with this ordering.
-	//   * "posting_publish_time desc": By Job.posting_publish_time
-	//     descending.
-	//   * "posting_update_time desc": By Job.posting_update_time
+	// with this ordering.
+	// * "posting`_`publish`_`time desc": By Job.posting_publish_time
 	// descending.
-	//   * "title": By Job.title ascending.
-	//   * "title desc": By Job.title descending.
-	//   * "annualized_base_compensation": By job's
-	//     CompensationInfo.annualized_base_compensation ascending. If
+	// * "posting`_`update`_`time desc": By Job.posting_update_time
+	// descending.
+	// * "title": By Job.title ascending.
+	// * "title desc": By Job.title descending.
+	// * "annualized`_`base`_`compensation": By
 	// job's
-	//     annualized base compensation is unspecified, they are put at the
-	// end of
-	//     search result.
-	//   * "annualized_base_compensation desc": By job's
-	//     CompensationInfo.annualized_base_compensation descending. If
+	// CompensationInfo.annualized_base_compensation_range ascending.
+	// Jobs
+	// whose annualized base compensation is unspecified are put at the end
+	// of
+	// search results.
+	// * "annualized`_`base`_`compensation desc": By
 	// job's
-	//     annualized base compensation is unspecified, they are put at the
-	// end of
-	//     search result.
-	//   * "annualized_total_compensation": By job's
-	//     CompensationInfo.annualized_total_compensation ascending. If
+	// CompensationInfo.annualized_base_compensation_range descending.
+	// Jobs
+	// whose annualized base compensation is unspecified are put at the end
+	// of
+	// search results.
+	// * "annualized`_`total`_`compensation": By
 	// job's
-	//     annualized total compensation is unspecified, they are put at the
-	// end
-	//     of search result.
-	//   * "annualized_total_compensation desc": By job's
-	//     CompensationInfo.annualized_total_compensation descending. If
+	// CompensationInfo.annualized_total_compensation_range ascending.
+	// Jobs
+	// whose annualized base compensation is unspecified are put at the end
+	// of
+	// search results.
+	// * "annualized`_`total`_`compensation desc": By
 	// job's
-	//     annualized total compensation is unspecified, they are put at the
-	// end
-	//     of search result.
+	// CompensationInfo.annualized_total_compensation_range descending.
+	// Jobs
+	// whose annualized base compensation is unspecified are put at the end
+	// of
+	// search results.
 	OrderBy string `json:"orderBy,omitempty"`
 
 	// PageSize: Optional.
@@ -3781,7 +3798,7 @@ type SearchJobsResponse struct {
 	// see enable_precise_result_size.
 	EstimatedTotalSize int64 `json:"estimatedTotalSize,omitempty"`
 
-	// HistogramResults: The histogram results that match with
+	// HistogramResults: The histogram results that match
 	// specified
 	// SearchJobsRequest.histogram_facets.
 	HistogramResults *HistogramResults `json:"histogramResults,omitempty"`
@@ -3813,7 +3830,7 @@ type SearchJobsResponse struct {
 	// TotalSize: The precise result count, which is available only if the
 	// client set
 	// enable_precise_result_size to `true` or if the response
-	// is the last page of results. Otherwise, the value will be `-1`.
+	// is the last page of results. Otherwise, the value is `-1`.
 	TotalSize int64 `json:"totalSize,omitempty"`
 
 	// ServerResponse contains the HTTP response code and headers from the
@@ -4204,7 +4221,7 @@ func (c *ProjectsCompleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.complete"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.complete" call.
@@ -4380,7 +4397,7 @@ func (c *ProjectsCompaniesCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.companies.create"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.companies.create" call.
@@ -4510,7 +4527,7 @@ func (c *ProjectsCompaniesDeleteCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.companies.delete"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.companies.delete" call.
@@ -4651,7 +4668,7 @@ func (c *ProjectsCompaniesGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.companies.get"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.companies.get" call.
@@ -4819,7 +4836,7 @@ func (c *ProjectsCompaniesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.companies.list"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.companies.list" call.
@@ -4994,7 +5011,7 @@ func (c *ProjectsCompaniesPatchCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.companies.patch"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.companies.patch" call.
@@ -5131,7 +5148,7 @@ func (c *ProjectsJobsBatchDeleteCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.jobs.batchDelete"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.jobs.batchDelete" call.
@@ -5272,7 +5289,7 @@ func (c *ProjectsJobsCreateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.jobs.create"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.jobs.create" call.
@@ -5406,7 +5423,7 @@ func (c *ProjectsJobsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.jobs.delete"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.jobs.delete" call.
@@ -5549,7 +5566,7 @@ func (c *ProjectsJobsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.jobs.get"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.jobs.get" call.
@@ -5750,7 +5767,7 @@ func (c *ProjectsJobsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.jobs.list"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.jobs.list" call.
@@ -5937,7 +5954,7 @@ func (c *ProjectsJobsPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.jobs.patch"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.jobs.patch" call.
@@ -6079,7 +6096,7 @@ func (c *ProjectsJobsSearchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.jobs.search"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.jobs.search" call.
@@ -6251,7 +6268,7 @@ func (c *ProjectsJobsSearchForAlertCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.projects.jobs.searchForAlert"), c.s.client, req)
 }
 
 // Do executes the "jobs.projects.jobs.searchForAlert" call.

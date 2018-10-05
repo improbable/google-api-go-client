@@ -518,7 +518,7 @@ func (c *DetectionsDetectCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.detections.detect"), c.s.client, req)
 }
 
 // Do executes the "language.detections.detect" call.
@@ -649,7 +649,7 @@ func (c *DetectionsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.detections.list"), c.s.client, req)
 }
 
 // Do executes the "language.detections.list" call.
@@ -801,7 +801,7 @@ func (c *LanguagesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.languages.list"), c.s.client, req)
 }
 
 // Do executes the "language.languages.list" call.
@@ -980,7 +980,7 @@ func (c *TranslationsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.translations.list"), c.s.client, req)
 }
 
 // Do executes the "language.translations.list" call.
@@ -1146,7 +1146,7 @@ func (c *TranslationsTranslateCall) doRequest(alt string) (*http.Response, error
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "language.translations.translate"), c.s.client, req)
 }
 
 // Do executes the "language.translations.translate" call.

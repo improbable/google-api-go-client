@@ -449,7 +449,7 @@ func (c *GetCertForOpenIdConnectCall) doRequest(alt string) (*http.Response, err
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.getCertForOpenIdConnect"), c.s.client, req)
 }
 
 // Do executes the "oauth2.getCertForOpenIdConnect" call.
@@ -547,7 +547,7 @@ func (c *GetCertForOpenIdConnectRawCall) doRequest(alt string) (*http.Response, 
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.getCertForOpenIdConnectRaw"), c.s.client, req)
 }
 
 // Do executes the "oauth2.getCertForOpenIdConnectRaw" call.
@@ -670,7 +670,7 @@ func (c *GetRobotJwkCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"robotEmail": c.robotEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.getRobotJwk"), c.s.client, req)
 }
 
 // Do executes the "oauth2.getRobotJwk" call.
@@ -804,7 +804,7 @@ func (c *GetRobotMetadataRawCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"robotEmail": c.robotEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.getRobotMetadataRaw"), c.s.client, req)
 }
 
 // Do executes the "oauth2.getRobotMetadataRaw" call.
@@ -938,7 +938,7 @@ func (c *GetRobotMetadataX509Call) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"robotEmail": c.robotEmail,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.getRobotMetadataX509"), c.s.client, req)
 }
 
 // Do executes the "oauth2.getRobotMetadataX509" call.
@@ -1046,7 +1046,7 @@ func (c *TokeninfoCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.tokeninfo"), c.s.client, req)
 }
 
 // Do executes the "oauth2.tokeninfo" call.
@@ -1177,7 +1177,7 @@ func (c *UserinfoGetCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.userinfo.get"), c.s.client, req)
 }
 
 // Do executes the "oauth2.userinfo.get" call.
@@ -1302,7 +1302,7 @@ func (c *UserinfoV2MeGetCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.userinfo.v2.me.get"), c.s.client, req)
 }
 
 // Do executes the "oauth2.userinfo.v2.me.get" call.

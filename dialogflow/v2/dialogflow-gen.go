@@ -298,7 +298,7 @@ func (s *GoogleCloudDialogflowV2Agent) UnmarshalJSON(data []byte) error {
 // GoogleCloudDialogflowV2BatchCreateEntitiesRequest: The request
 // message for EntityTypes.BatchCreateEntities.
 type GoogleCloudDialogflowV2BatchCreateEntitiesRequest struct {
-	// Entities: Required. The collection of entities to create.
+	// Entities: Required. The entities to create.
 	Entities []*GoogleCloudDialogflowV2EntityTypeEntity `json:"entities,omitempty"`
 
 	// LanguageCode: Optional. The language of entity synonyms defined in
@@ -442,11 +442,10 @@ func (s *GoogleCloudDialogflowV2BatchDeleteIntentsRequest) MarshalJSON() ([]byte
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
-// GoogleCloudDialogflowV2BatchUpdateEntitiesRequest: The response
-// message for EntityTypes.BatchCreateEntities.
+// GoogleCloudDialogflowV2BatchUpdateEntitiesRequest: The request
+// message for EntityTypes.BatchUpdateEntities.
 type GoogleCloudDialogflowV2BatchUpdateEntitiesRequest struct {
-	// Entities: Required. The collection of new entities to replace the
-	// existing entities.
+	// Entities: Required. The entities to update or create.
 	Entities []*GoogleCloudDialogflowV2EntityTypeEntity `json:"entities,omitempty"`
 
 	// LanguageCode: Optional. The language of entity synonyms defined in
@@ -489,7 +488,7 @@ func (s *GoogleCloudDialogflowV2BatchUpdateEntitiesRequest) MarshalJSON() ([]byt
 // GoogleCloudDialogflowV2BatchUpdateEntityTypesRequest: The request
 // message for EntityTypes.BatchUpdateEntityTypes.
 type GoogleCloudDialogflowV2BatchUpdateEntityTypesRequest struct {
-	// EntityTypeBatchInline: The collection of entity type to update or
+	// EntityTypeBatchInline: The collection of entity types to update or
 	// create.
 	EntityTypeBatchInline *GoogleCloudDialogflowV2EntityTypeBatch `json:"entityTypeBatchInline,omitempty"`
 
@@ -1344,9 +1343,10 @@ type GoogleCloudDialogflowV2Intent struct {
 	// intent.
 	Events []string `json:"events,omitempty"`
 
-	// FollowupIntentInfo: Optional. Collection of information about all
-	// followup intents that have
-	// name of this intent as a root_name.
+	// FollowupIntentInfo: Read-only. Information about all followup intents
+	// that have this intent as
+	// a direct or indirect parent. We populate this field only in the
+	// output.
 	FollowupIntentInfo []*GoogleCloudDialogflowV2IntentFollowupIntentInfo `json:"followupIntentInfo,omitempty"`
 
 	// InputContextNames: Optional. The list of context names required for
@@ -1395,9 +1395,13 @@ type GoogleCloudDialogflowV2Intent struct {
 	// the intent.
 	Parameters []*GoogleCloudDialogflowV2IntentParameter `json:"parameters,omitempty"`
 
-	// ParentFollowupIntentName: The unique identifier of the parent intent
-	// in the chain of followup
-	// intents.
+	// ParentFollowupIntentName: Read-only after creation. The unique
+	// identifier of the parent intent in the
+	// chain of followup intents. You can set this field when creating an
+	// intent,
+	// for example with CreateIntent or BatchUpdateIntents, in order to
+	// make this intent a followup intent.
+	//
 	// It identifies the parent followup intent.
 	// Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
 	ParentFollowupIntentName string `json:"parentFollowupIntentName,omitempty"`
@@ -1413,10 +1417,12 @@ type GoogleCloudDialogflowV2Intent struct {
 	// session when this intent is matched.
 	ResetContexts bool `json:"resetContexts,omitempty"`
 
-	// RootFollowupIntentName: The unique identifier of the root intent in
-	// the chain of followup intents.
-	// It identifies the correct followup intents chain for this
-	// intent.
+	// RootFollowupIntentName: Read-only. The unique identifier of the root
+	// intent in the chain of
+	// followup intents. It identifies the correct followup intents chain
+	// for
+	// this intent. We populate this field only in the output.
+	//
 	// Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
 	RootFollowupIntentName string `json:"rootFollowupIntentName,omitempty"`
 
@@ -1503,7 +1509,7 @@ type GoogleCloudDialogflowV2IntentFollowupIntentInfo struct {
 	FollowupIntentName string `json:"followupIntentName,omitempty"`
 
 	// ParentFollowupIntentName: The unique identifier of the followup
-	// intent parent.
+	// intent's parent.
 	// Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
 	ParentFollowupIntentName string `json:"parentFollowupIntentName,omitempty"`
 
@@ -3702,9 +3708,10 @@ type GoogleCloudDialogflowV2beta1Intent struct {
 	// intent.
 	Events []string `json:"events,omitempty"`
 
-	// FollowupIntentInfo: Optional. Collection of information about all
-	// followup intents that have
-	// name of this intent as a root_name.
+	// FollowupIntentInfo: Read-only. Information about all followup intents
+	// that have this intent as
+	// a direct or indirect parent. We populate this field only in the
+	// output.
 	FollowupIntentInfo []*GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo `json:"followupIntentInfo,omitempty"`
 
 	// InputContextNames: Optional. The list of context names required for
@@ -3770,9 +3777,13 @@ type GoogleCloudDialogflowV2beta1Intent struct {
 	// the intent.
 	Parameters []*GoogleCloudDialogflowV2beta1IntentParameter `json:"parameters,omitempty"`
 
-	// ParentFollowupIntentName: The unique identifier of the parent intent
-	// in the chain of followup
-	// intents.
+	// ParentFollowupIntentName: Read-only after creation. The unique
+	// identifier of the parent intent in the
+	// chain of followup intents. You can set this field when creating an
+	// intent,
+	// for example with CreateIntent or BatchUpdateIntents, in order to
+	// make this intent a followup intent.
+	//
 	// It identifies the parent followup intent.
 	// Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
 	ParentFollowupIntentName string `json:"parentFollowupIntentName,omitempty"`
@@ -3788,10 +3799,12 @@ type GoogleCloudDialogflowV2beta1Intent struct {
 	// session when this intent is matched.
 	ResetContexts bool `json:"resetContexts,omitempty"`
 
-	// RootFollowupIntentName: The unique identifier of the root intent in
-	// the chain of followup intents.
-	// It identifies the correct followup intents chain for this
-	// intent.
+	// RootFollowupIntentName: Read-only. The unique identifier of the root
+	// intent in the chain of
+	// followup intents. It identifies the correct followup intents chain
+	// for
+	// this intent. We populate this field only in the output.
+	//
 	// Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
 	RootFollowupIntentName string `json:"rootFollowupIntentName,omitempty"`
 
@@ -3845,7 +3858,7 @@ type GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo struct {
 	FollowupIntentName string `json:"followupIntentName,omitempty"`
 
 	// ParentFollowupIntentName: The unique identifier of the followup
-	// intent parent.
+	// intent's parent.
 	// Format: `projects/<Project ID>/agent/intents/<Intent ID>`.
 	ParentFollowupIntentName string `json:"parentFollowupIntentName,omitempty"`
 
@@ -5875,7 +5888,7 @@ func (c *ProjectsGetAgentCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.getAgent"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.getAgent" call.
@@ -6011,7 +6024,7 @@ func (c *ProjectsAgentExportCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.export"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.export" call.
@@ -6156,7 +6169,7 @@ func (c *ProjectsAgentImportCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.import"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.import" call.
@@ -6299,7 +6312,7 @@ func (c *ProjectsAgentRestoreCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.restore"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.restore" call.
@@ -6468,7 +6481,7 @@ func (c *ProjectsAgentSearchCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.search"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.search" call.
@@ -6638,7 +6651,7 @@ func (c *ProjectsAgentTrainCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.train"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.train" call.
@@ -6777,7 +6790,7 @@ func (c *ProjectsAgentEntityTypesBatchDeleteCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.batchDelete"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.batchDelete" call.
@@ -6917,7 +6930,7 @@ func (c *ProjectsAgentEntityTypesBatchUpdateCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.batchUpdate"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.batchUpdate" call.
@@ -7067,7 +7080,7 @@ func (c *ProjectsAgentEntityTypesCreateCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.create"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.create" call.
@@ -7202,7 +7215,7 @@ func (c *ProjectsAgentEntityTypesDeleteCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.delete"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.delete" call.
@@ -7356,7 +7369,7 @@ func (c *ProjectsAgentEntityTypesGetCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.get"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.get" call.
@@ -7531,7 +7544,7 @@ func (c *ProjectsAgentEntityTypesListCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.list"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.list" call.
@@ -7724,7 +7737,7 @@ func (c *ProjectsAgentEntityTypesPatchCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.patch"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.patch" call.
@@ -7819,8 +7832,7 @@ type ProjectsAgentEntityTypesEntitiesBatchCreateCall struct {
 }
 
 // BatchCreate: Creates multiple new entities in the specified entity
-// type (extends the
-// existing collection of entries).
+// type.
 //
 // Operation <response: google.protobuf.Empty>
 func (r *ProjectsAgentEntityTypesEntitiesService) BatchCreate(parent string, googleclouddialogflowv2batchcreateentitiesrequest *GoogleCloudDialogflowV2BatchCreateEntitiesRequest) *ProjectsAgentEntityTypesEntitiesBatchCreateCall {
@@ -7876,7 +7888,7 @@ func (c *ProjectsAgentEntityTypesEntitiesBatchCreateCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.entities.batchCreate"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.entities.batchCreate" call.
@@ -7917,7 +7929,7 @@ func (c *ProjectsAgentEntityTypesEntitiesBatchCreateCall) Do(opts ...googleapi.C
 	}
 	return ret, nil
 	// {
-	//   "description": "Creates multiple new entities in the specified entity type (extends the\nexisting collection of entries).\n\nOperation \u003cresponse: google.protobuf.Empty\u003e",
+	//   "description": "Creates multiple new entities in the specified entity type.\n\nOperation \u003cresponse: google.protobuf.Empty\u003e",
 	//   "flatPath": "v2/projects/{projectsId}/agent/entityTypes/{entityTypesId}/entities:batchCreate",
 	//   "httpMethod": "POST",
 	//   "id": "dialogflow.projects.agent.entityTypes.entities.batchCreate",
@@ -8016,7 +8028,7 @@ func (c *ProjectsAgentEntityTypesEntitiesBatchDeleteCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.entities.batchDelete"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.entities.batchDelete" call.
@@ -8098,9 +8110,11 @@ type ProjectsAgentEntityTypesEntitiesBatchUpdateCall struct {
 	header_                                           http.Header
 }
 
-// BatchUpdate: Updates entities in the specified entity type (replaces
-// the existing
-// collection of entries).
+// BatchUpdate: Updates or creates multiple entities in the specified
+// entity type. This
+// method does not affect entities in the entity type that aren't
+// explicitly
+// specified in the request.
 //
 // Operation <response: google.protobuf.Empty,
 //            metadata: google.protobuf.Struct>
@@ -8157,7 +8171,7 @@ func (c *ProjectsAgentEntityTypesEntitiesBatchUpdateCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.entityTypes.entities.batchUpdate"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.entityTypes.entities.batchUpdate" call.
@@ -8198,7 +8212,7 @@ func (c *ProjectsAgentEntityTypesEntitiesBatchUpdateCall) Do(opts ...googleapi.C
 	}
 	return ret, nil
 	// {
-	//   "description": "Updates entities in the specified entity type (replaces the existing\ncollection of entries).\n\nOperation \u003cresponse: google.protobuf.Empty,\n           metadata: google.protobuf.Struct\u003e",
+	//   "description": "Updates or creates multiple entities in the specified entity type. This\nmethod does not affect entities in the entity type that aren't explicitly\nspecified in the request.\n\nOperation \u003cresponse: google.protobuf.Empty,\n           metadata: google.protobuf.Struct\u003e",
 	//   "flatPath": "v2/projects/{projectsId}/agent/entityTypes/{entityTypesId}/entities:batchUpdate",
 	//   "httpMethod": "POST",
 	//   "id": "dialogflow.projects.agent.entityTypes.entities.batchUpdate",
@@ -8207,7 +8221,7 @@ func (c *ProjectsAgentEntityTypesEntitiesBatchUpdateCall) Do(opts ...googleapi.C
 	//   ],
 	//   "parameters": {
 	//     "parent": {
-	//       "description": "Required. The name of the entity type to update the entities in. Format:\n`projects/\u003cProject ID\u003e/agent/entityTypes/\u003cEntity Type ID\u003e`.",
+	//       "description": "Required. The name of the entity type to update or create entities in.\nFormat: `projects/\u003cProject ID\u003e/agent/entityTypes/\u003cEntity Type ID\u003e`.",
 	//       "location": "path",
 	//       "pattern": "^projects/[^/]+/agent/entityTypes/[^/]+$",
 	//       "required": true,
@@ -8295,7 +8309,7 @@ func (c *ProjectsAgentIntentsBatchDeleteCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.intents.batchDelete"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.intents.batchDelete" call.
@@ -8434,7 +8448,7 @@ func (c *ProjectsAgentIntentsBatchUpdateCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.intents.batchUpdate"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.intents.batchUpdate" call.
@@ -8596,7 +8610,7 @@ func (c *ProjectsAgentIntentsCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.intents.create"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.intents.create" call.
@@ -8691,7 +8705,8 @@ type ProjectsAgentIntentsDeleteCall struct {
 	header_    http.Header
 }
 
-// Delete: Deletes the specified intent.
+// Delete: Deletes the specified intent and its direct or indirect
+// followup intents.
 func (r *ProjectsAgentIntentsService) Delete(name string) *ProjectsAgentIntentsDeleteCall {
 	c := &ProjectsAgentIntentsDeleteCall{s: r.s, urlParams_: make(gensupport.URLParams)}
 	c.name = name
@@ -8739,7 +8754,7 @@ func (c *ProjectsAgentIntentsDeleteCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.intents.delete"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.intents.delete" call.
@@ -8780,7 +8795,7 @@ func (c *ProjectsAgentIntentsDeleteCall) Do(opts ...googleapi.CallOption) (*Goog
 	}
 	return ret, nil
 	// {
-	//   "description": "Deletes the specified intent.",
+	//   "description": "Deletes the specified intent and its direct or indirect followup intents.",
 	//   "flatPath": "v2/projects/{projectsId}/agent/intents/{intentsId}",
 	//   "httpMethod": "DELETE",
 	//   "id": "dialogflow.projects.agent.intents.delete",
@@ -8789,7 +8804,7 @@ func (c *ProjectsAgentIntentsDeleteCall) Do(opts ...googleapi.CallOption) (*Goog
 	//   ],
 	//   "parameters": {
 	//     "name": {
-	//       "description": "Required. The name of the intent to delete.\nFormat: `projects/\u003cProject ID\u003e/agent/intents/\u003cIntent ID\u003e`.",
+	//       "description": "Required. The name of the intent to delete. If this intent has direct or\nindirect followup intents, we also delete them.\n\nFormat: `projects/\u003cProject ID\u003e/agent/intents/\u003cIntent ID\u003e`.",
 	//       "location": "path",
 	//       "pattern": "^projects/[^/]+/agent/intents/[^/]+$",
 	//       "required": true,
@@ -8905,7 +8920,7 @@ func (c *ProjectsAgentIntentsGetCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.intents.get"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.intents.get" call.
@@ -9099,7 +9114,7 @@ func (c *ProjectsAgentIntentsListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.intents.list"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.intents.list" call.
@@ -9313,7 +9328,7 @@ func (c *ProjectsAgentIntentsPatchCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.intents.patch"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.intents.patch" call.
@@ -9462,7 +9477,7 @@ func (c *ProjectsAgentSessionsDeleteContextsCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.deleteContexts"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.deleteContexts" call.
@@ -9601,7 +9616,7 @@ func (c *ProjectsAgentSessionsDetectIntentCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"session": c.sessionid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.detectIntent"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.detectIntent" call.
@@ -9739,7 +9754,7 @@ func (c *ProjectsAgentSessionsContextsCreateCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.contexts.create"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.contexts.create" call.
@@ -9868,7 +9883,7 @@ func (c *ProjectsAgentSessionsContextsDeleteCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.contexts.delete"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.contexts.delete" call.
@@ -10008,7 +10023,7 @@ func (c *ProjectsAgentSessionsContextsGetCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.contexts.get"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.contexts.get" call.
@@ -10163,7 +10178,7 @@ func (c *ProjectsAgentSessionsContextsListCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.contexts.list"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.contexts.list" call.
@@ -10337,7 +10352,7 @@ func (c *ProjectsAgentSessionsContextsPatchCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.contexts.patch"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.contexts.patch" call.
@@ -10479,7 +10494,7 @@ func (c *ProjectsAgentSessionsEntityTypesCreateCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.entityTypes.create"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.entityTypes.create" call.
@@ -10610,7 +10625,7 @@ func (c *ProjectsAgentSessionsEntityTypesDeleteCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.entityTypes.delete"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.entityTypes.delete" call.
@@ -10750,7 +10765,7 @@ func (c *ProjectsAgentSessionsEntityTypesGetCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.entityTypes.get"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.entityTypes.get" call.
@@ -10908,7 +10923,7 @@ func (c *ProjectsAgentSessionsEntityTypesListCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.entityTypes.list"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.entityTypes.list" call.
@@ -11082,7 +11097,7 @@ func (c *ProjectsAgentSessionsEntityTypesPatchCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.agent.sessions.entityTypes.patch"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.agent.sessions.entityTypes.patch" call.
@@ -11237,7 +11252,7 @@ func (c *ProjectsOperationsGetCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dialogflow.projects.operations.get"), c.s.client, req)
 }
 
 // Do executes the "dialogflow.projects.operations.get" call.

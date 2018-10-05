@@ -1161,7 +1161,7 @@ type InstantiateWorkflowTemplateRequest struct {
 	InstanceId string `json:"instanceId,omitempty"`
 
 	// Parameters: Optional. Map from parameter names to values that should
-	// be used for those parameters.
+	// be used for those parameters. Values may not exceed 100 characters.
 	Parameters map[string]string `json:"parameters,omitempty"`
 
 	// RequestId: Optional. A tag that prevents multiple concurrent workflow
@@ -1469,19 +1469,22 @@ func (s *JobStatus) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
-// LifecycleConfig: Specifies the cluster auto delete related schedule
+// LifecycleConfig: Specifies the cluster auto-delete schedule
 // configuration.
 type LifecycleConfig struct {
 	// AutoDeleteTime: Optional. The time when cluster will be auto-deleted.
 	AutoDeleteTime string `json:"autoDeleteTime,omitempty"`
 
-	// AutoDeleteTtl: Optional. The life duration of cluster, the cluster
-	// will be auto-deleted at the end of this duration.
+	// AutoDeleteTtl: Optional. The lifetime duration of cluster. The
+	// cluster will be auto-deleted at the end of this period. Valid range:
+	// 10m, 14d.Example: "1d", to delete the cluster 1 day after its
+	// creation..
 	AutoDeleteTtl string `json:"autoDeleteTtl,omitempty"`
 
-	// IdleDeleteTtl: Optional. The longest duration that cluster would keep
-	// alive while staying  idle; passing this threshold will cause cluster
-	// to be auto-deleted.
+	// IdleDeleteTtl: Optional. The duration to keep the cluster alive while
+	// idling. Passing this threshold will cause the cluster to be deleted.
+	// Valid range: 10m, 14d.Example: "10m", the minimum value, to delete
+	// the cluster when it has had no jobs running for 10 minutes.
 	IdleDeleteTtl string `json:"idleDeleteTtl,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "AutoDeleteTime") to
@@ -2280,6 +2283,18 @@ type SoftwareConfig struct {
 	// "1.2" (including a subminor version, such as "1.2.29"), or the
 	// "preview" version. If unspecified, it defaults to the latest version.
 	ImageVersion string `json:"imageVersion,omitempty"`
+
+	// OptionalComponents: The set of optional components to activate on the
+	// cluster.
+	//
+	// Possible values:
+	//   "COMPONENT_UNSPECIFIED" - Unspecified component.
+	//   "JUPYTER" - The Jupyter Notebook.
+	//   "HIVE_WEBHCAT" - The Hive Web HCatalog (the REST service for
+	// accessing HCatalog).
+	//   "ZEPPELIN" - The Zeppelin notebook.
+	//   "ANACONDA" - The Anaconda python distribution.
+	OptionalComponents []string `json:"optionalComponents,omitempty"`
 
 	// Properties: Optional. The properties to set on daemon config
 	// files.Property keys are specified in prefix:property format, such as
@@ -3113,7 +3128,7 @@ func (c *ProjectsLocationsWorkflowTemplatesCreateCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.create"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.create" call.
@@ -3251,7 +3266,7 @@ func (c *ProjectsLocationsWorkflowTemplatesDeleteCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.delete" call.
@@ -3406,7 +3421,7 @@ func (c *ProjectsLocationsWorkflowTemplatesGetCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.get" call.
@@ -3554,7 +3569,7 @@ func (c *ProjectsLocationsWorkflowTemplatesGetIamPolicyCall) doRequest(alt strin
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.getIamPolicy" call.
@@ -3694,7 +3709,7 @@ func (c *ProjectsLocationsWorkflowTemplatesInstantiateCall) doRequest(alt string
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.instantiate"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.instantiate" call.
@@ -3793,15 +3808,22 @@ func (r *ProjectsLocationsWorkflowTemplatesService) InstantiateInline(parent str
 	return c
 }
 
-// InstanceId sets the optional parameter "instanceId": A tag that
+// InstanceId sets the optional parameter "instanceId": Deprecated.
+// Please use request_id field instead.
+func (c *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall) InstanceId(instanceId string) *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall {
+	c.urlParams_.Set("instanceId", instanceId)
+	return c
+}
+
+// RequestId sets the optional parameter "requestId": A tag that
 // prevents multiple concurrent workflow instances with the same tag
 // from running. This mitigates risk of concurrent instances started due
 // to retries.It is recommended to always set this value to a UUID
 // (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag
 // must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 // and hyphens (-). The maximum length is 40 characters.
-func (c *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall) InstanceId(instanceId string) *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall {
-	c.urlParams_.Set("instanceId", instanceId)
+func (c *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall) RequestId(requestId string) *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall {
+	c.urlParams_.Set("requestId", requestId)
 	return c
 }
 
@@ -3851,7 +3873,7 @@ func (c *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall) doRequest(alt 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.instantiateInline"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.instantiateInline" call.
@@ -3901,7 +3923,7 @@ func (c *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall) Do(opts ...goo
 	//   ],
 	//   "parameters": {
 	//     "instanceId": {
-	//       "description": "Optional. A tag that prevents multiple concurrent workflow instances with the same tag from running. This mitigates risk of concurrent instances started due to retries.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.",
+	//       "description": "Deprecated. Please use request_id field instead.",
 	//       "location": "query",
 	//       "type": "string"
 	//     },
@@ -3910,6 +3932,11 @@ func (c *ProjectsLocationsWorkflowTemplatesInstantiateInlineCall) Do(opts ...goo
 	//       "location": "path",
 	//       "pattern": "^projects/[^/]+/locations/[^/]+$",
 	//       "required": true,
+	//       "type": "string"
+	//     },
+	//     "requestId": {
+	//       "description": "Optional. A tag that prevents multiple concurrent workflow instances with the same tag from running. This mitigates risk of concurrent instances started due to retries.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.",
+	//       "location": "query",
 	//       "type": "string"
 	//     }
 	//   },
@@ -4013,7 +4040,7 @@ func (c *ProjectsLocationsWorkflowTemplatesListCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.list" call.
@@ -4179,7 +4206,7 @@ func (c *ProjectsLocationsWorkflowTemplatesSetIamPolicyCall) doRequest(alt strin
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.setIamPolicy" call.
@@ -4320,7 +4347,7 @@ func (c *ProjectsLocationsWorkflowTemplatesTestIamPermissionsCall) doRequest(alt
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.testIamPermissions" call.
@@ -4457,7 +4484,7 @@ func (c *ProjectsLocationsWorkflowTemplatesUpdateCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.locations.workflowTemplates.update"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.locations.workflowTemplates.update" call.
@@ -4610,7 +4637,7 @@ func (c *ProjectsRegionsClustersCreateCall) doRequest(alt string) (*http.Respons
 		"projectId": c.projectId,
 		"region":    c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.create"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.create" call.
@@ -4778,7 +4805,7 @@ func (c *ProjectsRegionsClustersDeleteCall) doRequest(alt string) (*http.Respons
 		"region":      c.region,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.delete" call.
@@ -4942,7 +4969,7 @@ func (c *ProjectsRegionsClustersDiagnoseCall) doRequest(alt string) (*http.Respo
 		"region":      c.region,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.diagnose"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.diagnose" call.
@@ -5104,7 +5131,7 @@ func (c *ProjectsRegionsClustersGetCall) doRequest(alt string) (*http.Response, 
 		"region":      c.region,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.get" call.
@@ -5259,7 +5286,7 @@ func (c *ProjectsRegionsClustersGetIamPolicyCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.getIamPolicy" call.
@@ -5434,7 +5461,7 @@ func (c *ProjectsRegionsClustersListCall) doRequest(alt string) (*http.Response,
 		"projectId": c.projectId,
 		"region":    c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.list" call.
@@ -5708,7 +5735,7 @@ func (c *ProjectsRegionsClustersPatchCall) doRequest(alt string) (*http.Response
 		"region":      c.region,
 		"clusterName": c.clusterName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.patch"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.patch" call.
@@ -5875,7 +5902,7 @@ func (c *ProjectsRegionsClustersSetIamPolicyCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.setIamPolicy" call.
@@ -6016,7 +6043,7 @@ func (c *ProjectsRegionsClustersTestIamPermissionsCall) doRequest(alt string) (*
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.clusters.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.clusters.testIamPermissions" call.
@@ -6160,7 +6187,7 @@ func (c *ProjectsRegionsJobsCancelCall) doRequest(alt string) (*http.Response, e
 		"region":    c.region,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.cancel"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.cancel" call.
@@ -6309,7 +6336,7 @@ func (c *ProjectsRegionsJobsDeleteCall) doRequest(alt string) (*http.Response, e
 		"region":    c.region,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.delete" call.
@@ -6468,7 +6495,7 @@ func (c *ProjectsRegionsJobsGetCall) doRequest(alt string) (*http.Response, erro
 		"region":    c.region,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.get" call.
@@ -6623,7 +6650,7 @@ func (c *ProjectsRegionsJobsGetIamPolicyCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.getIamPolicy" call.
@@ -6814,7 +6841,7 @@ func (c *ProjectsRegionsJobsListCall) doRequest(alt string) (*http.Response, err
 		"projectId": c.projectId,
 		"region":    c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.list" call.
@@ -7023,7 +7050,7 @@ func (c *ProjectsRegionsJobsPatchCall) doRequest(alt string) (*http.Response, er
 		"region":    c.region,
 		"jobId":     c.jobId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.patch"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.patch" call.
@@ -7179,7 +7206,7 @@ func (c *ProjectsRegionsJobsSetIamPolicyCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.setIamPolicy" call.
@@ -7318,7 +7345,7 @@ func (c *ProjectsRegionsJobsSubmitCall) doRequest(alt string) (*http.Response, e
 		"projectId": c.projectId,
 		"region":    c.region,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.submit"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.submit" call.
@@ -7465,7 +7492,7 @@ func (c *ProjectsRegionsJobsTestIamPermissionsCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.jobs.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.jobs.testIamPermissions" call.
@@ -7603,7 +7630,7 @@ func (c *ProjectsRegionsOperationsCancelCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.cancel" call.
@@ -7732,7 +7759,7 @@ func (c *ProjectsRegionsOperationsDeleteCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.delete" call.
@@ -7874,7 +7901,7 @@ func (c *ProjectsRegionsOperationsGetCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.get" call.
@@ -8016,7 +8043,7 @@ func (c *ProjectsRegionsOperationsGetIamPolicyCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.getIamPolicy" call.
@@ -8186,7 +8213,7 @@ func (c *ProjectsRegionsOperationsListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.list" call.
@@ -8357,7 +8384,7 @@ func (c *ProjectsRegionsOperationsSetIamPolicyCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.setIamPolicy" call.
@@ -8498,7 +8525,7 @@ func (c *ProjectsRegionsOperationsTestIamPermissionsCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.operations.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.operations.testIamPermissions" call.
@@ -8634,7 +8661,7 @@ func (c *ProjectsRegionsWorkflowTemplatesCreateCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.create"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.create" call.
@@ -8772,7 +8799,7 @@ func (c *ProjectsRegionsWorkflowTemplatesDeleteCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.delete"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.delete" call.
@@ -8927,7 +8954,7 @@ func (c *ProjectsRegionsWorkflowTemplatesGetCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.get"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.get" call.
@@ -9075,7 +9102,7 @@ func (c *ProjectsRegionsWorkflowTemplatesGetIamPolicyCall) doRequest(alt string)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.getIamPolicy" call.
@@ -9215,7 +9242,7 @@ func (c *ProjectsRegionsWorkflowTemplatesInstantiateCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.instantiate"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.instantiate" call.
@@ -9314,15 +9341,22 @@ func (r *ProjectsRegionsWorkflowTemplatesService) InstantiateInline(parent strin
 	return c
 }
 
-// InstanceId sets the optional parameter "instanceId": A tag that
+// InstanceId sets the optional parameter "instanceId": Deprecated.
+// Please use request_id field instead.
+func (c *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall) InstanceId(instanceId string) *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall {
+	c.urlParams_.Set("instanceId", instanceId)
+	return c
+}
+
+// RequestId sets the optional parameter "requestId": A tag that
 // prevents multiple concurrent workflow instances with the same tag
 // from running. This mitigates risk of concurrent instances started due
 // to retries.It is recommended to always set this value to a UUID
 // (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag
 // must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 // and hyphens (-). The maximum length is 40 characters.
-func (c *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall) InstanceId(instanceId string) *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall {
-	c.urlParams_.Set("instanceId", instanceId)
+func (c *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall) RequestId(requestId string) *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall {
+	c.urlParams_.Set("requestId", requestId)
 	return c
 }
 
@@ -9372,7 +9406,7 @@ func (c *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall) doRequest(alt st
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.instantiateInline"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.instantiateInline" call.
@@ -9422,7 +9456,7 @@ func (c *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall) Do(opts ...googl
 	//   ],
 	//   "parameters": {
 	//     "instanceId": {
-	//       "description": "Optional. A tag that prevents multiple concurrent workflow instances with the same tag from running. This mitigates risk of concurrent instances started due to retries.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.",
+	//       "description": "Deprecated. Please use request_id field instead.",
 	//       "location": "query",
 	//       "type": "string"
 	//     },
@@ -9431,6 +9465,11 @@ func (c *ProjectsRegionsWorkflowTemplatesInstantiateInlineCall) Do(opts ...googl
 	//       "location": "path",
 	//       "pattern": "^projects/[^/]+/regions/[^/]+$",
 	//       "required": true,
+	//       "type": "string"
+	//     },
+	//     "requestId": {
+	//       "description": "Optional. A tag that prevents multiple concurrent workflow instances with the same tag from running. This mitigates risk of concurrent instances started due to retries.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.",
+	//       "location": "query",
 	//       "type": "string"
 	//     }
 	//   },
@@ -9534,7 +9573,7 @@ func (c *ProjectsRegionsWorkflowTemplatesListCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.list"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.list" call.
@@ -9700,7 +9739,7 @@ func (c *ProjectsRegionsWorkflowTemplatesSetIamPolicyCall) doRequest(alt string)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.setIamPolicy" call.
@@ -9841,7 +9880,7 @@ func (c *ProjectsRegionsWorkflowTemplatesTestIamPermissionsCall) doRequest(alt s
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.testIamPermissions" call.
@@ -9978,7 +10017,7 @@ func (c *ProjectsRegionsWorkflowTemplatesUpdateCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "dataproc.projects.regions.workflowTemplates.update"), c.s.client, req)
 }
 
 // Do executes the "dataproc.projects.regions.workflowTemplates.update" call.

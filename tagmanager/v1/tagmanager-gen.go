@@ -2014,7 +2014,7 @@ func (c *AccountsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.get"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.get" call.
@@ -2149,7 +2149,7 @@ func (c *AccountsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.list" call.
@@ -2279,7 +2279,7 @@ func (c *AccountsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.update" call.
@@ -2418,7 +2418,7 @@ func (c *AccountsContainersCreateCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.create"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.create" call.
@@ -2548,7 +2548,7 @@ func (c *AccountsContainersDeleteCall) doRequest(alt string) (*http.Response, er
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.delete"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.delete" call.
@@ -2668,7 +2668,7 @@ func (c *AccountsContainersGetCall) doRequest(alt string) (*http.Response, error
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.get"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.get" call.
@@ -2814,7 +2814,7 @@ func (c *AccountsContainersListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.list" call.
@@ -2957,7 +2957,7 @@ func (c *AccountsContainersUpdateCall) doRequest(alt string) (*http.Response, er
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.update" call.
@@ -3106,7 +3106,7 @@ func (c *AccountsContainersEnvironmentsCreateCall) doRequest(alt string) (*http.
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.environments.create"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.environments.create" call.
@@ -3246,7 +3246,7 @@ func (c *AccountsContainersEnvironmentsDeleteCall) doRequest(alt string) (*http.
 		"containerId":   c.containerId,
 		"environmentId": c.environmentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.environments.delete"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.environments.delete" call.
@@ -3376,7 +3376,7 @@ func (c *AccountsContainersEnvironmentsGetCall) doRequest(alt string) (*http.Res
 		"containerId":   c.containerId,
 		"environmentId": c.environmentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.environments.get"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.environments.get" call.
@@ -3532,7 +3532,7 @@ func (c *AccountsContainersEnvironmentsListCall) doRequest(alt string) (*http.Re
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.environments.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.environments.list" call.
@@ -3686,7 +3686,7 @@ func (c *AccountsContainersEnvironmentsPatchCall) doRequest(alt string) (*http.R
 		"containerId":   c.containerId,
 		"environmentId": c.environmentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.environments.patch"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.environments.patch" call.
@@ -3853,7 +3853,7 @@ func (c *AccountsContainersEnvironmentsUpdateCall) doRequest(alt string) (*http.
 		"containerId":   c.containerId,
 		"environmentId": c.environmentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.environments.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.environments.update" call.
@@ -4009,7 +4009,7 @@ func (c *AccountsContainersFoldersCreateCall) doRequest(alt string) (*http.Respo
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.folders.create"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.folders.create" call.
@@ -4149,7 +4149,7 @@ func (c *AccountsContainersFoldersDeleteCall) doRequest(alt string) (*http.Respo
 		"containerId": c.containerId,
 		"folderId":    c.folderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.folders.delete"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.folders.delete" call.
@@ -4279,7 +4279,7 @@ func (c *AccountsContainersFoldersGetCall) doRequest(alt string) (*http.Response
 		"containerId": c.containerId,
 		"folderId":    c.folderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.folders.get"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.folders.get" call.
@@ -4435,7 +4435,7 @@ func (c *AccountsContainersFoldersListCall) doRequest(alt string) (*http.Respons
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.folders.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.folders.list" call.
@@ -4587,7 +4587,7 @@ func (c *AccountsContainersFoldersUpdateCall) doRequest(alt string) (*http.Respo
 		"containerId": c.containerId,
 		"folderId":    c.folderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.folders.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.folders.update" call.
@@ -4753,7 +4753,7 @@ func (c *AccountsContainersFoldersEntitiesListCall) doRequest(alt string) (*http
 		"containerId": c.containerId,
 		"folderId":    c.folderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.folders.entities.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.folders.entities.list" call.
@@ -4926,7 +4926,7 @@ func (c *AccountsContainersMoveFoldersUpdateCall) doRequest(alt string) (*http.R
 		"containerId": c.containerId,
 		"folderId":    c.folderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.move_folders.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.move_folders.update" call.
@@ -5070,7 +5070,7 @@ func (c *AccountsContainersReauthorizeEnvironmentsUpdateCall) doRequest(alt stri
 		"containerId":   c.containerId,
 		"environmentId": c.environmentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.reauthorize_environments.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.reauthorize_environments.update" call.
@@ -5221,7 +5221,7 @@ func (c *AccountsContainersTagsCreateCall) doRequest(alt string) (*http.Response
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.tags.create"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.tags.create" call.
@@ -5361,7 +5361,7 @@ func (c *AccountsContainersTagsDeleteCall) doRequest(alt string) (*http.Response
 		"containerId": c.containerId,
 		"tagId":       c.tagId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.tags.delete"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.tags.delete" call.
@@ -5491,7 +5491,7 @@ func (c *AccountsContainersTagsGetCall) doRequest(alt string) (*http.Response, e
 		"containerId": c.containerId,
 		"tagId":       c.tagId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.tags.get"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.tags.get" call.
@@ -5647,7 +5647,7 @@ func (c *AccountsContainersTagsListCall) doRequest(alt string) (*http.Response, 
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.tags.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.tags.list" call.
@@ -5799,7 +5799,7 @@ func (c *AccountsContainersTagsUpdateCall) doRequest(alt string) (*http.Response
 		"containerId": c.containerId,
 		"tagId":       c.tagId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.tags.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.tags.update" call.
@@ -5955,7 +5955,7 @@ func (c *AccountsContainersTriggersCreateCall) doRequest(alt string) (*http.Resp
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.triggers.create"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.triggers.create" call.
@@ -6095,7 +6095,7 @@ func (c *AccountsContainersTriggersDeleteCall) doRequest(alt string) (*http.Resp
 		"containerId": c.containerId,
 		"triggerId":   c.triggerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.triggers.delete"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.triggers.delete" call.
@@ -6225,7 +6225,7 @@ func (c *AccountsContainersTriggersGetCall) doRequest(alt string) (*http.Respons
 		"containerId": c.containerId,
 		"triggerId":   c.triggerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.triggers.get"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.triggers.get" call.
@@ -6381,7 +6381,7 @@ func (c *AccountsContainersTriggersListCall) doRequest(alt string) (*http.Respon
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.triggers.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.triggers.list" call.
@@ -6534,7 +6534,7 @@ func (c *AccountsContainersTriggersUpdateCall) doRequest(alt string) (*http.Resp
 		"containerId": c.containerId,
 		"triggerId":   c.triggerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.triggers.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.triggers.update" call.
@@ -6690,7 +6690,7 @@ func (c *AccountsContainersVariablesCreateCall) doRequest(alt string) (*http.Res
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.variables.create"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.variables.create" call.
@@ -6830,7 +6830,7 @@ func (c *AccountsContainersVariablesDeleteCall) doRequest(alt string) (*http.Res
 		"containerId": c.containerId,
 		"variableId":  c.variableId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.variables.delete"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.variables.delete" call.
@@ -6960,7 +6960,7 @@ func (c *AccountsContainersVariablesGetCall) doRequest(alt string) (*http.Respon
 		"containerId": c.containerId,
 		"variableId":  c.variableId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.variables.get"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.variables.get" call.
@@ -7116,7 +7116,7 @@ func (c *AccountsContainersVariablesListCall) doRequest(alt string) (*http.Respo
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.variables.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.variables.list" call.
@@ -7269,7 +7269,7 @@ func (c *AccountsContainersVariablesUpdateCall) doRequest(alt string) (*http.Res
 		"containerId": c.containerId,
 		"variableId":  c.variableId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.variables.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.variables.update" call.
@@ -7425,7 +7425,7 @@ func (c *AccountsContainersVersionsCreateCall) doRequest(alt string) (*http.Resp
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.versions.create"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.versions.create" call.
@@ -7565,7 +7565,7 @@ func (c *AccountsContainersVersionsDeleteCall) doRequest(alt string) (*http.Resp
 		"containerId":        c.containerId,
 		"containerVersionId": c.containerVersionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.versions.delete"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.versions.delete" call.
@@ -7695,7 +7695,7 @@ func (c *AccountsContainersVersionsGetCall) doRequest(alt string) (*http.Respons
 		"containerId":        c.containerId,
 		"containerVersionId": c.containerVersionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.versions.get"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.versions.get" call.
@@ -7866,7 +7866,7 @@ func (c *AccountsContainersVersionsListCall) doRequest(alt string) (*http.Respon
 		"accountId":   c.accountId,
 		"containerId": c.containerId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.versions.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.versions.list" call.
@@ -8025,7 +8025,7 @@ func (c *AccountsContainersVersionsPublishCall) doRequest(alt string) (*http.Res
 		"containerId":        c.containerId,
 		"containerVersionId": c.containerVersionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.versions.publish"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.versions.publish" call.
@@ -8177,7 +8177,7 @@ func (c *AccountsContainersVersionsRestoreCall) doRequest(alt string) (*http.Res
 		"containerId":        c.containerId,
 		"containerVersionId": c.containerVersionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.versions.restore"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.versions.restore" call.
@@ -8321,7 +8321,7 @@ func (c *AccountsContainersVersionsUndeleteCall) doRequest(alt string) (*http.Re
 		"containerId":        c.containerId,
 		"containerVersionId": c.containerVersionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.versions.undelete"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.versions.undelete" call.
@@ -8480,7 +8480,7 @@ func (c *AccountsContainersVersionsUpdateCall) doRequest(alt string) (*http.Resp
 		"containerId":        c.containerId,
 		"containerVersionId": c.containerVersionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.containers.versions.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.containers.versions.update" call.
@@ -8633,7 +8633,7 @@ func (c *AccountsPermissionsCreateCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.permissions.create"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.permissions.create" call.
@@ -8764,7 +8764,7 @@ func (c *AccountsPermissionsDeleteCall) doRequest(alt string) (*http.Response, e
 		"accountId":    c.accountId,
 		"permissionId": c.permissionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.permissions.delete"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.permissions.delete" call.
@@ -8884,7 +8884,7 @@ func (c *AccountsPermissionsGetCall) doRequest(alt string) (*http.Response, erro
 		"accountId":    c.accountId,
 		"permissionId": c.permissionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.permissions.get"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.permissions.get" call.
@@ -9030,7 +9030,7 @@ func (c *AccountsPermissionsListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.permissions.list"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.permissions.list" call.
@@ -9164,7 +9164,7 @@ func (c *AccountsPermissionsUpdateCall) doRequest(alt string) (*http.Response, e
 		"accountId":    c.accountId,
 		"permissionId": c.permissionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tagmanager.accounts.permissions.update"), c.s.client, req)
 }
 
 // Do executes the "tagmanager.accounts.permissions.update" call.

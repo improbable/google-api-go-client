@@ -1061,14 +1061,21 @@ func (s *CompensationInfo) MarshalJSON() ([]byte, error) {
 
 // CompensationRange: Compensation range.
 type CompensationRange struct {
-	// Max: Required.
+	// Max: Optional.
 	//
-	// The maximum amount of compensation.
+	// The maximum amount of compensation. If left empty, the value is
+	// set
+	// to a maximal compensation value and the currency code is set to
+	// match the currency code of
+	// min_compensation.
 	Max *Money `json:"max,omitempty"`
 
-	// Min: Required.
+	// Min: Optional.
 	//
-	// The minimum amount of compensation.
+	// The minimum amount of compensation. If left empty, the value is
+	// set
+	// to zero and the currency code is set to match the
+	// currency code of max_compensation.
 	Min *Money `json:"min,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "Max") to
@@ -1457,19 +1464,19 @@ func (s *CustomFieldFilter) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
-// Date: Represents a whole calendar date, e.g. date of birth. The time
-// of day and
-// time zone are either specified elsewhere or are not significant. The
-// date
-// is relative to the Proleptic Gregorian Calendar. The day may be 0
+// Date: Represents a whole calendar date, for example date of birth.
+// The time of day
+// and time zone are either specified elsewhere or are not significant.
+// The date
+// is relative to the Proleptic Gregorian Calendar. The day can be 0
 // to
-// represent a year and month where the day is not significant, e.g.
-// credit card
-// expiration date. The year may be 0 to represent a month and day
-// independent
-// of year, e.g. anniversary date. Related types are
-// google.type.TimeOfDay
-// and `google.protobuf.Timestamp`.
+// represent a year and month where the day is not significant, for
+// example
+// credit card expiration date. The year can be 0 to represent a month
+// and day
+// independent of year, for example anniversary date. Related types
+// are
+// google.type.TimeOfDay and `google.protobuf.Timestamp`.
 type Date struct {
 	// Day: Day of month. Must be from 1 to 31 and valid for the year and
 	// month, or 0
@@ -5176,7 +5183,7 @@ type SearchJobsResponse struct {
 	// seenenable_precise_result_size.
 	EstimatedTotalSize int64 `json:"estimatedTotalSize,omitempty,string"`
 
-	// HistogramResults: The histogram results that match with
+	// HistogramResults: The histogram results that match
 	// specified
 	// SearchJobsRequest.HistogramFacets.
 	HistogramResults *HistogramResults `json:"histogramResults,omitempty"`
@@ -5497,7 +5504,7 @@ func (c *CompaniesCreateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.companies.create"), c.s.client, req)
 }
 
 // Do executes the "jobs.companies.create" call.
@@ -5617,7 +5624,7 @@ func (c *CompaniesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.companies.delete"), c.s.client, req)
 }
 
 // Do executes the "jobs.companies.delete" call.
@@ -5758,7 +5765,7 @@ func (c *CompaniesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.companies.get"), c.s.client, req)
 }
 
 // Do executes the "jobs.companies.get" call.
@@ -5922,7 +5929,7 @@ func (c *CompaniesListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.companies.list"), c.s.client, req)
 }
 
 // Do executes the "jobs.companies.list" call.
@@ -6118,7 +6125,7 @@ func (c *CompaniesPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.companies.patch"), c.s.client, req)
 }
 
 // Do executes the "jobs.companies.patch" call.
@@ -6327,7 +6334,7 @@ func (c *CompaniesJobsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"companyName": c.companyName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.companies.jobs.list"), c.s.client, req)
 }
 
 // Do executes the "jobs.companies.jobs.list" call.
@@ -6503,7 +6510,7 @@ func (c *JobsBatchDeleteCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.batchDelete"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.batchDelete" call.
@@ -6629,7 +6636,7 @@ func (c *JobsCreateCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.create"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.create" call.
@@ -6768,7 +6775,7 @@ func (c *JobsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.delete"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.delete" call.
@@ -6908,7 +6915,7 @@ func (c *JobsDeleteByFilterCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.deleteByFilter"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.deleteByFilter" call.
@@ -7044,7 +7051,7 @@ func (c *JobsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.get"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.get" call.
@@ -7189,7 +7196,7 @@ func (c *JobsHistogramCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.histogram"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.histogram" call.
@@ -7369,7 +7376,7 @@ func (c *JobsListCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.list"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.list" call.
@@ -7540,7 +7547,7 @@ func (c *JobsPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.patch"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.patch" call.
@@ -7677,7 +7684,7 @@ func (c *JobsSearchCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.search"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.search" call.
@@ -7834,7 +7841,7 @@ func (c *JobsSearchForAlertCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.jobs.searchForAlert"), c.s.client, req)
 }
 
 // Do executes the "jobs.jobs.searchForAlert" call.
@@ -8063,7 +8070,7 @@ func (c *V2CompleteCall) doRequest(alt string) (*http.Response, error) {
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "jobs.complete"), c.s.client, req)
 }
 
 // Do executes the "jobs.complete" call.

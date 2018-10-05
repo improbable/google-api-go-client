@@ -419,7 +419,7 @@ func (c *OperationsCancelCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.operations.cancel" call.
@@ -555,7 +555,7 @@ func (c *OperationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.operations.delete" call.
@@ -733,7 +733,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "runtimeconfig.operations.list"), c.s.client, req)
 }
 
 // Do executes the "runtimeconfig.operations.list" call.

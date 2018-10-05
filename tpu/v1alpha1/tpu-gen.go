@@ -1035,7 +1035,7 @@ func (c *ProjectsLocationsGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.get"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.get" call.
@@ -1197,7 +1197,7 @@ func (c *ProjectsLocationsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.list"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.list" call.
@@ -1374,7 +1374,7 @@ func (c *ProjectsLocationsAcceleratorTypesGetCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.acceleratorTypes.get"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.acceleratorTypes.get" call.
@@ -1540,7 +1540,7 @@ func (c *ProjectsLocationsAcceleratorTypesListCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.acceleratorTypes.list"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.acceleratorTypes.list" call.
@@ -1722,7 +1722,7 @@ func (c *ProjectsLocationsNodesCreateCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.nodes.create"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.nodes.create" call.
@@ -1856,7 +1856,7 @@ func (c *ProjectsLocationsNodesDeleteCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.nodes.delete"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.nodes.delete" call.
@@ -1996,7 +1996,7 @@ func (c *ProjectsLocationsNodesGetCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.nodes.get"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.nodes.get" call.
@@ -2150,7 +2150,7 @@ func (c *ProjectsLocationsNodesListCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.nodes.list"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.nodes.list" call.
@@ -2315,7 +2315,7 @@ func (c *ProjectsLocationsNodesReimageCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.nodes.reimage"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.nodes.reimage" call.
@@ -2451,7 +2451,7 @@ func (c *ProjectsLocationsNodesStartCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.nodes.start"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.nodes.start" call.
@@ -2587,7 +2587,7 @@ func (c *ProjectsLocationsNodesStopCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.nodes.stop"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.nodes.stop" call.
@@ -2733,7 +2733,7 @@ func (c *ProjectsLocationsOperationsCancelCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.operations.cancel" call.
@@ -2865,7 +2865,7 @@ func (c *ProjectsLocationsOperationsDeleteCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.operations.delete" call.
@@ -3009,7 +3009,7 @@ func (c *ProjectsLocationsOperationsGetCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.operations.get"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.operations.get" call.
@@ -3186,7 +3186,7 @@ func (c *ProjectsLocationsOperationsListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.operations.list"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.operations.list" call.
@@ -3363,7 +3363,7 @@ func (c *ProjectsLocationsTensorflowVersionsGetCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.tensorflowVersions.get"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.tensorflowVersions.get" call.
@@ -3529,7 +3529,7 @@ func (c *ProjectsLocationsTensorflowVersionsListCall) doRequest(alt string) (*ht
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "tpu.projects.locations.tensorflowVersions.list"), c.s.client, req)
 }
 
 // Do executes the "tpu.projects.locations.tensorflowVersions.list" call.
