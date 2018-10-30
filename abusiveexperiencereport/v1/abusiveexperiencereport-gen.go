@@ -1,4 +1,4 @@
-// Package abusiveexperiencereport provides access to the Google Abusive Experience Report API.
+// Package abusiveexperiencereport provides access to the Abusive Experience Report API.
 //
 // See https://developers.google.com/abusive-experience-report/
 //

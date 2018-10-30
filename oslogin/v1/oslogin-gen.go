@@ -1,4 +1,4 @@
-// Package oslogin provides access to the Google Cloud OS Login API.
+// Package oslogin provides access to the Cloud OS Login API.
 //
 // See https://cloud.google.com/compute/docs/oslogin/rest/
 //
@@ -218,6 +218,17 @@ type PosixAccount struct {
 	// HomeDirectory: The path to the home directory for this account.
 	HomeDirectory string `json:"homeDirectory,omitempty"`
 
+	// OperatingSystemType: The operating system type where this account
+	// applies.
+	//
+	// Possible values:
+	//   "OPERATING_SYSTEM_TYPE_UNSPECIFIED" - The operating system type
+	// associated with the user account information is
+	// unspecified.
+	//   "LINUX" - Linux user account information.
+	//   "WINDOWS" - Windows user account information.
+	OperatingSystemType string `json:"operatingSystemType,omitempty"`
+
 	// Primary: Only one POSIX account can be marked as primary.
 	Primary bool `json:"primary,omitempty"`
 
@@ -319,6 +330,20 @@ type UsersGetLoginProfileCall struct {
 func (r *UsersService) GetLoginProfile(name string) *UsersGetLoginProfileCall {
 	c := &UsersGetLoginProfileCall{s: r.s, urlParams_: make(gensupport.URLParams)}
 	c.name = name
+	return c
+}
+
+// ProjectId sets the optional parameter "projectId": The project ID of
+// the Google Cloud Platform project.
+func (c *UsersGetLoginProfileCall) ProjectId(projectId string) *UsersGetLoginProfileCall {
+	c.urlParams_.Set("projectId", projectId)
+	return c
+}
+
+// SystemId sets the optional parameter "systemId": A system ID for
+// filtering the results of the request.
+func (c *UsersGetLoginProfileCall) SystemId(systemId string) *UsersGetLoginProfileCall {
+	c.urlParams_.Set("systemId", systemId)
 	return c
 }
 
@@ -429,6 +454,16 @@ func (c *UsersGetLoginProfileCall) Do(opts ...googleapi.CallOption) (*LoginProfi
 	//       "location": "path",
 	//       "pattern": "^users/[^/]+$",
 	//       "required": true,
+	//       "type": "string"
+	//     },
+	//     "projectId": {
+	//       "description": "The project ID of the Google Cloud Platform project.",
+	//       "location": "query",
+	//       "type": "string"
+	//     },
+	//     "systemId": {
+	//       "description": "A system ID for filtering the results of the request.",
+	//       "location": "query",
 	//       "type": "string"
 	//     }
 	//   },

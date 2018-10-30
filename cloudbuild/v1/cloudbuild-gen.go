@@ -1,6 +1,6 @@
-// Package cloudbuild provides access to the Cloud Container Builder API.
+// Package cloudbuild provides access to the Cloud Build API.
 //
-// See https://cloud.google.com/container-builder/docs/
+// See https://cloud.google.com/cloud-build/docs/
 //
 // Usage example:
 //
@@ -120,7 +120,147 @@ type ProjectsTriggersService struct {
 	s *Service
 }
 
-// Build: A build resource in the Container Builder API.
+// ArtifactObjects: Files in the workspace to upload to Cloud Storage
+// upon successful
+// completion of all build steps.
+type ArtifactObjects struct {
+	// Location: Cloud Storage bucket and optional object path, in the
+	// form
+	// "gs://bucket/path/to/somewhere/". (see [Bucket
+	// Name
+	// Requirements](https://cloud.google.com/storage/docs/bucket-naming
+	// #requirements)).
+	//
+	// Files in the workspace matching any path pattern will be uploaded
+	// to
+	// Cloud Storage with this location as a prefix.
+	Location string `json:"location,omitempty"`
+
+	// Paths: Path globs used to match files in the build's workspace.
+	Paths []string `json:"paths,omitempty"`
+
+	// Timing: Output only. Stores timing information for pushing all
+	// artifact objects.
+	Timing *TimeSpan `json:"timing,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "Location") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "Location") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *ArtifactObjects) MarshalJSON() ([]byte, error) {
+	type NoMethod ArtifactObjects
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+// ArtifactResult: An artifact that was uploaded during a build. This
+// is a single record in the artifact manifest JSON file.
+type ArtifactResult struct {
+	// FileHash: The file hash of the artifact.
+	FileHash []*FileHashes `json:"fileHash,omitempty"`
+
+	// Location: The path of an artifact in a Google Cloud Storage bucket,
+	// with the
+	// generation number. For
+	// example,
+	// `gs://mybucket/path/to/output.jar#generation`.
+	Location string `json:"location,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "FileHash") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "FileHash") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *ArtifactResult) MarshalJSON() ([]byte, error) {
+	type NoMethod ArtifactResult
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+// Artifacts: Artifacts produced by a build that should be uploaded
+// upon
+// successful completion of all build steps.
+type Artifacts struct {
+	// Images: A list of images to be pushed upon the successful completion
+	// of all build
+	// steps.
+	//
+	// The images will be pushed using the builder service account's
+	// credentials.
+	//
+	// The digests of the pushed images will be stored in the Build
+	// resource's
+	// results field.
+	//
+	// If any of the images fail to be pushed, the build is marked FAILURE.
+	Images []string `json:"images,omitempty"`
+
+	// Objects: A list of objects to be uploaded to Cloud Storage upon
+	// successful
+	// completion of all build steps.
+	//
+	// Files in the workspace matching specified paths globs will be
+	// uploaded to
+	// the specified Cloud Storage location using the builder service
+	// account's
+	// credentials.
+	//
+	// The location and generation of the uploaded objects will be stored in
+	// the
+	// Build resource's results field.
+	//
+	// If any objects fail to be pushed, the build is marked FAILURE.
+	Objects *ArtifactObjects `json:"objects,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "Images") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "Images") to include in API
+	// requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *Artifacts) MarshalJSON() ([]byte, error) {
+	type NoMethod Artifacts
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+// Build: A build resource in the Cloud Build API.
 //
 // At a high level, a `Build` describes where to find source code, how
 // to build
@@ -142,27 +282,29 @@ type ProjectsTriggersService struct {
 //   resolved from the specified branch or tag.
 // - $SHORT_SHA: first 7 characters of $REVISION_ID or $COMMIT_SHA.
 type Build struct {
-	// BuildTriggerId: The ID of the `BuildTrigger` that triggered this
-	// build, if it was
-	// triggered automatically.
-	// @OutputOnly
+	// Artifacts: Artifacts produced by the build that should be uploaded
+	// upon
+	// successful completion of all build steps.
+	Artifacts *Artifacts `json:"artifacts,omitempty"`
+
+	// BuildTriggerId: Output only. The ID of the `BuildTrigger` that
+	// triggered this build, if it
+	// was triggered automatically.
 	BuildTriggerId string `json:"buildTriggerId,omitempty"`
 
-	// CreateTime: Time at which the request to create the build was
-	// received.
-	// @OutputOnly
+	// CreateTime: Output only. Time at which the request to create the
+	// build was received.
 	CreateTime string `json:"createTime,omitempty"`
 
-	// FinishTime: Time at which execution of the build was finished.
+	// FinishTime: Output only. Time at which execution of the build was
+	// finished.
 	//
 	// The difference between finish_time and start_time is the duration of
 	// the
 	// build's execution.
-	// @OutputOnly
 	FinishTime string `json:"finishTime,omitempty"`
 
-	// Id: Unique identifier of the build.
-	// @OutputOnly
+	// Id: Output only. Unique identifier of the build.
 	Id string `json:"id,omitempty"`
 
 	// Images: A list of images to be pushed upon the successful completion
@@ -181,9 +323,8 @@ type Build struct {
 	// `FAILURE`.
 	Images []string `json:"images,omitempty"`
 
-	// LogUrl: URL to logs for this build in Google Cloud
+	// LogUrl: Output only. URL to logs for this build in Google Cloud
 	// Console.
-	// @OutputOnly
 	LogUrl string `json:"logUrl,omitempty"`
 
 	// LogsBucket: Google Cloud Storage bucket where logs should be written
@@ -199,12 +340,10 @@ type Build struct {
 	// Options: Special options for this build.
 	Options *BuildOptions `json:"options,omitempty"`
 
-	// ProjectId: ID of the project.
-	// @OutputOnly.
+	// ProjectId: Output only. ID of the project.
 	ProjectId string `json:"projectId,omitempty"`
 
-	// Results: Results of the build.
-	// @OutputOnly
+	// Results: Output only. Results of the build.
 	Results *Results `json:"results,omitempty"`
 
 	// Secrets: Secrets to decrypt using Cloud Key Management Service.
@@ -213,18 +352,15 @@ type Build struct {
 	// Source: The location of the source files to build.
 	Source *Source `json:"source,omitempty"`
 
-	// SourceProvenance: A permanent fixed identifier for
+	// SourceProvenance: Output only. A permanent fixed identifier for
 	// source.
-	// @OutputOnly
 	SourceProvenance *SourceProvenance `json:"sourceProvenance,omitempty"`
 
-	// StartTime: Time at which execution of the build was
+	// StartTime: Output only. Time at which execution of the build was
 	// started.
-	// @OutputOnly
 	StartTime string `json:"startTime,omitempty"`
 
-	// Status: Status of the build.
-	// @OutputOnly
+	// Status: Output only. Status of the build.
 	//
 	// Possible values:
 	//   "STATUS_UNKNOWN" - Status of the build is unknown.
@@ -237,9 +373,8 @@ type Build struct {
 	//   "CANCELLED" - Build or step was canceled by a user.
 	Status string `json:"status,omitempty"`
 
-	// StatusDetail: Customer-readable message about the current
-	// status.
-	// @OutputOnly
+	// StatusDetail: Output only. Customer-readable message about the
+	// current status.
 	StatusDetail string `json:"statusDetail,omitempty"`
 
 	// Steps: Required. The operations to be performed on the workspace.
@@ -260,7 +395,8 @@ type Build struct {
 	// Default time is ten minutes.
 	Timeout string `json:"timeout,omitempty"`
 
-	// Timing: Stores timing information for phases of the build. Valid keys
+	// Timing: Output only. Stores timing information for phases of the
+	// build. Valid keys
 	// are:
 	//
 	// * BUILD: time to execute all build steps
@@ -269,14 +405,13 @@ type Build struct {
 	//
 	// If the build does not specify source or images,
 	// these keys will not be included.
-	// @OutputOnly
 	Timing map[string]TimeSpan `json:"timing,omitempty"`
 
 	// ServerResponse contains the HTTP response code and headers from the
 	// server.
 	googleapi.ServerResponse `json:"-"`
 
-	// ForceSendFields is a list of field names (e.g. "BuildTriggerId") to
+	// ForceSendFields is a list of field names (e.g. "Artifacts") to
 	// unconditionally include in API requests. By default, fields with
 	// empty values are omitted from API requests. However, any non-pointer,
 	// non-interface field appearing in ForceSendFields will be sent to the
@@ -284,13 +419,12 @@ type Build struct {
 	// used to include empty fields in Patch requests.
 	ForceSendFields []string `json:"-"`
 
-	// NullFields is a list of field names (e.g. "BuildTriggerId") to
-	// include in API requests with the JSON null value. By default, fields
-	// with empty values are omitted from API requests. However, any field
-	// with an empty value appearing in NullFields will be sent to the
-	// server as null. It is an error if a field in this list has a
-	// non-empty value. This may be used to include null fields in Patch
-	// requests.
+	// NullFields is a list of field names (e.g. "Artifacts") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
 	NullFields []string `json:"-"`
 }
 
@@ -344,6 +478,17 @@ type BuildOptions struct {
 	// more than the maximum are rejected with an error.
 	DiskSizeGb int64 `json:"diskSizeGb,omitempty,string"`
 
+	// Env: A list of global environment variable definitions that will
+	// exist for all
+	// build steps in this build. If a variable is defined in both globally
+	// and in
+	// a build step, the variable will use the build step value.
+	//
+	// The elements are of the form "KEY=VALUE" for the environment variable
+	// "KEY"
+	// being given the value "VALUE".
+	Env []string `json:"env,omitempty"`
+
 	// LogStreamingOption: Option to define build log streaming behavior to
 	// Google Cloud
 	// Storage.
@@ -357,6 +502,19 @@ type BuildOptions struct {
 	// Storage; they will be
 	// written when the build is completed.
 	LogStreamingOption string `json:"logStreamingOption,omitempty"`
+
+	// Logging: Option to specify the logging mode, which determines where
+	// the logs are
+	// stored.
+	//
+	// Possible values:
+	//   "LOGGING_UNSPECIFIED" - The service determines the logging mode.
+	// The default is `LEGACY`. Do not
+	// rely on the default logging behavior as it may change in the future.
+	//   "LEGACY" - Stackdriver logging and Cloud Storage logging are
+	// enabled.
+	//   "GCS_ONLY" - Only Cloud Storage logging is enabled.
+	Logging string `json:"logging,omitempty"`
 
 	// MachineType: Compute Engine machine type on which to run the build.
 	//
@@ -373,11 +531,21 @@ type BuildOptions struct {
 	//   "VERIFIED" - Verified build.
 	RequestedVerifyOption string `json:"requestedVerifyOption,omitempty"`
 
+	// SecretEnv: A list of global environment variables, which are
+	// encrypted using a Cloud
+	// Key Management Service crypto key. These values must be specified in
+	// the
+	// build's `Secret`. These variables will be available to all build
+	// steps
+	// in this build.
+	SecretEnv []string `json:"secretEnv,omitempty"`
+
 	// SourceProvenanceHash: Requested hash for SourceProvenance.
 	//
 	// Possible values:
 	//   "NONE" - No hash requested.
 	//   "SHA256" - Use a sha256 hash.
+	//   "MD5" - Use a md5 hash.
 	SourceProvenanceHash []string `json:"sourceProvenanceHash,omitempty"`
 
 	// SubstitutionOption: Option to specify behavior when there is an error
@@ -391,6 +559,27 @@ type BuildOptions struct {
 	//   "ALLOW_LOOSE" - Do not fail the build if error in substitutions
 	// checks.
 	SubstitutionOption string `json:"substitutionOption,omitempty"`
+
+	// Volumes: Global list of volumes to mount for ALL build steps
+	//
+	// Each volume is created as an empty volume prior to starting the
+	// build
+	// process. Upon completion of the build, volumes and their contents
+	// are
+	// discarded. Global volume names and paths cannot conflict with the
+	// volumes
+	// defined a build step.
+	//
+	// Using a global volume in a build with only one step is not valid
+	// as
+	// it is indicative of a build request with an incorrect configuration.
+	Volumes []*Volume `json:"volumes,omitempty"`
+
+	// WorkerPool: Option to specify a `WorkerPool` for the build. User
+	// specifies the pool
+	// with the format "[WORKERPOOL_PROJECT_ID]/[WORKERPOOL_NAME]".
+	// This is an experimental field.
+	WorkerPool string `json:"workerPool,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "DiskSizeGb") to
 	// unconditionally include in API requests. By default, fields with
@@ -495,6 +684,11 @@ type BuildStep struct {
 	// later build step.
 	Name string `json:"name,omitempty"`
 
+	// PullTiming: Output only. Stores timing information for pulling this
+	// build step's
+	// builder image only.
+	PullTiming *TimeSpan `json:"pullTiming,omitempty"`
+
 	// SecretEnv: A list of environment variables which are encrypted using
 	// a Cloud Key
 	// Management Service crypto key. These values must be specified in
@@ -502,12 +696,11 @@ type BuildStep struct {
 	// build's `Secret`.
 	SecretEnv []string `json:"secretEnv,omitempty"`
 
-	// Status: Status of the build step. At this time, build step status is
-	// only updated
-	// on build completion; step status is not updated in real-time as the
-	// build
-	// progresses.
-	// @OutputOnly
+	// Status: Output only. Status of the build step. At this time, build
+	// step status is
+	// only updated on build completion; step status is not updated in
+	// real-time
+	// as the build progresses.
 	//
 	// Possible values:
 	//   "STATUS_UNKNOWN" - Status of the build is unknown.
@@ -527,22 +720,21 @@ type BuildStep struct {
 	// or the build itself times out.
 	Timeout string `json:"timeout,omitempty"`
 
-	// Timing: Stores timing information for executing this build
-	// step.
-	// @OutputOnly
+	// Timing: Output only. Stores timing information for executing this
+	// build step.
 	Timing *TimeSpan `json:"timing,omitempty"`
 
 	// Volumes: List of volumes to mount into the build step.
 	//
-	// Each volume will be created as an empty volume prior to execution of
+	// Each volume is created as an empty volume prior to execution of
 	// the
 	// build step. Upon completion of the build, volumes and their contents
-	// will
-	// be discarded.
+	// are
+	// discarded.
 	//
 	// Using a named volume in only one step is not valid as it is
 	// indicative
-	// of a mis-configured build request.
+	// of a build request with an incorrect configuration.
 	Volumes []*Volume `json:"volumes,omitempty"`
 
 	// WaitFor: The ID(s) of the step(s) that this build step depends
@@ -551,9 +743,9 @@ type BuildStep struct {
 	// `wait_for`
 	// have completed successfully. If `wait_for` is empty, this build step
 	// will
-	// start when all previous build steps in the `Build.Steps` list have
-	// completed
-	// successfully.
+	// start when all previous build steps in the `Build.Steps` list
+	// have
+	// completed successfully.
 	WaitFor []string `json:"waitFor,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "Args") to
@@ -586,9 +778,7 @@ type BuildTrigger struct {
 	// Build: Contents of the build template.
 	Build *Build `json:"build,omitempty"`
 
-	// CreateTime: Time when the trigger was created.
-	//
-	// @OutputOnly
+	// CreateTime: Output only. Time when the trigger was created.
 	CreateTime string `json:"createTime,omitempty"`
 
 	// Description: Human-readable description of this trigger.
@@ -602,10 +792,37 @@ type BuildTrigger struct {
 	// template.
 	Filename string `json:"filename,omitempty"`
 
-	// Id: Unique identifier of the trigger.
-	//
-	// @OutputOnly
+	// Id: Output only. Unique identifier of the trigger.
 	Id string `json:"id,omitempty"`
+
+	// IgnoredFiles: ignored_files and included_files are file glob matches
+	// using
+	// http://godoc/pkg/path/filepath#Match extended with support for
+	// "**".
+	//
+	// If ignored_files and changed files are both empty, then they are
+	// not used to determine whether or not to trigger a build.
+	//
+	// If ignored_files is not empty, then we ignore any files that
+	// match
+	// any of the ignored_file globs. If the change has no files that
+	// are
+	// outside of the ignored_files globs, then we do not trigger a build.
+	IgnoredFiles []string `json:"ignoredFiles,omitempty"`
+
+	// IncludedFiles: If any of the files altered in the commit pass the
+	// ignored_files
+	// filter and included_files is empty, then as far as this filter
+	// is
+	// concerned, we should trigger the build.
+	//
+	// If any of the files altered in the commit pass the
+	// ignored_files
+	// filter and included_files is not empty, then we make sure that
+	// at
+	// least one of those files matches a included_files glob. If not,
+	// then we do not trigger a build.
+	IncludedFiles []string `json:"includedFiles,omitempty"`
 
 	// Substitutions: Substitutions data for Build resource.
 	Substitutions map[string]string `json:"substitutions,omitempty"`
@@ -657,9 +874,8 @@ type BuiltImage struct {
 	// presented to `docker push`.
 	Name string `json:"name,omitempty"`
 
-	// PushTiming: Stores timing information for pushing the specified
-	// image.
-	// @OutputOnly
+	// PushTiming: Output only. Stores timing information for pushing the
+	// specified image.
 	PushTiming *TimeSpan `json:"pushTiming,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "Digest") to
@@ -750,6 +966,7 @@ type Hash struct {
 	// Possible values:
 	//   "NONE" - No hash requested.
 	//   "SHA256" - Use a sha256 hash.
+	//   "MD5" - Use a md5 hash.
 	Type string `json:"type,omitempty"`
 
 	// Value: The hash value.
@@ -1014,15 +1231,34 @@ func (s *RepoSource) MarshalJSON() ([]byte, error) {
 
 // Results: Artifacts created by the build pipeline.
 type Results struct {
+	// ArtifactManifest: Path to the artifact manifest. Only populated when
+	// artifacts are uploaded.
+	ArtifactManifest string `json:"artifactManifest,omitempty"`
+
 	// BuildStepImages: List of build step digests, in the order
 	// corresponding to build step
 	// indices.
 	BuildStepImages []string `json:"buildStepImages,omitempty"`
 
+	// BuildStepOutputs: List of build step outputs, produced by builder
+	// images, in the order
+	// corresponding to build step indices.
+	//
+	// [Cloud
+	// Builders](https://cloud.google.com/cloud-build/docs/cloud-builders)
+	// ca
+	// n produce this output by writing to `$BUILDER_OUTPUT/output`.
+	// Only the first 4KB of data is stored.
+	BuildStepOutputs []string `json:"buildStepOutputs,omitempty"`
+
 	// Images: Container images that were built as a part of the build.
 	Images []*BuiltImage `json:"images,omitempty"`
 
-	// ForceSendFields is a list of field names (e.g. "BuildStepImages") to
+	// NumArtifacts: Number of artifacts uploaded. Only populated when
+	// artifacts are uploaded.
+	NumArtifacts int64 `json:"numArtifacts,omitempty,string"`
+
+	// ForceSendFields is a list of field names (e.g. "ArtifactManifest") to
 	// unconditionally include in API requests. By default, fields with
 	// empty values are omitted from API requests. However, any non-pointer,
 	// non-interface field appearing in ForceSendFields will be sent to the
@@ -1030,7 +1266,7 @@ type Results struct {
 	// used to include empty fields in Patch requests.
 	ForceSendFields []string `json:"-"`
 
-	// NullFields is a list of field names (e.g. "BuildStepImages") to
+	// NullFields is a list of field names (e.g. "ArtifactManifest") to
 	// include in API requests with the JSON null value. By default, fields
 	// with empty values are omitted from API requests. However, any field
 	// with an empty value appearing in NullFields will be sent to the
@@ -1064,7 +1300,7 @@ type Secret struct {
 	// build's
 	// secrets, and must be used by at least one build step. Values can be
 	// at most
-	// 1 KB in size. There can be at most ten secret values across all of
+	// 64 KB in size. There can be at most 100 secret values across all of
 	// a
 	// build's secrets.
 	SecretEnv map[string]string `json:"secretEnv,omitempty"`
@@ -1130,11 +1366,12 @@ func (s *Source) MarshalJSON() ([]byte, error) {
 // source, or verify that
 // some source was used for this build.
 type SourceProvenance struct {
-	// FileHashes: Hash(es) of the build source, which can be used to verify
-	// that the original
-	// source integrity was maintained in the build. Note that `FileHashes`
-	// will
-	// only be populated if `BuildOptions` has requested a
+	// FileHashes: Output only. Hash(es) of the build source, which can be
+	// used to verify that
+	// the originalsource integrity was maintained in the build. Note
+	// that
+	// `FileHashes` willonly be populated if `BuildOptions` has requested
+	// a
 	// `SourceProvenanceHash`.
 	//
 	// The keys to this map are file paths used as build source and the
@@ -1143,9 +1380,7 @@ type SourceProvenance struct {
 	//
 	// If the build source came in a single package such as a gzipped
 	// tarfile
-	// (`.tar.gz`), the `FileHash` will be for the single path to that
-	// file.
-	// @OutputOnly
+	// (`.tar.gz`), the `FileHash` will be for the single path to that file.
 	FileHashes map[string]FileHashes `json:"fileHashes,omitempty"`
 
 	// ResolvedRepoSource: A copy of the build's `source.repo_source`, if
@@ -2085,9 +2320,10 @@ type ProjectsBuildsCreateCall struct {
 // Create: Starts a build with the specified configuration.
 //
 // This method returns a long-running `Operation`, which includes the
-// build ID.
-// Pass the build ID to `GetBuild` to determine the build status
-// (such as `SUCCESS` or `FAILURE`).
+// build
+// ID. Pass the build ID to `GetBuild` to determine the build status
+// (such as
+// `SUCCESS` or `FAILURE`).
 func (r *ProjectsBuildsService) Create(projectId string, build *Build) *ProjectsBuildsCreateCall {
 	c := &ProjectsBuildsCreateCall{s: r.s, urlParams_: make(gensupport.URLParams)}
 	c.projectId = projectId
@@ -2181,7 +2417,7 @@ func (c *ProjectsBuildsCreateCall) Do(opts ...googleapi.CallOption) (*Operation,
 	}
 	return ret, nil
 	// {
-	//   "description": "Starts a build with the specified configuration.\n\nThis method returns a long-running `Operation`, which includes the build ID.\nPass the build ID to `GetBuild` to determine the build status\n(such as `SUCCESS` or `FAILURE`).",
+	//   "description": "Starts a build with the specified configuration.\n\nThis method returns a long-running `Operation`, which includes the build\nID. Pass the build ID to `GetBuild` to determine the build status (such as\n`SUCCESS` or `FAILURE`).",
 	//   "flatPath": "v1/projects/{projectId}/builds",
 	//   "httpMethod": "POST",
 	//   "id": "cloudbuild.projects.builds.create",

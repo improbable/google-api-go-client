@@ -332,12 +332,20 @@ type AdministratorWebTokenSpec struct {
 	// https.
 	Parent string `json:"parent,omitempty"`
 
-	// Permission: The list of permissions the admin is granted within the
-	// iframe. The admin will only be allowed to view an iframe if they have
-	// all of the permissions associated with it. The only valid value is
-	// "approveApps" that will allow the admin to access the iframe in
-	// "approve" mode.
+	// Permission: Deprecated. Use PlaySearch.approveApps.
 	Permission []string `json:"permission,omitempty"`
+
+	// PlaySearch: Options for displaying the managed Play Search apps page.
+	PlaySearch *AdministratorWebTokenSpecPlaySearch `json:"playSearch,omitempty"`
+
+	// PrivateApps: Options for displaying the Private Apps page.
+	PrivateApps *AdministratorWebTokenSpecPrivateApps `json:"privateApps,omitempty"`
+
+	// StoreBuilder: Options for displaying the Organize apps page.
+	StoreBuilder *AdministratorWebTokenSpecStoreBuilder `json:"storeBuilder,omitempty"`
+
+	// WebApps: Options for displaying the Web Apps page.
+	WebApps *AdministratorWebTokenSpecWebApps `json:"webApps,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "Kind") to
 	// unconditionally include in API requests. By default, fields with
@@ -362,17 +370,127 @@ func (s *AdministratorWebTokenSpec) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
-// AndroidDevicePolicyConfig: The Android Device Policy configuration of
-// an enterprise.
+type AdministratorWebTokenSpecPlaySearch struct {
+	// ApproveApps: Allow access to the iframe in approve mode. Default is
+	// false.
+	ApproveApps bool `json:"approveApps,omitempty"`
+
+	// Enabled: Whether the managed Play Search apps page is displayed.
+	// Default is true.
+	Enabled bool `json:"enabled,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "ApproveApps") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "ApproveApps") to include
+	// in API requests with the JSON null value. By default, fields with
+	// empty values are omitted from API requests. However, any field with
+	// an empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *AdministratorWebTokenSpecPlaySearch) MarshalJSON() ([]byte, error) {
+	type NoMethod AdministratorWebTokenSpecPlaySearch
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+type AdministratorWebTokenSpecPrivateApps struct {
+	// Enabled: Whether the Private Apps page is displayed. Default is true.
+	Enabled bool `json:"enabled,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "Enabled") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "Enabled") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *AdministratorWebTokenSpecPrivateApps) MarshalJSON() ([]byte, error) {
+	type NoMethod AdministratorWebTokenSpecPrivateApps
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+type AdministratorWebTokenSpecStoreBuilder struct {
+	// Enabled: Whether the Organize apps page is displayed. Default is
+	// true.
+	Enabled bool `json:"enabled,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "Enabled") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "Enabled") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *AdministratorWebTokenSpecStoreBuilder) MarshalJSON() ([]byte, error) {
+	type NoMethod AdministratorWebTokenSpecStoreBuilder
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+type AdministratorWebTokenSpecWebApps struct {
+	// Enabled: Whether the Web Apps page is displayed. Default is true.
+	Enabled bool `json:"enabled,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "Enabled") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "Enabled") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *AdministratorWebTokenSpecWebApps) MarshalJSON() ([]byte, error) {
+	type NoMethod AdministratorWebTokenSpecWebApps
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+// AndroidDevicePolicyConfig: Deprecated and unused.
 type AndroidDevicePolicyConfig struct {
 	// Kind: Identifies what kind of resource this is. Value: the fixed
 	// string "androidenterprise#androidDevicePolicyConfig".
 	Kind string `json:"kind,omitempty"`
 
-	// State: The state of Android Device Policy. "enabled" indicates that
-	// Android Device Policy is enabled for the enterprise and the EMM is
-	// allowed to manage devices with Android Device Policy, while
-	// "disabled" means that it cannot.
+	// State: Deprecated and unused.
 	State string `json:"state,omitempty"`
 
 	// ServerResponse contains the HTTP response code and headers from the
@@ -613,9 +731,17 @@ func (s *AppUpdateEvent) MarshalJSON() ([]byte, error) {
 
 // AppVersion: This represents a single version of the app.
 type AppVersion struct {
+	// IsProduction: True if this version is a production Apk.
+	IsProduction bool `json:"isProduction,omitempty"`
+
 	// Track: The track that this app was published in. For example if track
-	// is "alpha", this is an alpha version of the app.
+	// is "alpha", this is an alpha version of the app. Deprecated, use
+	// track_id instead.
 	Track string `json:"track,omitempty"`
+
+	// TrackId: The track ids that this version was published in. This field
+	// supersedes track, but doesn't include the production track.
+	TrackId []string `json:"trackId,omitempty"`
 
 	// VersionCode: Unique increasing identifier for the app version.
 	VersionCode int64 `json:"versionCode,omitempty"`
@@ -625,7 +751,7 @@ type AppVersion struct {
 	// localized (for example, the string could be "1.4").
 	VersionString string `json:"versionString,omitempty"`
 
-	// ForceSendFields is a list of field names (e.g. "Track") to
+	// ForceSendFields is a list of field names (e.g. "IsProduction") to
 	// unconditionally include in API requests. By default, fields with
 	// empty values are omitted from API requests. However, any non-pointer,
 	// non-interface field appearing in ForceSendFields will be sent to the
@@ -633,10 +759,10 @@ type AppVersion struct {
 	// used to include empty fields in Patch requests.
 	ForceSendFields []string `json:"-"`
 
-	// NullFields is a list of field names (e.g. "Track") to include in API
-	// requests with the JSON null value. By default, fields with empty
-	// values are omitted from API requests. However, any field with an
-	// empty value appearing in NullFields will be sent to the server as
+	// NullFields is a list of field names (e.g. "IsProduction") to include
+	// in API requests with the JSON null value. By default, fields with
+	// empty values are omitted from API requests. However, any field with
+	// an empty value appearing in NullFields will be sent to the server as
 	// null. It is an error if a field in this list has a non-empty value.
 	// This may be used to include null fields in Patch requests.
 	NullFields []string `json:"-"`
@@ -1524,6 +1650,41 @@ func (s *LocalizedText) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
+// MaintenanceWindow: Maintenance window for managed Google Play
+// Accounts. This allows Play store to update the apps on the foreground
+// in the designated window.
+type MaintenanceWindow struct {
+	// DurationMs: Duration of the maintenance window, in milliseconds. The
+	// duration must be between 30 minutes and 24 hours (inclusive).
+	DurationMs int64 `json:"durationMs,omitempty,string"`
+
+	// StartTimeAfterMidnightMs: Start time of the maintenance window, in
+	// milliseconds after midnight on the device. Windows can span midnight.
+	StartTimeAfterMidnightMs int64 `json:"startTimeAfterMidnightMs,omitempty,string"`
+
+	// ForceSendFields is a list of field names (e.g. "DurationMs") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "DurationMs") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *MaintenanceWindow) MarshalJSON() ([]byte, error) {
+	type NoMethod MaintenanceWindow
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
 // ManagedConfiguration: A managed configuration resource contains the
 // set of managed properties defined by the app developer in the app's
 // managed configurations schema, as well as any configuration variables
@@ -2105,17 +2266,19 @@ type Policy struct {
 	// connected to wifi.
 	AutoUpdatePolicy string `json:"autoUpdatePolicy,omitempty"`
 
+	// MaintenanceWindow: The maintenance window defining when apps running
+	// in the foreground should be updated.
+	MaintenanceWindow *MaintenanceWindow `json:"maintenanceWindow,omitempty"`
+
 	// ProductAvailabilityPolicy: The availability granted to the device for
 	// the specified products. "all" gives the device access to all
-	// products, regardless of approval status. "allApproved" entitles the
-	// device to access all products that are approved for the enterprise.
-	// "allApproved" and "all" do not enable automatic visibility of "alpha"
-	// or "beta" tracks. "whitelist" grants the device access the products
-	// specified in productPolicy[]. Only products that are approved or
-	// products that were previously approved (products with revoked
-	// approval) by the enterprise can be whitelisted. If no value is
-	// provided, the availability set at the user level is applied by
-	// default.
+	// products, regardless of approval status. "all" does not enable
+	// automatic visibility of "alpha" or "beta" tracks. "whitelist" grants
+	// the device access the products specified in productPolicy[]. Only
+	// products that are approved or products that were previously approved
+	// (products with revoked approval) by the enterprise can be
+	// whitelisted. If no value is provided, the availability set at the
+	// user level is applied by default.
 	ProductAvailabilityPolicy string `json:"productAvailabilityPolicy,omitempty"`
 
 	// ProductPolicy: The list of product policies.
@@ -2154,6 +2317,10 @@ func (s *Policy) MarshalJSON() ([]byte, error) {
 // to the full Google Play details page) is intended to allow a basic
 // representation of the product within an EMM user interface.
 type Product struct {
+	// AppTracks: The tracks that are visible to the enterprise with their
+	// user-friendly name.
+	AppTracks []*TrackInfo `json:"appTracks,omitempty"`
+
 	// AppVersion: App versions currently available for this product.
 	AppVersion []*AppVersion `json:"appVersion,omitempty"`
 
@@ -2165,6 +2332,7 @@ type Product struct {
 	AvailableCountries []string `json:"availableCountries,omitempty"`
 
 	// AvailableTracks: The tracks that are visible to the enterprise.
+	// Deprecated, use app_tracks instead.
 	AvailableTracks []string `json:"availableTracks,omitempty"`
 
 	// Category: The app category (e.g. RACING, SOCIAL, etc.)
@@ -2246,7 +2414,7 @@ type Product struct {
 	// server.
 	googleapi.ServerResponse `json:"-"`
 
-	// ForceSendFields is a list of field names (e.g. "AppVersion") to
+	// ForceSendFields is a list of field names (e.g. "AppTracks") to
 	// unconditionally include in API requests. By default, fields with
 	// empty values are omitted from API requests. However, any non-pointer,
 	// non-interface field appearing in ForceSendFields will be sent to the
@@ -2254,7 +2422,7 @@ type Product struct {
 	// used to include empty fields in Patch requests.
 	ForceSendFields []string `json:"-"`
 
-	// NullFields is a list of field names (e.g. "AppVersion") to include in
+	// NullFields is a list of field names (e.g. "AppTracks") to include in
 	// API requests with the JSON null value. By default, fields with empty
 	// values are omitted from API requests. However, any field with an
 	// empty value appearing in NullFields will be sent to the server as
@@ -2423,6 +2591,11 @@ type ProductPolicy struct {
 	// "app:com.google.android.gm".
 	ProductId string `json:"productId,omitempty"`
 
+	// TrackIds: Grants visibility to the specified track(s) of the product
+	// to the device. The existing track ids can be obtained by calling
+	// Products.Get.
+	TrackIds []string `json:"trackIds,omitempty"`
+
 	// Tracks: Grants visibility to the specified track(s) of the product to
 	// the device. The track available to the device is based on the
 	// following order of preference: alpha, beta, production. For example,
@@ -2439,6 +2612,8 @@ type ProductPolicy struct {
 	// {"production"} {"beta", "production"} {"alpha", "beta", "production"}
 	// The order of elements is not relevant. Any other set of tracks will
 	// be rejected with an error.
+	//
+	// This is deprecated. Use track_ids instead.
 	Tracks []string `json:"tracks,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "ProductId") to
@@ -2563,6 +2738,11 @@ type ProductVisibility struct {
 	// each item in the productVisibility list.
 	ProductId string `json:"productId,omitempty"`
 
+	// TrackIds: Grants visibility to the specified track(s) of the product
+	// to the user. This replaces the tracks field, and specifies the track
+	// by their unique id.
+	TrackIds []string `json:"trackIds,omitempty"`
+
 	// Tracks: Grants visibility to the specified track(s) of the product to
 	// the user. The track available to the user is based on the following
 	// order of preference: alpha, beta, production. For example, if an app
@@ -2579,6 +2759,8 @@ type ProductVisibility struct {
 	// {"production"} {"beta", "production"} {"alpha", "beta", "production"}
 	// The order of elements is not relevant. Any other set of tracks will
 	// be rejected with an error.
+	//
+	// This is deprecated. Use track_ids instead.
 	Tracks []string `json:"tracks,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "ProductId") to
@@ -3091,13 +3273,12 @@ type StorePage struct {
 	Kind string `json:"kind,omitempty"`
 
 	// Link: Ordered list of pages a user should be able to reach from this
-	// page. The pages must exist, must not be this page, and once a link is
-	// created the page linked to cannot be deleted until all links to it
-	// are removed. It is recommended that the basic pages are created
-	// first, before adding the links between pages.
+	// page. The list can't include this page. It is recommended that the
+	// basic pages are created first, before adding the links between
+	// pages.
 	//
-	// No attempt is made to verify that all pages are reachable from the
-	// homepage.
+	// The API doesn't verify that the pages exist or the pages are
+	// reachable.
 	Link []string `json:"link,omitempty"`
 
 	// Name: Ordered list of localized strings giving the name of this page.
@@ -3157,6 +3338,37 @@ type TokenPagination struct {
 
 func (s *TokenPagination) MarshalJSON() ([]byte, error) {
 	type NoMethod TokenPagination
+	raw := NoMethod(*s)
+	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
+}
+
+// TrackInfo: Id to name association of a track.
+type TrackInfo struct {
+	// TrackAlias: A changeable, user-friendly name for a track.
+	TrackAlias string `json:"trackAlias,omitempty"`
+
+	// TrackId: A unique an unchangeable identifier of a test track.
+	TrackId string `json:"trackId,omitempty"`
+
+	// ForceSendFields is a list of field names (e.g. "TrackAlias") to
+	// unconditionally include in API requests. By default, fields with
+	// empty values are omitted from API requests. However, any non-pointer,
+	// non-interface field appearing in ForceSendFields will be sent to the
+	// server regardless of whether the field is empty or not. This may be
+	// used to include empty fields in Patch requests.
+	ForceSendFields []string `json:"-"`
+
+	// NullFields is a list of field names (e.g. "TrackAlias") to include in
+	// API requests with the JSON null value. By default, fields with empty
+	// values are omitted from API requests. However, any field with an
+	// empty value appearing in NullFields will be sent to the server as
+	// null. It is an error if a field in this list has a non-empty value.
+	// This may be used to include null fields in Patch requests.
+	NullFields []string `json:"-"`
+}
+
+func (s *TrackInfo) MarshalJSON() ([]byte, error) {
+	type NoMethod TrackInfo
 	raw := NoMethod(*s)
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
@@ -4688,104 +4900,6 @@ func (c *EnterprisesCreateWebTokenCall) Do(opts ...googleapi.CallOption) (*Admin
 
 }
 
-// method id "androidenterprise.enterprises.delete":
-
-type EnterprisesDeleteCall struct {
-	s            *Service
-	enterpriseId string
-	urlParams_   gensupport.URLParams
-	ctx_         context.Context
-	header_      http.Header
-}
-
-// Delete: Deletes the binding between the EMM and enterprise. This is
-// now deprecated. Use this method only to unenroll customers that were
-// previously enrolled with the insert call, then enroll them again with
-// the enroll call.
-func (r *EnterprisesService) Delete(enterpriseId string) *EnterprisesDeleteCall {
-	c := &EnterprisesDeleteCall{s: r.s, urlParams_: make(gensupport.URLParams)}
-	c.enterpriseId = enterpriseId
-	return c
-}
-
-// Fields allows partial responses to be retrieved. See
-// https://developers.google.com/gdata/docs/2.0/basics#PartialResponse
-// for more information.
-func (c *EnterprisesDeleteCall) Fields(s ...googleapi.Field) *EnterprisesDeleteCall {
-	c.urlParams_.Set("fields", googleapi.CombineFields(s))
-	return c
-}
-
-// Context sets the context to be used in this call's Do method. Any
-// pending HTTP request will be aborted if the provided context is
-// canceled.
-func (c *EnterprisesDeleteCall) Context(ctx context.Context) *EnterprisesDeleteCall {
-	c.ctx_ = ctx
-	return c
-}
-
-// Header returns an http.Header that can be modified by the caller to
-// add HTTP headers to the request.
-func (c *EnterprisesDeleteCall) Header() http.Header {
-	if c.header_ == nil {
-		c.header_ = make(http.Header)
-	}
-	return c.header_
-}
-
-func (c *EnterprisesDeleteCall) doRequest(alt string) (*http.Response, error) {
-	reqHeaders := make(http.Header)
-	for k, v := range c.header_ {
-		reqHeaders[k] = v
-	}
-	reqHeaders.Set("User-Agent", c.s.userAgent())
-	var body io.Reader = nil
-	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "enterprises/{enterpriseId}")
-	urls += "?" + c.urlParams_.Encode()
-	req, _ := http.NewRequest("DELETE", urls, body)
-	req.Header = reqHeaders
-	googleapi.Expand(req.URL, map[string]string{
-		"enterpriseId": c.enterpriseId,
-	})
-	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.delete"), c.s.client, req)
-}
-
-// Do executes the "androidenterprise.enterprises.delete" call.
-func (c *EnterprisesDeleteCall) Do(opts ...googleapi.CallOption) error {
-	gensupport.SetOptions(c.urlParams_, opts...)
-	res, err := c.doRequest("json")
-	if err != nil {
-		return err
-	}
-	defer googleapi.CloseBody(res)
-	if err := googleapi.CheckResponse(res); err != nil {
-		return err
-	}
-	return nil
-	// {
-	//   "description": "Deletes the binding between the EMM and enterprise. This is now deprecated. Use this method only to unenroll customers that were previously enrolled with the insert call, then enroll them again with the enroll call.",
-	//   "httpMethod": "DELETE",
-	//   "id": "androidenterprise.enterprises.delete",
-	//   "parameterOrder": [
-	//     "enterpriseId"
-	//   ],
-	//   "parameters": {
-	//     "enterpriseId": {
-	//       "description": "The ID of the enterprise.",
-	//       "location": "path",
-	//       "required": true,
-	//       "type": "string"
-	//     }
-	//   },
-	//   "path": "enterprises/{enterpriseId}",
-	//   "scopes": [
-	//     "https://www.googleapis.com/auth/androidenterprise"
-	//   ]
-	// }
-
-}
-
 // method id "androidenterprise.enterprises.enroll":
 
 type EnterprisesEnrollCall struct {
@@ -5192,8 +5306,7 @@ type EnterprisesGetAndroidDevicePolicyConfigCall struct {
 	header_      http.Header
 }
 
-// GetAndroidDevicePolicyConfig: Returns the Android Device Policy
-// config resource.
+// GetAndroidDevicePolicyConfig: Deprecated and unused.
 func (r *EnterprisesService) GetAndroidDevicePolicyConfig(enterpriseId string) *EnterprisesGetAndroidDevicePolicyConfigCall {
 	c := &EnterprisesGetAndroidDevicePolicyConfigCall{s: r.s, urlParams_: make(gensupport.URLParams)}
 	c.enterpriseId = enterpriseId
@@ -5294,7 +5407,7 @@ func (c *EnterprisesGetAndroidDevicePolicyConfigCall) Do(opts ...googleapi.CallO
 	}
 	return ret, nil
 	// {
-	//   "description": "Returns the Android Device Policy config resource.",
+	//   "description": "Deprecated and unused.",
 	//   "httpMethod": "GET",
 	//   "id": "androidenterprise.enterprises.getAndroidDevicePolicyConfig",
 	//   "parameterOrder": [
@@ -5626,136 +5739,6 @@ func (c *EnterprisesGetStoreLayoutCall) Do(opts ...googleapi.CallOption) (*Store
 	//   "path": "enterprises/{enterpriseId}/storeLayout",
 	//   "response": {
 	//     "$ref": "StoreLayout"
-	//   },
-	//   "scopes": [
-	//     "https://www.googleapis.com/auth/androidenterprise"
-	//   ]
-	// }
-
-}
-
-// method id "androidenterprise.enterprises.insert":
-
-type EnterprisesInsertCall struct {
-	s          *Service
-	enterprise *Enterprise
-	urlParams_ gensupport.URLParams
-	ctx_       context.Context
-	header_    http.Header
-}
-
-// Insert: Establishes the binding between the EMM and an enterprise.
-// This is now deprecated; use enroll instead.
-func (r *EnterprisesService) Insert(token string, enterprise *Enterprise) *EnterprisesInsertCall {
-	c := &EnterprisesInsertCall{s: r.s, urlParams_: make(gensupport.URLParams)}
-	c.urlParams_.Set("token", token)
-	c.enterprise = enterprise
-	return c
-}
-
-// Fields allows partial responses to be retrieved. See
-// https://developers.google.com/gdata/docs/2.0/basics#PartialResponse
-// for more information.
-func (c *EnterprisesInsertCall) Fields(s ...googleapi.Field) *EnterprisesInsertCall {
-	c.urlParams_.Set("fields", googleapi.CombineFields(s))
-	return c
-}
-
-// Context sets the context to be used in this call's Do method. Any
-// pending HTTP request will be aborted if the provided context is
-// canceled.
-func (c *EnterprisesInsertCall) Context(ctx context.Context) *EnterprisesInsertCall {
-	c.ctx_ = ctx
-	return c
-}
-
-// Header returns an http.Header that can be modified by the caller to
-// add HTTP headers to the request.
-func (c *EnterprisesInsertCall) Header() http.Header {
-	if c.header_ == nil {
-		c.header_ = make(http.Header)
-	}
-	return c.header_
-}
-
-func (c *EnterprisesInsertCall) doRequest(alt string) (*http.Response, error) {
-	reqHeaders := make(http.Header)
-	for k, v := range c.header_ {
-		reqHeaders[k] = v
-	}
-	reqHeaders.Set("User-Agent", c.s.userAgent())
-	var body io.Reader = nil
-	body, err := googleapi.WithoutDataWrapper.JSONReader(c.enterprise)
-	if err != nil {
-		return nil, err
-	}
-	reqHeaders.Set("Content-Type", "application/json")
-	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "enterprises")
-	urls += "?" + c.urlParams_.Encode()
-	req, _ := http.NewRequest("POST", urls, body)
-	req.Header = reqHeaders
-	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.insert"), c.s.client, req)
-}
-
-// Do executes the "androidenterprise.enterprises.insert" call.
-// Exactly one of *Enterprise or error will be non-nil. Any non-2xx
-// status code is an error. Response headers are in either
-// *Enterprise.ServerResponse.Header or (if a response was returned at
-// all) in error.(*googleapi.Error).Header. Use googleapi.IsNotModified
-// to check whether the returned error was because
-// http.StatusNotModified was returned.
-func (c *EnterprisesInsertCall) Do(opts ...googleapi.CallOption) (*Enterprise, error) {
-	gensupport.SetOptions(c.urlParams_, opts...)
-	res, err := c.doRequest("json")
-	if res != nil && res.StatusCode == http.StatusNotModified {
-		if res.Body != nil {
-			res.Body.Close()
-		}
-		return nil, &googleapi.Error{
-			Code:   res.StatusCode,
-			Header: res.Header,
-		}
-	}
-	if err != nil {
-		return nil, err
-	}
-	defer googleapi.CloseBody(res)
-	if err := googleapi.CheckResponse(res); err != nil {
-		return nil, err
-	}
-	ret := &Enterprise{
-		ServerResponse: googleapi.ServerResponse{
-			Header:         res.Header,
-			HTTPStatusCode: res.StatusCode,
-		},
-	}
-	target := &ret
-	if err := gensupport.DecodeResponse(target, res); err != nil {
-		return nil, err
-	}
-	return ret, nil
-	// {
-	//   "description": "Establishes the binding between the EMM and an enterprise. This is now deprecated; use enroll instead.",
-	//   "httpMethod": "POST",
-	//   "id": "androidenterprise.enterprises.insert",
-	//   "parameterOrder": [
-	//     "token"
-	//   ],
-	//   "parameters": {
-	//     "token": {
-	//       "description": "The token provided by the enterprise to register the EMM.",
-	//       "location": "query",
-	//       "required": true,
-	//       "type": "string"
-	//     }
-	//   },
-	//   "path": "enterprises",
-	//   "request": {
-	//     "$ref": "Enterprise"
-	//   },
-	//   "response": {
-	//     "$ref": "Enterprise"
 	//   },
 	//   "scopes": [
 	//     "https://www.googleapis.com/auth/androidenterprise"
@@ -6331,11 +6314,7 @@ type EnterprisesSetAndroidDevicePolicyConfigCall struct {
 	header_                   http.Header
 }
 
-// SetAndroidDevicePolicyConfig: Sets the Android Device Policy config
-// resource. EMM may use this method to enable or disable Android Device
-// Policy support for the specified enterprise. To learn more about
-// managing devices and apps with Android Device Policy, see the Android
-// Management API.
+// SetAndroidDevicePolicyConfig: Deprecated and unused.
 func (r *EnterprisesService) SetAndroidDevicePolicyConfig(enterpriseId string, androiddevicepolicyconfig *AndroidDevicePolicyConfig) *EnterprisesSetAndroidDevicePolicyConfigCall {
 	c := &EnterprisesSetAndroidDevicePolicyConfigCall{s: r.s, urlParams_: make(gensupport.URLParams)}
 	c.enterpriseId = enterpriseId
@@ -6429,7 +6408,7 @@ func (c *EnterprisesSetAndroidDevicePolicyConfigCall) Do(opts ...googleapi.CallO
 	}
 	return ret, nil
 	// {
-	//   "description": "Sets the Android Device Policy config resource. EMM may use this method to enable or disable Android Device Policy support for the specified enterprise. To learn more about managing devices and apps with Android Device Policy, see the Android Management API.",
+	//   "description": "Deprecated and unused.",
 	//   "httpMethod": "PUT",
 	//   "id": "androidenterprise.enterprises.setAndroidDevicePolicyConfig",
 	//   "parameterOrder": [

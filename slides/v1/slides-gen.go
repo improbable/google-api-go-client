@@ -483,11 +483,13 @@ type CreateImageRequest struct {
 	// for
 	// display inside the presentation. Images must be less than 50MB in
 	// size,
-	// cannot exceed 25 megapixels, and must be in either in PNG, JPEG, or
+	// cannot exceed 25 megapixels, and must be in one of PNG, JPEG, or
 	// GIF
 	// format.
 	//
-	// The provided URL can be at most 2 kB in length.
+	// The provided URL can be at most 2 kB in length. The URL itself is
+	// saved
+	// with the image, and exposed via the Image.source_url field.
 	Url string `json:"url,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "ElementProperties")
@@ -1136,7 +1138,7 @@ func (s *CreateShapeResponse) MarshalJSON() ([]byte, error) {
 //
 // NOTE: Chart creation requires at least one of the
 // spreadsheets.readonly,
-// spreadsheets, drive.readonly, or drive OAuth scopes.
+// spreadsheets, drive.readonly, drive.file, or drive OAuth scopes.
 type CreateSheetsChartRequest struct {
 	// ChartId: The ID of the specific chart in the Google Sheets
 	// spreadsheet.
@@ -1419,6 +1421,11 @@ func (s *CreateTableResponse) MarshalJSON() ([]byte, error) {
 }
 
 // CreateVideoRequest: Creates a video.
+//
+// NOTE: Creating a video from Google Drive requires that the requesting
+// app
+// have at least one of the drive, drive.readonly, or drive.file OAuth
+// scopes.
 type CreateVideoRequest struct {
 	// ElementProperties: The element properties for the video.
 	//
@@ -1438,7 +1445,11 @@ type CreateVideoRequest struct {
 	//
 	// e.g. For YouTube video
 	// https://www.youtube.com/watch?v=7U3axjORYZ0,
-	// the ID is 7U3axjORYZ0.
+	// the ID is 7U3axjORYZ0. For a Google Drive
+	// video
+	// https://drive.google.com/file/d/1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5
+	// Q the ID
+	// is 1xCgQLFTJi5_Xl8DgW_lcUYq5e-q6Hi5Q.
 	Id string `json:"id,omitempty"`
 
 	// ObjectId: A user-supplied object ID.
@@ -1461,6 +1472,7 @@ type CreateVideoRequest struct {
 	// Possible values:
 	//   "SOURCE_UNSPECIFIED" - The video source is unspecified.
 	//   "YOUTUBE" - The video source is YouTube.
+	//   "DRIVE" - The video source is Google Drive.
 	Source string `json:"source,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "ElementProperties")
@@ -2543,7 +2555,8 @@ func (s *LayoutReference) MarshalJSON() ([]byte, error) {
 }
 
 // Line: A PageElement kind representing a
-// line, curved connector, or bent connector.
+// non-connector line, straight connector, curved connector, or bent
+// connector.
 type Line struct {
 	// LineProperties: The properties of the line.
 	LineProperties *LineProperties `json:"lineProperties,omitempty"`
@@ -2579,6 +2592,9 @@ type Line struct {
 	//   "CURVED_CONNECTOR_5" - Curved connector 5 form. Corresponds to
 	// ECMA-376 ST_ShapeType
 	// 'curvedConnector5'.
+	//   "STRAIGHT_LINE" - Straight line. Corresponds to ECMA-376
+	// ST_ShapeType 'line'. This line
+	// type is not a connector.
 	LineType string `json:"lineType,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "LineProperties") to
@@ -3619,7 +3635,7 @@ type ParagraphStyle struct {
 	// inherited from the parent.
 	SpaceAbove *Dimension `json:"spaceAbove,omitempty"`
 
-	// SpaceBelow: The amount of extra space above the paragraph. If unset,
+	// SpaceBelow: The amount of extra space below the paragraph. If unset,
 	// the value is
 	// inherited from the parent.
 	SpaceBelow *Dimension `json:"spaceBelow,omitempty"`
@@ -3928,7 +3944,7 @@ type Recolor struct {
 	// color from its color scheme.
 	//   "LIGHT7" - A recolor effect that lightens the image using the
 	// page's seventh
-	// available color from its color scheme.e.
+	// available color from its color scheme.
 	//   "LIGHT8" - A recolor effect that lightens the image using the
 	// page's eighth
 	// available color from its color scheme.
@@ -4049,6 +4065,10 @@ func (s *RefreshSheetsChartRequest) MarshalJSON() ([]byte, error) {
 
 // ReplaceAllShapesWithImageRequest: Replaces all shapes that match the
 // given criteria with the provided image.
+//
+// The images replacing the shapes are rectangular after being inserted
+// into
+// the presentation and do not take on the forms of the shapes.
 type ReplaceAllShapesWithImageRequest struct {
 	// ContainsText: If set, this request will replace all of the shapes
 	// that contain the
@@ -4092,11 +4112,13 @@ type ReplaceAllShapesWithImageRequest struct {
 	// for
 	// display inside the presentation. Images must be less than 50MB in
 	// size,
-	// cannot exceed 25 megapixels, and must be in either in PNG, JPEG, or
+	// cannot exceed 25 megapixels, and must be in one of PNG, JPEG, or
 	// GIF
 	// format.
 	//
-	// The provided URL can be at most 2 kB in length.
+	// The provided URL can be at most 2 kB in length. The URL itself is
+	// saved
+	// with the image, and exposed via the Image.source_url field.
 	ImageUrl string `json:"imageUrl,omitempty"`
 
 	// PageObjectIds: If non-empty, limits the matches to page elements only
@@ -4389,11 +4411,13 @@ type ReplaceImageRequest struct {
 	// for
 	// display inside the presentation. Images must be less than 50MB in
 	// size,
-	// cannot exceed 25 megapixels, and must be in either in PNG, JPEG, or
+	// cannot exceed 25 megapixels, and must be in one of PNG, JPEG, or
 	// GIF
 	// format.
 	//
-	// The provided URL can be at most 2 kB in length.
+	// The provided URL can be at most 2 kB in length. The URL itself is
+	// saved
+	// with the image, and exposed via the Image.source_url field.
 	Url string `json:"url,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "ImageObjectId") to
@@ -4702,7 +4726,7 @@ func (s *RgbColor) UnmarshalJSON(data []byte) error {
 type Shadow struct {
 	// Alignment: The alignment point of the shadow, that sets the origin
 	// for translate,
-	// scale and skew of the shadow.
+	// scale and skew of the shadow. This property is read-only.
 	//
 	// Possible values:
 	//   "RECTANGLE_POSITION_UNSPECIFIED" - Unspecified.
@@ -4767,6 +4791,8 @@ type Shadow struct {
 	PropertyState string `json:"propertyState,omitempty"`
 
 	// RotateWithShape: Whether the shadow should rotate with the shape.
+	// This property is
+	// read-only.
 	RotateWithShape bool `json:"rotateWithShape,omitempty"`
 
 	// Transform: Transform that encodes the translate, scale, and skew of
@@ -4774,7 +4800,7 @@ type Shadow struct {
 	// relative to the alignment position.
 	Transform *AffineTransform `json:"transform,omitempty"`
 
-	// Type: The type of the shadow.
+	// Type: The type of the shadow. This property is read-only.
 	//
 	// Possible values:
 	//   "SHADOW_TYPE_UNSPECIFIED" - Unspecified shadow type.
@@ -5457,11 +5483,13 @@ func (s *Size) MarshalJSON() ([]byte, error) {
 // relevant for pages with page_type SLIDE.
 type SlideProperties struct {
 	// LayoutObjectId: The object ID of the layout that this slide is based
-	// on.
+	// on. This property is
+	// read-only.
 	LayoutObjectId string `json:"layoutObjectId,omitempty"`
 
 	// MasterObjectId: The object ID of the master that this slide is based
-	// on.
+	// on. This property is
+	// read-only.
 	MasterObjectId string `json:"masterObjectId,omitempty"`
 
 	// NotesPage: The notes page that this slide is associated with. It
@@ -5477,7 +5505,7 @@ type SlideProperties struct {
 	// speakerNotesObjectId field.
 	// The notes page is read-only except for the text content and styles of
 	// the
-	// speaker notes shape.
+	// speaker notes shape. This property is read-only.
 	NotesPage *Page `json:"notesPage,omitempty"`
 
 	// ForceSendFields is a list of field names (e.g. "LayoutObjectId") to
@@ -5584,7 +5612,7 @@ type StretchedPictureFill struct {
 	// for
 	// display inside the presentation. Pictures must be less than 50MB in
 	// size,
-	// cannot exceed 25 megapixels, and must be in either in PNG, JPEG, or
+	// cannot exceed 25 megapixels, and must be in one of PNG, JPEG, or
 	// GIF
 	// format.
 	//
@@ -6090,14 +6118,14 @@ func (s *TableColumnProperties) MarshalJSON() ([]byte, error) {
 // like this:
 //
 //
-//   [             ]
+//      [             ]
 //
 // A table range with location = (0, 0), row span = 3 and column span =
 // 2
 // specifies the following cells:
 //
-//    x     x
-//   [      x      ]
+//       x     x
+//      [      x      ]
 type TableRange struct {
 	// ColumnSpan: The column span of the table range.
 	ColumnSpan int64 `json:"columnSpan,omitempty"`
@@ -7480,11 +7508,12 @@ type Video struct {
 	// Possible values:
 	//   "SOURCE_UNSPECIFIED" - The video source is unspecified.
 	//   "YOUTUBE" - The video source is YouTube.
+	//   "DRIVE" - The video source is Google Drive.
 	Source string `json:"source,omitempty"`
 
-	// Url: An URL to a video. The URL is valid as long as the source
-	// video
-	// exists and sharing settings do not change.
+	// Url: An URL to a video. The URL is valid as long as the source video
+	// exists and
+	// sharing settings do not change.
 	Url string `json:"url,omitempty"`
 
 	// VideoProperties: The properties of the video.
@@ -7524,8 +7553,8 @@ type VideoProperties struct {
 	// beginning
 	// of the video.
 	// If set, the end time should be after the start time.
-	// If not set or if you set this to a value that exceeds the video
-	// duration,
+	// If not set or if you set this to a value that exceeds the video's
+	// length,
 	// the video will be played until its end.
 	End int64 `json:"end,omitempty"`
 
@@ -7864,8 +7893,10 @@ type PresentationsCreateCall struct {
 }
 
 // Create: Creates a new presentation using the title given in the
-// request. Other
-// fields in the request are ignored.
+// request. If a
+// presentationId is provided, uses it as the ID of the new
+// presentation.
+// Otherwise, a new presentationId is generated.
 // Returns the created presentation.
 func (r *PresentationsService) Create(presentation *Presentation) *PresentationsCreateCall {
 	c := &PresentationsCreateCall{s: r.s, urlParams_: make(gensupport.URLParams)}
@@ -7956,7 +7987,7 @@ func (c *PresentationsCreateCall) Do(opts ...googleapi.CallOption) (*Presentatio
 	}
 	return ret, nil
 	// {
-	//   "description": "Creates a new presentation using the title given in the request. Other\nfields in the request are ignored.\nReturns the created presentation.",
+	//   "description": "Creates a new presentation using the title given in the request. If a\npresentationId is provided, uses it as the ID of the new presentation.\nOtherwise, a new presentationId is generated.\nReturns the created presentation.",
 	//   "flatPath": "v1/presentations",
 	//   "httpMethod": "POST",
 	//   "id": "slides.presentations.create",
@@ -8325,6 +8356,8 @@ func (c *PresentationsPagesGetThumbnailCall) ThumbnailPropertiesMimeType(thumbna
 // Possible values:
 //   "THUMBNAIL_SIZE_UNSPECIFIED"
 //   "LARGE"
+//   "MEDIUM"
+//   "SMALL"
 func (c *PresentationsPagesGetThumbnailCall) ThumbnailPropertiesThumbnailSize(thumbnailPropertiesThumbnailSize string) *PresentationsPagesGetThumbnailCall {
 	c.urlParams_.Set("thumbnailProperties.thumbnailSize", thumbnailPropertiesThumbnailSize)
 	return c
@@ -8458,7 +8491,9 @@ func (c *PresentationsPagesGetThumbnailCall) Do(opts ...googleapi.CallOption) (*
 	//       "description": "The optional thumbnail image size.\n\nIf you don't specify the size, the server chooses a default size of the\nimage.",
 	//       "enum": [
 	//         "THUMBNAIL_SIZE_UNSPECIFIED",
-	//         "LARGE"
+	//         "LARGE",
+	//         "MEDIUM",
+	//         "SMALL"
 	//       ],
 	//       "location": "query",
 	//       "type": "string"

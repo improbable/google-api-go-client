@@ -145,8 +145,10 @@ func (s *AwsAccessKey) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
-// AwsS3Data: An AwsS3Data can be a data source, but not a data sink.
-// In an AwsS3Data, an object's name is the S3 object's key name.
+// AwsS3Data: An AwsS3Data resource can be a data source, but not a data
+// sink.
+// In an AwsS3Data resource, an object's name is the S3 object's key
+// name.
 type AwsS3Data struct {
 	// AwsAccessKey: AWS access key used to sign the API requests to the AWS
 	// S3 bucket.
@@ -185,26 +187,32 @@ func (s *AwsS3Data) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
-// Date: Represents a whole calendar date, e.g. date of birth. The time
-// of day and
-// time zone are either specified elsewhere or are not significant. The
-// date
-// is relative to the Proleptic Gregorian Calendar. The day may be 0
-// to
-// represent a year and month where the day is not significant, e.g.
-// credit card
-// expiration date. The year may be 0 to represent a month and day
-// independent
-// of year, e.g. anniversary date. Related types are
-// google.type.TimeOfDay
-// and `google.protobuf.Timestamp`.
+// Date: Represents a whole or partial calendar date, e.g. a birthday.
+// The time of day
+// and time zone are either specified elsewhere or are not significant.
+// The date
+// is relative to the Proleptic Gregorian Calendar. This can
+// represent:
+//
+// * A full date, with non-zero year, month and day values
+// * A month and day value, with a zero year, e.g. an anniversary
+// * A year on its own, with zero month and day values
+// * A year and month value, with a zero day, e.g. a credit card
+// expiration date
+//
+// Related types are google.type.TimeOfDay and
+// `google.protobuf.Timestamp`.
 type Date struct {
 	// Day: Day of month. Must be from 1 to 31 and valid for the year and
 	// month, or 0
-	// if specifying a year/month where the day is not significant.
+	// if specifying a year by itself or a year and month where the day is
+	// not
+	// significant.
 	Day int64 `json:"day,omitempty"`
 
-	// Month: Month of year. Must be from 1 to 12.
+	// Month: Month of year. Must be from 1 to 12, or 0 if specifying a year
+	// without a
+	// month and day.
 	Month int64 `json:"month,omitempty"`
 
 	// Year: Year of date. Must be from 1 to 9999, or 0 if specifying a date
@@ -478,16 +486,18 @@ func (s *ErrorSummary) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
-// GcsData: In a GcsData, an object's name is the Google Cloud Storage
-// object's name and
-// its `lastModificationTime` refers to the object's updated time, which
-// changes
-// when the content or the metadata of the object is updated.
+// GcsData: In a GcsData resource, an object's name is the Google Cloud
+// Storage object's
+// name and its `lastModificationTime` refers to the object's updated
+// time,
+// which changes when the content or the metadata of the object is
+// updated.
 type GcsData struct {
 	// BucketName: Google Cloud Storage bucket name (see
-	// [Bucket Name
-	// Requirements](https://cloud.google.com/storage/docs/bucket-naming#requ
-	// irements)).
+	// [Bucket
+	// Name
+	// Requirements](https://cloud.google.com/storage/docs/naming#requir
+	// ements)).
 	// Required.
 	BucketName string `json:"bucketName,omitempty"`
 
@@ -546,11 +556,11 @@ func (s *GoogleServiceAccount) MarshalJSON() ([]byte, error) {
 	return gensupport.MarshalJSON(raw, s.ForceSendFields, s.NullFields)
 }
 
-// HttpData: An HttpData specifies a list of objects on the web to be
-// transferred over
-// HTTP.  The information of the objects to be transferred is contained
-// in a
-// file referenced by a URL. The first line in the file must
+// HttpData: An HttpData resource specifies a list of objects on the web
+// to be transferred
+// over HTTP.  The information of the objects to be transferred is
+// contained in
+// a file referenced by a URL. The first line in the file must
 // be
 // "TsvHttpData-1.0", which specifies the format of the file.
 // Subsequent lines
@@ -565,16 +575,17 @@ func (s *GoogleServiceAccount) MarshalJSON() ([]byte, error) {
 // * MD5 - The base64-encoded MD5 hash of the object.
 //
 // For an example of a valid TSV file, see
-// [Transferring data from
+// [Transferring data
+// from
 // URLs](https://cloud.google.com/storage/transfer/create-url-list).
 //
-// Whe
-// n transferring data based on a URL list, keep the following in
+//
+// When transferring data based on a URL list, keep the following in
 // mind:
 //
-// * When an object located at `http(s)://hostname:port/<URL-path>` is
-// transferred
-// to a data sink, the name of the object at the data sink
+// * When an object located at `http(s)://hostname:port/<URL-path>`
+// is
+// transferred to a data sink, the name of the object at the data sink
 // is
 // `<hostname>/<URL-path>`.
 //
