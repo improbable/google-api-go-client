@@ -15,7 +15,7 @@
   "description": "Accesses Android application developers' Google Play accounts.",
   "discoveryVersion": "v1",
   "documentationLink": "https://developers.google.com/android-publisher",
-  "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/AZ_0b4PIWTPOhRGAK6sY6pAZ33o\"",
+  "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/QOSAA79zadBSuM2-uR1KK8Jwjsk\"",
   "icons": {
     "x16": "https://www.google.com/images/icons/product/android-16.png",
     "x32": "https://www.google.com/images/icons/product/android-32.png"
@@ -1604,9 +1604,8 @@
                   "type": "string"
                 },
                 "track": {
-                  "description": "The track to read or modify. Acceptable values are: \"alpha\", \"beta\", \"production\", \"rollout\" or \"internal\".",
+                  "description": "The track to read or modify.",
                   "location": "path",
-                  "pattern": "(alpha|beta|production|rollout|internal)",
                   "required": true,
                   "type": "string"
                 }
@@ -1641,9 +1640,8 @@
                   "type": "string"
                 },
                 "track": {
-                  "description": "The track to read or modify. Acceptable values are: \"alpha\", \"beta\", \"production\", \"rollout\" or \"internal\".",
+                  "description": "The track to read or modify.",
                   "location": "path",
-                  "pattern": "(alpha|beta|production|rollout|internal)",
                   "required": true,
                   "type": "string"
                 }
@@ -1681,9 +1679,8 @@
                   "type": "string"
                 },
                 "track": {
-                  "description": "The track to read or modify. Acceptable values are: \"alpha\", \"beta\", \"production\", \"rollout\" or \"internal\".",
+                  "description": "The track to read or modify.",
                   "location": "path",
-                  "pattern": "(alpha|beta|production|rollout|internal)",
                   "required": true,
                   "type": "string"
                 }
@@ -1771,7 +1768,7 @@
               ]
             },
             "patch": {
-              "description": "Updates the track configuration for the specified track type. When halted, the rollout track cannot be updated without adding new APKs, and adding new APKs will cause it to resume. This method supports patch semantics.",
+              "description": "Updates the track configuration for the specified track type. This method supports patch semantics.",
               "httpMethod": "PATCH",
               "id": "androidpublisher.edits.tracks.patch",
               "parameterOrder": [
@@ -1811,7 +1808,7 @@
               ]
             },
             "update": {
-              "description": "Updates the track configuration for the specified track type. When halted, the rollout track cannot be updated without adding new APKs, and adding new APKs will cause it to resume.",
+              "description": "Updates the track configuration for the specified track type.",
               "httpMethod": "PUT",
               "id": "androidpublisher.edits.tracks.update",
               "parameterOrder": [
@@ -2331,7 +2328,7 @@
               ],
               "parameters": {
                 "endTime": {
-                  "description": "The time, in milliseconds since the Epoch, of the newest voided in-app product purchase that you want to see in the response. The value of this parameter cannot be greater than the current time and is ignored if a pagination token is set. Default value is current time. Note: This filter is applied on the time at which the record is seen as voided by our systems and not the actual voided time returned in the response.",
+                  "description": "The time, in milliseconds since the Epoch, of the newest voided purchase that you want to see in the response. The value of this parameter cannot be greater than the current time and is ignored if a pagination token is set. Default value is current time. Note: This filter is applied on the time at which the record is seen as voided by our systems and not the actual voided time returned in the response.",
                   "format": "int64",
                   "location": "query",
                   "type": "string"
@@ -2353,7 +2350,7 @@
                   "type": "integer"
                 },
                 "startTime": {
-                  "description": "The time, in milliseconds since the Epoch, of the oldest voided in-app product purchase that you want to see in the response. The value of this parameter cannot be older than 30 days and is ignored if a pagination token is set. Default value is current time minus 30 days. Note: This filter is applied on the time at which the record is seen as voided by our systems and not the actual voided time returned in the response.",
+                  "description": "The time, in milliseconds since the Epoch, of the oldest voided purchase that you want to see in the response. The value of this parameter cannot be older than 30 days and is ignored if a pagination token is set. Default value is current time minus 30 days. Note: This filter is applied on the time at which the record is seen as voided by our systems and not the actual voided time returned in the response.",
                   "format": "int64",
                   "location": "query",
                   "type": "string"
@@ -2486,7 +2483,7 @@
       }
     }
   },
-  "revision": "20181028",
+  "revision": "20190818",
   "rootUrl": "https://www.googleapis.com/",
   "schemas": {
     "Apk": {
@@ -2898,6 +2895,10 @@
           "description": "A sha1 hash of the image that was uploaded.",
           "type": "string"
         },
+        "sha256": {
+          "description": "A sha256 hash of the image that was uploaded.",
+          "type": "string"
+        },
         "url": {
           "description": "A URL that will serve a preview of the image.",
           "type": "string"
@@ -3148,7 +3149,7 @@
           "type": "string"
         },
         "purchaseState": {
-          "description": "The purchase state of the order. Possible values are:  \n- Purchased \n- Canceled",
+          "description": "The purchase state of the order. Possible values are:  \n- Purchased \n- Canceled \n- Pending",
           "format": "int32",
           "type": "integer"
         },
@@ -3158,7 +3159,7 @@
           "type": "string"
         },
         "purchaseType": {
-          "description": "The type of purchase of the inapp product. This field is only set if this purchase was not made using the standard in-app billing flow. Possible values are:  \n- Test (i.e. purchased from a license testing account) \n- Promo (i.e. purchased using a promo code)",
+          "description": "The type of purchase of the inapp product. This field is only set if this purchase was not made using the standard in-app billing flow. Possible values are:  \n- Test (i.e. purchased from a license testing account) \n- Promo (i.e. purchased using a promo code) \n- Rewarded (i.e. from watching a video ad instead of paying)",
           "format": "int32",
           "type": "integer"
         }
@@ -3395,7 +3396,7 @@
           "type": "string"
         },
         "profileId": {
-          "description": "The profile id of the user when the subscription was purchased. Only present for purchases made with 'Subscribe with Google'.",
+          "description": "The Google profile id of the user when the subscription was purchased. Only present for purchases made with 'Subscribe with Google'.",
           "type": "string"
         },
         "profileName": {
@@ -3445,12 +3446,14 @@
       "id": "Testers",
       "properties": {
         "googleGroups": {
+          "description": "A list of all Google Groups, as email addresses, that define testers for this track.",
           "items": {
             "type": "string"
           },
           "type": "array"
         },
         "googlePlusCommunities": {
+          "description": "A list of all Google+ Communities, as URLs, that define testers for this track.",
           "items": {
             "type": "string"
           },
@@ -3598,7 +3601,7 @@
           "type": "string"
         },
         "purchaseToken": {
-          "description": "The token that was generated when a purchase was made. This uniquely identifies a purchase.",
+          "description": "The token which uniquely identifies a one-time purchase or subscription. To uniquely identify subscription renewals use order_id (available starting from version 3 of the API).",
           "type": "string"
         },
         "voidedTimeMillis": {

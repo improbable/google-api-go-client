@@ -250,7 +250,7 @@
       }
     }
   },
-  "revision": "20181023",
+  "revision": "20180910",
   "rootUrl": "https://cloudtrace.googleapis.com/",
   "schemas": {
     "Empty": {

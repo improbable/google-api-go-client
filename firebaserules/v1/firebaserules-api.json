@@ -433,7 +433,7 @@
               ],
               "parameters": {
                 "filter": {
-                  "description": "`Ruleset` filter. The list method supports filters with restrictions on\n`Ruleset.name`.\n\nFilters on `Ruleset.create_time` should use the `date` function which\nparses strings that conform to the RFC 3339 date/time specifications.\n\nExample: `create_time \u003e date(\"2017-01-01\") AND name=UUID-*`",
+                  "description": "`Ruleset` filter. The list method supports filters with restrictions on\n`Ruleset.name`.\n\nFilters on `Ruleset.create_time` should use the `date` function which\nparses strings that conform to the RFC 3339 date/time specifications.\n\nExample: `create_time \u003e date(\"2017-01-01T00:00:00Z\") AND name=UUID-*`",
                   "location": "query",
                   "type": "string"
                 },
@@ -471,7 +471,7 @@
       }
     }
   },
-  "revision": "20181005",
+  "revision": "20190807",
   "rootUrl": "https://firebaserules.googleapis.com/",
   "schemas": {
     "Arg": {
@@ -796,6 +796,20 @@
           },
           "type": "array"
         },
+        "pathEncoding": {
+          "description": "Specifies whether paths (such as request.path) are encoded and how.",
+          "enum": [
+            "ENCODING_UNSPECIFIED",
+            "URL_ENCODED",
+            "PLAIN"
+          ],
+          "enumDescriptions": [
+            "No encoding has been specified. Defaults to \"URL_ENCODED\" behavior.",
+            "Treats path segments as URL encoded but with non-encoded separators\n(\"/\"). This is the default behavior.",
+            "Treats total path as non-URL encoded e.g. raw."
+          ],
+          "type": "string"
+        },
         "request": {
           "description": "Request context.\n\nThe exact format of the request context is service-dependent. See the\nappropriate service documentation for information about the supported\nfields and types on the request. Minimally, all services support the\nfollowing fields and types:\n\nRequest field  | Type\n---------------|-----------------\nauth.uid       | `string`\nauth.token     | `map\u003cstring, string\u003e`\nheaders        | `map\u003cstring, string\u003e`\nmethod         | `string`\nparams         | `map\u003cstring, string\u003e`\npath           | `string`\ntime           | `google.protobuf.Timestamp`\n\nIf the request value is not well-formed for the service, the request will\nbe rejected as an invalid argument.",
           "type": "any"
@@ -844,7 +858,7 @@
           "type": "string"
         },
         "visitedExpressions": {
-          "description": "The set of visited expressions for a given test. This returns positions\nand evaluation results of all visited expressions.",
+          "description": "The set of visited permission expressions for a given test. This returns\nthe positions and evaluation results of all visited permission\nexpressions which were relevant to the test case, e.g.\n```\nmatch /path {\n  allow read if: \u003cexpr\u003e\n}\n```\nFor a detailed report of the intermediate evaluation states, see the\n`expression_reports` field",
           "items": {
             "$ref": "VisitedExpression"
           },

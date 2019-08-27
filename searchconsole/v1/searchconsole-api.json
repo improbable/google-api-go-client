@@ -118,7 +118,7 @@
       }
     }
   },
-  "revision": "20181026",
+  "revision": "20180601",
   "rootUrl": "https://searchconsole.googleapis.com/",
   "schemas": {
     "BlockedResource": {

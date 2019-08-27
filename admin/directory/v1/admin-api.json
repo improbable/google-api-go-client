@@ -93,7 +93,7 @@
   "description": "Manages enterprise resources such as users and groups, administrative notifications, security features, and more.",
   "discoveryVersion": "v1",
   "documentationLink": "https://developers.google.com/admin-sdk/directory/",
-  "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/3gWnYLZX6BDruNsFQ2Dxff52vJg\"",
+  "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/5HuD5_WBYDvRWcfO5I5hjCFh4pY\"",
   "icons": {
     "x16": "https://www.gstatic.com/images/branding/product/1x/googleg_16dp.png",
     "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
@@ -348,7 +348,8 @@
               "type": "string"
             },
             "maxResults": {
-              "description": "Maximum number of results to return. Default is 100",
+              "default": "100",
+              "description": "Maximum number of results to return. Max allowed value is 200.",
               "format": "int32",
               "location": "query",
               "minimum": "1",
@@ -938,7 +939,8 @@
               "type": "string"
             },
             "maxResults": {
-              "description": "Maximum number of results to return. Default is 200",
+              "default": "200",
+              "description": "Maximum number of results to return. Max allowed value is 200.",
               "format": "int32",
               "location": "query",
               "minimum": "1",
@@ -979,7 +981,7 @@
               "type": "string"
             },
             "userKey": {
-              "description": "Email or immutable Id of the user if only those groups are to be listed, the given user is a member of. If Id, it should match with id of user object",
+              "description": "Email or immutable ID of the user if only those groups are to be listed, the given user is a member of. If it's an ID, it should match with the ID of the user object.",
               "location": "query",
               "type": "string"
             }
@@ -1274,7 +1276,8 @@
               "type": "boolean"
             },
             "maxResults": {
-              "description": "Maximum number of results to return. Default is 200",
+              "default": "200",
+              "description": "Maximum number of results to return. Max allowed value is 200.",
               "format": "int32",
               "location": "query",
               "minimum": "1",
@@ -1492,7 +1495,8 @@
               "type": "string"
             },
             "maxResults": {
-              "description": "Maximum number of results to return. Default is 100",
+              "default": "100",
+              "description": "Maximum number of results to return. Max allowed value is 100.",
               "format": "int32",
               "location": "query",
               "minimum": "1",
@@ -2059,6 +2063,22 @@
                 "customer"
               ],
               "parameters": {
+                "coordinatesSource": {
+                  "default": "SOURCE_UNSPECIFIED",
+                  "description": "Source from which Building.coordinates are derived.",
+                  "enum": [
+                    "CLIENT_SPECIFIED",
+                    "RESOLVED_FROM_ADDRESS",
+                    "SOURCE_UNSPECIFIED"
+                  ],
+                  "enumDescriptions": [
+                    "Building.coordinates are set to the coordinates included in the request.",
+                    "Building.coordinates are automatically populated based on the postal address.",
+                    "Defaults to RESOLVED_FROM_ADDRESS if postal address is provided. Otherwise, defaults to CLIENT_SPECIFIED if coordinates are provided."
+                  ],
+                  "location": "query",
+                  "type": "string"
+                },
                 "customer": {
                   "description": "The unique ID for the customer's G Suite account. As an account administrator, you can also use the my_customer alias to represent your account's customer ID.",
                   "location": "path",
@@ -2129,6 +2149,22 @@
                   "required": true,
                   "type": "string"
                 },
+                "coordinatesSource": {
+                  "default": "SOURCE_UNSPECIFIED",
+                  "description": "Source from which Building.coordinates are derived.",
+                  "enum": [
+                    "CLIENT_SPECIFIED",
+                    "RESOLVED_FROM_ADDRESS",
+                    "SOURCE_UNSPECIFIED"
+                  ],
+                  "enumDescriptions": [
+                    "Building.coordinates are set to the coordinates included in the request.",
+                    "Building.coordinates are automatically populated based on the postal address.",
+                    "Defaults to RESOLVED_FROM_ADDRESS if postal address is provided. Otherwise, defaults to CLIENT_SPECIFIED if coordinates are provided."
+                  ],
+                  "location": "query",
+                  "type": "string"
+                },
                 "customer": {
                   "description": "The unique ID for the customer's G Suite account. As an account administrator, you can also use the my_customer alias to represent your account's customer ID.",
                   "location": "path",
@@ -2160,6 +2196,22 @@
                   "description": "The ID of the building to update.",
                   "location": "path",
                   "required": true,
+                  "type": "string"
+                },
+                "coordinatesSource": {
+                  "default": "SOURCE_UNSPECIFIED",
+                  "description": "Source from which Building.coordinates are derived.",
+                  "enum": [
+                    "CLIENT_SPECIFIED",
+                    "RESOLVED_FROM_ADDRESS",
+                    "SOURCE_UNSPECIFIED"
+                  ],
+                  "enumDescriptions": [
+                    "Building.coordinates are set to the coordinates included in the request.",
+                    "Building.coordinates are automatically populated based on the postal address.",
+                    "Defaults to RESOLVED_FROM_ADDRESS if postal address is provided. Otherwise, defaults to CLIENT_SPECIFIED if coordinates are provided."
+                  ],
+                  "location": "query",
                   "type": "string"
                 },
                 "customer": {
@@ -3330,7 +3382,8 @@
               "type": "string"
             },
             "maxResults": {
-              "description": "Maximum number of results to return. Default is 100. Max allowed is 500",
+              "default": "100",
+              "description": "Maximum number of results to return.",
               "format": "int32",
               "location": "query",
               "maximum": "500",
@@ -3379,7 +3432,7 @@
               "type": "string"
             },
             "showDeleted": {
-              "description": "If set to true retrieves the list of deleted users. Default is false",
+              "description": "If set to true, retrieves the list of deleted users. (Default: false)",
               "location": "query",
               "type": "string"
             },
@@ -3559,7 +3612,8 @@
               "type": "string"
             },
             "maxResults": {
-              "description": "Maximum number of results to return. Default is 100. Max allowed is 500",
+              "default": "100",
+              "description": "Maximum number of results to return.",
               "format": "int32",
               "location": "query",
               "maximum": "500",
@@ -3608,7 +3662,7 @@
               "type": "string"
             },
             "showDeleted": {
-              "description": "If set to true retrieves the list of deleted users. Default is false",
+              "description": "If set to true, retrieves the list of deleted users. (Default: false)",
               "location": "query",
               "type": "string"
             },
@@ -3969,7 +4023,7 @@
       }
     }
   },
-  "revision": "20180917",
+  "revision": "20190806",
   "rootUrl": "https://www.googleapis.com/",
   "schemas": {
     "Alias": {
@@ -4132,6 +4186,10 @@
       "description": "JSON template for Building object in Directory API.",
       "id": "Building",
       "properties": {
+        "address": {
+          "$ref": "BuildingAddress",
+          "description": "The postal address of the building. See PostalAddress for details. Note that only a single address line and region code are required."
+        },
         "buildingId": {
           "description": "Unique identifier for the building. The maximum length is 100 characters.",
           "type": "string"
@@ -4162,6 +4220,44 @@
         "kind": {
           "default": "admin#directory#resources#buildings#Building",
           "description": "Kind of resource this is.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "BuildingAddress": {
+      "description": "JSON template for the postal address of a building in Directory API.",
+      "id": "BuildingAddress",
+      "properties": {
+        "addressLines": {
+          "description": "Unstructured address lines describing the lower levels of an address.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "administrativeArea": {
+          "description": "Optional. Highest administrative subdivision which is used for postal addresses of a country or region.",
+          "type": "string"
+        },
+        "languageCode": {
+          "description": "Optional. BCP-47 language code of the contents of this address (if known).",
+          "type": "string"
+        },
+        "locality": {
+          "description": "Optional. Generally refers to the city/town portion of the address. Examples: US city, IT comune, UK post town. In regions of the world where localities are not well defined or do not fit into this structure well, leave locality empty and use addressLines.",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "Optional. Postal code of the address.",
+          "type": "string"
+        },
+        "regionCode": {
+          "description": "Required. CLDR region code of the country/region of the address.",
+          "type": "string"
+        },
+        "sublocality": {
+          "description": "Optional. Sublocality of the address.",
           "type": "string"
         }
       },
@@ -4335,7 +4431,7 @@
         },
         "kind": {
           "default": "api#channel",
-          "description": "Identifies this as a notification channel used to watch for changes to a resource. Value: the fixed string \"api#channel\".",
+          "description": "Identifies this as a notification channel used to watch for changes to a resource, which is \"api#channel\".",
           "type": "string"
         },
         "params": {
@@ -4402,6 +4498,11 @@
         },
         "annotatedUser": {
           "description": "User of the device",
+          "type": "string"
+        },
+        "autoUpdateExpiration": {
+          "description": "(Read-only) The timestamp after which the device will stop receiving Chrome updates or support",
+          "format": "int64",
           "type": "string"
         },
         "bootMode": {
@@ -4509,12 +4610,20 @@
           },
           "type": "array"
         },
+        "dockMacAddress": {
+          "description": "(Read-only) Built-in MAC address for the docking station that the device connected to. Factory sets Media access control address (MAC address) assigned for use by a dock. Currently this is only supported on the Dell Arcada / Sarien devices and the Dell WD19 / WD19TB Docking Station. It is reserved specifically for MAC pass through device policy. The format is twelve (12) hexadecimal digits without any delimiter (uppercase letters). This is only relevant for Dell devices.",
+          "type": "string"
+        },
         "etag": {
           "description": "ETag of the resource.",
           "type": "string"
         },
         "ethernetMacAddress": {
           "description": "Chromebook Mac Address on ethernet network interface (Read-only)",
+          "type": "string"
+        },
+        "ethernetMacAddress0": {
+          "description": "(Read-only) MAC address used by the Chromebook’s internal ethernet port, and for onboard network (ethernet) interface. The format is twelve (12) hexadecimal digits without any delimiter (uppercase letters). This is only relevant for Dell devices.",
           "type": "string"
         },
         "firmwareVersion": {
@@ -4538,6 +4647,10 @@
         },
         "macAddress": {
           "description": "Chromebook Mac Address on wifi network interface (Read-only)",
+          "type": "string"
+        },
+        "manufactureDate": {
+          "description": "(Read-only) The date the device was manufactured in yyyy-mm-dd format.",
           "type": "string"
         },
         "meid": {
@@ -5126,7 +5239,7 @@
           "type": "string"
         },
         "id": {
-          "description": "Unique identifier of customer member (Read-only) Unique identifier of group (Read-only) Unique identifier of member (Read-only)",
+          "description": "The unique ID of the group member. A member id can be used as a member request URI's memberKey. Unique identifier of group (Read-only) Unique identifier of member (Read-only)",
           "type": "string"
         },
         "kind": {
@@ -5619,7 +5732,7 @@
           "type": "string"
         },
         "serviceId": {
-          "description": "The obfuscated ID of the service this privilege is for.",
+          "description": "The obfuscated ID of the service this privilege is for. This value is returned with Privileges.list().",
           "type": "string"
         },
         "serviceName": {
@@ -5705,7 +5818,7 @@
                 "type": "string"
               },
               "serviceId": {
-                "description": "The obfuscated ID of the service this privilege is for.",
+                "description": "The obfuscated ID of the service this privilege is for. This value is returned with Privileges.list().",
                 "type": "string"
               }
             },
@@ -6260,6 +6373,14 @@
           "description": "username of User",
           "type": "string"
         },
+        "recoveryEmail": {
+          "description": "Recovery email of the user.",
+          "type": "string"
+        },
+        "recoveryPhone": {
+          "description": "Recovery phone of the user. The phone number must be in the E.164 format, starting with the plus sign (+). Example: +16506661212.",
+          "type": "string"
+        },
         "relations": {
           "type": "any"
         },
@@ -6603,7 +6724,7 @@
           "type": "string"
         },
         "fullTimeEquivalent": {
-          "description": "The full-time equivalent percent within the organization (100000 = 100%).",
+          "description": "The full-time equivalent millipercent within the organization (100000 = 100%).",
           "format": "int32",
           "type": "integer"
         },
@@ -6710,8 +6831,7 @@
       "id": "UserPosixAccount",
       "properties": {
         "accountId": {
-          "description": "A POSIX account field identifier. (Read-only)",
-          "readOnly": true,
+          "description": "A POSIX account field identifier.",
           "type": "string"
         },
         "gecos": {

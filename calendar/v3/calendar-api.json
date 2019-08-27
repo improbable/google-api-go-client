@@ -3,7 +3,7 @@
     "oauth2": {
       "scopes": {
         "https://www.googleapis.com/auth/calendar": {
-          "description": "Manage your calendars"
+          "description": "See, edit, share, and permanently delete all the calendars you can access using Google Calendar"
         },
         "https://www.googleapis.com/auth/calendar.events": {
           "description": "View and edit events on all your calendars"
@@ -26,7 +26,7 @@
   "description": "Manipulates events and other calendar data.",
   "discoveryVersion": "v1",
   "documentationLink": "https://developers.google.com/google-apps/calendar/firstapp",
-  "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/GHb3aQGuHsw_eHRJC_q-6fH0l_E\"",
+  "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/K_k45CtMfV--mlEBFlbW_LzaaUU\"",
   "icons": {
     "x16": "http://www.google.com/images/icons/product/calendar-16.png",
     "x32": "http://www.google.com/images/icons/product/calendar-32.png"
@@ -1164,13 +1164,13 @@
               "type": "string"
             },
             "timeMax": {
-              "description": "Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g., 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be ignored. If timeMin is set, timeMax must be greater than timeMin.",
+              "description": "Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset, for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If timeMin is set, timeMax must be greater than timeMin.",
               "format": "date-time",
               "location": "query",
               "type": "string"
             },
             "timeMin": {
-              "description": "Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g., 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be ignored. If timeMax is set, timeMin must be smaller than timeMax.",
+              "description": "Lower bound (exclusive) for an event's end time to filter by. Optional. The default is not to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If timeMax is set, timeMin must be smaller than timeMax.",
               "format": "date-time",
               "location": "query",
               "type": "string"
@@ -1561,13 +1561,13 @@
               "type": "string"
             },
             "timeMax": {
-              "description": "Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g., 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be ignored. If timeMin is set, timeMax must be greater than timeMin.",
+              "description": "Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset, for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If timeMin is set, timeMax must be greater than timeMin.",
               "format": "date-time",
               "location": "query",
               "type": "string"
             },
             "timeMin": {
-              "description": "Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g., 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be ignored. If timeMax is set, timeMin must be smaller than timeMax.",
+              "description": "Lower bound (exclusive) for an event's end time to filter by. Optional. The default is not to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If timeMax is set, timeMin must be smaller than timeMax.",
               "format": "date-time",
               "location": "query",
               "type": "string"
@@ -1724,7 +1724,7 @@
       }
     }
   },
-  "revision": "20181016",
+  "revision": "20190609",
   "rootUrl": "https://www.googleapis.com/",
   "schemas": {
     "Acl": {
@@ -1991,7 +1991,7 @@
       "id": "CalendarNotification",
       "properties": {
         "method": {
-          "description": "The method used to deliver the notification. Possible values are:  \n- \"email\" - Reminders are sent via email. \n- \"sms\" - Reminders are sent via SMS. This value is read-only and is ignored on inserts and updates. SMS reminders are only available for G Suite customers.  \nRequired when adding a notification.",
+          "description": "The method used to deliver the notification. Possible values are:  \n- \"email\" - Notifications are sent via email. \n- \"sms\" - Deprecated. Once this feature is shutdown, the API will no longer return notifications using this method. Any newly added SMS notifications will be ignored. See  Google Calendar SMS notifications to be removed for more information.\nNotifications are sent via SMS. This value is read-only and is ignored on inserts and updates. SMS notifications are only available for G Suite customers.  \nRequired when adding a notification.",
           "type": "string"
         },
         "type": {
@@ -2019,7 +2019,7 @@
         },
         "kind": {
           "default": "api#channel",
-          "description": "Identifies this as a notification channel used to watch for changes to a resource. Value: the fixed string \"api#channel\".",
+          "description": "Identifies this as a notification channel used to watch for changes to a resource, which is \"api#channel\".",
           "type": "string"
         },
         "params": {
@@ -2130,7 +2130,7 @@
           "description": "Additional properties related to a conference. An example would be a solution-specific setting for enabling video streaming."
         },
         "signature": {
-          "description": "The signature of the conference data.\nGenereated on server side. Must be preserved while copying the conference data between events, otherwise the conference data will not be copied.\nUnset for a conference with a failed create request.\nOptional for a conference with a pending create request.",
+          "description": "The signature of the conference data.\nGenerated on server side. Must be preserved while copying the conference data between events, otherwise the conference data will not be copied.\nUnset for a conference with a failed create request.\nOptional for a conference with a pending create request.",
           "type": "string"
         }
       },
@@ -2710,7 +2710,7 @@
       "id": "EventReminder",
       "properties": {
         "method": {
-          "description": "The method used by this reminder. Possible values are:  \n- \"email\" - Reminders are sent via email. \n- \"sms\" - Reminders are sent via SMS. These are only available for G Suite customers. Requests to set SMS reminders for other account types are ignored. \n- \"popup\" - Reminders are sent via a UI popup.  \nRequired when adding a reminder.",
+          "description": "The method used by this reminder. Possible values are:  \n- \"email\" - Reminders are sent via email. \n- \"sms\" - Deprecated. Once this feature is shutdown, the API will no longer return reminders using this method. Any newly added SMS reminders will be ignored. See  Google Calendar SMS notifications to be removed for more information.\nReminders are sent via SMS. These are only available for G Suite customers. Requests to set SMS reminders for other account types are ignored. \n- \"popup\" - Reminders are sent via a UI popup.  \nRequired when adding a reminder.",
           "type": "string"
         },
         "minutes": {

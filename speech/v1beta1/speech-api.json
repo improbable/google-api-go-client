@@ -211,7 +211,7 @@
       }
     }
   },
-  "revision": "20181025",
+  "revision": "20180911",
   "rootUrl": "https://speech.googleapis.com/",
   "schemas": {
     "AsyncRecognizeRequest": {

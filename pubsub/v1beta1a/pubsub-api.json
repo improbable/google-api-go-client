@@ -456,7 +456,7 @@
       }
     }
   },
-  "revision": "20181001",
+  "revision": "20180604",
   "rootUrl": "https://pubsub.googleapis.com/",
   "schemas": {
     "AcknowledgeRequest": {
