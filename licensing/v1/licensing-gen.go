@@ -313,7 +313,7 @@ func (c *LicenseAssignmentsDeleteCall) Header() http.Header {
 
 func (c *LicenseAssignmentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -333,7 +333,7 @@ func (c *LicenseAssignmentsDeleteCall) doRequest(alt string) (*http.Response, er
 		"skuId":     c.skuId,
 		"userId":    c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "licensing.licenseAssignments.delete"), c.s.client, req)
 }
 
 // Do executes the "licensing.licenseAssignments.delete" call.
@@ -445,7 +445,7 @@ func (c *LicenseAssignmentsGetCall) Header() http.Header {
 
 func (c *LicenseAssignmentsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -468,7 +468,7 @@ func (c *LicenseAssignmentsGetCall) doRequest(alt string) (*http.Response, error
 		"skuId":     c.skuId,
 		"userId":    c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "licensing.licenseAssignments.get"), c.s.client, req)
 }
 
 // Do executes the "licensing.licenseAssignments.get" call.
@@ -596,7 +596,7 @@ func (c *LicenseAssignmentsInsertCall) Header() http.Header {
 
 func (c *LicenseAssignmentsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -620,7 +620,7 @@ func (c *LicenseAssignmentsInsertCall) doRequest(alt string) (*http.Response, er
 		"productId": c.productId,
 		"skuId":     c.skuId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "licensing.licenseAssignments.insert"), c.s.client, req)
 }
 
 // Do executes the "licensing.licenseAssignments.insert" call.
@@ -768,7 +768,7 @@ func (c *LicenseAssignmentsListForProductCall) Header() http.Header {
 
 func (c *LicenseAssignmentsListForProductCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -789,7 +789,7 @@ func (c *LicenseAssignmentsListForProductCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"productId": c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "licensing.licenseAssignments.listForProduct"), c.s.client, req)
 }
 
 // Do executes the "licensing.licenseAssignments.listForProduct" call.
@@ -972,7 +972,7 @@ func (c *LicenseAssignmentsListForProductAndSkuCall) Header() http.Header {
 
 func (c *LicenseAssignmentsListForProductAndSkuCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -994,7 +994,7 @@ func (c *LicenseAssignmentsListForProductAndSkuCall) doRequest(alt string) (*htt
 		"productId": c.productId,
 		"skuId":     c.skuId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "licensing.licenseAssignments.listForProductAndSku"), c.s.client, req)
 }
 
 // Do executes the "licensing.licenseAssignments.listForProductAndSku" call.
@@ -1160,7 +1160,7 @@ func (c *LicenseAssignmentsPatchCall) Header() http.Header {
 
 func (c *LicenseAssignmentsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1185,7 +1185,7 @@ func (c *LicenseAssignmentsPatchCall) doRequest(alt string) (*http.Response, err
 		"skuId":     c.skuId,
 		"userId":    c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "licensing.licenseAssignments.patch"), c.s.client, req)
 }
 
 // Do executes the "licensing.licenseAssignments.patch" call.
@@ -1318,7 +1318,7 @@ func (c *LicenseAssignmentsUpdateCall) Header() http.Header {
 
 func (c *LicenseAssignmentsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1343,7 +1343,7 @@ func (c *LicenseAssignmentsUpdateCall) doRequest(alt string) (*http.Response, er
 		"skuId":     c.skuId,
 		"userId":    c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "licensing.licenseAssignments.update"), c.s.client, req)
 }
 
 // Do executes the "licensing.licenseAssignments.update" call.

@@ -887,6 +887,7 @@ func (c *MobileapppanelsGetCall) Header() http.Header {
 
 func (c *MobileapppanelsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -907,7 +908,7 @@ func (c *MobileapppanelsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"panelId": c.panelId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.mobileapppanels.get"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.mobileapppanels.get" call.
@@ -1046,6 +1047,7 @@ func (c *MobileapppanelsListCall) Header() http.Header {
 
 func (c *MobileapppanelsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1063,7 +1065,7 @@ func (c *MobileapppanelsListCall) doRequest(alt string) (*http.Response, error) 
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.mobileapppanels.list"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.mobileapppanels.list" call.
@@ -1183,6 +1185,7 @@ func (c *MobileapppanelsUpdateCall) Header() http.Header {
 
 func (c *MobileapppanelsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1205,7 +1208,7 @@ func (c *MobileapppanelsUpdateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"panelId": c.panelId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.mobileapppanels.update"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.mobileapppanels.update" call.
@@ -1334,6 +1337,7 @@ func (c *ResultsGetCall) Header() http.Header {
 
 func (c *ResultsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1354,7 +1358,7 @@ func (c *ResultsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"surveyUrlId": c.surveyUrlId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.results.get"), c.s.client, req)
 }
 
 // Download fetches the API endpoint's "media" value, instead of the normal
@@ -1486,6 +1490,7 @@ func (c *SurveysDeleteCall) Header() http.Header {
 
 func (c *SurveysDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1503,7 +1508,7 @@ func (c *SurveysDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"surveyUrlId": c.surveyUrlId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.delete"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.delete" call.
@@ -1625,6 +1630,7 @@ func (c *SurveysGetCall) Header() http.Header {
 
 func (c *SurveysGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1645,7 +1651,7 @@ func (c *SurveysGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"surveyUrlId": c.surveyUrlId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.get"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.get" call.
@@ -1757,6 +1763,7 @@ func (c *SurveysInsertCall) Header() http.Header {
 
 func (c *SurveysInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1776,7 +1783,7 @@ func (c *SurveysInsertCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.insert"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.insert" call.
@@ -1906,6 +1913,7 @@ func (c *SurveysListCall) Header() http.Header {
 
 func (c *SurveysListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1923,7 +1931,7 @@ func (c *SurveysListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.list"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.list" call.
@@ -2042,6 +2050,7 @@ func (c *SurveysStartCall) Header() http.Header {
 
 func (c *SurveysStartCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2064,7 +2073,7 @@ func (c *SurveysStartCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"resourceId": c.resourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.start"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.start" call.
@@ -2177,6 +2186,7 @@ func (c *SurveysStopCall) Header() http.Header {
 
 func (c *SurveysStopCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2194,7 +2204,7 @@ func (c *SurveysStopCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"resourceId": c.resourceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.stop"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.stop" call.
@@ -2307,6 +2317,7 @@ func (c *SurveysUpdateCall) Header() http.Header {
 
 func (c *SurveysUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2329,7 +2340,7 @@ func (c *SurveysUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"surveyUrlId": c.surveyUrlId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "consumersurveys.surveys.update"), c.s.client, req)
 }
 
 // Do executes the "consumersurveys.surveys.update" call.

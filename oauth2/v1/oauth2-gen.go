@@ -368,7 +368,7 @@ func (c *TokeninfoCall) Header() http.Header {
 
 func (c *TokeninfoCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -383,7 +383,7 @@ func (c *TokeninfoCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.tokeninfo"), c.s.client, req)
 }
 
 // Do executes the "oauth2.tokeninfo" call.
@@ -500,7 +500,7 @@ func (c *UserinfoGetCall) Header() http.Header {
 
 func (c *UserinfoGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -518,7 +518,7 @@ func (c *UserinfoGetCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.userinfo.get"), c.s.client, req)
 }
 
 // Do executes the "oauth2.userinfo.get" call.
@@ -628,7 +628,7 @@ func (c *UserinfoV2MeGetCall) Header() http.Header {
 
 func (c *UserinfoV2MeGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -646,7 +646,7 @@ func (c *UserinfoV2MeGetCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oauth2.userinfo.v2.me.get"), c.s.client, req)
 }
 
 // Do executes the "oauth2.userinfo.v2.me.get" call.

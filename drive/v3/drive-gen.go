@@ -2868,7 +2868,7 @@ func (c *AboutGetCall) Header() http.Header {
 
 func (c *AboutGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2886,7 +2886,7 @@ func (c *AboutGetCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.about.get"), c.s.client, req)
 }
 
 // Do executes the "drive.about.get" call.
@@ -3033,7 +3033,7 @@ func (c *ChangesGetStartPageTokenCall) Header() http.Header {
 
 func (c *ChangesGetStartPageTokenCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3051,7 +3051,7 @@ func (c *ChangesGetStartPageTokenCall) doRequest(alt string) (*http.Response, er
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.changes.getStartPageToken"), c.s.client, req)
 }
 
 // Do executes the "drive.changes.getStartPageToken" call.
@@ -3284,7 +3284,7 @@ func (c *ChangesListCall) Header() http.Header {
 
 func (c *ChangesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3302,7 +3302,7 @@ func (c *ChangesListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.changes.list"), c.s.client, req)
 }
 
 // Do executes the "drive.changes.list" call.
@@ -3581,7 +3581,7 @@ func (c *ChangesWatchCall) Header() http.Header {
 
 func (c *ChangesWatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3601,7 +3601,7 @@ func (c *ChangesWatchCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.changes.watch"), c.s.client, req)
 }
 
 // Do executes the "drive.changes.watch" call.
@@ -3789,7 +3789,7 @@ func (c *ChannelsStopCall) Header() http.Header {
 
 func (c *ChannelsStopCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3809,7 +3809,7 @@ func (c *ChannelsStopCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.channels.stop"), c.s.client, req)
 }
 
 // Do executes the "drive.channels.stop" call.
@@ -3892,7 +3892,7 @@ func (c *CommentsCreateCall) Header() http.Header {
 
 func (c *CommentsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3915,7 +3915,7 @@ func (c *CommentsCreateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.comments.create"), c.s.client, req)
 }
 
 // Do executes the "drive.comments.create" call.
@@ -4031,7 +4031,7 @@ func (c *CommentsDeleteCall) Header() http.Header {
 
 func (c *CommentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4050,7 +4050,7 @@ func (c *CommentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":    c.fileId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.comments.delete"), c.s.client, req)
 }
 
 // Do executes the "drive.comments.delete" call.
@@ -4161,7 +4161,7 @@ func (c *CommentsGetCall) Header() http.Header {
 
 func (c *CommentsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4183,7 +4183,7 @@ func (c *CommentsGetCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":    c.fileId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.comments.get"), c.s.client, req)
 }
 
 // Do executes the "drive.comments.get" call.
@@ -4350,7 +4350,7 @@ func (c *CommentsListCall) Header() http.Header {
 
 func (c *CommentsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4371,7 +4371,7 @@ func (c *CommentsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.comments.list"), c.s.client, req)
 }
 
 // Do executes the "drive.comments.list" call.
@@ -4533,7 +4533,7 @@ func (c *CommentsUpdateCall) Header() http.Header {
 
 func (c *CommentsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4557,7 +4557,7 @@ func (c *CommentsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":    c.fileId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.comments.update"), c.s.client, req)
 }
 
 // Do executes the "drive.comments.update" call.
@@ -4679,7 +4679,7 @@ func (c *DrivesCreateCall) Header() http.Header {
 
 func (c *DrivesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4699,7 +4699,7 @@ func (c *DrivesCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.drives.create"), c.s.client, req)
 }
 
 // Do executes the "drive.drives.create" call.
@@ -4813,7 +4813,7 @@ func (c *DrivesDeleteCall) Header() http.Header {
 
 func (c *DrivesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4831,7 +4831,7 @@ func (c *DrivesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"driveId": c.driveId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.drives.delete"), c.s.client, req)
 }
 
 // Do executes the "drive.drives.delete" call.
@@ -4933,7 +4933,7 @@ func (c *DrivesGetCall) Header() http.Header {
 
 func (c *DrivesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4954,7 +4954,7 @@ func (c *DrivesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"driveId": c.driveId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.drives.get"), c.s.client, req)
 }
 
 // Do executes the "drive.drives.get" call.
@@ -5071,7 +5071,7 @@ func (c *DrivesHideCall) Header() http.Header {
 
 func (c *DrivesHideCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5089,7 +5089,7 @@ func (c *DrivesHideCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"driveId": c.driveId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.drives.hide"), c.s.client, req)
 }
 
 // Do executes the "drive.drives.hide" call.
@@ -5238,7 +5238,7 @@ func (c *DrivesListCall) Header() http.Header {
 
 func (c *DrivesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5256,7 +5256,7 @@ func (c *DrivesListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.drives.list"), c.s.client, req)
 }
 
 // Do executes the "drive.drives.list" call.
@@ -5404,7 +5404,7 @@ func (c *DrivesUnhideCall) Header() http.Header {
 
 func (c *DrivesUnhideCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5422,7 +5422,7 @@ func (c *DrivesUnhideCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"driveId": c.driveId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.drives.unhide"), c.s.client, req)
 }
 
 // Do executes the "drive.drives.unhide" call.
@@ -5543,7 +5543,7 @@ func (c *DrivesUpdateCall) Header() http.Header {
 
 func (c *DrivesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5566,7 +5566,7 @@ func (c *DrivesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"driveId": c.driveId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.drives.update"), c.s.client, req)
 }
 
 // Do executes the "drive.drives.update" call.
@@ -5733,7 +5733,7 @@ func (c *FilesCopyCall) Header() http.Header {
 
 func (c *FilesCopyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5756,7 +5756,7 @@ func (c *FilesCopyCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.copy"), c.s.client, req)
 }
 
 // Do executes the "drive.files.copy" call.
@@ -5994,7 +5994,7 @@ func (c *FilesCreateCall) Header() http.Header {
 
 func (c *FilesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6025,7 +6025,7 @@ func (c *FilesCreateCall) doRequest(alt string) (*http.Response, error) {
 	}
 	req.Header = reqHeaders
 	req.GetBody = getBody
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.create"), c.s.client, req)
 }
 
 // Do executes the "drive.files.create" call.
@@ -6221,7 +6221,7 @@ func (c *FilesDeleteCall) Header() http.Header {
 
 func (c *FilesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6239,7 +6239,7 @@ func (c *FilesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.delete"), c.s.client, req)
 }
 
 // Do executes the "drive.files.delete" call.
@@ -6333,7 +6333,7 @@ func (c *FilesEmptyTrashCall) Header() http.Header {
 
 func (c *FilesEmptyTrashCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6348,7 +6348,7 @@ func (c *FilesEmptyTrashCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.emptyTrash"), c.s.client, req)
 }
 
 // Do executes the "drive.files.emptyTrash" call.
@@ -6433,7 +6433,7 @@ func (c *FilesExportCall) Header() http.Header {
 
 func (c *FilesExportCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6454,7 +6454,7 @@ func (c *FilesExportCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.export"), c.s.client, req)
 }
 
 // Download fetches the API endpoint's "media" value, instead of the normal
@@ -6587,7 +6587,7 @@ func (c *FilesGenerateIdsCall) Header() http.Header {
 
 func (c *FilesGenerateIdsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6605,7 +6605,7 @@ func (c *FilesGenerateIdsCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.generateIds"), c.s.client, req)
 }
 
 // Do executes the "drive.files.generateIds" call.
@@ -6760,7 +6760,7 @@ func (c *FilesGetCall) Header() http.Header {
 
 func (c *FilesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6781,7 +6781,7 @@ func (c *FilesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.get"), c.s.client, req)
 }
 
 // Download fetches the API endpoint's "media" value, instead of the normal
@@ -7057,7 +7057,7 @@ func (c *FilesListCall) Header() http.Header {
 
 func (c *FilesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7075,7 +7075,7 @@ func (c *FilesListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.list"), c.s.client, req)
 }
 
 // Do executes the "drive.files.list" call.
@@ -7384,7 +7384,7 @@ func (c *FilesUpdateCall) Header() http.Header {
 
 func (c *FilesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7418,7 +7418,7 @@ func (c *FilesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.update"), c.s.client, req)
 }
 
 // Do executes the "drive.files.update" call.
@@ -7636,7 +7636,7 @@ func (c *FilesWatchCall) Header() http.Header {
 
 func (c *FilesWatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7659,7 +7659,7 @@ func (c *FilesWatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.files.watch"), c.s.client, req)
 }
 
 // Download fetches the API endpoint's "media" value, instead of the normal
@@ -7871,7 +7871,7 @@ func (c *PermissionsCreateCall) Header() http.Header {
 
 func (c *PermissionsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7894,7 +7894,7 @@ func (c *PermissionsCreateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.permissions.create"), c.s.client, req)
 }
 
 // Do executes the "drive.permissions.create" call.
@@ -8071,7 +8071,7 @@ func (c *PermissionsDeleteCall) Header() http.Header {
 
 func (c *PermissionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8090,7 +8090,7 @@ func (c *PermissionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":       c.fileId,
 		"permissionId": c.permissionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.permissions.delete"), c.s.client, req)
 }
 
 // Do executes the "drive.permissions.delete" call.
@@ -8238,7 +8238,7 @@ func (c *PermissionsGetCall) Header() http.Header {
 
 func (c *PermissionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8260,7 +8260,7 @@ func (c *PermissionsGetCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":       c.fileId,
 		"permissionId": c.permissionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.permissions.get"), c.s.client, req)
 }
 
 // Do executes the "drive.permissions.get" call.
@@ -8455,7 +8455,7 @@ func (c *PermissionsListCall) Header() http.Header {
 
 func (c *PermissionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8476,7 +8476,7 @@ func (c *PermissionsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.permissions.list"), c.s.client, req)
 }
 
 // Do executes the "drive.permissions.list" call.
@@ -8690,7 +8690,7 @@ func (c *PermissionsUpdateCall) Header() http.Header {
 
 func (c *PermissionsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8714,7 +8714,7 @@ func (c *PermissionsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":       c.fileId,
 		"permissionId": c.permissionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.permissions.update"), c.s.client, req)
 }
 
 // Do executes the "drive.permissions.update" call.
@@ -8869,7 +8869,7 @@ func (c *RepliesCreateCall) Header() http.Header {
 
 func (c *RepliesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8893,7 +8893,7 @@ func (c *RepliesCreateCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":    c.fileId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.replies.create"), c.s.client, req)
 }
 
 // Do executes the "drive.replies.create" call.
@@ -9018,7 +9018,7 @@ func (c *RepliesDeleteCall) Header() http.Header {
 
 func (c *RepliesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9038,7 +9038,7 @@ func (c *RepliesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"commentId": c.commentId,
 		"replyId":   c.replyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.replies.delete"), c.s.client, req)
 }
 
 // Do executes the "drive.replies.delete" call.
@@ -9158,7 +9158,7 @@ func (c *RepliesGetCall) Header() http.Header {
 
 func (c *RepliesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9181,7 +9181,7 @@ func (c *RepliesGetCall) doRequest(alt string) (*http.Response, error) {
 		"commentId": c.commentId,
 		"replyId":   c.replyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.replies.get"), c.s.client, req)
 }
 
 // Do executes the "drive.replies.get" call.
@@ -9349,7 +9349,7 @@ func (c *RepliesListCall) Header() http.Header {
 
 func (c *RepliesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9371,7 +9371,7 @@ func (c *RepliesListCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":    c.fileId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.replies.list"), c.s.client, req)
 }
 
 // Do executes the "drive.replies.list" call.
@@ -9537,7 +9537,7 @@ func (c *RepliesUpdateCall) Header() http.Header {
 
 func (c *RepliesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9562,7 +9562,7 @@ func (c *RepliesUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"commentId": c.commentId,
 		"replyId":   c.replyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.replies.update"), c.s.client, req)
 }
 
 // Do executes the "drive.replies.update" call.
@@ -9695,7 +9695,7 @@ func (c *RevisionsDeleteCall) Header() http.Header {
 
 func (c *RevisionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9714,7 +9714,7 @@ func (c *RevisionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":     c.fileId,
 		"revisionId": c.revisionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.revisions.delete"), c.s.client, req)
 }
 
 // Do executes the "drive.revisions.delete" call.
@@ -9827,7 +9827,7 @@ func (c *RevisionsGetCall) Header() http.Header {
 
 func (c *RevisionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9849,7 +9849,7 @@ func (c *RevisionsGetCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":     c.fileId,
 		"revisionId": c.revisionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.revisions.get"), c.s.client, req)
 }
 
 // Download fetches the API endpoint's "media" value, instead of the normal
@@ -10022,7 +10022,7 @@ func (c *RevisionsListCall) Header() http.Header {
 
 func (c *RevisionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10043,7 +10043,7 @@ func (c *RevisionsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"fileId": c.fileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.revisions.list"), c.s.client, req)
 }
 
 // Do executes the "drive.revisions.list" call.
@@ -10198,7 +10198,7 @@ func (c *RevisionsUpdateCall) Header() http.Header {
 
 func (c *RevisionsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10222,7 +10222,7 @@ func (c *RevisionsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"fileId":     c.fileId,
 		"revisionId": c.revisionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.revisions.update"), c.s.client, req)
 }
 
 // Do executes the "drive.revisions.update" call.
@@ -10345,7 +10345,7 @@ func (c *TeamdrivesCreateCall) Header() http.Header {
 
 func (c *TeamdrivesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10365,7 +10365,7 @@ func (c *TeamdrivesCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.teamdrives.create"), c.s.client, req)
 }
 
 // Do executes the "drive.teamdrives.create" call.
@@ -10478,7 +10478,7 @@ func (c *TeamdrivesDeleteCall) Header() http.Header {
 
 func (c *TeamdrivesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10496,7 +10496,7 @@ func (c *TeamdrivesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"teamDriveId": c.teamDriveId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.teamdrives.delete"), c.s.client, req)
 }
 
 // Do executes the "drive.teamdrives.delete" call.
@@ -10598,7 +10598,7 @@ func (c *TeamdrivesGetCall) Header() http.Header {
 
 func (c *TeamdrivesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10619,7 +10619,7 @@ func (c *TeamdrivesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"teamDriveId": c.teamDriveId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.teamdrives.get"), c.s.client, req)
 }
 
 // Do executes the "drive.teamdrives.get" call.
@@ -10775,7 +10775,7 @@ func (c *TeamdrivesListCall) Header() http.Header {
 
 func (c *TeamdrivesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10793,7 +10793,7 @@ func (c *TeamdrivesListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.teamdrives.list"), c.s.client, req)
 }
 
 // Do executes the "drive.teamdrives.list" call.
@@ -10952,7 +10952,7 @@ func (c *TeamdrivesUpdateCall) Header() http.Header {
 
 func (c *TeamdrivesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10975,7 +10975,7 @@ func (c *TeamdrivesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"teamDriveId": c.teamDriveId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "drive.teamdrives.update"), c.s.client, req)
 }
 
 // Do executes the "drive.teamdrives.update" call.

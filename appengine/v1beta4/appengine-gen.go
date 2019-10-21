@@ -2765,6 +2765,7 @@ func (c *AppsCreateCall) Header() http.Header {
 
 func (c *AppsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2784,7 +2785,7 @@ func (c *AppsCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.create"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.create" call.
@@ -2912,6 +2913,7 @@ func (c *AppsGetCall) Header() http.Header {
 
 func (c *AppsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2932,7 +2934,7 @@ func (c *AppsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.get" call.
@@ -3064,6 +3066,7 @@ func (c *AppsPatchCall) Header() http.Header {
 
 func (c *AppsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3086,7 +3089,7 @@ func (c *AppsPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.patch"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.patch" call.
@@ -3219,6 +3222,7 @@ func (c *AppsLocationsGetCall) Header() http.Header {
 
 func (c *AppsLocationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3240,7 +3244,7 @@ func (c *AppsLocationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":      c.appsId,
 		"locationsId": c.locationsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.locations.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.locations.get" call.
@@ -3393,6 +3397,7 @@ func (c *AppsLocationsListCall) Header() http.Header {
 
 func (c *AppsLocationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3413,7 +3418,7 @@ func (c *AppsLocationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.locations.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.locations.list" call.
@@ -3565,6 +3570,7 @@ func (c *AppsModulesDeleteCall) Header() http.Header {
 
 func (c *AppsModulesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3583,7 +3589,7 @@ func (c *AppsModulesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":    c.appsId,
 		"modulesId": c.modulesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.delete"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.delete" call.
@@ -3714,6 +3720,7 @@ func (c *AppsModulesGetCall) Header() http.Header {
 
 func (c *AppsModulesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3735,7 +3742,7 @@ func (c *AppsModulesGetCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":    c.appsId,
 		"modulesId": c.modulesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.get" call.
@@ -3880,6 +3887,7 @@ func (c *AppsModulesListCall) Header() http.Header {
 
 func (c *AppsModulesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3900,7 +3908,7 @@ func (c *AppsModulesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.list" call.
@@ -4077,6 +4085,7 @@ func (c *AppsModulesPatchCall) Header() http.Header {
 
 func (c *AppsModulesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4100,7 +4109,7 @@ func (c *AppsModulesPatchCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":    c.appsId,
 		"modulesId": c.modulesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.patch"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.patch" call.
@@ -4236,6 +4245,7 @@ func (c *AppsModulesVersionsCreateCall) Header() http.Header {
 
 func (c *AppsModulesVersionsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4259,7 +4269,7 @@ func (c *AppsModulesVersionsCreateCall) doRequest(alt string) (*http.Response, e
 		"appsId":    c.appsId,
 		"modulesId": c.modulesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.versions.create"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.versions.create" call.
@@ -4384,6 +4394,7 @@ func (c *AppsModulesVersionsDeleteCall) Header() http.Header {
 
 func (c *AppsModulesVersionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4403,7 +4414,7 @@ func (c *AppsModulesVersionsDeleteCall) doRequest(alt string) (*http.Response, e
 		"modulesId":  c.modulesId,
 		"versionsId": c.versionsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.versions.delete"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.versions.delete" call.
@@ -4556,6 +4567,7 @@ func (c *AppsModulesVersionsGetCall) Header() http.Header {
 
 func (c *AppsModulesVersionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4578,7 +4590,7 @@ func (c *AppsModulesVersionsGetCall) doRequest(alt string) (*http.Response, erro
 		"modulesId":  c.modulesId,
 		"versionsId": c.versionsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.versions.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.versions.get" call.
@@ -4752,6 +4764,7 @@ func (c *AppsModulesVersionsListCall) Header() http.Header {
 
 func (c *AppsModulesVersionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4773,7 +4786,7 @@ func (c *AppsModulesVersionsListCall) doRequest(alt string) (*http.Response, err
 		"appsId":    c.appsId,
 		"modulesId": c.modulesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.versions.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.versions.list" call.
@@ -4969,6 +4982,7 @@ func (c *AppsModulesVersionsPatchCall) Header() http.Header {
 
 func (c *AppsModulesVersionsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4993,7 +5007,7 @@ func (c *AppsModulesVersionsPatchCall) doRequest(alt string) (*http.Response, er
 		"modulesId":  c.modulesId,
 		"versionsId": c.versionsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.versions.patch"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.versions.patch" call.
@@ -5141,6 +5155,7 @@ func (c *AppsModulesVersionsInstancesDebugCall) Header() http.Header {
 
 func (c *AppsModulesVersionsInstancesDebugCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5166,7 +5181,7 @@ func (c *AppsModulesVersionsInstancesDebugCall) doRequest(alt string) (*http.Res
 		"versionsId":  c.versionsId,
 		"instancesId": c.instancesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.versions.instances.debug"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.versions.instances.debug" call.
@@ -5307,6 +5322,7 @@ func (c *AppsModulesVersionsInstancesDeleteCall) Header() http.Header {
 
 func (c *AppsModulesVersionsInstancesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5327,7 +5343,7 @@ func (c *AppsModulesVersionsInstancesDeleteCall) doRequest(alt string) (*http.Re
 		"versionsId":  c.versionsId,
 		"instancesId": c.instancesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.versions.instances.delete"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.versions.instances.delete" call.
@@ -5476,6 +5492,7 @@ func (c *AppsModulesVersionsInstancesGetCall) Header() http.Header {
 
 func (c *AppsModulesVersionsInstancesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5499,7 +5516,7 @@ func (c *AppsModulesVersionsInstancesGetCall) doRequest(alt string) (*http.Respo
 		"versionsId":  c.versionsId,
 		"instancesId": c.instancesId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.versions.instances.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.versions.instances.get" call.
@@ -5665,6 +5682,7 @@ func (c *AppsModulesVersionsInstancesListCall) Header() http.Header {
 
 func (c *AppsModulesVersionsInstancesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5687,7 +5705,7 @@ func (c *AppsModulesVersionsInstancesListCall) doRequest(alt string) (*http.Resp
 		"modulesId":  c.modulesId,
 		"versionsId": c.versionsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.modules.versions.instances.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.modules.versions.instances.list" call.
@@ -5861,6 +5879,7 @@ func (c *AppsOperationsGetCall) Header() http.Header {
 
 func (c *AppsOperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5882,7 +5901,7 @@ func (c *AppsOperationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"appsId":       c.appsId,
 		"operationsId": c.operationsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.operations.get"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.operations.get" call.
@@ -6043,6 +6062,7 @@ func (c *AppsOperationsListCall) Header() http.Header {
 
 func (c *AppsOperationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6063,7 +6083,7 @@ func (c *AppsOperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"appsId": c.appsId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "appengine.apps.operations.list"), c.s.client, req)
 }
 
 // Do executes the "appengine.apps.operations.list" call.

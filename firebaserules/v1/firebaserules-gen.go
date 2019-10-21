@@ -1191,7 +1191,7 @@ func (c *ProjectsTestCall) Header() http.Header {
 
 func (c *ProjectsTestCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1214,7 +1214,7 @@ func (c *ProjectsTestCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.test"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.test" call.
@@ -1367,7 +1367,7 @@ func (c *ProjectsReleasesCreateCall) Header() http.Header {
 
 func (c *ProjectsReleasesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1390,7 +1390,7 @@ func (c *ProjectsReleasesCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.create"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.create" call.
@@ -1506,7 +1506,7 @@ func (c *ProjectsReleasesDeleteCall) Header() http.Header {
 
 func (c *ProjectsReleasesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1524,7 +1524,7 @@ func (c *ProjectsReleasesDeleteCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.delete"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.delete" call.
@@ -1648,7 +1648,7 @@ func (c *ProjectsReleasesGetCall) Header() http.Header {
 
 func (c *ProjectsReleasesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1669,7 +1669,7 @@ func (c *ProjectsReleasesGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.get"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.get" call.
@@ -1808,7 +1808,7 @@ func (c *ProjectsReleasesGetExecutableCall) Header() http.Header {
 
 func (c *ProjectsReleasesGetExecutableCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1829,7 +1829,7 @@ func (c *ProjectsReleasesGetExecutableCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.getExecutable"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.getExecutable" call.
@@ -2032,7 +2032,7 @@ func (c *ProjectsReleasesListCall) Header() http.Header {
 
 func (c *ProjectsReleasesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2053,7 +2053,7 @@ func (c *ProjectsReleasesListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.list"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.list" call.
@@ -2212,7 +2212,7 @@ func (c *ProjectsReleasesPatchCall) Header() http.Header {
 
 func (c *ProjectsReleasesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2235,7 +2235,7 @@ func (c *ProjectsReleasesPatchCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.releases.patch"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.releases.patch" call.
@@ -2361,7 +2361,7 @@ func (c *ProjectsRulesetsCreateCall) Header() http.Header {
 
 func (c *ProjectsRulesetsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2384,7 +2384,7 @@ func (c *ProjectsRulesetsCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.create"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.create" call.
@@ -2503,7 +2503,7 @@ func (c *ProjectsRulesetsDeleteCall) Header() http.Header {
 
 func (c *ProjectsRulesetsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2521,7 +2521,7 @@ func (c *ProjectsRulesetsDeleteCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.delete"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.delete" call.
@@ -2645,7 +2645,7 @@ func (c *ProjectsRulesetsGetCall) Header() http.Header {
 
 func (c *ProjectsRulesetsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2666,7 +2666,7 @@ func (c *ProjectsRulesetsGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.get"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.get" call.
@@ -2832,7 +2832,7 @@ func (c *ProjectsRulesetsListCall) Header() http.Header {
 
 func (c *ProjectsRulesetsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2853,7 +2853,7 @@ func (c *ProjectsRulesetsListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firebaserules.projects.rulesets.list"), c.s.client, req)
 }
 
 // Do executes the "firebaserules.projects.rulesets.list" call.

@@ -4042,7 +4042,7 @@ func (c *DevicesForceReportUploadCall) Header() http.Header {
 
 func (c *DevicesForceReportUploadCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4062,7 +4062,7 @@ func (c *DevicesForceReportUploadCall) doRequest(alt string) (*http.Response, er
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.forceReportUpload"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.forceReportUpload" call.
@@ -4173,7 +4173,7 @@ func (c *DevicesGetCall) Header() http.Header {
 
 func (c *DevicesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4196,7 +4196,7 @@ func (c *DevicesGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.get" call.
@@ -4340,7 +4340,7 @@ func (c *DevicesGetStateCall) Header() http.Header {
 
 func (c *DevicesGetStateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4363,7 +4363,7 @@ func (c *DevicesGetStateCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.getState"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.getState" call.
@@ -4500,7 +4500,7 @@ func (c *DevicesListCall) Header() http.Header {
 
 func (c *DevicesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4522,7 +4522,7 @@ func (c *DevicesListCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.list" call.
@@ -4657,7 +4657,7 @@ func (c *DevicesPatchCall) Header() http.Header {
 
 func (c *DevicesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4682,7 +4682,7 @@ func (c *DevicesPatchCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.patch" call.
@@ -4825,7 +4825,7 @@ func (c *DevicesSetStateCall) Header() http.Header {
 
 func (c *DevicesSetStateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4850,7 +4850,7 @@ func (c *DevicesSetStateCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.setState"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.setState" call.
@@ -4994,7 +4994,7 @@ func (c *DevicesUpdateCall) Header() http.Header {
 
 func (c *DevicesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5019,7 +5019,7 @@ func (c *DevicesUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.devices.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.devices.update" call.
@@ -5159,7 +5159,7 @@ func (c *EnterprisesAcknowledgeNotificationSetCall) Header() http.Header {
 
 func (c *EnterprisesAcknowledgeNotificationSetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5174,7 +5174,7 @@ func (c *EnterprisesAcknowledgeNotificationSetCall) doRequest(alt string) (*http
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.acknowledgeNotificationSet"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.acknowledgeNotificationSet" call.
@@ -5266,7 +5266,7 @@ func (c *EnterprisesCompleteSignupCall) Header() http.Header {
 
 func (c *EnterprisesCompleteSignupCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5281,7 +5281,7 @@ func (c *EnterprisesCompleteSignupCall) doRequest(alt string) (*http.Response, e
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.completeSignup"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.completeSignup" call.
@@ -5398,7 +5398,7 @@ func (c *EnterprisesCreateWebTokenCall) Header() http.Header {
 
 func (c *EnterprisesCreateWebTokenCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5421,7 +5421,7 @@ func (c *EnterprisesCreateWebTokenCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.createWebToken"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.createWebToken" call.
@@ -5535,7 +5535,7 @@ func (c *EnterprisesEnrollCall) Header() http.Header {
 
 func (c *EnterprisesEnrollCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5555,7 +5555,7 @@ func (c *EnterprisesEnrollCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.enroll"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.enroll" call.
@@ -5681,7 +5681,7 @@ func (c *EnterprisesGenerateSignupUrlCall) Header() http.Header {
 
 func (c *EnterprisesGenerateSignupUrlCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5696,7 +5696,7 @@ func (c *EnterprisesGenerateSignupUrlCall) doRequest(alt string) (*http.Response
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.generateSignupUrl"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.generateSignupUrl" call.
@@ -5813,7 +5813,7 @@ func (c *EnterprisesGetCall) Header() http.Header {
 
 func (c *EnterprisesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5834,7 +5834,7 @@ func (c *EnterprisesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.get" call.
@@ -5981,7 +5981,7 @@ func (c *EnterprisesGetServiceAccountCall) Header() http.Header {
 
 func (c *EnterprisesGetServiceAccountCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6002,7 +6002,7 @@ func (c *EnterprisesGetServiceAccountCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.getServiceAccount"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.getServiceAccount" call.
@@ -6138,7 +6138,7 @@ func (c *EnterprisesGetStoreLayoutCall) Header() http.Header {
 
 func (c *EnterprisesGetStoreLayoutCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6159,7 +6159,7 @@ func (c *EnterprisesGetStoreLayoutCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.getStoreLayout"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.getStoreLayout" call.
@@ -6283,7 +6283,7 @@ func (c *EnterprisesListCall) Header() http.Header {
 
 func (c *EnterprisesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6301,7 +6301,7 @@ func (c *EnterprisesListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.list" call.
@@ -6445,7 +6445,7 @@ func (c *EnterprisesPullNotificationSetCall) Header() http.Header {
 
 func (c *EnterprisesPullNotificationSetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6460,7 +6460,7 @@ func (c *EnterprisesPullNotificationSetCall) doRequest(alt string) (*http.Respon
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.pullNotificationSet"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.pullNotificationSet" call.
@@ -6576,7 +6576,7 @@ func (c *EnterprisesSendTestPushNotificationCall) Header() http.Header {
 
 func (c *EnterprisesSendTestPushNotificationCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6594,7 +6594,7 @@ func (c *EnterprisesSendTestPushNotificationCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.sendTestPushNotification"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.sendTestPushNotification" call.
@@ -6709,7 +6709,7 @@ func (c *EnterprisesSetAccountCall) Header() http.Header {
 
 func (c *EnterprisesSetAccountCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6732,7 +6732,7 @@ func (c *EnterprisesSetAccountCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.setAccount"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.setAccount" call.
@@ -6854,7 +6854,7 @@ func (c *EnterprisesSetStoreLayoutCall) Header() http.Header {
 
 func (c *EnterprisesSetStoreLayoutCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6877,7 +6877,7 @@ func (c *EnterprisesSetStoreLayoutCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.setStoreLayout"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.setStoreLayout" call.
@@ -6990,7 +6990,7 @@ func (c *EnterprisesUnenrollCall) Header() http.Header {
 
 func (c *EnterprisesUnenrollCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7008,7 +7008,7 @@ func (c *EnterprisesUnenrollCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.enterprises.unenroll"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.enterprises.unenroll" call.
@@ -7094,7 +7094,7 @@ func (c *EntitlementsDeleteCall) Header() http.Header {
 
 func (c *EntitlementsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7114,7 +7114,7 @@ func (c *EntitlementsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"userId":        c.userId,
 		"entitlementId": c.entitlementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.delete" call.
@@ -7225,7 +7225,7 @@ func (c *EntitlementsGetCall) Header() http.Header {
 
 func (c *EntitlementsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7248,7 +7248,7 @@ func (c *EntitlementsGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId":        c.userId,
 		"entitlementId": c.entitlementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.get" call.
@@ -7386,7 +7386,7 @@ func (c *EntitlementsListCall) Header() http.Header {
 
 func (c *EntitlementsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7408,7 +7408,7 @@ func (c *EntitlementsListCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.list" call.
@@ -7542,7 +7542,7 @@ func (c *EntitlementsPatchCall) Header() http.Header {
 
 func (c *EntitlementsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7567,7 +7567,7 @@ func (c *EntitlementsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"userId":        c.userId,
 		"entitlementId": c.entitlementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.patch" call.
@@ -7715,7 +7715,7 @@ func (c *EntitlementsUpdateCall) Header() http.Header {
 
 func (c *EntitlementsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7740,7 +7740,7 @@ func (c *EntitlementsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"userId":        c.userId,
 		"entitlementId": c.entitlementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.entitlements.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.entitlements.update" call.
@@ -7886,7 +7886,7 @@ func (c *GrouplicensesGetCall) Header() http.Header {
 
 func (c *GrouplicensesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7908,7 +7908,7 @@ func (c *GrouplicensesGetCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId":   c.enterpriseId,
 		"groupLicenseId": c.groupLicenseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.grouplicenses.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.grouplicenses.get" call.
@@ -8037,7 +8037,7 @@ func (c *GrouplicensesListCall) Header() http.Header {
 
 func (c *GrouplicensesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8058,7 +8058,7 @@ func (c *GrouplicensesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.grouplicenses.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.grouplicenses.list" call.
@@ -8182,7 +8182,7 @@ func (c *GrouplicenseusersListCall) Header() http.Header {
 
 func (c *GrouplicenseusersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8204,7 +8204,7 @@ func (c *GrouplicenseusersListCall) doRequest(alt string) (*http.Response, error
 		"enterpriseId":   c.enterpriseId,
 		"groupLicenseId": c.groupLicenseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.grouplicenseusers.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.grouplicenseusers.list" call.
@@ -8329,7 +8329,7 @@ func (c *InstallsDeleteCall) Header() http.Header {
 
 func (c *InstallsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8350,7 +8350,7 @@ func (c *InstallsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"deviceId":     c.deviceId,
 		"installId":    c.installId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.delete" call.
@@ -8470,7 +8470,7 @@ func (c *InstallsGetCall) Header() http.Header {
 
 func (c *InstallsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8494,7 +8494,7 @@ func (c *InstallsGetCall) doRequest(alt string) (*http.Response, error) {
 		"deviceId":     c.deviceId,
 		"installId":    c.installId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.get" call.
@@ -8641,7 +8641,7 @@ func (c *InstallsListCall) Header() http.Header {
 
 func (c *InstallsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8664,7 +8664,7 @@ func (c *InstallsListCall) doRequest(alt string) (*http.Response, error) {
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.list" call.
@@ -8798,7 +8798,7 @@ func (c *InstallsPatchCall) Header() http.Header {
 
 func (c *InstallsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8824,7 +8824,7 @@ func (c *InstallsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"deviceId":     c.deviceId,
 		"installId":    c.installId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.patch" call.
@@ -8968,7 +8968,7 @@ func (c *InstallsUpdateCall) Header() http.Header {
 
 func (c *InstallsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8994,7 +8994,7 @@ func (c *InstallsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"deviceId":     c.deviceId,
 		"installId":    c.installId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.installs.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.installs.update" call.
@@ -9135,7 +9135,7 @@ func (c *ManagedconfigurationsfordeviceDeleteCall) Header() http.Header {
 
 func (c *ManagedconfigurationsfordeviceDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9156,7 +9156,7 @@ func (c *ManagedconfigurationsfordeviceDeleteCall) doRequest(alt string) (*http.
 		"deviceId":                        c.deviceId,
 		"managedConfigurationForDeviceId": c.managedConfigurationForDeviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.delete" call.
@@ -9276,7 +9276,7 @@ func (c *ManagedconfigurationsfordeviceGetCall) Header() http.Header {
 
 func (c *ManagedconfigurationsfordeviceGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9300,7 +9300,7 @@ func (c *ManagedconfigurationsfordeviceGetCall) doRequest(alt string) (*http.Res
 		"deviceId":                        c.deviceId,
 		"managedConfigurationForDeviceId": c.managedConfigurationForDeviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.get" call.
@@ -9447,7 +9447,7 @@ func (c *ManagedconfigurationsfordeviceListCall) Header() http.Header {
 
 func (c *ManagedconfigurationsfordeviceListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9470,7 +9470,7 @@ func (c *ManagedconfigurationsfordeviceListCall) doRequest(alt string) (*http.Re
 		"userId":       c.userId,
 		"deviceId":     c.deviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.list" call.
@@ -9605,7 +9605,7 @@ func (c *ManagedconfigurationsfordevicePatchCall) Header() http.Header {
 
 func (c *ManagedconfigurationsfordevicePatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9631,7 +9631,7 @@ func (c *ManagedconfigurationsfordevicePatchCall) doRequest(alt string) (*http.R
 		"deviceId":                        c.deviceId,
 		"managedConfigurationForDeviceId": c.managedConfigurationForDeviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.patch" call.
@@ -9774,7 +9774,7 @@ func (c *ManagedconfigurationsfordeviceUpdateCall) Header() http.Header {
 
 func (c *ManagedconfigurationsfordeviceUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9800,7 +9800,7 @@ func (c *ManagedconfigurationsfordeviceUpdateCall) doRequest(alt string) (*http.
 		"deviceId":                        c.deviceId,
 		"managedConfigurationForDeviceId": c.managedConfigurationForDeviceId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsfordevice.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsfordevice.update" call.
@@ -9939,7 +9939,7 @@ func (c *ManagedconfigurationsforuserDeleteCall) Header() http.Header {
 
 func (c *ManagedconfigurationsforuserDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9959,7 +9959,7 @@ func (c *ManagedconfigurationsforuserDeleteCall) doRequest(alt string) (*http.Re
 		"userId":                        c.userId,
 		"managedConfigurationForUserId": c.managedConfigurationForUserId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.delete" call.
@@ -10071,7 +10071,7 @@ func (c *ManagedconfigurationsforuserGetCall) Header() http.Header {
 
 func (c *ManagedconfigurationsforuserGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10094,7 +10094,7 @@ func (c *ManagedconfigurationsforuserGetCall) doRequest(alt string) (*http.Respo
 		"userId":                        c.userId,
 		"managedConfigurationForUserId": c.managedConfigurationForUserId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.get" call.
@@ -10232,7 +10232,7 @@ func (c *ManagedconfigurationsforuserListCall) Header() http.Header {
 
 func (c *ManagedconfigurationsforuserListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10254,7 +10254,7 @@ func (c *ManagedconfigurationsforuserListCall) doRequest(alt string) (*http.Resp
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.list" call.
@@ -10385,7 +10385,7 @@ func (c *ManagedconfigurationsforuserPatchCall) Header() http.Header {
 
 func (c *ManagedconfigurationsforuserPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10410,7 +10410,7 @@ func (c *ManagedconfigurationsforuserPatchCall) doRequest(alt string) (*http.Res
 		"userId":                        c.userId,
 		"managedConfigurationForUserId": c.managedConfigurationForUserId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.patch" call.
@@ -10548,7 +10548,7 @@ func (c *ManagedconfigurationsforuserUpdateCall) Header() http.Header {
 
 func (c *ManagedconfigurationsforuserUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10573,7 +10573,7 @@ func (c *ManagedconfigurationsforuserUpdateCall) doRequest(alt string) (*http.Re
 		"userId":                        c.userId,
 		"managedConfigurationForUserId": c.managedConfigurationForUserId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationsforuser.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationsforuser.update" call.
@@ -10714,7 +10714,7 @@ func (c *ManagedconfigurationssettingsListCall) Header() http.Header {
 
 func (c *ManagedconfigurationssettingsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10736,7 +10736,7 @@ func (c *ManagedconfigurationssettingsListCall) doRequest(alt string) (*http.Res
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.managedconfigurationssettings.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.managedconfigurationssettings.list" call.
@@ -10874,7 +10874,7 @@ func (c *PermissionsGetCall) Header() http.Header {
 
 func (c *PermissionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10895,7 +10895,7 @@ func (c *PermissionsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"permissionId": c.permissionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.permissions.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.permissions.get" call.
@@ -11020,7 +11020,7 @@ func (c *ProductsApproveCall) Header() http.Header {
 
 func (c *ProductsApproveCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11044,7 +11044,7 @@ func (c *ProductsApproveCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.approve"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.approve" call.
@@ -11156,7 +11156,7 @@ func (c *ProductsGenerateApprovalUrlCall) Header() http.Header {
 
 func (c *ProductsGenerateApprovalUrlCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11175,7 +11175,7 @@ func (c *ProductsGenerateApprovalUrlCall) doRequest(alt string) (*http.Response,
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.generateApprovalUrl"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.generateApprovalUrl" call.
@@ -11319,7 +11319,7 @@ func (c *ProductsGetCall) Header() http.Header {
 
 func (c *ProductsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11341,7 +11341,7 @@ func (c *ProductsGetCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.get" call.
@@ -11489,7 +11489,7 @@ func (c *ProductsGetAppRestrictionsSchemaCall) Header() http.Header {
 
 func (c *ProductsGetAppRestrictionsSchemaCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11511,7 +11511,7 @@ func (c *ProductsGetAppRestrictionsSchemaCall) doRequest(alt string) (*http.Resp
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.getAppRestrictionsSchema"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.getAppRestrictionsSchema" call.
@@ -11647,7 +11647,7 @@ func (c *ProductsGetPermissionsCall) Header() http.Header {
 
 func (c *ProductsGetPermissionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11669,7 +11669,7 @@ func (c *ProductsGetPermissionsCall) doRequest(alt string) (*http.Response, erro
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.getPermissions"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.getPermissions" call.
@@ -11842,7 +11842,7 @@ func (c *ProductsListCall) Header() http.Header {
 
 func (c *ProductsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11863,7 +11863,7 @@ func (c *ProductsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.list" call.
@@ -12002,7 +12002,7 @@ func (c *ProductsUnapproveCall) Header() http.Header {
 
 func (c *ProductsUnapproveCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12021,7 +12021,7 @@ func (c *ProductsUnapproveCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"productId":    c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.products.unapprove"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.products.unapprove" call.
@@ -12116,7 +12116,7 @@ func (c *ServiceaccountkeysDeleteCall) Header() http.Header {
 
 func (c *ServiceaccountkeysDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12135,7 +12135,7 @@ func (c *ServiceaccountkeysDeleteCall) doRequest(alt string) (*http.Response, er
 		"enterpriseId": c.enterpriseId,
 		"keyId":        c.keyId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.serviceaccountkeys.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.serviceaccountkeys.delete" call.
@@ -12233,7 +12233,7 @@ func (c *ServiceaccountkeysInsertCall) Header() http.Header {
 
 func (c *ServiceaccountkeysInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12256,7 +12256,7 @@ func (c *ServiceaccountkeysInsertCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.serviceaccountkeys.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.serviceaccountkeys.insert" call.
@@ -12384,7 +12384,7 @@ func (c *ServiceaccountkeysListCall) Header() http.Header {
 
 func (c *ServiceaccountkeysListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12405,7 +12405,7 @@ func (c *ServiceaccountkeysListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.serviceaccountkeys.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.serviceaccountkeys.list" call.
@@ -12519,7 +12519,7 @@ func (c *StorelayoutclustersDeleteCall) Header() http.Header {
 
 func (c *StorelayoutclustersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12539,7 +12539,7 @@ func (c *StorelayoutclustersDeleteCall) doRequest(alt string) (*http.Response, e
 		"pageId":       c.pageId,
 		"clusterId":    c.clusterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.delete" call.
@@ -12650,7 +12650,7 @@ func (c *StorelayoutclustersGetCall) Header() http.Header {
 
 func (c *StorelayoutclustersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12673,7 +12673,7 @@ func (c *StorelayoutclustersGetCall) doRequest(alt string) (*http.Response, erro
 		"pageId":       c.pageId,
 		"clusterId":    c.clusterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.get" call.
@@ -12801,7 +12801,7 @@ func (c *StorelayoutclustersInsertCall) Header() http.Header {
 
 func (c *StorelayoutclustersInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12825,7 +12825,7 @@ func (c *StorelayoutclustersInsertCall) doRequest(alt string) (*http.Response, e
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.insert" call.
@@ -12958,7 +12958,7 @@ func (c *StorelayoutclustersListCall) Header() http.Header {
 
 func (c *StorelayoutclustersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12980,7 +12980,7 @@ func (c *StorelayoutclustersListCall) doRequest(alt string) (*http.Response, err
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.list" call.
@@ -13103,7 +13103,7 @@ func (c *StorelayoutclustersPatchCall) Header() http.Header {
 
 func (c *StorelayoutclustersPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13128,7 +13128,7 @@ func (c *StorelayoutclustersPatchCall) doRequest(alt string) (*http.Response, er
 		"pageId":       c.pageId,
 		"clusterId":    c.clusterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.patch" call.
@@ -13261,7 +13261,7 @@ func (c *StorelayoutclustersUpdateCall) Header() http.Header {
 
 func (c *StorelayoutclustersUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13286,7 +13286,7 @@ func (c *StorelayoutclustersUpdateCall) doRequest(alt string) (*http.Response, e
 		"pageId":       c.pageId,
 		"clusterId":    c.clusterId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutclusters.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutclusters.update" call.
@@ -13415,7 +13415,7 @@ func (c *StorelayoutpagesDeleteCall) Header() http.Header {
 
 func (c *StorelayoutpagesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13434,7 +13434,7 @@ func (c *StorelayoutpagesDeleteCall) doRequest(alt string) (*http.Response, erro
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.delete" call.
@@ -13536,7 +13536,7 @@ func (c *StorelayoutpagesGetCall) Header() http.Header {
 
 func (c *StorelayoutpagesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13558,7 +13558,7 @@ func (c *StorelayoutpagesGetCall) doRequest(alt string) (*http.Response, error) 
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.get" call.
@@ -13677,7 +13677,7 @@ func (c *StorelayoutpagesInsertCall) Header() http.Header {
 
 func (c *StorelayoutpagesInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13700,7 +13700,7 @@ func (c *StorelayoutpagesInsertCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.insert" call.
@@ -13824,7 +13824,7 @@ func (c *StorelayoutpagesListCall) Header() http.Header {
 
 func (c *StorelayoutpagesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13845,7 +13845,7 @@ func (c *StorelayoutpagesListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.list" call.
@@ -13960,7 +13960,7 @@ func (c *StorelayoutpagesPatchCall) Header() http.Header {
 
 func (c *StorelayoutpagesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13984,7 +13984,7 @@ func (c *StorelayoutpagesPatchCall) doRequest(alt string) (*http.Response, error
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.patch" call.
@@ -14108,7 +14108,7 @@ func (c *StorelayoutpagesUpdateCall) Header() http.Header {
 
 func (c *StorelayoutpagesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14132,7 +14132,7 @@ func (c *StorelayoutpagesUpdateCall) doRequest(alt string) (*http.Response, erro
 		"enterpriseId": c.enterpriseId,
 		"pageId":       c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.storelayoutpages.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.storelayoutpages.update" call.
@@ -14254,7 +14254,7 @@ func (c *UsersDeleteCall) Header() http.Header {
 
 func (c *UsersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14273,7 +14273,7 @@ func (c *UsersDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.delete" call.
@@ -14371,7 +14371,7 @@ func (c *UsersGenerateAuthenticationTokenCall) Header() http.Header {
 
 func (c *UsersGenerateAuthenticationTokenCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14390,7 +14390,7 @@ func (c *UsersGenerateAuthenticationTokenCall) doRequest(alt string) (*http.Resp
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.generateAuthenticationToken"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.generateAuthenticationToken" call.
@@ -14513,7 +14513,7 @@ func (c *UsersGenerateTokenCall) Header() http.Header {
 
 func (c *UsersGenerateTokenCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14532,7 +14532,7 @@ func (c *UsersGenerateTokenCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.generateToken"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.generateToken" call.
@@ -14662,7 +14662,7 @@ func (c *UsersGetCall) Header() http.Header {
 
 func (c *UsersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14684,7 +14684,7 @@ func (c *UsersGetCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.get" call.
@@ -14815,7 +14815,7 @@ func (c *UsersGetAvailableProductSetCall) Header() http.Header {
 
 func (c *UsersGetAvailableProductSetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14837,7 +14837,7 @@ func (c *UsersGetAvailableProductSetCall) doRequest(alt string) (*http.Response,
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.getAvailableProductSet"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.getAvailableProductSet" call.
@@ -14962,7 +14962,7 @@ func (c *UsersInsertCall) Header() http.Header {
 
 func (c *UsersInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14985,7 +14985,7 @@ func (c *UsersInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.insert" call.
@@ -15113,7 +15113,7 @@ func (c *UsersListCall) Header() http.Header {
 
 func (c *UsersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15134,7 +15134,7 @@ func (c *UsersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.list" call.
@@ -15261,7 +15261,7 @@ func (c *UsersPatchCall) Header() http.Header {
 
 func (c *UsersPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15285,7 +15285,7 @@ func (c *UsersPatchCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.patch" call.
@@ -15411,7 +15411,7 @@ func (c *UsersRevokeDeviceAccessCall) Header() http.Header {
 
 func (c *UsersRevokeDeviceAccessCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15430,7 +15430,7 @@ func (c *UsersRevokeDeviceAccessCall) doRequest(alt string) (*http.Response, err
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.revokeDeviceAccess"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.revokeDeviceAccess" call.
@@ -15522,7 +15522,7 @@ func (c *UsersRevokeTokenCall) Header() http.Header {
 
 func (c *UsersRevokeTokenCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15541,7 +15541,7 @@ func (c *UsersRevokeTokenCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.revokeToken"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.revokeToken" call.
@@ -15637,7 +15637,7 @@ func (c *UsersSetAvailableProductSetCall) Header() http.Header {
 
 func (c *UsersSetAvailableProductSetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15661,7 +15661,7 @@ func (c *UsersSetAvailableProductSetCall) doRequest(alt string) (*http.Response,
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.setAvailableProductSet"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.setAvailableProductSet" call.
@@ -15790,7 +15790,7 @@ func (c *UsersUpdateCall) Header() http.Header {
 
 func (c *UsersUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15814,7 +15814,7 @@ func (c *UsersUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"userId":       c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.users.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.users.update" call.
@@ -15936,7 +15936,7 @@ func (c *WebappsDeleteCall) Header() http.Header {
 
 func (c *WebappsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15955,7 +15955,7 @@ func (c *WebappsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"webAppId":     c.webAppId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.webapps.delete"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.webapps.delete" call.
@@ -16057,7 +16057,7 @@ func (c *WebappsGetCall) Header() http.Header {
 
 func (c *WebappsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16079,7 +16079,7 @@ func (c *WebappsGetCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"webAppId":     c.webAppId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.webapps.get"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.webapps.get" call.
@@ -16198,7 +16198,7 @@ func (c *WebappsInsertCall) Header() http.Header {
 
 func (c *WebappsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16221,7 +16221,7 @@ func (c *WebappsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.webapps.insert"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.webapps.insert" call.
@@ -16345,7 +16345,7 @@ func (c *WebappsListCall) Header() http.Header {
 
 func (c *WebappsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16366,7 +16366,7 @@ func (c *WebappsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"enterpriseId": c.enterpriseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.webapps.list"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.webapps.list" call.
@@ -16481,7 +16481,7 @@ func (c *WebappsPatchCall) Header() http.Header {
 
 func (c *WebappsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16505,7 +16505,7 @@ func (c *WebappsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"webAppId":     c.webAppId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.webapps.patch"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.webapps.patch" call.
@@ -16629,7 +16629,7 @@ func (c *WebappsUpdateCall) Header() http.Header {
 
 func (c *WebappsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16653,7 +16653,7 @@ func (c *WebappsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"enterpriseId": c.enterpriseId,
 		"webAppId":     c.webAppId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidenterprise.webapps.update"), c.s.client, req)
 }
 
 // Do executes the "androidenterprise.webapps.update" call.

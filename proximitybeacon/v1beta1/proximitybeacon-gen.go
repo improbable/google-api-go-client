@@ -1426,7 +1426,7 @@ func (c *BeaconinfoGetforobservedCall) Header() http.Header {
 
 func (c *BeaconinfoGetforobservedCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1446,7 +1446,7 @@ func (c *BeaconinfoGetforobservedCall) doRequest(alt string) (*http.Response, er
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beaconinfo.getforobserved"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beaconinfo.getforobserved" call.
@@ -1573,7 +1573,7 @@ func (c *BeaconsActivateCall) Header() http.Header {
 
 func (c *BeaconsActivateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1591,7 +1591,7 @@ func (c *BeaconsActivateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.activate"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.activate" call.
@@ -1733,7 +1733,7 @@ func (c *BeaconsDeactivateCall) Header() http.Header {
 
 func (c *BeaconsDeactivateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1751,7 +1751,7 @@ func (c *BeaconsDeactivateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.deactivate"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.deactivate" call.
@@ -1892,7 +1892,7 @@ func (c *BeaconsDecommissionCall) Header() http.Header {
 
 func (c *BeaconsDecommissionCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1910,7 +1910,7 @@ func (c *BeaconsDecommissionCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.decommission"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.decommission" call.
@@ -2047,7 +2047,7 @@ func (c *BeaconsDeleteCall) Header() http.Header {
 
 func (c *BeaconsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2065,7 +2065,7 @@ func (c *BeaconsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.delete"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.delete" call.
@@ -2222,7 +2222,7 @@ func (c *BeaconsGetCall) Header() http.Header {
 
 func (c *BeaconsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2243,7 +2243,7 @@ func (c *BeaconsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.get"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.get" call.
@@ -2499,7 +2499,7 @@ func (c *BeaconsListCall) Header() http.Header {
 
 func (c *BeaconsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2517,7 +2517,7 @@ func (c *BeaconsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.list"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.list" call.
@@ -2683,7 +2683,7 @@ func (c *BeaconsRegisterCall) Header() http.Header {
 
 func (c *BeaconsRegisterCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2703,7 +2703,7 @@ func (c *BeaconsRegisterCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.register"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.register" call.
@@ -2845,7 +2845,7 @@ func (c *BeaconsUpdateCall) Header() http.Header {
 
 func (c *BeaconsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2868,7 +2868,7 @@ func (c *BeaconsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.update"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.update" call.
@@ -3029,7 +3029,7 @@ func (c *BeaconsAttachmentsBatchDeleteCall) Header() http.Header {
 
 func (c *BeaconsAttachmentsBatchDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3047,7 +3047,7 @@ func (c *BeaconsAttachmentsBatchDeleteCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.attachments.batchDelete"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.attachments.batchDelete" call.
@@ -3204,7 +3204,7 @@ func (c *BeaconsAttachmentsCreateCall) Header() http.Header {
 
 func (c *BeaconsAttachmentsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3227,7 +3227,7 @@ func (c *BeaconsAttachmentsCreateCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.attachments.create"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.attachments.create" call.
@@ -3371,7 +3371,7 @@ func (c *BeaconsAttachmentsDeleteCall) Header() http.Header {
 
 func (c *BeaconsAttachmentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3389,7 +3389,7 @@ func (c *BeaconsAttachmentsDeleteCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"attachmentName": c.attachmentName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.attachments.delete"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.attachments.delete" call.
@@ -3557,7 +3557,7 @@ func (c *BeaconsAttachmentsListCall) Header() http.Header {
 
 func (c *BeaconsAttachmentsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3578,7 +3578,7 @@ func (c *BeaconsAttachmentsListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.attachments.list"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.attachments.list" call.
@@ -3763,7 +3763,7 @@ func (c *BeaconsDiagnosticsListCall) Header() http.Header {
 
 func (c *BeaconsDiagnosticsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3784,7 +3784,7 @@ func (c *BeaconsDiagnosticsListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"beaconName": c.beaconName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.beacons.diagnostics.list"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.beacons.diagnostics.list" call.
@@ -3973,7 +3973,7 @@ func (c *NamespacesListCall) Header() http.Header {
 
 func (c *NamespacesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3991,7 +3991,7 @@ func (c *NamespacesListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.namespaces.list"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.namespaces.list" call.
@@ -4113,7 +4113,7 @@ func (c *NamespacesUpdateCall) Header() http.Header {
 
 func (c *NamespacesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4136,7 +4136,7 @@ func (c *NamespacesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"namespaceName": c.namespaceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.namespaces.update"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.namespaces.update" call.
@@ -4277,7 +4277,7 @@ func (c *V1beta1GetEidparamsCall) Header() http.Header {
 
 func (c *V1beta1GetEidparamsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4295,7 +4295,7 @@ func (c *V1beta1GetEidparamsCall) doRequest(alt string) (*http.Response, error) 
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "proximitybeacon.getEidparams"), c.s.client, req)
 }
 
 // Do executes the "proximitybeacon.getEidparams" call.

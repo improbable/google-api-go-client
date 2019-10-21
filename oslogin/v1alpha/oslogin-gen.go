@@ -473,7 +473,7 @@ func (c *UsersGetLoginProfileCall) Header() http.Header {
 
 func (c *UsersGetLoginProfileCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -494,7 +494,7 @@ func (c *UsersGetLoginProfileCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oslogin.users.getLoginProfile"), c.s.client, req)
 }
 
 // Do executes the "oslogin.users.getLoginProfile" call.
@@ -642,7 +642,7 @@ func (c *UsersImportSshPublicKeyCall) Header() http.Header {
 
 func (c *UsersImportSshPublicKeyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -665,7 +665,7 @@ func (c *UsersImportSshPublicKeyCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oslogin.users.importSshPublicKey"), c.s.client, req)
 }
 
 // Do executes the "oslogin.users.importSshPublicKey" call.
@@ -799,7 +799,7 @@ func (c *UsersProjectsDeleteCall) Header() http.Header {
 
 func (c *UsersProjectsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -817,7 +817,7 @@ func (c *UsersProjectsDeleteCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oslogin.users.projects.delete"), c.s.client, req)
 }
 
 // Do executes the "oslogin.users.projects.delete" call.
@@ -940,7 +940,7 @@ func (c *UsersSshPublicKeysDeleteCall) Header() http.Header {
 
 func (c *UsersSshPublicKeysDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -958,7 +958,7 @@ func (c *UsersSshPublicKeysDeleteCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oslogin.users.sshPublicKeys.delete"), c.s.client, req)
 }
 
 // Do executes the "oslogin.users.sshPublicKeys.delete" call.
@@ -1082,7 +1082,7 @@ func (c *UsersSshPublicKeysGetCall) Header() http.Header {
 
 func (c *UsersSshPublicKeysGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1103,7 +1103,7 @@ func (c *UsersSshPublicKeysGetCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oslogin.users.sshPublicKeys.get"), c.s.client, req)
 }
 
 // Do executes the "oslogin.users.sshPublicKeys.get" call.
@@ -1227,7 +1227,7 @@ func (c *UsersSshPublicKeysPatchCall) Header() http.Header {
 
 func (c *UsersSshPublicKeysPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1250,7 +1250,7 @@ func (c *UsersSshPublicKeysPatchCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "oslogin.users.sshPublicKeys.patch"), c.s.client, req)
 }
 
 // Do executes the "oslogin.users.sshPublicKeys.patch" call.

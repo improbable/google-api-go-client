@@ -3120,7 +3120,7 @@ func (c *ProjectsDatabasesExportDocumentsCall) Header() http.Header {
 
 func (c *ProjectsDatabasesExportDocumentsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3143,7 +3143,7 @@ func (c *ProjectsDatabasesExportDocumentsCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.exportDocuments"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.exportDocuments" call.
@@ -3270,7 +3270,7 @@ func (c *ProjectsDatabasesImportDocumentsCall) Header() http.Header {
 
 func (c *ProjectsDatabasesImportDocumentsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3293,7 +3293,7 @@ func (c *ProjectsDatabasesImportDocumentsCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.importDocuments"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.importDocuments" call.
@@ -3415,7 +3415,7 @@ func (c *ProjectsDatabasesDocumentsBatchGetCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsBatchGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3438,7 +3438,7 @@ func (c *ProjectsDatabasesDocumentsBatchGetCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.batchGet"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.batchGet" call.
@@ -3556,7 +3556,7 @@ func (c *ProjectsDatabasesDocumentsBeginTransactionCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsBeginTransactionCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3579,7 +3579,7 @@ func (c *ProjectsDatabasesDocumentsBeginTransactionCall) doRequest(alt string) (
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.beginTransaction"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.beginTransaction" call.
@@ -3697,7 +3697,7 @@ func (c *ProjectsDatabasesDocumentsCommitCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsCommitCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3720,7 +3720,7 @@ func (c *ProjectsDatabasesDocumentsCommitCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.commit"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.commit" call.
@@ -3857,7 +3857,7 @@ func (c *ProjectsDatabasesDocumentsCreateDocumentCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsCreateDocumentCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3881,7 +3881,7 @@ func (c *ProjectsDatabasesDocumentsCreateDocumentCall) doRequest(alt string) (*h
 		"parent":       c.parent,
 		"collectionId": c.collectionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.createDocument"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.createDocument" call.
@@ -4033,7 +4033,7 @@ func (c *ProjectsDatabasesDocumentsDeleteCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4051,7 +4051,7 @@ func (c *ProjectsDatabasesDocumentsDeleteCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.delete"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.delete" call.
@@ -4209,7 +4209,7 @@ func (c *ProjectsDatabasesDocumentsGetCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4230,7 +4230,7 @@ func (c *ProjectsDatabasesDocumentsGetCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.get"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.get" call.
@@ -4434,7 +4434,7 @@ func (c *ProjectsDatabasesDocumentsListCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4456,7 +4456,7 @@ func (c *ProjectsDatabasesDocumentsListCall) doRequest(alt string) (*http.Respon
 		"parent":       c.parent,
 		"collectionId": c.collectionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.list"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.list" call.
@@ -4639,7 +4639,7 @@ func (c *ProjectsDatabasesDocumentsListCollectionIdsCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsListCollectionIdsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4662,7 +4662,7 @@ func (c *ProjectsDatabasesDocumentsListCollectionIdsCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.listCollectionIds"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.listCollectionIds" call.
@@ -4801,7 +4801,7 @@ func (c *ProjectsDatabasesDocumentsListenCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsListenCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4824,7 +4824,7 @@ func (c *ProjectsDatabasesDocumentsListenCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.listen"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.listen" call.
@@ -4977,7 +4977,7 @@ func (c *ProjectsDatabasesDocumentsPatchCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5000,7 +5000,7 @@ func (c *ProjectsDatabasesDocumentsPatchCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.patch"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.patch" call.
@@ -5141,7 +5141,7 @@ func (c *ProjectsDatabasesDocumentsRollbackCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsRollbackCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5164,7 +5164,7 @@ func (c *ProjectsDatabasesDocumentsRollbackCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.rollback"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.rollback" call.
@@ -5282,7 +5282,7 @@ func (c *ProjectsDatabasesDocumentsRunQueryCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsRunQueryCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5305,7 +5305,7 @@ func (c *ProjectsDatabasesDocumentsRunQueryCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.runQuery"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.runQuery" call.
@@ -5423,7 +5423,7 @@ func (c *ProjectsDatabasesDocumentsWriteCall) Header() http.Header {
 
 func (c *ProjectsDatabasesDocumentsWriteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5446,7 +5446,7 @@ func (c *ProjectsDatabasesDocumentsWriteCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"database": c.database,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.documents.write"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.documents.write" call.
@@ -5581,7 +5581,7 @@ func (c *ProjectsDatabasesIndexesCreateCall) Header() http.Header {
 
 func (c *ProjectsDatabasesIndexesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5604,7 +5604,7 @@ func (c *ProjectsDatabasesIndexesCreateCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.indexes.create"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.indexes.create" call.
@@ -5720,7 +5720,7 @@ func (c *ProjectsDatabasesIndexesDeleteCall) Header() http.Header {
 
 func (c *ProjectsDatabasesIndexesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5738,7 +5738,7 @@ func (c *ProjectsDatabasesIndexesDeleteCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.indexes.delete"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.indexes.delete" call.
@@ -5862,7 +5862,7 @@ func (c *ProjectsDatabasesIndexesGetCall) Header() http.Header {
 
 func (c *ProjectsDatabasesIndexesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5883,7 +5883,7 @@ func (c *ProjectsDatabasesIndexesGetCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.indexes.get"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.indexes.get" call.
@@ -6027,7 +6027,7 @@ func (c *ProjectsDatabasesIndexesListCall) Header() http.Header {
 
 func (c *ProjectsDatabasesIndexesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6048,7 +6048,7 @@ func (c *ProjectsDatabasesIndexesListCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "firestore.projects.databases.indexes.list"), c.s.client, req)
 }
 
 // Do executes the "firestore.projects.databases.indexes.list" call.

@@ -2045,6 +2045,7 @@ func (c *PawsGetSpectrumCall) Header() http.Header {
 
 func (c *PawsGetSpectrumCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2064,7 +2065,7 @@ func (c *PawsGetSpectrumCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spectrum.paws.getSpectrum"), c.s.client, req)
 }
 
 // Do executes the "spectrum.paws.getSpectrum" call.
@@ -2164,6 +2165,7 @@ func (c *PawsGetSpectrumBatchCall) Header() http.Header {
 
 func (c *PawsGetSpectrumBatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2183,7 +2185,7 @@ func (c *PawsGetSpectrumBatchCall) doRequest(alt string) (*http.Response, error)
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spectrum.paws.getSpectrumBatch"), c.s.client, req)
 }
 
 // Do executes the "spectrum.paws.getSpectrumBatch" call.
@@ -2283,6 +2285,7 @@ func (c *PawsInitCall) Header() http.Header {
 
 func (c *PawsInitCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2302,7 +2305,7 @@ func (c *PawsInitCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spectrum.paws.init"), c.s.client, req)
 }
 
 // Do executes the "spectrum.paws.init" call.
@@ -2405,6 +2408,7 @@ func (c *PawsNotifySpectrumUseCall) Header() http.Header {
 
 func (c *PawsNotifySpectrumUseCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2424,7 +2428,7 @@ func (c *PawsNotifySpectrumUseCall) doRequest(alt string) (*http.Response, error
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spectrum.paws.notifySpectrumUse"), c.s.client, req)
 }
 
 // Do executes the "spectrum.paws.notifySpectrumUse" call.
@@ -2525,6 +2529,7 @@ func (c *PawsRegisterCall) Header() http.Header {
 
 func (c *PawsRegisterCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2544,7 +2549,7 @@ func (c *PawsRegisterCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spectrum.paws.register"), c.s.client, req)
 }
 
 // Do executes the "spectrum.paws.register" call.
@@ -2646,6 +2651,7 @@ func (c *PawsVerifyDeviceCall) Header() http.Header {
 
 func (c *PawsVerifyDeviceCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2665,7 +2671,7 @@ func (c *PawsVerifyDeviceCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "spectrum.paws.verifyDevice"), c.s.client, req)
 }
 
 // Do executes the "spectrum.paws.verifyDevice" call.

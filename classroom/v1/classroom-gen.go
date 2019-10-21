@@ -3369,7 +3369,7 @@ func (c *CoursesCreateCall) Header() http.Header {
 
 func (c *CoursesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3389,7 +3389,7 @@ func (c *CoursesCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.create" call.
@@ -3501,7 +3501,7 @@ func (c *CoursesDeleteCall) Header() http.Header {
 
 func (c *CoursesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3519,7 +3519,7 @@ func (c *CoursesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"id": c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.delete" call.
@@ -3648,7 +3648,7 @@ func (c *CoursesGetCall) Header() http.Header {
 
 func (c *CoursesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3669,7 +3669,7 @@ func (c *CoursesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"id": c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.get" call.
@@ -3865,7 +3865,7 @@ func (c *CoursesListCall) Header() http.Header {
 
 func (c *CoursesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3883,7 +3883,7 @@ func (c *CoursesListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.list" call.
@@ -4086,7 +4086,7 @@ func (c *CoursesPatchCall) Header() http.Header {
 
 func (c *CoursesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4109,7 +4109,7 @@ func (c *CoursesPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"id": c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.patch"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.patch" call.
@@ -4240,7 +4240,7 @@ func (c *CoursesUpdateCall) Header() http.Header {
 
 func (c *CoursesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4263,7 +4263,7 @@ func (c *CoursesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"id": c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.update"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.update" call.
@@ -4391,7 +4391,7 @@ func (c *CoursesAliasesCreateCall) Header() http.Header {
 
 func (c *CoursesAliasesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4414,7 +4414,7 @@ func (c *CoursesAliasesCreateCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.aliases.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.aliases.create" call.
@@ -4541,7 +4541,7 @@ func (c *CoursesAliasesDeleteCall) Header() http.Header {
 
 func (c *CoursesAliasesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4560,7 +4560,7 @@ func (c *CoursesAliasesDeleteCall) doRequest(alt string) (*http.Response, error)
 		"courseId": c.courseId,
 		"alias":    c.aliasid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.aliases.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.aliases.delete" call.
@@ -4720,7 +4720,7 @@ func (c *CoursesAliasesListCall) Header() http.Header {
 
 func (c *CoursesAliasesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4741,7 +4741,7 @@ func (c *CoursesAliasesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.aliases.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.aliases.list" call.
@@ -4899,7 +4899,7 @@ func (c *CoursesAnnouncementsCreateCall) Header() http.Header {
 
 func (c *CoursesAnnouncementsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4922,7 +4922,7 @@ func (c *CoursesAnnouncementsCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.announcements.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.announcements.create" call.
@@ -5056,7 +5056,7 @@ func (c *CoursesAnnouncementsDeleteCall) Header() http.Header {
 
 func (c *CoursesAnnouncementsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5075,7 +5075,7 @@ func (c *CoursesAnnouncementsDeleteCall) doRequest(alt string) (*http.Response, 
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.announcements.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.announcements.delete" call.
@@ -5214,7 +5214,7 @@ func (c *CoursesAnnouncementsGetCall) Header() http.Header {
 
 func (c *CoursesAnnouncementsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5236,7 +5236,7 @@ func (c *CoursesAnnouncementsGetCall) doRequest(alt string) (*http.Response, err
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.announcements.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.announcements.get" call.
@@ -5431,7 +5431,7 @@ func (c *CoursesAnnouncementsListCall) Header() http.Header {
 
 func (c *CoursesAnnouncementsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5452,7 +5452,7 @@ func (c *CoursesAnnouncementsListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.announcements.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.announcements.list" call.
@@ -5629,7 +5629,7 @@ func (c *CoursesAnnouncementsModifyAssigneesCall) Header() http.Header {
 
 func (c *CoursesAnnouncementsModifyAssigneesCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5653,7 +5653,7 @@ func (c *CoursesAnnouncementsModifyAssigneesCall) doRequest(alt string) (*http.R
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.announcements.modifyAssignees"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.announcements.modifyAssignees" call.
@@ -5813,7 +5813,7 @@ func (c *CoursesAnnouncementsPatchCall) Header() http.Header {
 
 func (c *CoursesAnnouncementsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5837,7 +5837,7 @@ func (c *CoursesAnnouncementsPatchCall) doRequest(alt string) (*http.Response, e
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.announcements.patch"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.announcements.patch" call.
@@ -5989,7 +5989,7 @@ func (c *CoursesCourseWorkCreateCall) Header() http.Header {
 
 func (c *CoursesCourseWorkCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6012,7 +6012,7 @@ func (c *CoursesCourseWorkCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.create" call.
@@ -6146,7 +6146,7 @@ func (c *CoursesCourseWorkDeleteCall) Header() http.Header {
 
 func (c *CoursesCourseWorkDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6165,7 +6165,7 @@ func (c *CoursesCourseWorkDeleteCall) doRequest(alt string) (*http.Response, err
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.delete" call.
@@ -6304,7 +6304,7 @@ func (c *CoursesCourseWorkGetCall) Header() http.Header {
 
 func (c *CoursesCourseWorkGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6326,7 +6326,7 @@ func (c *CoursesCourseWorkGetCall) doRequest(alt string) (*http.Response, error)
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.get" call.
@@ -6525,7 +6525,7 @@ func (c *CoursesCourseWorkListCall) Header() http.Header {
 
 func (c *CoursesCourseWorkListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6546,7 +6546,7 @@ func (c *CoursesCourseWorkListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.list" call.
@@ -6725,7 +6725,7 @@ func (c *CoursesCourseWorkModifyAssigneesCall) Header() http.Header {
 
 func (c *CoursesCourseWorkModifyAssigneesCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6749,7 +6749,7 @@ func (c *CoursesCourseWorkModifyAssigneesCall) doRequest(alt string) (*http.Resp
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.modifyAssignees"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.modifyAssignees" call.
@@ -6929,7 +6929,7 @@ func (c *CoursesCourseWorkPatchCall) Header() http.Header {
 
 func (c *CoursesCourseWorkPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6953,7 +6953,7 @@ func (c *CoursesCourseWorkPatchCall) doRequest(alt string) (*http.Response, erro
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.patch"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.patch" call.
@@ -7104,7 +7104,7 @@ func (c *CoursesCourseWorkStudentSubmissionsGetCall) Header() http.Header {
 
 func (c *CoursesCourseWorkStudentSubmissionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7127,7 +7127,7 @@ func (c *CoursesCourseWorkStudentSubmissionsGetCall) doRequest(alt string) (*htt
 		"courseWorkId": c.courseWorkId,
 		"id":           c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.studentSubmissions.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.studentSubmissions.get" call.
@@ -7354,7 +7354,7 @@ func (c *CoursesCourseWorkStudentSubmissionsListCall) Header() http.Header {
 
 func (c *CoursesCourseWorkStudentSubmissionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7376,7 +7376,7 @@ func (c *CoursesCourseWorkStudentSubmissionsListCall) doRequest(alt string) (*ht
 		"courseId":     c.courseId,
 		"courseWorkId": c.courseWorkId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.studentSubmissions.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.studentSubmissions.list" call.
@@ -7590,7 +7590,7 @@ func (c *CoursesCourseWorkStudentSubmissionsModifyAttachmentsCall) Header() http
 
 func (c *CoursesCourseWorkStudentSubmissionsModifyAttachmentsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7615,7 +7615,7 @@ func (c *CoursesCourseWorkStudentSubmissionsModifyAttachmentsCall) doRequest(alt
 		"courseWorkId": c.courseWorkId,
 		"id":           c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.studentSubmissions.modifyAttachments"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.studentSubmissions.modifyAttachments" call.
@@ -7787,7 +7787,7 @@ func (c *CoursesCourseWorkStudentSubmissionsPatchCall) Header() http.Header {
 
 func (c *CoursesCourseWorkStudentSubmissionsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7812,7 +7812,7 @@ func (c *CoursesCourseWorkStudentSubmissionsPatchCall) doRequest(alt string) (*h
 		"courseWorkId": c.courseWorkId,
 		"id":           c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.studentSubmissions.patch"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.studentSubmissions.patch" call.
@@ -7983,7 +7983,7 @@ func (c *CoursesCourseWorkStudentSubmissionsReclaimCall) Header() http.Header {
 
 func (c *CoursesCourseWorkStudentSubmissionsReclaimCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8008,7 +8008,7 @@ func (c *CoursesCourseWorkStudentSubmissionsReclaimCall) doRequest(alt string) (
 		"courseWorkId": c.courseWorkId,
 		"id":           c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.studentSubmissions.reclaim"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.studentSubmissions.reclaim" call.
@@ -8171,7 +8171,7 @@ func (c *CoursesCourseWorkStudentSubmissionsReturnCall) Header() http.Header {
 
 func (c *CoursesCourseWorkStudentSubmissionsReturnCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8196,7 +8196,7 @@ func (c *CoursesCourseWorkStudentSubmissionsReturnCall) doRequest(alt string) (*
 		"courseWorkId": c.courseWorkId,
 		"id":           c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.studentSubmissions.return"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.studentSubmissions.return" call.
@@ -8356,7 +8356,7 @@ func (c *CoursesCourseWorkStudentSubmissionsTurnInCall) Header() http.Header {
 
 func (c *CoursesCourseWorkStudentSubmissionsTurnInCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8381,7 +8381,7 @@ func (c *CoursesCourseWorkStudentSubmissionsTurnInCall) doRequest(alt string) (*
 		"courseWorkId": c.courseWorkId,
 		"id":           c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.courseWork.studentSubmissions.turnIn"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.courseWork.studentSubmissions.turnIn" call.
@@ -8538,7 +8538,7 @@ func (c *CoursesStudentsCreateCall) Header() http.Header {
 
 func (c *CoursesStudentsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8561,7 +8561,7 @@ func (c *CoursesStudentsCreateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.students.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.students.create" call.
@@ -8693,7 +8693,7 @@ func (c *CoursesStudentsDeleteCall) Header() http.Header {
 
 func (c *CoursesStudentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8712,7 +8712,7 @@ func (c *CoursesStudentsDeleteCall) doRequest(alt string) (*http.Response, error
 		"courseId": c.courseId,
 		"userId":   c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.students.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.students.delete" call.
@@ -8852,7 +8852,7 @@ func (c *CoursesStudentsGetCall) Header() http.Header {
 
 func (c *CoursesStudentsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8874,7 +8874,7 @@ func (c *CoursesStudentsGetCall) doRequest(alt string) (*http.Response, error) {
 		"courseId": c.courseId,
 		"userId":   c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.students.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.students.get" call.
@@ -9034,7 +9034,7 @@ func (c *CoursesStudentsListCall) Header() http.Header {
 
 func (c *CoursesStudentsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9055,7 +9055,7 @@ func (c *CoursesStudentsListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.students.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.students.list" call.
@@ -9220,7 +9220,7 @@ func (c *CoursesTeachersCreateCall) Header() http.Header {
 
 func (c *CoursesTeachersCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9243,7 +9243,7 @@ func (c *CoursesTeachersCreateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.teachers.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.teachers.create" call.
@@ -9373,7 +9373,7 @@ func (c *CoursesTeachersDeleteCall) Header() http.Header {
 
 func (c *CoursesTeachersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9392,7 +9392,7 @@ func (c *CoursesTeachersDeleteCall) doRequest(alt string) (*http.Response, error
 		"courseId": c.courseId,
 		"userId":   c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.teachers.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.teachers.delete" call.
@@ -9532,7 +9532,7 @@ func (c *CoursesTeachersGetCall) Header() http.Header {
 
 func (c *CoursesTeachersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9554,7 +9554,7 @@ func (c *CoursesTeachersGetCall) doRequest(alt string) (*http.Response, error) {
 		"courseId": c.courseId,
 		"userId":   c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.teachers.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.teachers.get" call.
@@ -9714,7 +9714,7 @@ func (c *CoursesTeachersListCall) Header() http.Header {
 
 func (c *CoursesTeachersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9735,7 +9735,7 @@ func (c *CoursesTeachersListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.teachers.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.teachers.list" call.
@@ -9892,7 +9892,7 @@ func (c *CoursesTopicsCreateCall) Header() http.Header {
 
 func (c *CoursesTopicsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9915,7 +9915,7 @@ func (c *CoursesTopicsCreateCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.topics.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.topics.create" call.
@@ -10041,7 +10041,7 @@ func (c *CoursesTopicsDeleteCall) Header() http.Header {
 
 func (c *CoursesTopicsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10060,7 +10060,7 @@ func (c *CoursesTopicsDeleteCall) doRequest(alt string) (*http.Response, error) 
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.topics.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.topics.delete" call.
@@ -10199,7 +10199,7 @@ func (c *CoursesTopicsGetCall) Header() http.Header {
 
 func (c *CoursesTopicsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10221,7 +10221,7 @@ func (c *CoursesTopicsGetCall) doRequest(alt string) (*http.Response, error) {
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.topics.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.topics.get" call.
@@ -10384,7 +10384,7 @@ func (c *CoursesTopicsListCall) Header() http.Header {
 
 func (c *CoursesTopicsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10405,7 +10405,7 @@ func (c *CoursesTopicsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"courseId": c.courseId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.topics.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.topics.list" call.
@@ -10583,7 +10583,7 @@ func (c *CoursesTopicsPatchCall) Header() http.Header {
 
 func (c *CoursesTopicsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10607,7 +10607,7 @@ func (c *CoursesTopicsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"courseId": c.courseId,
 		"id":       c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.courses.topics.patch"), c.s.client, req)
 }
 
 // Do executes the "classroom.courses.topics.patch" call.
@@ -10750,7 +10750,7 @@ func (c *InvitationsAcceptCall) Header() http.Header {
 
 func (c *InvitationsAcceptCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10768,7 +10768,7 @@ func (c *InvitationsAcceptCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"id": c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.invitations.accept"), c.s.client, req)
 }
 
 // Do executes the "classroom.invitations.accept" call.
@@ -10894,7 +10894,7 @@ func (c *InvitationsCreateCall) Header() http.Header {
 
 func (c *InvitationsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10914,7 +10914,7 @@ func (c *InvitationsCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.invitations.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.invitations.create" call.
@@ -11026,7 +11026,7 @@ func (c *InvitationsDeleteCall) Header() http.Header {
 
 func (c *InvitationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11044,7 +11044,7 @@ func (c *InvitationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"id": c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.invitations.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.invitations.delete" call.
@@ -11173,7 +11173,7 @@ func (c *InvitationsGetCall) Header() http.Header {
 
 func (c *InvitationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11194,7 +11194,7 @@ func (c *InvitationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"id": c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.invitations.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.invitations.get" call.
@@ -11367,7 +11367,7 @@ func (c *InvitationsListCall) Header() http.Header {
 
 func (c *InvitationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11385,7 +11385,7 @@ func (c *InvitationsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.invitations.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.invitations.list" call.
@@ -11571,7 +11571,7 @@ func (c *RegistrationsCreateCall) Header() http.Header {
 
 func (c *RegistrationsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11591,7 +11591,7 @@ func (c *RegistrationsCreateCall) doRequest(alt string) (*http.Response, error) 
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.registrations.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.registrations.create" call.
@@ -11698,7 +11698,7 @@ func (c *RegistrationsDeleteCall) Header() http.Header {
 
 func (c *RegistrationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11716,7 +11716,7 @@ func (c *RegistrationsDeleteCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"registrationId": c.registrationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.registrations.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.registrations.delete" call.
@@ -11846,7 +11846,7 @@ func (c *UserProfilesGetCall) Header() http.Header {
 
 func (c *UserProfilesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11867,7 +11867,7 @@ func (c *UserProfilesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.userProfiles.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.userProfiles.get" call.
@@ -12028,7 +12028,7 @@ func (c *UserProfilesGuardianInvitationsCreateCall) Header() http.Header {
 
 func (c *UserProfilesGuardianInvitationsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12051,7 +12051,7 @@ func (c *UserProfilesGuardianInvitationsCreateCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"studentId": c.studentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.userProfiles.guardianInvitations.create"), c.s.client, req)
 }
 
 // Do executes the "classroom.userProfiles.guardianInvitations.create" call.
@@ -12197,7 +12197,7 @@ func (c *UserProfilesGuardianInvitationsGetCall) Header() http.Header {
 
 func (c *UserProfilesGuardianInvitationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12219,7 +12219,7 @@ func (c *UserProfilesGuardianInvitationsGetCall) doRequest(alt string) (*http.Re
 		"studentId":    c.studentId,
 		"invitationId": c.invitationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.userProfiles.guardianInvitations.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.userProfiles.guardianInvitations.get" call.
@@ -12419,7 +12419,7 @@ func (c *UserProfilesGuardianInvitationsListCall) Header() http.Header {
 
 func (c *UserProfilesGuardianInvitationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12440,7 +12440,7 @@ func (c *UserProfilesGuardianInvitationsListCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"studentId": c.studentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.userProfiles.guardianInvitations.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.userProfiles.guardianInvitations.list" call.
@@ -12646,7 +12646,7 @@ func (c *UserProfilesGuardianInvitationsPatchCall) Header() http.Header {
 
 func (c *UserProfilesGuardianInvitationsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12670,7 +12670,7 @@ func (c *UserProfilesGuardianInvitationsPatchCall) doRequest(alt string) (*http.
 		"studentId":    c.studentId,
 		"invitationId": c.invitationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.userProfiles.guardianInvitations.patch"), c.s.client, req)
 }
 
 // Do executes the "classroom.userProfiles.guardianInvitations.patch" call.
@@ -12823,7 +12823,7 @@ func (c *UserProfilesGuardiansDeleteCall) Header() http.Header {
 
 func (c *UserProfilesGuardiansDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12842,7 +12842,7 @@ func (c *UserProfilesGuardiansDeleteCall) doRequest(alt string) (*http.Response,
 		"studentId":  c.studentId,
 		"guardianId": c.guardianId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.userProfiles.guardians.delete"), c.s.client, req)
 }
 
 // Do executes the "classroom.userProfiles.guardians.delete" call.
@@ -12994,7 +12994,7 @@ func (c *UserProfilesGuardiansGetCall) Header() http.Header {
 
 func (c *UserProfilesGuardiansGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13016,7 +13016,7 @@ func (c *UserProfilesGuardiansGetCall) doRequest(alt string) (*http.Response, er
 		"studentId":  c.studentId,
 		"guardianId": c.guardianId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.userProfiles.guardians.get"), c.s.client, req)
 }
 
 // Do executes the "classroom.userProfiles.guardians.get" call.
@@ -13211,7 +13211,7 @@ func (c *UserProfilesGuardiansListCall) Header() http.Header {
 
 func (c *UserProfilesGuardiansListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13232,7 +13232,7 @@ func (c *UserProfilesGuardiansListCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"studentId": c.studentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "classroom.userProfiles.guardians.list"), c.s.client, req)
 }
 
 // Do executes the "classroom.userProfiles.guardians.list" call.

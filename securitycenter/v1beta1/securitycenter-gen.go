@@ -2129,7 +2129,7 @@ func (c *OrganizationsGetOrganizationSettingsCall) Header() http.Header {
 
 func (c *OrganizationsGetOrganizationSettingsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2150,7 +2150,7 @@ func (c *OrganizationsGetOrganizationSettingsCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.getOrganizationSettings"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.getOrganizationSettings" call.
@@ -2271,7 +2271,7 @@ func (c *OrganizationsUpdateOrganizationSettingsCall) Header() http.Header {
 
 func (c *OrganizationsUpdateOrganizationSettingsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2294,7 +2294,7 @@ func (c *OrganizationsUpdateOrganizationSettingsCall) doRequest(alt string) (*ht
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.updateOrganizationSettings"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.updateOrganizationSettings" call.
@@ -2419,7 +2419,7 @@ func (c *OrganizationsAssetsGroupCall) Header() http.Header {
 
 func (c *OrganizationsAssetsGroupCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2442,7 +2442,7 @@ func (c *OrganizationsAssetsGroupCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.assets.group"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.assets.group" call.
@@ -2721,7 +2721,7 @@ func (c *OrganizationsAssetsListCall) Header() http.Header {
 
 func (c *OrganizationsAssetsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2742,7 +2742,7 @@ func (c *OrganizationsAssetsListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.assets.list"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.assets.list" call.
@@ -2924,7 +2924,7 @@ func (c *OrganizationsAssetsRunDiscoveryCall) Header() http.Header {
 
 func (c *OrganizationsAssetsRunDiscoveryCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2947,7 +2947,7 @@ func (c *OrganizationsAssetsRunDiscoveryCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.assets.runDiscovery"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.assets.runDiscovery" call.
@@ -3078,7 +3078,7 @@ func (c *OrganizationsAssetsUpdateSecurityMarksCall) Header() http.Header {
 
 func (c *OrganizationsAssetsUpdateSecurityMarksCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3101,7 +3101,7 @@ func (c *OrganizationsAssetsUpdateSecurityMarksCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.assets.updateSecurityMarks"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.assets.updateSecurityMarks" call.
@@ -3247,7 +3247,7 @@ func (c *OrganizationsOperationsCancelCall) Header() http.Header {
 
 func (c *OrganizationsOperationsCancelCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3270,7 +3270,7 @@ func (c *OrganizationsOperationsCancelCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.operations.cancel" call.
@@ -3391,7 +3391,7 @@ func (c *OrganizationsOperationsDeleteCall) Header() http.Header {
 
 func (c *OrganizationsOperationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3409,7 +3409,7 @@ func (c *OrganizationsOperationsDeleteCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.operations.delete" call.
@@ -3536,7 +3536,7 @@ func (c *OrganizationsOperationsGetCall) Header() http.Header {
 
 func (c *OrganizationsOperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3557,7 +3557,7 @@ func (c *OrganizationsOperationsGetCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.operations.get"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.operations.get" call.
@@ -3717,7 +3717,7 @@ func (c *OrganizationsOperationsListCall) Header() http.Header {
 
 func (c *OrganizationsOperationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3738,7 +3738,7 @@ func (c *OrganizationsOperationsListCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.operations.list"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.operations.list" call.
@@ -3889,7 +3889,7 @@ func (c *OrganizationsSourcesCreateCall) Header() http.Header {
 
 func (c *OrganizationsSourcesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3912,7 +3912,7 @@ func (c *OrganizationsSourcesCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.create"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.create" call.
@@ -4038,7 +4038,7 @@ func (c *OrganizationsSourcesGetCall) Header() http.Header {
 
 func (c *OrganizationsSourcesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4059,7 +4059,7 @@ func (c *OrganizationsSourcesGetCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.get"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.get" call.
@@ -4173,7 +4173,7 @@ func (c *OrganizationsSourcesGetIamPolicyCall) Header() http.Header {
 
 func (c *OrganizationsSourcesGetIamPolicyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4196,7 +4196,7 @@ func (c *OrganizationsSourcesGetIamPolicyCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.getIamPolicy" call.
@@ -4339,7 +4339,7 @@ func (c *OrganizationsSourcesListCall) Header() http.Header {
 
 func (c *OrganizationsSourcesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4360,7 +4360,7 @@ func (c *OrganizationsSourcesListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.list"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.list" call.
@@ -4513,7 +4513,7 @@ func (c *OrganizationsSourcesPatchCall) Header() http.Header {
 
 func (c *OrganizationsSourcesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4536,7 +4536,7 @@ func (c *OrganizationsSourcesPatchCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.patch"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.patch" call.
@@ -4659,7 +4659,7 @@ func (c *OrganizationsSourcesSetIamPolicyCall) Header() http.Header {
 
 func (c *OrganizationsSourcesSetIamPolicyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4682,7 +4682,7 @@ func (c *OrganizationsSourcesSetIamPolicyCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.setIamPolicy" call.
@@ -4800,7 +4800,7 @@ func (c *OrganizationsSourcesTestIamPermissionsCall) Header() http.Header {
 
 func (c *OrganizationsSourcesTestIamPermissionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4823,7 +4823,7 @@ func (c *OrganizationsSourcesTestIamPermissionsCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.testIamPermissions" call.
@@ -4952,7 +4952,7 @@ func (c *OrganizationsSourcesFindingsCreateCall) Header() http.Header {
 
 func (c *OrganizationsSourcesFindingsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4975,7 +4975,7 @@ func (c *OrganizationsSourcesFindingsCreateCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.findings.create"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.findings.create" call.
@@ -5102,7 +5102,7 @@ func (c *OrganizationsSourcesFindingsGroupCall) Header() http.Header {
 
 func (c *OrganizationsSourcesFindingsGroupCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5125,7 +5125,7 @@ func (c *OrganizationsSourcesFindingsGroupCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.findings.group"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.findings.group" call.
@@ -5366,7 +5366,7 @@ func (c *OrganizationsSourcesFindingsListCall) Header() http.Header {
 
 func (c *OrganizationsSourcesFindingsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5387,7 +5387,7 @@ func (c *OrganizationsSourcesFindingsListCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.findings.list"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.findings.list" call.
@@ -5565,7 +5565,7 @@ func (c *OrganizationsSourcesFindingsPatchCall) Header() http.Header {
 
 func (c *OrganizationsSourcesFindingsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5588,7 +5588,7 @@ func (c *OrganizationsSourcesFindingsPatchCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.findings.patch"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.findings.patch" call.
@@ -5711,7 +5711,7 @@ func (c *OrganizationsSourcesFindingsSetStateCall) Header() http.Header {
 
 func (c *OrganizationsSourcesFindingsSetStateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5734,7 +5734,7 @@ func (c *OrganizationsSourcesFindingsSetStateCall) doRequest(alt string) (*http.
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.findings.setState"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.findings.setState" call.
@@ -5865,7 +5865,7 @@ func (c *OrganizationsSourcesFindingsUpdateSecurityMarksCall) Header() http.Head
 
 func (c *OrganizationsSourcesFindingsUpdateSecurityMarksCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5888,7 +5888,7 @@ func (c *OrganizationsSourcesFindingsUpdateSecurityMarksCall) doRequest(alt stri
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "securitycenter.organizations.sources.findings.updateSecurityMarks"), c.s.client, req)
 }
 
 // Do executes the "securitycenter.organizations.sources.findings.updateSecurityMarks" call.

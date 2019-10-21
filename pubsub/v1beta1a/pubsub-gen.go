@@ -973,7 +973,7 @@ func (c *SubscriptionsAcknowledgeCall) Header() http.Header {
 
 func (c *SubscriptionsAcknowledgeCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -993,7 +993,7 @@ func (c *SubscriptionsAcknowledgeCall) doRequest(alt string) (*http.Response, er
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.acknowledge"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.acknowledge" call.
@@ -1106,7 +1106,7 @@ func (c *SubscriptionsCreateCall) Header() http.Header {
 
 func (c *SubscriptionsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1126,7 +1126,7 @@ func (c *SubscriptionsCreateCall) doRequest(alt string) (*http.Response, error) 
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.create"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.create" call.
@@ -1236,7 +1236,7 @@ func (c *SubscriptionsDeleteCall) Header() http.Header {
 
 func (c *SubscriptionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1254,7 +1254,7 @@ func (c *SubscriptionsDeleteCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"subscription": c.subscription,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.delete"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.delete" call.
@@ -1378,7 +1378,7 @@ func (c *SubscriptionsGetCall) Header() http.Header {
 
 func (c *SubscriptionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1399,7 +1399,7 @@ func (c *SubscriptionsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"subscription": c.subscription,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.get"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.get" call.
@@ -1543,7 +1543,7 @@ func (c *SubscriptionsListCall) Header() http.Header {
 
 func (c *SubscriptionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1561,7 +1561,7 @@ func (c *SubscriptionsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.list"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.list" call.
@@ -1703,7 +1703,7 @@ func (c *SubscriptionsModifyAckDeadlineCall) Header() http.Header {
 
 func (c *SubscriptionsModifyAckDeadlineCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1723,7 +1723,7 @@ func (c *SubscriptionsModifyAckDeadlineCall) doRequest(alt string) (*http.Respon
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.modifyAckDeadline"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.modifyAckDeadline" call.
@@ -1837,7 +1837,7 @@ func (c *SubscriptionsModifyPushConfigCall) Header() http.Header {
 
 func (c *SubscriptionsModifyPushConfigCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1857,7 +1857,7 @@ func (c *SubscriptionsModifyPushConfigCall) doRequest(alt string) (*http.Respons
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.modifyPushConfig"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.modifyPushConfig" call.
@@ -1970,7 +1970,7 @@ func (c *SubscriptionsPullCall) Header() http.Header {
 
 func (c *SubscriptionsPullCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1990,7 +1990,7 @@ func (c *SubscriptionsPullCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.pull"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.pull" call.
@@ -2101,7 +2101,7 @@ func (c *SubscriptionsPullBatchCall) Header() http.Header {
 
 func (c *SubscriptionsPullBatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2121,7 +2121,7 @@ func (c *SubscriptionsPullBatchCall) doRequest(alt string) (*http.Response, erro
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.subscriptions.pullBatch"), c.s.client, req)
 }
 
 // Do executes the "pubsub.subscriptions.pullBatch" call.
@@ -2227,7 +2227,7 @@ func (c *TopicsCreateCall) Header() http.Header {
 
 func (c *TopicsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2247,7 +2247,7 @@ func (c *TopicsCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.create"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.create" call.
@@ -2357,7 +2357,7 @@ func (c *TopicsDeleteCall) Header() http.Header {
 
 func (c *TopicsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2375,7 +2375,7 @@ func (c *TopicsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"topic": c.topic,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.delete"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.delete" call.
@@ -2504,7 +2504,7 @@ func (c *TopicsGetCall) Header() http.Header {
 
 func (c *TopicsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2525,7 +2525,7 @@ func (c *TopicsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"topic": c.topic,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.get"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.get" call.
@@ -2669,7 +2669,7 @@ func (c *TopicsListCall) Header() http.Header {
 
 func (c *TopicsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2687,7 +2687,7 @@ func (c *TopicsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.list"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.list" call.
@@ -2830,7 +2830,7 @@ func (c *TopicsPublishCall) Header() http.Header {
 
 func (c *TopicsPublishCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2850,7 +2850,7 @@ func (c *TopicsPublishCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.publish"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.publish" call.
@@ -2958,7 +2958,7 @@ func (c *TopicsPublishBatchCall) Header() http.Header {
 
 func (c *TopicsPublishBatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2978,7 +2978,7 @@ func (c *TopicsPublishBatchCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "pubsub.topics.publishBatch"), c.s.client, req)
 }
 
 // Do executes the "pubsub.topics.publishBatch" call.

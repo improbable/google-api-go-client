@@ -964,7 +964,7 @@ func (c *ActivitiesListCall) Header() http.Header {
 
 func (c *ActivitiesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -986,7 +986,7 @@ func (c *ActivitiesListCall) doRequest(alt string) (*http.Response, error) {
 		"userKey":         c.userKey,
 		"applicationName": c.applicationName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reports.activities.list"), c.s.client, req)
 }
 
 // Do executes the "reports.activities.list" call.
@@ -1250,7 +1250,7 @@ func (c *ActivitiesWatchCall) Header() http.Header {
 
 func (c *ActivitiesWatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1274,7 +1274,7 @@ func (c *ActivitiesWatchCall) doRequest(alt string) (*http.Response, error) {
 		"userKey":         c.userKey,
 		"applicationName": c.applicationName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reports.activities.watch"), c.s.client, req)
 }
 
 // Do executes the "reports.activities.watch" call.
@@ -1451,7 +1451,7 @@ func (c *ChannelsStopCall) Header() http.Header {
 
 func (c *ChannelsStopCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1471,7 +1471,7 @@ func (c *ChannelsStopCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "admin.channels.stop"), c.s.client, req)
 }
 
 // Do executes the "admin.channels.stop" call.
@@ -1580,7 +1580,7 @@ func (c *CustomerUsageReportsGetCall) Header() http.Header {
 
 func (c *CustomerUsageReportsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1601,7 +1601,7 @@ func (c *CustomerUsageReportsGetCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"date": c.date,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reports.customerUsageReports.get"), c.s.client, req)
 }
 
 // Do executes the "reports.customerUsageReports.get" call.
@@ -1802,7 +1802,7 @@ func (c *EntityUsageReportsGetCall) Header() http.Header {
 
 func (c *EntityUsageReportsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1825,7 +1825,7 @@ func (c *EntityUsageReportsGetCall) doRequest(alt string) (*http.Response, error
 		"entityKey":  c.entityKey,
 		"date":       c.date,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reports.entityUsageReports.get"), c.s.client, req)
 }
 
 // Do executes the "reports.entityUsageReports.get" call.
@@ -2060,7 +2060,7 @@ func (c *UserUsageReportGetCall) Header() http.Header {
 
 func (c *UserUsageReportGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2082,7 +2082,7 @@ func (c *UserUsageReportGetCall) doRequest(alt string) (*http.Response, error) {
 		"userKey": c.userKey,
 		"date":    c.date,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "reports.userUsageReport.get"), c.s.client, req)
 }
 
 // Do executes the "reports.userUsageReport.get" call.

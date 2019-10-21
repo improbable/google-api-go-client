@@ -1150,7 +1150,7 @@ func (c *AccountsGetCall) Header() http.Header {
 
 func (c *AccountsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1171,7 +1171,7 @@ func (c *AccountsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.get"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.get" call.
@@ -1292,7 +1292,7 @@ func (c *AccountsListCall) Header() http.Header {
 
 func (c *AccountsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1310,7 +1310,7 @@ func (c *AccountsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.list"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.list" call.
@@ -1435,7 +1435,7 @@ func (c *AccountsAdclientsGetCall) Header() http.Header {
 
 func (c *AccountsAdclientsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1457,7 +1457,7 @@ func (c *AccountsAdclientsGetCall) doRequest(alt string) (*http.Response, error)
 		"accountId":  c.accountId,
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.adclients.get"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.adclients.get" call.
@@ -1601,7 +1601,7 @@ func (c *AccountsAdclientsListCall) Header() http.Header {
 
 func (c *AccountsAdclientsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1622,7 +1622,7 @@ func (c *AccountsAdclientsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.adclients.list"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.adclients.list" call.
@@ -1771,7 +1771,7 @@ func (c *AccountsAdunitsDeleteCall) Header() http.Header {
 
 func (c *AccountsAdunitsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1791,7 +1791,7 @@ func (c *AccountsAdunitsDeleteCall) doRequest(alt string) (*http.Response, error
 		"adClientId": c.adClientId,
 		"adUnitId":   c.adUnitId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.adunits.delete"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.adunits.delete" call.
@@ -1930,7 +1930,7 @@ func (c *AccountsAdunitsGetCall) Header() http.Header {
 
 func (c *AccountsAdunitsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1953,7 +1953,7 @@ func (c *AccountsAdunitsGetCall) doRequest(alt string) (*http.Response, error) {
 		"adClientId": c.adClientId,
 		"adUnitId":   c.adUnitId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.adunits.get"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.adunits.get" call.
@@ -2100,7 +2100,7 @@ func (c *AccountsAdunitsGetAdCodeCall) Header() http.Header {
 
 func (c *AccountsAdunitsGetAdCodeCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2123,7 +2123,7 @@ func (c *AccountsAdunitsGetAdCodeCall) doRequest(alt string) (*http.Response, er
 		"adClientId": c.adClientId,
 		"adUnitId":   c.adUnitId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.adunits.getAdCode"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.adunits.getAdCode" call.
@@ -2258,7 +2258,7 @@ func (c *AccountsAdunitsInsertCall) Header() http.Header {
 
 func (c *AccountsAdunitsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2282,7 +2282,7 @@ func (c *AccountsAdunitsInsertCall) doRequest(alt string) (*http.Response, error
 		"accountId":  c.accountId,
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.adunits.insert"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.adunits.insert" call.
@@ -2438,7 +2438,7 @@ func (c *AccountsAdunitsListCall) Header() http.Header {
 
 func (c *AccountsAdunitsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2460,7 +2460,7 @@ func (c *AccountsAdunitsListCall) doRequest(alt string) (*http.Response, error) 
 		"accountId":  c.accountId,
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.adunits.list"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.adunits.list" call.
@@ -2622,7 +2622,7 @@ func (c *AccountsAdunitsPatchCall) Header() http.Header {
 
 func (c *AccountsAdunitsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2646,7 +2646,7 @@ func (c *AccountsAdunitsPatchCall) doRequest(alt string) (*http.Response, error)
 		"accountId":  c.accountId,
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.adunits.patch"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.adunits.patch" call.
@@ -2778,7 +2778,7 @@ func (c *AccountsAdunitsUpdateCall) Header() http.Header {
 
 func (c *AccountsAdunitsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2802,7 +2802,7 @@ func (c *AccountsAdunitsUpdateCall) doRequest(alt string) (*http.Response, error
 		"accountId":  c.accountId,
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.adunits.update"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.adunits.update" call.
@@ -2989,7 +2989,7 @@ func (c *AccountsReportsGenerateCall) Header() http.Header {
 
 func (c *AccountsReportsGenerateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3010,7 +3010,7 @@ func (c *AccountsReportsGenerateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.accounts.reports.generate"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.accounts.reports.generate" call.
@@ -3198,7 +3198,7 @@ func (c *AdclientsGetCall) Header() http.Header {
 
 func (c *AdclientsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3219,7 +3219,7 @@ func (c *AdclientsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.adclients.get"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.adclients.get" call.
@@ -3354,7 +3354,7 @@ func (c *AdclientsListCall) Header() http.Header {
 
 func (c *AdclientsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3372,7 +3372,7 @@ func (c *AdclientsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.adclients.list"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.adclients.list" call.
@@ -3533,7 +3533,7 @@ func (c *AssociationsessionsStartCall) Header() http.Header {
 
 func (c *AssociationsessionsStartCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3551,7 +3551,7 @@ func (c *AssociationsessionsStartCall) doRequest(alt string) (*http.Response, er
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.associationsessions.start"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.associationsessions.start" call.
@@ -3704,7 +3704,7 @@ func (c *AssociationsessionsVerifyCall) Header() http.Header {
 
 func (c *AssociationsessionsVerifyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3722,7 +3722,7 @@ func (c *AssociationsessionsVerifyCall) doRequest(alt string) (*http.Response, e
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.associationsessions.verify"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.associationsessions.verify" call.
@@ -3835,7 +3835,7 @@ func (c *CustomchannelsDeleteCall) Header() http.Header {
 
 func (c *CustomchannelsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3854,7 +3854,7 @@ func (c *CustomchannelsDeleteCall) doRequest(alt string) (*http.Response, error)
 		"adClientId":      c.adClientId,
 		"customChannelId": c.customChannelId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.customchannels.delete"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.customchannels.delete" call.
@@ -3984,7 +3984,7 @@ func (c *CustomchannelsGetCall) Header() http.Header {
 
 func (c *CustomchannelsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4006,7 +4006,7 @@ func (c *CustomchannelsGetCall) doRequest(alt string) (*http.Response, error) {
 		"adClientId":      c.adClientId,
 		"customChannelId": c.customChannelId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.customchannels.get"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.customchannels.get" call.
@@ -4125,7 +4125,7 @@ func (c *CustomchannelsInsertCall) Header() http.Header {
 
 func (c *CustomchannelsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4148,7 +4148,7 @@ func (c *CustomchannelsInsertCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.customchannels.insert"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.customchannels.insert" call.
@@ -4289,7 +4289,7 @@ func (c *CustomchannelsListCall) Header() http.Header {
 
 func (c *CustomchannelsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4310,7 +4310,7 @@ func (c *CustomchannelsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.customchannels.list"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.customchannels.list" call.
@@ -4458,7 +4458,7 @@ func (c *CustomchannelsPatchCall) Header() http.Header {
 
 func (c *CustomchannelsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4481,7 +4481,7 @@ func (c *CustomchannelsPatchCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.customchannels.patch"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.customchannels.patch" call.
@@ -4603,7 +4603,7 @@ func (c *CustomchannelsUpdateCall) Header() http.Header {
 
 func (c *CustomchannelsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4626,7 +4626,7 @@ func (c *CustomchannelsUpdateCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.customchannels.update"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.customchannels.update" call.
@@ -4804,7 +4804,7 @@ func (c *ReportsGenerateCall) Header() http.Header {
 
 func (c *ReportsGenerateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4822,7 +4822,7 @@ func (c *ReportsGenerateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.reports.generate"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.reports.generate" call.
@@ -4993,7 +4993,7 @@ func (c *UrlchannelsDeleteCall) Header() http.Header {
 
 func (c *UrlchannelsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5012,7 +5012,7 @@ func (c *UrlchannelsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"adClientId":   c.adClientId,
 		"urlChannelId": c.urlChannelId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.urlchannels.delete"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.urlchannels.delete" call.
@@ -5131,7 +5131,7 @@ func (c *UrlchannelsInsertCall) Header() http.Header {
 
 func (c *UrlchannelsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5154,7 +5154,7 @@ func (c *UrlchannelsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.urlchannels.insert"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.urlchannels.insert" call.
@@ -5294,7 +5294,7 @@ func (c *UrlchannelsListCall) Header() http.Header {
 
 func (c *UrlchannelsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5315,7 +5315,7 @@ func (c *UrlchannelsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adsensehost.urlchannels.list"), c.s.client, req)
 }
 
 // Do executes the "adsensehost.urlchannels.list" call.

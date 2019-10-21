@@ -480,7 +480,7 @@ func (c *AutnumGetCall) Header() http.Header {
 
 func (c *AutnumGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -501,7 +501,7 @@ func (c *AutnumGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"autnumId": c.autnumId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.autnum.get"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.autnum.get" call.
@@ -619,7 +619,7 @@ func (c *DomainGetCall) Header() http.Header {
 
 func (c *DomainGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -640,7 +640,7 @@ func (c *DomainGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"domainName": c.domainName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.domain.get"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.domain.get" call.
@@ -762,7 +762,7 @@ func (c *EntityGetCall) Header() http.Header {
 
 func (c *EntityGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -783,7 +783,7 @@ func (c *EntityGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"entityId": c.entityId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.entity.get"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.entity.get" call.
@@ -905,7 +905,7 @@ func (c *IpGetCall) Header() http.Header {
 
 func (c *IpGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -927,7 +927,7 @@ func (c *IpGetCall) doRequest(alt string) (*http.Response, error) {
 		"ipId":  c.ipId,
 		"ipId1": c.ipId1,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.ip.get"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.ip.get" call.
@@ -1053,7 +1053,7 @@ func (c *NameserverGetCall) Header() http.Header {
 
 func (c *NameserverGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1074,7 +1074,7 @@ func (c *NameserverGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"nameserverId": c.nameserverId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.nameserver.get"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.nameserver.get" call.
@@ -1192,7 +1192,7 @@ func (c *V1GetDomainsCall) Header() http.Header {
 
 func (c *V1GetDomainsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1210,7 +1210,7 @@ func (c *V1GetDomainsCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.getDomains"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.getDomains" call.
@@ -1320,7 +1320,7 @@ func (c *V1GetEntitiesCall) Header() http.Header {
 
 func (c *V1GetEntitiesCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1338,7 +1338,7 @@ func (c *V1GetEntitiesCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.getEntities"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.getEntities" call.
@@ -1447,7 +1447,7 @@ func (c *V1GetHelpCall) Header() http.Header {
 
 func (c *V1GetHelpCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1465,7 +1465,7 @@ func (c *V1GetHelpCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.getHelp"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.getHelp" call.
@@ -1575,7 +1575,7 @@ func (c *V1GetIpCall) Header() http.Header {
 
 func (c *V1GetIpCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1593,7 +1593,7 @@ func (c *V1GetIpCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.getIp"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.getIp" call.
@@ -1703,7 +1703,7 @@ func (c *V1GetNameserversCall) Header() http.Header {
 
 func (c *V1GetNameserversCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1721,7 +1721,7 @@ func (c *V1GetNameserversCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "domainsrdap.getNameservers"), c.s.client, req)
 }
 
 // Do executes the "domainsrdap.getNameservers" call.

@@ -713,7 +713,7 @@ func (c *AchievementConfigurationsDeleteCall) Header() http.Header {
 
 func (c *AchievementConfigurationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -731,7 +731,7 @@ func (c *AchievementConfigurationsDeleteCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"achievementId": c.achievementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.achievementConfigurations.delete"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.achievementConfigurations.delete" call.
@@ -825,7 +825,7 @@ func (c *AchievementConfigurationsGetCall) Header() http.Header {
 
 func (c *AchievementConfigurationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -846,7 +846,7 @@ func (c *AchievementConfigurationsGetCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"achievementId": c.achievementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.achievementConfigurations.get"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.achievementConfigurations.get" call.
@@ -958,7 +958,7 @@ func (c *AchievementConfigurationsInsertCall) Header() http.Header {
 
 func (c *AchievementConfigurationsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -981,7 +981,7 @@ func (c *AchievementConfigurationsInsertCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"applicationId": c.applicationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.achievementConfigurations.insert"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.achievementConfigurations.insert" call.
@@ -1122,7 +1122,7 @@ func (c *AchievementConfigurationsListCall) Header() http.Header {
 
 func (c *AchievementConfigurationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1143,7 +1143,7 @@ func (c *AchievementConfigurationsListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"applicationId": c.applicationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.achievementConfigurations.list"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.achievementConfigurations.list" call.
@@ -1291,7 +1291,7 @@ func (c *AchievementConfigurationsPatchCall) Header() http.Header {
 
 func (c *AchievementConfigurationsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1314,7 +1314,7 @@ func (c *AchievementConfigurationsPatchCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"achievementId": c.achievementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.achievementConfigurations.patch"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.achievementConfigurations.patch" call.
@@ -1430,7 +1430,7 @@ func (c *AchievementConfigurationsUpdateCall) Header() http.Header {
 
 func (c *AchievementConfigurationsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1453,7 +1453,7 @@ func (c *AchievementConfigurationsUpdateCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"achievementId": c.achievementId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.achievementConfigurations.update"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.achievementConfigurations.update" call.
@@ -1609,7 +1609,7 @@ func (c *ImageConfigurationsUploadCall) Header() http.Header {
 
 func (c *ImageConfigurationsUploadCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1639,7 +1639,7 @@ func (c *ImageConfigurationsUploadCall) doRequest(alt string) (*http.Response, e
 		"resourceId": c.resourceId,
 		"imageType":  c.imageType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.imageConfigurations.upload"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.imageConfigurations.upload" call.
@@ -1798,7 +1798,7 @@ func (c *LeaderboardConfigurationsDeleteCall) Header() http.Header {
 
 func (c *LeaderboardConfigurationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1816,7 +1816,7 @@ func (c *LeaderboardConfigurationsDeleteCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"leaderboardId": c.leaderboardId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.leaderboardConfigurations.delete"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.leaderboardConfigurations.delete" call.
@@ -1910,7 +1910,7 @@ func (c *LeaderboardConfigurationsGetCall) Header() http.Header {
 
 func (c *LeaderboardConfigurationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1931,7 +1931,7 @@ func (c *LeaderboardConfigurationsGetCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"leaderboardId": c.leaderboardId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.leaderboardConfigurations.get"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.leaderboardConfigurations.get" call.
@@ -2043,7 +2043,7 @@ func (c *LeaderboardConfigurationsInsertCall) Header() http.Header {
 
 func (c *LeaderboardConfigurationsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2066,7 +2066,7 @@ func (c *LeaderboardConfigurationsInsertCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"applicationId": c.applicationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.leaderboardConfigurations.insert"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.leaderboardConfigurations.insert" call.
@@ -2207,7 +2207,7 @@ func (c *LeaderboardConfigurationsListCall) Header() http.Header {
 
 func (c *LeaderboardConfigurationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2228,7 +2228,7 @@ func (c *LeaderboardConfigurationsListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"applicationId": c.applicationId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.leaderboardConfigurations.list"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.leaderboardConfigurations.list" call.
@@ -2376,7 +2376,7 @@ func (c *LeaderboardConfigurationsPatchCall) Header() http.Header {
 
 func (c *LeaderboardConfigurationsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2399,7 +2399,7 @@ func (c *LeaderboardConfigurationsPatchCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"leaderboardId": c.leaderboardId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.leaderboardConfigurations.patch"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.leaderboardConfigurations.patch" call.
@@ -2515,7 +2515,7 @@ func (c *LeaderboardConfigurationsUpdateCall) Header() http.Header {
 
 func (c *LeaderboardConfigurationsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2538,7 +2538,7 @@ func (c *LeaderboardConfigurationsUpdateCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"leaderboardId": c.leaderboardId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "gamesConfiguration.leaderboardConfigurations.update"), c.s.client, req)
 }
 
 // Do executes the "gamesConfiguration.leaderboardConfigurations.update" call.

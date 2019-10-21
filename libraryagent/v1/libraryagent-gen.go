@@ -369,7 +369,7 @@ func (c *ShelvesGetCall) Header() http.Header {
 
 func (c *ShelvesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -390,7 +390,7 @@ func (c *ShelvesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "libraryagent.shelves.get"), c.s.client, req)
 }
 
 // Do executes the "libraryagent.shelves.get" call.
@@ -532,7 +532,7 @@ func (c *ShelvesListCall) Header() http.Header {
 
 func (c *ShelvesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -550,7 +550,7 @@ func (c *ShelvesListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "libraryagent.shelves.list"), c.s.client, req)
 }
 
 // Do executes the "libraryagent.shelves.list" call.
@@ -693,7 +693,7 @@ func (c *ShelvesBooksBorrowCall) Header() http.Header {
 
 func (c *ShelvesBooksBorrowCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -711,7 +711,7 @@ func (c *ShelvesBooksBorrowCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "libraryagent.shelves.books.borrow"), c.s.client, req)
 }
 
 // Do executes the "libraryagent.shelves.books.borrow" call.
@@ -834,7 +834,7 @@ func (c *ShelvesBooksGetCall) Header() http.Header {
 
 func (c *ShelvesBooksGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -855,7 +855,7 @@ func (c *ShelvesBooksGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "libraryagent.shelves.books.get"), c.s.client, req)
 }
 
 // Do executes the "libraryagent.shelves.books.get" call.
@@ -1001,7 +1001,7 @@ func (c *ShelvesBooksListCall) Header() http.Header {
 
 func (c *ShelvesBooksListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1022,7 +1022,7 @@ func (c *ShelvesBooksListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "libraryagent.shelves.books.list"), c.s.client, req)
 }
 
 // Do executes the "libraryagent.shelves.books.list" call.
@@ -1172,7 +1172,7 @@ func (c *ShelvesBooksReturnCall) Header() http.Header {
 
 func (c *ShelvesBooksReturnCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1190,7 +1190,7 @@ func (c *ShelvesBooksReturnCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "libraryagent.shelves.books.return"), c.s.client, req)
 }
 
 // Do executes the "libraryagent.shelves.books.return" call.

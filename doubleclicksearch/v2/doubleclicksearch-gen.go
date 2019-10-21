@@ -1154,7 +1154,7 @@ func (c *ConversionGetCall) Header() http.Header {
 
 func (c *ConversionGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1177,7 +1177,7 @@ func (c *ConversionGetCall) doRequest(alt string) (*http.Response, error) {
 		"advertiserId":    strconv.FormatInt(c.advertiserId, 10),
 		"engineAccountId": strconv.FormatInt(c.engineAccountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.conversion.get"), c.s.client, req)
 }
 
 // Do executes the "doubleclicksearch.conversion.get" call.
@@ -1366,7 +1366,7 @@ func (c *ConversionInsertCall) Header() http.Header {
 
 func (c *ConversionInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1386,7 +1386,7 @@ func (c *ConversionInsertCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.conversion.insert"), c.s.client, req)
 }
 
 // Do executes the "doubleclicksearch.conversion.insert" call.
@@ -1496,7 +1496,7 @@ func (c *ConversionPatchCall) Header() http.Header {
 
 func (c *ConversionPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1516,7 +1516,7 @@ func (c *ConversionPatchCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.conversion.patch"), c.s.client, req)
 }
 
 // Do executes the "doubleclicksearch.conversion.patch" call.
@@ -1684,7 +1684,7 @@ func (c *ConversionUpdateCall) Header() http.Header {
 
 func (c *ConversionUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1704,7 +1704,7 @@ func (c *ConversionUpdateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.conversion.update"), c.s.client, req)
 }
 
 // Do executes the "doubleclicksearch.conversion.update" call.
@@ -1807,7 +1807,7 @@ func (c *ConversionUpdateAvailabilityCall) Header() http.Header {
 
 func (c *ConversionUpdateAvailabilityCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1827,7 +1827,7 @@ func (c *ConversionUpdateAvailabilityCall) doRequest(alt string) (*http.Response
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.conversion.updateAvailability"), c.s.client, req)
 }
 
 // Do executes the "doubleclicksearch.conversion.updateAvailability" call.
@@ -1930,7 +1930,7 @@ func (c *ReportsGenerateCall) Header() http.Header {
 
 func (c *ReportsGenerateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1950,7 +1950,7 @@ func (c *ReportsGenerateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.reports.generate"), c.s.client, req)
 }
 
 // Do executes the "doubleclicksearch.reports.generate" call.
@@ -2064,7 +2064,7 @@ func (c *ReportsGetCall) Header() http.Header {
 
 func (c *ReportsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2085,7 +2085,7 @@ func (c *ReportsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"reportId": c.reportId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.reports.get"), c.s.client, req)
 }
 
 // Do executes the "doubleclicksearch.reports.get" call.
@@ -2208,7 +2208,7 @@ func (c *ReportsGetFileCall) Header() http.Header {
 
 func (c *ReportsGetFileCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2230,7 +2230,7 @@ func (c *ReportsGetFileCall) doRequest(alt string) (*http.Response, error) {
 		"reportId":       c.reportId,
 		"reportFragment": strconv.FormatInt(c.reportFragment, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.reports.getFile"), c.s.client, req)
 }
 
 // Download fetches the API endpoint's "media" value, instead of the normal
@@ -2339,7 +2339,7 @@ func (c *ReportsRequestCall) Header() http.Header {
 
 func (c *ReportsRequestCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2359,7 +2359,7 @@ func (c *ReportsRequestCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.reports.request"), c.s.client, req)
 }
 
 // Do executes the "doubleclicksearch.reports.request" call.
@@ -2475,7 +2475,7 @@ func (c *SavedColumnsListCall) Header() http.Header {
 
 func (c *SavedColumnsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2497,7 +2497,7 @@ func (c *SavedColumnsListCall) doRequest(alt string) (*http.Response, error) {
 		"agencyId":     strconv.FormatInt(c.agencyId, 10),
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "doubleclicksearch.savedColumns.list"), c.s.client, req)
 }
 
 // Do executes the "doubleclicksearch.savedColumns.list" call.
