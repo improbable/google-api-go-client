@@ -1654,7 +1654,7 @@ func (c *CatalogsCreateCall) Header() http.Header {
 
 func (c *CatalogsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1674,7 +1674,7 @@ func (c *CatalogsCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.create"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.create" call.
@@ -1795,7 +1795,7 @@ func (c *CatalogsDeleteCall) Header() http.Header {
 
 func (c *CatalogsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1813,7 +1813,7 @@ func (c *CatalogsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.delete"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.delete" call.
@@ -1943,7 +1943,7 @@ func (c *CatalogsGetCall) Header() http.Header {
 
 func (c *CatalogsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1964,7 +1964,7 @@ func (c *CatalogsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.get"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.get" call.
@@ -2107,7 +2107,7 @@ func (c *CatalogsGetIamPolicyCall) Header() http.Header {
 
 func (c *CatalogsGetIamPolicyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2128,7 +2128,7 @@ func (c *CatalogsGetIamPolicyCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.getIamPolicy" call.
@@ -2280,7 +2280,7 @@ func (c *CatalogsListCall) Header() http.Header {
 
 func (c *CatalogsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2298,7 +2298,7 @@ func (c *CatalogsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.list"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.list" call.
@@ -2450,7 +2450,7 @@ func (c *CatalogsPatchCall) Header() http.Header {
 
 func (c *CatalogsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2473,7 +2473,7 @@ func (c *CatalogsPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.patch"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.patch" call.
@@ -2598,7 +2598,7 @@ func (c *CatalogsSetIamPolicyCall) Header() http.Header {
 
 func (c *CatalogsSetIamPolicyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2621,7 +2621,7 @@ func (c *CatalogsSetIamPolicyCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.setIamPolicy" call.
@@ -2739,7 +2739,7 @@ func (c *CatalogsTestIamPermissionsCall) Header() http.Header {
 
 func (c *CatalogsTestIamPermissionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2762,7 +2762,7 @@ func (c *CatalogsTestIamPermissionsCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.testIamPermissions" call.
@@ -2880,7 +2880,7 @@ func (c *CatalogsUndeleteCall) Header() http.Header {
 
 func (c *CatalogsUndeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2903,7 +2903,7 @@ func (c *CatalogsUndeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.undelete"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.undelete" call.
@@ -3022,7 +3022,7 @@ func (c *CatalogsAssociationsCreateCall) Header() http.Header {
 
 func (c *CatalogsAssociationsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3045,7 +3045,7 @@ func (c *CatalogsAssociationsCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.associations.create"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.associations.create" call.
@@ -3162,7 +3162,7 @@ func (c *CatalogsAssociationsDeleteCall) Header() http.Header {
 
 func (c *CatalogsAssociationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3180,7 +3180,7 @@ func (c *CatalogsAssociationsDeleteCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.associations.delete"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.associations.delete" call.
@@ -3303,7 +3303,7 @@ func (c *CatalogsAssociationsGetCall) Header() http.Header {
 
 func (c *CatalogsAssociationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3324,7 +3324,7 @@ func (c *CatalogsAssociationsGetCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.associations.get"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.associations.get" call.
@@ -3464,7 +3464,7 @@ func (c *CatalogsAssociationsListCall) Header() http.Header {
 
 func (c *CatalogsAssociationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3485,7 +3485,7 @@ func (c *CatalogsAssociationsListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.associations.list"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.associations.list" call.
@@ -3634,7 +3634,7 @@ func (c *CatalogsProductsCopyCall) Header() http.Header {
 
 func (c *CatalogsProductsCopyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3657,7 +3657,7 @@ func (c *CatalogsProductsCopyCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.copy"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.copy" call.
@@ -3774,7 +3774,7 @@ func (c *CatalogsProductsCreateCall) Header() http.Header {
 
 func (c *CatalogsProductsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3797,7 +3797,7 @@ func (c *CatalogsProductsCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.create"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.create" call.
@@ -3914,7 +3914,7 @@ func (c *CatalogsProductsDeleteCall) Header() http.Header {
 
 func (c *CatalogsProductsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3932,7 +3932,7 @@ func (c *CatalogsProductsDeleteCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.delete"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.delete" call.
@@ -4055,7 +4055,7 @@ func (c *CatalogsProductsGetCall) Header() http.Header {
 
 func (c *CatalogsProductsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4076,7 +4076,7 @@ func (c *CatalogsProductsGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.get"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.get" call.
@@ -4227,7 +4227,7 @@ func (c *CatalogsProductsListCall) Header() http.Header {
 
 func (c *CatalogsProductsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4248,7 +4248,7 @@ func (c *CatalogsProductsListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.list"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.list" call.
@@ -4409,7 +4409,7 @@ func (c *CatalogsProductsPatchCall) Header() http.Header {
 
 func (c *CatalogsProductsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4432,7 +4432,7 @@ func (c *CatalogsProductsPatchCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.patch"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.patch" call.
@@ -4562,7 +4562,7 @@ func (c *CatalogsProductsIconsUploadCall) Header() http.Header {
 
 func (c *CatalogsProductsIconsUploadCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4585,7 +4585,7 @@ func (c *CatalogsProductsIconsUploadCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"product": c.product,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.icons.upload"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.icons.upload" call.
@@ -4702,7 +4702,7 @@ func (c *CatalogsProductsVersionsCreateCall) Header() http.Header {
 
 func (c *CatalogsProductsVersionsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4725,7 +4725,7 @@ func (c *CatalogsProductsVersionsCreateCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.versions.create"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.versions.create" call.
@@ -4840,7 +4840,7 @@ func (c *CatalogsProductsVersionsDeleteCall) Header() http.Header {
 
 func (c *CatalogsProductsVersionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4858,7 +4858,7 @@ func (c *CatalogsProductsVersionsDeleteCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.versions.delete"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.versions.delete" call.
@@ -4981,7 +4981,7 @@ func (c *CatalogsProductsVersionsGetCall) Header() http.Header {
 
 func (c *CatalogsProductsVersionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5002,7 +5002,7 @@ func (c *CatalogsProductsVersionsGetCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.versions.get"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.versions.get" call.
@@ -5145,7 +5145,7 @@ func (c *CatalogsProductsVersionsListCall) Header() http.Header {
 
 func (c *CatalogsProductsVersionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5166,7 +5166,7 @@ func (c *CatalogsProductsVersionsListCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.versions.list"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.versions.list" call.
@@ -5322,7 +5322,7 @@ func (c *CatalogsProductsVersionsPatchCall) Header() http.Header {
 
 func (c *CatalogsProductsVersionsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5345,7 +5345,7 @@ func (c *CatalogsProductsVersionsPatchCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.catalogs.products.versions.patch"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.catalogs.products.versions.patch" call.
@@ -5487,7 +5487,7 @@ func (c *OperationsCancelCall) Header() http.Header {
 
 func (c *OperationsCancelCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5510,7 +5510,7 @@ func (c *OperationsCancelCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.operations.cancel"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.operations.cancel" call.
@@ -5631,7 +5631,7 @@ func (c *OperationsDeleteCall) Header() http.Header {
 
 func (c *OperationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5649,7 +5649,7 @@ func (c *OperationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.operations.delete"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.operations.delete" call.
@@ -5776,7 +5776,7 @@ func (c *OperationsGetCall) Header() http.Header {
 
 func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5797,7 +5797,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.operations.get"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.operations.get" call.
@@ -5962,7 +5962,7 @@ func (c *OperationsListCall) Header() http.Header {
 
 func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5980,7 +5980,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprivatecatalogproducer.operations.list"), c.s.client, req)
 }
 
 // Do executes the "cloudprivatecatalogproducer.operations.list" call.

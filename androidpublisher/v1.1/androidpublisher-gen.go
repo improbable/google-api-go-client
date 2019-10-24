@@ -324,7 +324,7 @@ func (c *InapppurchasesGetCall) Header() http.Header {
 
 func (c *InapppurchasesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -347,7 +347,7 @@ func (c *InapppurchasesGetCall) doRequest(alt string) (*http.Response, error) {
 		"productId":   c.productId,
 		"token":       c.token,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidpublisher.inapppurchases.get"), c.s.client, req)
 }
 
 // Do executes the "androidpublisher.inapppurchases.get" call.
@@ -476,7 +476,7 @@ func (c *PurchasesCancelCall) Header() http.Header {
 
 func (c *PurchasesCancelCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -496,7 +496,7 @@ func (c *PurchasesCancelCall) doRequest(alt string) (*http.Response, error) {
 		"subscriptionId": c.subscriptionId,
 		"token":          c.token,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidpublisher.purchases.cancel"), c.s.client, req)
 }
 
 // Do executes the "androidpublisher.purchases.cancel" call.
@@ -608,7 +608,7 @@ func (c *PurchasesGetCall) Header() http.Header {
 
 func (c *PurchasesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -631,7 +631,7 @@ func (c *PurchasesGetCall) doRequest(alt string) (*http.Response, error) {
 		"subscriptionId": c.subscriptionId,
 		"token":          c.token,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "androidpublisher.purchases.get"), c.s.client, req)
 }
 
 // Do executes the "androidpublisher.purchases.get" call.

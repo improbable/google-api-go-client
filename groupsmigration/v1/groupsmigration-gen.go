@@ -258,7 +258,7 @@ func (c *ArchiveInsertCall) Header() http.Header {
 
 func (c *ArchiveInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -287,7 +287,7 @@ func (c *ArchiveInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"groupId": c.groupId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "groupsmigration.archive.insert"), c.s.client, req)
 }
 
 // Do executes the "groupsmigration.archive.insert" call.

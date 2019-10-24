@@ -989,6 +989,7 @@ func (c *AccountsAvailsGetCall) Header() http.Header {
 
 func (c *AccountsAvailsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1010,7 +1011,7 @@ func (c *AccountsAvailsGetCall) doRequest(alt string) (*http.Response, error) {
 		"accountId": c.accountId,
 		"availId":   c.availId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "playmoviespartner.accounts.avails.get"), c.s.client, req)
 }
 
 // Do executes the "playmoviespartner.accounts.avails.get" call.
@@ -1213,6 +1214,7 @@ func (c *AccountsAvailsListCall) Header() http.Header {
 
 func (c *AccountsAvailsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1233,7 +1235,7 @@ func (c *AccountsAvailsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "playmoviespartner.accounts.avails.list"), c.s.client, req)
 }
 
 // Do executes the "playmoviespartner.accounts.avails.list" call.
@@ -1432,6 +1434,7 @@ func (c *AccountsOrdersGetCall) Header() http.Header {
 
 func (c *AccountsOrdersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1453,7 +1456,7 @@ func (c *AccountsOrdersGetCall) doRequest(alt string) (*http.Response, error) {
 		"accountId": c.accountId,
 		"orderId":   c.orderId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "playmoviespartner.accounts.orders.get"), c.s.client, req)
 }
 
 // Do executes the "playmoviespartner.accounts.orders.get" call.
@@ -1650,6 +1653,7 @@ func (c *AccountsOrdersListCall) Header() http.Header {
 
 func (c *AccountsOrdersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1670,7 +1674,7 @@ func (c *AccountsOrdersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "playmoviespartner.accounts.orders.list"), c.s.client, req)
 }
 
 // Do executes the "playmoviespartner.accounts.orders.list" call.
@@ -1945,6 +1949,7 @@ func (c *AccountsStoreInfosListCall) Header() http.Header {
 
 func (c *AccountsStoreInfosListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1965,7 +1970,7 @@ func (c *AccountsStoreInfosListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "playmoviespartner.accounts.storeInfos.list"), c.s.client, req)
 }
 
 // Do executes the "playmoviespartner.accounts.storeInfos.list" call.
@@ -2172,6 +2177,7 @@ func (c *AccountsStoreInfosCountryGetCall) Header() http.Header {
 
 func (c *AccountsStoreInfosCountryGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2194,7 +2200,7 @@ func (c *AccountsStoreInfosCountryGetCall) doRequest(alt string) (*http.Response
 		"videoId":   c.videoId,
 		"country":   c.country,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "playmoviespartner.accounts.storeInfos.country.get"), c.s.client, req)
 }
 
 // Do executes the "playmoviespartner.accounts.storeInfos.country.get" call.

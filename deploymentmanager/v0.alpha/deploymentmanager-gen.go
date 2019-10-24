@@ -3224,7 +3224,7 @@ func (c *CompositeTypesDeleteCall) Header() http.Header {
 
 func (c *CompositeTypesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3243,7 +3243,7 @@ func (c *CompositeTypesDeleteCall) doRequest(alt string) (*http.Response, error)
 		"project":       c.project,
 		"compositeType": c.compositeType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.compositeTypes.delete"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.compositeTypes.delete" call.
@@ -3376,7 +3376,7 @@ func (c *CompositeTypesGetCall) Header() http.Header {
 
 func (c *CompositeTypesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3398,7 +3398,7 @@ func (c *CompositeTypesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":       c.project,
 		"compositeType": c.compositeType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.compositeTypes.get"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.compositeTypes.get" call.
@@ -3522,7 +3522,7 @@ func (c *CompositeTypesInsertCall) Header() http.Header {
 
 func (c *CompositeTypesInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3545,7 +3545,7 @@ func (c *CompositeTypesInsertCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.compositeTypes.insert"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.compositeTypes.insert" call.
@@ -3734,7 +3734,7 @@ func (c *CompositeTypesListCall) Header() http.Header {
 
 func (c *CompositeTypesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3755,7 +3755,7 @@ func (c *CompositeTypesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.compositeTypes.list"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.compositeTypes.list" call.
@@ -3918,7 +3918,7 @@ func (c *CompositeTypesPatchCall) Header() http.Header {
 
 func (c *CompositeTypesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3942,7 +3942,7 @@ func (c *CompositeTypesPatchCall) doRequest(alt string) (*http.Response, error) 
 		"project":       c.project,
 		"compositeType": c.compositeType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.compositeTypes.patch"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.compositeTypes.patch" call.
@@ -4069,7 +4069,7 @@ func (c *CompositeTypesUpdateCall) Header() http.Header {
 
 func (c *CompositeTypesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4093,7 +4093,7 @@ func (c *CompositeTypesUpdateCall) doRequest(alt string) (*http.Response, error)
 		"project":       c.project,
 		"compositeType": c.compositeType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.compositeTypes.update"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.compositeTypes.update" call.
@@ -4221,7 +4221,7 @@ func (c *DeploymentsCancelPreviewCall) Header() http.Header {
 
 func (c *DeploymentsCancelPreviewCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4245,7 +4245,7 @@ func (c *DeploymentsCancelPreviewCall) doRequest(alt string) (*http.Response, er
 		"project":    c.project,
 		"deployment": c.deployment,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.cancelPreview"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.cancelPreview" call.
@@ -4382,7 +4382,7 @@ func (c *DeploymentsDeleteCall) Header() http.Header {
 
 func (c *DeploymentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4401,7 +4401,7 @@ func (c *DeploymentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project":    c.project,
 		"deployment": c.deployment,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.delete"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.delete" call.
@@ -4547,7 +4547,7 @@ func (c *DeploymentsGetCall) Header() http.Header {
 
 func (c *DeploymentsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4569,7 +4569,7 @@ func (c *DeploymentsGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":    c.project,
 		"deployment": c.deployment,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.get"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.get" call.
@@ -4705,7 +4705,7 @@ func (c *DeploymentsGetIamPolicyCall) Header() http.Header {
 
 func (c *DeploymentsGetIamPolicyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4727,7 +4727,7 @@ func (c *DeploymentsGetIamPolicyCall) doRequest(alt string) (*http.Response, err
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.getIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.getIamPolicy" call.
@@ -4876,7 +4876,7 @@ func (c *DeploymentsInsertCall) Header() http.Header {
 
 func (c *DeploymentsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4899,7 +4899,7 @@ func (c *DeploymentsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.insert"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.insert" call.
@@ -5109,7 +5109,7 @@ func (c *DeploymentsListCall) Header() http.Header {
 
 func (c *DeploymentsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5130,7 +5130,7 @@ func (c *DeploymentsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.list"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.list" call.
@@ -5332,7 +5332,7 @@ func (c *DeploymentsPatchCall) Header() http.Header {
 
 func (c *DeploymentsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5356,7 +5356,7 @@ func (c *DeploymentsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"project":    c.project,
 		"deployment": c.deployment,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.patch"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.patch" call.
@@ -5520,7 +5520,7 @@ func (c *DeploymentsSetIamPolicyCall) Header() http.Header {
 
 func (c *DeploymentsSetIamPolicyCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5544,7 +5544,7 @@ func (c *DeploymentsSetIamPolicyCall) doRequest(alt string) (*http.Response, err
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.setIamPolicy"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.setIamPolicy" call.
@@ -5673,7 +5673,7 @@ func (c *DeploymentsStopCall) Header() http.Header {
 
 func (c *DeploymentsStopCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5697,7 +5697,7 @@ func (c *DeploymentsStopCall) doRequest(alt string) (*http.Response, error) {
 		"project":    c.project,
 		"deployment": c.deployment,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.stop"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.stop" call.
@@ -5825,7 +5825,7 @@ func (c *DeploymentsTestIamPermissionsCall) Header() http.Header {
 
 func (c *DeploymentsTestIamPermissionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5849,7 +5849,7 @@ func (c *DeploymentsTestIamPermissionsCall) doRequest(alt string) (*http.Respons
 		"project":  c.project,
 		"resource": c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.testIamPermissions"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.testIamPermissions" call.
@@ -6016,7 +6016,7 @@ func (c *DeploymentsUpdateCall) Header() http.Header {
 
 func (c *DeploymentsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6040,7 +6040,7 @@ func (c *DeploymentsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"project":    c.project,
 		"deployment": c.deployment,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.deployments.update"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.deployments.update" call.
@@ -6214,7 +6214,7 @@ func (c *ManifestsGetCall) Header() http.Header {
 
 func (c *ManifestsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6237,7 +6237,7 @@ func (c *ManifestsGetCall) doRequest(alt string) (*http.Response, error) {
 		"deployment": c.deployment,
 		"manifest":   c.manifest,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.manifests.get"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.manifests.get" call.
@@ -6443,7 +6443,7 @@ func (c *ManifestsListCall) Header() http.Header {
 
 func (c *ManifestsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6465,7 +6465,7 @@ func (c *ManifestsListCall) doRequest(alt string) (*http.Response, error) {
 		"project":    c.project,
 		"deployment": c.deployment,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.manifests.list"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.manifests.list" call.
@@ -6644,7 +6644,7 @@ func (c *OperationsGetCall) Header() http.Header {
 
 func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6666,7 +6666,7 @@ func (c *OperationsGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":   c.project,
 		"operation": c.operation,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.operations.get"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.operations.get" call.
@@ -6861,7 +6861,7 @@ func (c *OperationsListCall) Header() http.Header {
 
 func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6882,7 +6882,7 @@ func (c *OperationsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.operations.list"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.operations.list" call.
@@ -7055,7 +7055,7 @@ func (c *ResourcesGetCall) Header() http.Header {
 
 func (c *ResourcesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7078,7 +7078,7 @@ func (c *ResourcesGetCall) doRequest(alt string) (*http.Response, error) {
 		"deployment": c.deployment,
 		"resource":   c.resource,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.resources.get"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.resources.get" call.
@@ -7283,7 +7283,7 @@ func (c *ResourcesListCall) Header() http.Header {
 
 func (c *ResourcesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7305,7 +7305,7 @@ func (c *ResourcesListCall) doRequest(alt string) (*http.Response, error) {
 		"project":    c.project,
 		"deployment": c.deployment,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.resources.list"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.resources.list" call.
@@ -7473,7 +7473,7 @@ func (c *TypeProvidersDeleteCall) Header() http.Header {
 
 func (c *TypeProvidersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7492,7 +7492,7 @@ func (c *TypeProvidersDeleteCall) doRequest(alt string) (*http.Response, error) 
 		"project":      c.project,
 		"typeProvider": c.typeProvider,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.typeProviders.delete"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.typeProviders.delete" call.
@@ -7625,7 +7625,7 @@ func (c *TypeProvidersGetCall) Header() http.Header {
 
 func (c *TypeProvidersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7647,7 +7647,7 @@ func (c *TypeProvidersGetCall) doRequest(alt string) (*http.Response, error) {
 		"project":      c.project,
 		"typeProvider": c.typeProvider,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.typeProviders.get"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.typeProviders.get" call.
@@ -7784,7 +7784,7 @@ func (c *TypeProvidersGetTypeCall) Header() http.Header {
 
 func (c *TypeProvidersGetTypeCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7807,7 +7807,7 @@ func (c *TypeProvidersGetTypeCall) doRequest(alt string) (*http.Response, error)
 		"typeProvider": c.typeProvider,
 		"type":         c.type_,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.typeProviders.getType"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.typeProviders.getType" call.
@@ -7938,7 +7938,7 @@ func (c *TypeProvidersInsertCall) Header() http.Header {
 
 func (c *TypeProvidersInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7961,7 +7961,7 @@ func (c *TypeProvidersInsertCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.typeProviders.insert"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.typeProviders.insert" call.
@@ -8150,7 +8150,7 @@ func (c *TypeProvidersListCall) Header() http.Header {
 
 func (c *TypeProvidersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8171,7 +8171,7 @@ func (c *TypeProvidersListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.typeProviders.list"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.typeProviders.list" call.
@@ -8405,7 +8405,7 @@ func (c *TypeProvidersListTypesCall) Header() http.Header {
 
 func (c *TypeProvidersListTypesCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8427,7 +8427,7 @@ func (c *TypeProvidersListTypesCall) doRequest(alt string) (*http.Response, erro
 		"project":      c.project,
 		"typeProvider": c.typeProvider,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.typeProviders.listTypes"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.typeProviders.listTypes" call.
@@ -8597,7 +8597,7 @@ func (c *TypeProvidersPatchCall) Header() http.Header {
 
 func (c *TypeProvidersPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8621,7 +8621,7 @@ func (c *TypeProvidersPatchCall) doRequest(alt string) (*http.Response, error) {
 		"project":      c.project,
 		"typeProvider": c.typeProvider,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.typeProviders.patch"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.typeProviders.patch" call.
@@ -8748,7 +8748,7 @@ func (c *TypeProvidersUpdateCall) Header() http.Header {
 
 func (c *TypeProvidersUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8772,7 +8772,7 @@ func (c *TypeProvidersUpdateCall) doRequest(alt string) (*http.Response, error) 
 		"project":      c.project,
 		"typeProvider": c.typeProvider,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.typeProviders.update"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.typeProviders.update" call.
@@ -8897,7 +8897,7 @@ func (c *TypesDeleteCall) Header() http.Header {
 
 func (c *TypesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8916,7 +8916,7 @@ func (c *TypesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"type":    c.type_,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.types.delete"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.types.delete" call.
@@ -9049,7 +9049,7 @@ func (c *TypesGetCall) Header() http.Header {
 
 func (c *TypesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9071,7 +9071,7 @@ func (c *TypesGetCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"type":    c.type_,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.types.get"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.types.get" call.
@@ -9195,7 +9195,7 @@ func (c *TypesInsertCall) Header() http.Header {
 
 func (c *TypesInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9218,7 +9218,7 @@ func (c *TypesInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.types.insert"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.types.insert" call.
@@ -9407,7 +9407,7 @@ func (c *TypesListCall) Header() http.Header {
 
 func (c *TypesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9428,7 +9428,7 @@ func (c *TypesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"project": c.project,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.types.list"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.types.list" call.
@@ -9590,7 +9590,7 @@ func (c *TypesPatchCall) Header() http.Header {
 
 func (c *TypesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9614,7 +9614,7 @@ func (c *TypesPatchCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"type":    c.type_,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.types.patch"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.types.patch" call.
@@ -9741,7 +9741,7 @@ func (c *TypesUpdateCall) Header() http.Header {
 
 func (c *TypesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9765,7 +9765,7 @@ func (c *TypesUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"project": c.project,
 		"type":    c.type_,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "deploymentmanager.types.update"), c.s.client, req)
 }
 
 // Do executes the "deploymentmanager.types.update" call.

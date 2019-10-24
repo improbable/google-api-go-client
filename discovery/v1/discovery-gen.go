@@ -1051,7 +1051,7 @@ func (c *ApisGetRestCall) Header() http.Header {
 
 func (c *ApisGetRestCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1073,7 +1073,7 @@ func (c *ApisGetRestCall) doRequest(alt string) (*http.Response, error) {
 		"api":     c.api,
 		"version": c.version,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "discovery.apis.getRest"), c.s.client, req)
 }
 
 // Do executes the "discovery.apis.getRest" call.
@@ -1210,7 +1210,7 @@ func (c *ApisListCall) Header() http.Header {
 
 func (c *ApisListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.11.0 gdcl/20190926")
+	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.1 gdcl/20191007")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1228,7 +1228,7 @@ func (c *ApisListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "discovery.apis.list"), c.s.client, req)
 }
 
 // Do executes the "discovery.apis.list" call.
