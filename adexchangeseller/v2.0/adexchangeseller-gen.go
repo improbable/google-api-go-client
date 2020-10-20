@@ -56,6 +56,7 @@ import (
 	googleapi "google.golang.org/api/googleapi"
 	gensupport "google.golang.org/api/internal/gensupport"
 	option "google.golang.org/api/option"
+	internaloption "google.golang.org/api/option/internaloption"
 	htransport "google.golang.org/api/transport/http"
 )
 
@@ -72,6 +73,7 @@ var _ = googleapi.Version
 var _ = errors.New
 var _ = strings.Replace
 var _ = context.Canceled
+var _ = internaloption.WithDefaultEndpoint
 
 const apiId = "adexchangeseller:v2.0"
 const apiName = "adexchangeseller"
@@ -95,6 +97,7 @@ func NewService(ctx context.Context, opts ...option.ClientOption) (*Service, err
 	)
 	// NOTE: prepend, so we don't override user-specified scopes.
 	opts = append([]option.ClientOption{scopesOption}, opts...)
+	opts = append(opts, internaloption.WithDefaultEndpoint(basePath))
 	client, endpoint, err := htransport.NewClient(ctx, opts...)
 	if err != nil {
 		return nil, err
@@ -1141,7 +1144,7 @@ func (c *AccountsGetCall) Header() http.Header {
 
 func (c *AccountsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1162,7 +1165,7 @@ func (c *AccountsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.get" call.
@@ -1298,7 +1301,7 @@ func (c *AccountsListCall) Header() http.Header {
 
 func (c *AccountsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1316,7 +1319,7 @@ func (c *AccountsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.list" call.
@@ -1479,7 +1482,7 @@ func (c *AccountsAdclientsListCall) Header() http.Header {
 
 func (c *AccountsAdclientsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1500,7 +1503,7 @@ func (c *AccountsAdclientsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.adclients.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.adclients.list" call.
@@ -1665,7 +1668,7 @@ func (c *AccountsAlertsListCall) Header() http.Header {
 
 func (c *AccountsAlertsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1686,7 +1689,7 @@ func (c *AccountsAlertsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.alerts.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.alerts.list" call.
@@ -1817,7 +1820,7 @@ func (c *AccountsCustomchannelsGetCall) Header() http.Header {
 
 func (c *AccountsCustomchannelsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1840,7 +1843,7 @@ func (c *AccountsCustomchannelsGetCall) doRequest(alt string) (*http.Response, e
 		"adClientId":      c.adClientId,
 		"customChannelId": c.customChannelId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.customchannels.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.customchannels.get" call.
@@ -1996,7 +1999,7 @@ func (c *AccountsCustomchannelsListCall) Header() http.Header {
 
 func (c *AccountsCustomchannelsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2018,7 +2021,7 @@ func (c *AccountsCustomchannelsListCall) doRequest(alt string) (*http.Response, 
 		"accountId":  c.accountId,
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.customchannels.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.customchannels.list" call.
@@ -2182,7 +2185,7 @@ func (c *AccountsMetadataDimensionsListCall) Header() http.Header {
 
 func (c *AccountsMetadataDimensionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2203,7 +2206,7 @@ func (c *AccountsMetadataDimensionsListCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.metadata.dimensions.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.metadata.dimensions.list" call.
@@ -2326,7 +2329,7 @@ func (c *AccountsMetadataMetricsListCall) Header() http.Header {
 
 func (c *AccountsMetadataMetricsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2347,7 +2350,7 @@ func (c *AccountsMetadataMetricsListCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.metadata.metrics.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.metadata.metrics.list" call.
@@ -2471,7 +2474,7 @@ func (c *AccountsPreferreddealsGetCall) Header() http.Header {
 
 func (c *AccountsPreferreddealsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2493,7 +2496,7 @@ func (c *AccountsPreferreddealsGetCall) doRequest(alt string) (*http.Response, e
 		"accountId": c.accountId,
 		"dealId":    c.dealId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.preferreddeals.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.preferreddeals.get" call.
@@ -2622,7 +2625,7 @@ func (c *AccountsPreferreddealsListCall) Header() http.Header {
 
 func (c *AccountsPreferreddealsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2643,7 +2646,7 @@ func (c *AccountsPreferreddealsListCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.preferreddeals.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.preferreddeals.list" call.
@@ -2821,7 +2824,7 @@ func (c *AccountsReportsGenerateCall) Header() http.Header {
 
 func (c *AccountsReportsGenerateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2842,7 +2845,7 @@ func (c *AccountsReportsGenerateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.reports.generate"), c.s.client, req)
 }
 
 // Download fetches the API endpoint's "media" value, instead of the normal
@@ -3072,7 +3075,7 @@ func (c *AccountsReportsSavedGenerateCall) Header() http.Header {
 
 func (c *AccountsReportsSavedGenerateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3094,7 +3097,7 @@ func (c *AccountsReportsSavedGenerateCall) doRequest(alt string) (*http.Response
 		"accountId":     c.accountId,
 		"savedReportId": c.savedReportId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.reports.saved.generate"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.reports.saved.generate" call.
@@ -3261,7 +3264,7 @@ func (c *AccountsReportsSavedListCall) Header() http.Header {
 
 func (c *AccountsReportsSavedListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3282,7 +3285,7 @@ func (c *AccountsReportsSavedListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.reports.saved.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.reports.saved.list" call.
@@ -3457,7 +3460,7 @@ func (c *AccountsUrlchannelsListCall) Header() http.Header {
 
 func (c *AccountsUrlchannelsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3479,7 +3482,7 @@ func (c *AccountsUrlchannelsListCall) doRequest(alt string) (*http.Response, err
 		"accountId":  c.accountId,
 		"adClientId": c.adClientId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangeseller.accounts.urlchannels.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangeseller.accounts.urlchannels.list" call.

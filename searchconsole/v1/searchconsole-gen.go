@@ -1037,7 +1037,7 @@ func (c *SearchanalyticsQueryCall) Header() http.Header {
 
 func (c *SearchanalyticsQueryCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1060,7 +1060,7 @@ func (c *SearchanalyticsQueryCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"siteUrl": c.siteUrl,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "webmasters.searchanalytics.query"), c.s.client, req)
 }
 
 // Do executes the "webmasters.searchanalytics.query" call.
@@ -1177,7 +1177,7 @@ func (c *SitemapsDeleteCall) Header() http.Header {
 
 func (c *SitemapsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1196,7 +1196,7 @@ func (c *SitemapsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"siteUrl":  c.siteUrl,
 		"feedpath": c.feedpath,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "webmasters.sitemaps.delete"), c.s.client, req)
 }
 
 // Do executes the "webmasters.sitemaps.delete" call.
@@ -1299,7 +1299,7 @@ func (c *SitemapsGetCall) Header() http.Header {
 
 func (c *SitemapsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1321,7 +1321,7 @@ func (c *SitemapsGetCall) doRequest(alt string) (*http.Response, error) {
 		"siteUrl":  c.siteUrl,
 		"feedpath": c.feedpath,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "webmasters.sitemaps.get"), c.s.client, req)
 }
 
 // Do executes the "webmasters.sitemaps.get" call.
@@ -1461,7 +1461,7 @@ func (c *SitemapsListCall) Header() http.Header {
 
 func (c *SitemapsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1482,7 +1482,7 @@ func (c *SitemapsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"siteUrl": c.siteUrl,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "webmasters.sitemaps.list"), c.s.client, req)
 }
 
 // Do executes the "webmasters.sitemaps.list" call.
@@ -1601,7 +1601,7 @@ func (c *SitemapsSubmitCall) Header() http.Header {
 
 func (c *SitemapsSubmitCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1620,7 +1620,7 @@ func (c *SitemapsSubmitCall) doRequest(alt string) (*http.Response, error) {
 		"siteUrl":  c.siteUrl,
 		"feedpath": c.feedpath,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "webmasters.sitemaps.submit"), c.s.client, req)
 }
 
 // Do executes the "webmasters.sitemaps.submit" call.
@@ -1710,7 +1710,7 @@ func (c *SitesAddCall) Header() http.Header {
 
 func (c *SitesAddCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1728,7 +1728,7 @@ func (c *SitesAddCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"siteUrl": c.siteUrl,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "webmasters.sites.add"), c.s.client, req)
 }
 
 // Do executes the "webmasters.sites.add" call.
@@ -1812,7 +1812,7 @@ func (c *SitesDeleteCall) Header() http.Header {
 
 func (c *SitesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1830,7 +1830,7 @@ func (c *SitesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"siteUrl": c.siteUrl,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "webmasters.sites.delete"), c.s.client, req)
 }
 
 // Do executes the "webmasters.sites.delete" call.
@@ -1924,7 +1924,7 @@ func (c *SitesGetCall) Header() http.Header {
 
 func (c *SitesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1945,7 +1945,7 @@ func (c *SitesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"siteUrl": c.siteUrl,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "webmasters.sites.get"), c.s.client, req)
 }
 
 // Do executes the "webmasters.sites.get" call.
@@ -2066,7 +2066,7 @@ func (c *SitesListCall) Header() http.Header {
 
 func (c *SitesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2084,7 +2084,7 @@ func (c *SitesListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "webmasters.sites.list"), c.s.client, req)
 }
 
 // Do executes the "webmasters.sites.list" call.
@@ -2187,7 +2187,7 @@ func (c *UrlTestingToolsMobileFriendlyTestRunCall) Header() http.Header {
 
 func (c *UrlTestingToolsMobileFriendlyTestRunCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2207,7 +2207,7 @@ func (c *UrlTestingToolsMobileFriendlyTestRunCall) doRequest(alt string) (*http.
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "searchconsole.urlTestingTools.mobileFriendlyTest.run"), c.s.client, req)
 }
 
 // Do executes the "searchconsole.urlTestingTools.mobileFriendlyTest.run" call.

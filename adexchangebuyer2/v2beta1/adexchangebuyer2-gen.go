@@ -5654,7 +5654,7 @@ func (c *AccountsClientsCreateCall) Header() http.Header {
 
 func (c *AccountsClientsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5677,7 +5677,7 @@ func (c *AccountsClientsCreateCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": strconv.FormatInt(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.create" call.
@@ -5805,7 +5805,7 @@ func (c *AccountsClientsGetCall) Header() http.Header {
 
 func (c *AccountsClientsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5827,7 +5827,7 @@ func (c *AccountsClientsGetCall) doRequest(alt string) (*http.Response, error) {
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.get" call.
@@ -5984,7 +5984,7 @@ func (c *AccountsClientsListCall) Header() http.Header {
 
 func (c *AccountsClientsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6005,7 +6005,7 @@ func (c *AccountsClientsListCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": strconv.FormatInt(c.accountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.list" call.
@@ -6158,7 +6158,7 @@ func (c *AccountsClientsUpdateCall) Header() http.Header {
 
 func (c *AccountsClientsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6182,7 +6182,7 @@ func (c *AccountsClientsUpdateCall) doRequest(alt string) (*http.Response, error
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.update"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.update" call.
@@ -6310,7 +6310,7 @@ func (c *AccountsClientsInvitationsCreateCall) Header() http.Header {
 
 func (c *AccountsClientsInvitationsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6334,7 +6334,7 @@ func (c *AccountsClientsInvitationsCreateCall) doRequest(alt string) (*http.Resp
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.invitations.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.invitations.create" call.
@@ -6472,7 +6472,7 @@ func (c *AccountsClientsInvitationsGetCall) Header() http.Header {
 
 func (c *AccountsClientsInvitationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6495,7 +6495,7 @@ func (c *AccountsClientsInvitationsGetCall) doRequest(alt string) (*http.Respons
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 		"invitationId":    strconv.FormatInt(c.invitationId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.invitations.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.invitations.get" call.
@@ -6655,7 +6655,7 @@ func (c *AccountsClientsInvitationsListCall) Header() http.Header {
 
 func (c *AccountsClientsInvitationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6677,7 +6677,7 @@ func (c *AccountsClientsInvitationsListCall) doRequest(alt string) (*http.Respon
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": c.clientAccountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.invitations.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.invitations.list" call.
@@ -6844,7 +6844,7 @@ func (c *AccountsClientsUsersGetCall) Header() http.Header {
 
 func (c *AccountsClientsUsersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6867,7 +6867,7 @@ func (c *AccountsClientsUsersGetCall) doRequest(alt string) (*http.Response, err
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 		"userId":          strconv.FormatInt(c.userId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.users.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.users.get" call.
@@ -7026,7 +7026,7 @@ func (c *AccountsClientsUsersListCall) Header() http.Header {
 
 func (c *AccountsClientsUsersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7048,7 +7048,7 @@ func (c *AccountsClientsUsersListCall) doRequest(alt string) (*http.Response, er
 		"accountId":       strconv.FormatInt(c.accountId, 10),
 		"clientAccountId": c.clientAccountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.users.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.users.list" call.
@@ -7206,7 +7206,7 @@ func (c *AccountsClientsUsersUpdateCall) Header() http.Header {
 
 func (c *AccountsClientsUsersUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7231,7 +7231,7 @@ func (c *AccountsClientsUsersUpdateCall) doRequest(alt string) (*http.Response, 
 		"clientAccountId": strconv.FormatInt(c.clientAccountId, 10),
 		"userId":          strconv.FormatInt(c.userId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.clients.users.update"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.clients.users.update" call.
@@ -7382,7 +7382,7 @@ func (c *AccountsCreativesCreateCall) Header() http.Header {
 
 func (c *AccountsCreativesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7405,7 +7405,7 @@ func (c *AccountsCreativesCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.create" call.
@@ -7545,7 +7545,7 @@ func (c *AccountsCreativesGetCall) Header() http.Header {
 
 func (c *AccountsCreativesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7567,7 +7567,7 @@ func (c *AccountsCreativesGetCall) doRequest(alt string) (*http.Response, error)
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.get" call.
@@ -7731,7 +7731,7 @@ func (c *AccountsCreativesListCall) Header() http.Header {
 
 func (c *AccountsCreativesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7752,7 +7752,7 @@ func (c *AccountsCreativesListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.list" call.
@@ -7905,7 +7905,7 @@ func (c *AccountsCreativesStopWatchingCall) Header() http.Header {
 
 func (c *AccountsCreativesStopWatchingCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7929,7 +7929,7 @@ func (c *AccountsCreativesStopWatchingCall) doRequest(alt string) (*http.Respons
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.stopWatching"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.stopWatching" call.
@@ -8054,7 +8054,7 @@ func (c *AccountsCreativesUpdateCall) Header() http.Header {
 
 func (c *AccountsCreativesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8078,7 +8078,7 @@ func (c *AccountsCreativesUpdateCall) doRequest(alt string) (*http.Response, err
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.update"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.update" call.
@@ -8204,7 +8204,7 @@ func (c *AccountsCreativesWatchCall) Header() http.Header {
 
 func (c *AccountsCreativesWatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8228,7 +8228,7 @@ func (c *AccountsCreativesWatchCall) doRequest(alt string) (*http.Response, erro
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.watch"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.watch" call.
@@ -8353,7 +8353,7 @@ func (c *AccountsCreativesDealAssociationsAddCall) Header() http.Header {
 
 func (c *AccountsCreativesDealAssociationsAddCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8377,7 +8377,7 @@ func (c *AccountsCreativesDealAssociationsAddCall) doRequest(alt string) (*http.
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.dealAssociations.add"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.dealAssociations.add" call.
@@ -8541,7 +8541,7 @@ func (c *AccountsCreativesDealAssociationsListCall) Header() http.Header {
 
 func (c *AccountsCreativesDealAssociationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8563,7 +8563,7 @@ func (c *AccountsCreativesDealAssociationsListCall) doRequest(alt string) (*http
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.dealAssociations.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.dealAssociations.list" call.
@@ -8722,7 +8722,7 @@ func (c *AccountsCreativesDealAssociationsRemoveCall) Header() http.Header {
 
 func (c *AccountsCreativesDealAssociationsRemoveCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8746,7 +8746,7 @@ func (c *AccountsCreativesDealAssociationsRemoveCall) doRequest(alt string) (*ht
 		"accountId":  c.accountId,
 		"creativeId": c.creativeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.creatives.dealAssociations.remove"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.creatives.dealAssociations.remove" call.
@@ -8921,7 +8921,7 @@ func (c *AccountsFinalizedProposalsListCall) Header() http.Header {
 
 func (c *AccountsFinalizedProposalsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -8942,7 +8942,7 @@ func (c *AccountsFinalizedProposalsListCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.finalizedProposals.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.finalizedProposals.list" call.
@@ -9118,7 +9118,7 @@ func (c *AccountsProductsGetCall) Header() http.Header {
 
 func (c *AccountsProductsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9140,7 +9140,7 @@ func (c *AccountsProductsGetCall) doRequest(alt string) (*http.Response, error) 
 		"accountId": c.accountId,
 		"productId": c.productId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.products.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.products.get" call.
@@ -9295,7 +9295,7 @@ func (c *AccountsProductsListCall) Header() http.Header {
 
 func (c *AccountsProductsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9316,7 +9316,7 @@ func (c *AccountsProductsListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.products.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.products.list" call.
@@ -9472,7 +9472,7 @@ func (c *AccountsProposalsAcceptCall) Header() http.Header {
 
 func (c *AccountsProposalsAcceptCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9496,7 +9496,7 @@ func (c *AccountsProposalsAcceptCall) doRequest(alt string) (*http.Response, err
 		"accountId":  c.accountId,
 		"proposalId": c.proposalId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.accept"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.accept" call.
@@ -9623,7 +9623,7 @@ func (c *AccountsProposalsAddNoteCall) Header() http.Header {
 
 func (c *AccountsProposalsAddNoteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9647,7 +9647,7 @@ func (c *AccountsProposalsAddNoteCall) doRequest(alt string) (*http.Response, er
 		"accountId":  c.accountId,
 		"proposalId": c.proposalId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.addNote"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.addNote" call.
@@ -9774,7 +9774,7 @@ func (c *AccountsProposalsCancelNegotiationCall) Header() http.Header {
 
 func (c *AccountsProposalsCancelNegotiationCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9798,7 +9798,7 @@ func (c *AccountsProposalsCancelNegotiationCall) doRequest(alt string) (*http.Re
 		"accountId":  c.accountId,
 		"proposalId": c.proposalId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.cancelNegotiation"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.cancelNegotiation" call.
@@ -9929,7 +9929,7 @@ func (c *AccountsProposalsCompleteSetupCall) Header() http.Header {
 
 func (c *AccountsProposalsCompleteSetupCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -9953,7 +9953,7 @@ func (c *AccountsProposalsCompleteSetupCall) doRequest(alt string) (*http.Respon
 		"accountId":  c.accountId,
 		"proposalId": c.proposalId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.completeSetup"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.completeSetup" call.
@@ -10077,7 +10077,7 @@ func (c *AccountsProposalsCreateCall) Header() http.Header {
 
 func (c *AccountsProposalsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10100,7 +10100,7 @@ func (c *AccountsProposalsCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.create" call.
@@ -10228,7 +10228,7 @@ func (c *AccountsProposalsGetCall) Header() http.Header {
 
 func (c *AccountsProposalsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10250,7 +10250,7 @@ func (c *AccountsProposalsGetCall) doRequest(alt string) (*http.Response, error)
 		"accountId":  c.accountId,
 		"proposalId": c.proposalId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.get" call.
@@ -10426,7 +10426,7 @@ func (c *AccountsProposalsListCall) Header() http.Header {
 
 func (c *AccountsProposalsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10447,7 +10447,7 @@ func (c *AccountsProposalsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.list" call.
@@ -10618,7 +10618,7 @@ func (c *AccountsProposalsPauseCall) Header() http.Header {
 
 func (c *AccountsProposalsPauseCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10642,7 +10642,7 @@ func (c *AccountsProposalsPauseCall) doRequest(alt string) (*http.Response, erro
 		"accountId":  c.accountId,
 		"proposalId": c.proposalId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.pause"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.pause" call.
@@ -10773,7 +10773,7 @@ func (c *AccountsProposalsResumeCall) Header() http.Header {
 
 func (c *AccountsProposalsResumeCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10797,7 +10797,7 @@ func (c *AccountsProposalsResumeCall) doRequest(alt string) (*http.Response, err
 		"accountId":  c.accountId,
 		"proposalId": c.proposalId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.resume"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.resume" call.
@@ -10932,7 +10932,7 @@ func (c *AccountsProposalsUpdateCall) Header() http.Header {
 
 func (c *AccountsProposalsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -10956,7 +10956,7 @@ func (c *AccountsProposalsUpdateCall) doRequest(alt string) (*http.Response, err
 		"accountId":  c.accountId,
 		"proposalId": c.proposalId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.proposals.update"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.proposals.update" call.
@@ -11090,7 +11090,7 @@ func (c *AccountsPublisherProfilesGetCall) Header() http.Header {
 
 func (c *AccountsPublisherProfilesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11112,7 +11112,7 @@ func (c *AccountsPublisherProfilesGetCall) doRequest(alt string) (*http.Response
 		"accountId":          c.accountId,
 		"publisherProfileId": c.publisherProfileId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.publisherProfiles.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.publisherProfiles.get" call.
@@ -11255,7 +11255,7 @@ func (c *AccountsPublisherProfilesListCall) Header() http.Header {
 
 func (c *AccountsPublisherProfilesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11276,7 +11276,7 @@ func (c *AccountsPublisherProfilesListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"accountId": c.accountId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.accounts.publisherProfiles.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.accounts.publisherProfiles.list" call.
@@ -11431,7 +11431,7 @@ func (c *BiddersAccountsFilterSetsCreateCall) Header() http.Header {
 
 func (c *BiddersAccountsFilterSetsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11454,7 +11454,7 @@ func (c *BiddersAccountsFilterSetsCreateCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"ownerName": c.ownerName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.create" call.
@@ -11575,7 +11575,7 @@ func (c *BiddersAccountsFilterSetsDeleteCall) Header() http.Header {
 
 func (c *BiddersAccountsFilterSetsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11593,7 +11593,7 @@ func (c *BiddersAccountsFilterSetsDeleteCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.delete"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.delete" call.
@@ -11717,7 +11717,7 @@ func (c *BiddersAccountsFilterSetsGetCall) Header() http.Header {
 
 func (c *BiddersAccountsFilterSetsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11738,7 +11738,7 @@ func (c *BiddersAccountsFilterSetsGetCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.get" call.
@@ -11879,7 +11879,7 @@ func (c *BiddersAccountsFilterSetsListCall) Header() http.Header {
 
 func (c *BiddersAccountsFilterSetsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -11900,7 +11900,7 @@ func (c *BiddersAccountsFilterSetsListCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"ownerName": c.ownerName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.list" call.
@@ -12072,7 +12072,7 @@ func (c *BiddersAccountsFilterSetsBidMetricsListCall) Header() http.Header {
 
 func (c *BiddersAccountsFilterSetsBidMetricsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12093,7 +12093,7 @@ func (c *BiddersAccountsFilterSetsBidMetricsListCall) doRequest(alt string) (*ht
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.bidMetrics.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.bidMetrics.list" call.
@@ -12266,7 +12266,7 @@ func (c *BiddersAccountsFilterSetsBidResponseErrorsListCall) Header() http.Heade
 
 func (c *BiddersAccountsFilterSetsBidResponseErrorsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12287,7 +12287,7 @@ func (c *BiddersAccountsFilterSetsBidResponseErrorsListCall) doRequest(alt strin
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.bidResponseErrors.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.bidResponseErrors.list" call.
@@ -12462,7 +12462,7 @@ func (c *BiddersAccountsFilterSetsBidResponsesWithoutBidsListCall) Header() http
 
 func (c *BiddersAccountsFilterSetsBidResponsesWithoutBidsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12483,7 +12483,7 @@ func (c *BiddersAccountsFilterSetsBidResponsesWithoutBidsListCall) doRequest(alt
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.bidResponsesWithoutBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.bidResponsesWithoutBids.list" call.
@@ -12659,7 +12659,7 @@ func (c *BiddersAccountsFilterSetsFilteredBidRequestsListCall) Header() http.Hea
 
 func (c *BiddersAccountsFilterSetsFilteredBidRequestsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12680,7 +12680,7 @@ func (c *BiddersAccountsFilterSetsFilteredBidRequestsListCall) doRequest(alt str
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.filteredBidRequests.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.filteredBidRequests.list" call.
@@ -12853,7 +12853,7 @@ func (c *BiddersAccountsFilterSetsFilteredBidsListCall) Header() http.Header {
 
 func (c *BiddersAccountsFilterSetsFilteredBidsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12874,7 +12874,7 @@ func (c *BiddersAccountsFilterSetsFilteredBidsListCall) doRequest(alt string) (*
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.filteredBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.filteredBids.list" call.
@@ -13051,7 +13051,7 @@ func (c *BiddersAccountsFilterSetsFilteredBidsCreativesListCall) Header() http.H
 
 func (c *BiddersAccountsFilterSetsFilteredBidsCreativesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13073,7 +13073,7 @@ func (c *BiddersAccountsFilterSetsFilteredBidsCreativesListCall) doRequest(alt s
 		"filterSetName":    c.filterSetName,
 		"creativeStatusId": strconv.FormatInt(c.creativeStatusId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.filteredBids.creatives.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.filteredBids.creatives.list" call.
@@ -13259,7 +13259,7 @@ func (c *BiddersAccountsFilterSetsFilteredBidsDetailsListCall) Header() http.Hea
 
 func (c *BiddersAccountsFilterSetsFilteredBidsDetailsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13281,7 +13281,7 @@ func (c *BiddersAccountsFilterSetsFilteredBidsDetailsListCall) doRequest(alt str
 		"filterSetName":    c.filterSetName,
 		"creativeStatusId": strconv.FormatInt(c.creativeStatusId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.filteredBids.details.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.filteredBids.details.list" call.
@@ -13464,7 +13464,7 @@ func (c *BiddersAccountsFilterSetsImpressionMetricsListCall) Header() http.Heade
 
 func (c *BiddersAccountsFilterSetsImpressionMetricsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13485,7 +13485,7 @@ func (c *BiddersAccountsFilterSetsImpressionMetricsListCall) doRequest(alt strin
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.impressionMetrics.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.impressionMetrics.list" call.
@@ -13658,7 +13658,7 @@ func (c *BiddersAccountsFilterSetsLosingBidsListCall) Header() http.Header {
 
 func (c *BiddersAccountsFilterSetsLosingBidsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13679,7 +13679,7 @@ func (c *BiddersAccountsFilterSetsLosingBidsListCall) doRequest(alt string) (*ht
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.losingBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.losingBids.list" call.
@@ -13853,7 +13853,7 @@ func (c *BiddersAccountsFilterSetsNonBillableWinningBidsListCall) Header() http.
 
 func (c *BiddersAccountsFilterSetsNonBillableWinningBidsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13874,7 +13874,7 @@ func (c *BiddersAccountsFilterSetsNonBillableWinningBidsListCall) doRequest(alt 
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.accounts.filterSets.nonBillableWinningBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.accounts.filterSets.nonBillableWinningBids.list" call.
@@ -14031,7 +14031,7 @@ func (c *BiddersFilterSetsCreateCall) Header() http.Header {
 
 func (c *BiddersFilterSetsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14054,7 +14054,7 @@ func (c *BiddersFilterSetsCreateCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"ownerName": c.ownerName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.create"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.create" call.
@@ -14175,7 +14175,7 @@ func (c *BiddersFilterSetsDeleteCall) Header() http.Header {
 
 func (c *BiddersFilterSetsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14193,7 +14193,7 @@ func (c *BiddersFilterSetsDeleteCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.delete"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.delete" call.
@@ -14317,7 +14317,7 @@ func (c *BiddersFilterSetsGetCall) Header() http.Header {
 
 func (c *BiddersFilterSetsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14338,7 +14338,7 @@ func (c *BiddersFilterSetsGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.get"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.get" call.
@@ -14479,7 +14479,7 @@ func (c *BiddersFilterSetsListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14500,7 +14500,7 @@ func (c *BiddersFilterSetsListCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"ownerName": c.ownerName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.list" call.
@@ -14672,7 +14672,7 @@ func (c *BiddersFilterSetsBidMetricsListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsBidMetricsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14693,7 +14693,7 @@ func (c *BiddersFilterSetsBidMetricsListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.bidMetrics.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.bidMetrics.list" call.
@@ -14866,7 +14866,7 @@ func (c *BiddersFilterSetsBidResponseErrorsListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsBidResponseErrorsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14887,7 +14887,7 @@ func (c *BiddersFilterSetsBidResponseErrorsListCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.bidResponseErrors.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.bidResponseErrors.list" call.
@@ -15062,7 +15062,7 @@ func (c *BiddersFilterSetsBidResponsesWithoutBidsListCall) Header() http.Header 
 
 func (c *BiddersFilterSetsBidResponsesWithoutBidsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15083,7 +15083,7 @@ func (c *BiddersFilterSetsBidResponsesWithoutBidsListCall) doRequest(alt string)
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.bidResponsesWithoutBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.bidResponsesWithoutBids.list" call.
@@ -15259,7 +15259,7 @@ func (c *BiddersFilterSetsFilteredBidRequestsListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsFilteredBidRequestsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15280,7 +15280,7 @@ func (c *BiddersFilterSetsFilteredBidRequestsListCall) doRequest(alt string) (*h
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.filteredBidRequests.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.filteredBidRequests.list" call.
@@ -15453,7 +15453,7 @@ func (c *BiddersFilterSetsFilteredBidsListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsFilteredBidsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15474,7 +15474,7 @@ func (c *BiddersFilterSetsFilteredBidsListCall) doRequest(alt string) (*http.Res
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.filteredBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.filteredBids.list" call.
@@ -15651,7 +15651,7 @@ func (c *BiddersFilterSetsFilteredBidsCreativesListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsFilteredBidsCreativesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15673,7 +15673,7 @@ func (c *BiddersFilterSetsFilteredBidsCreativesListCall) doRequest(alt string) (
 		"filterSetName":    c.filterSetName,
 		"creativeStatusId": strconv.FormatInt(c.creativeStatusId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.filteredBids.creatives.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.filteredBids.creatives.list" call.
@@ -15859,7 +15859,7 @@ func (c *BiddersFilterSetsFilteredBidsDetailsListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsFilteredBidsDetailsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15881,7 +15881,7 @@ func (c *BiddersFilterSetsFilteredBidsDetailsListCall) doRequest(alt string) (*h
 		"filterSetName":    c.filterSetName,
 		"creativeStatusId": strconv.FormatInt(c.creativeStatusId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.filteredBids.details.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.filteredBids.details.list" call.
@@ -16064,7 +16064,7 @@ func (c *BiddersFilterSetsImpressionMetricsListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsImpressionMetricsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16085,7 +16085,7 @@ func (c *BiddersFilterSetsImpressionMetricsListCall) doRequest(alt string) (*htt
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.impressionMetrics.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.impressionMetrics.list" call.
@@ -16258,7 +16258,7 @@ func (c *BiddersFilterSetsLosingBidsListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsLosingBidsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16279,7 +16279,7 @@ func (c *BiddersFilterSetsLosingBidsListCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.losingBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.losingBids.list" call.
@@ -16453,7 +16453,7 @@ func (c *BiddersFilterSetsNonBillableWinningBidsListCall) Header() http.Header {
 
 func (c *BiddersFilterSetsNonBillableWinningBidsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16474,7 +16474,7 @@ func (c *BiddersFilterSetsNonBillableWinningBidsListCall) doRequest(alt string) 
 	googleapi.Expand(req.URL, map[string]string{
 		"filterSetName": c.filterSetName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "adexchangebuyer2.bidders.filterSets.nonBillableWinningBids.list"), c.s.client, req)
 }
 
 // Do executes the "adexchangebuyer2.bidders.filterSets.nonBillableWinningBids.list" call.

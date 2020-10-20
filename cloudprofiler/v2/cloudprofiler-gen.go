@@ -407,7 +407,7 @@ func (c *ProjectsProfilesCreateCall) Header() http.Header {
 
 func (c *ProjectsProfilesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -430,7 +430,7 @@ func (c *ProjectsProfilesCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprofiler.projects.profiles.create"), c.s.client, req)
 }
 
 // Do executes the "cloudprofiler.projects.profiles.create" call.
@@ -551,7 +551,7 @@ func (c *ProjectsProfilesCreateOfflineCall) Header() http.Header {
 
 func (c *ProjectsProfilesCreateOfflineCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -574,7 +574,7 @@ func (c *ProjectsProfilesCreateOfflineCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprofiler.projects.profiles.createOffline"), c.s.client, req)
 }
 
 // Do executes the "cloudprofiler.projects.profiles.createOffline" call.
@@ -706,7 +706,7 @@ func (c *ProjectsProfilesPatchCall) Header() http.Header {
 
 func (c *ProjectsProfilesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -729,7 +729,7 @@ func (c *ProjectsProfilesPatchCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudprofiler.projects.profiles.patch"), c.s.client, req)
 }
 
 // Do executes the "cloudprofiler.projects.profiles.patch" call.

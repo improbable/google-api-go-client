@@ -353,7 +353,7 @@ func (c *ProjectsTraceSinksCreateCall) Header() http.Header {
 
 func (c *ProjectsTraceSinksCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -376,7 +376,7 @@ func (c *ProjectsTraceSinksCreateCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudtrace.projects.traceSinks.create"), c.s.client, req)
 }
 
 // Do executes the "cloudtrace.projects.traceSinks.create" call.
@@ -492,7 +492,7 @@ func (c *ProjectsTraceSinksDeleteCall) Header() http.Header {
 
 func (c *ProjectsTraceSinksDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -510,7 +510,7 @@ func (c *ProjectsTraceSinksDeleteCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudtrace.projects.traceSinks.delete"), c.s.client, req)
 }
 
 // Do executes the "cloudtrace.projects.traceSinks.delete" call.
@@ -635,7 +635,7 @@ func (c *ProjectsTraceSinksGetCall) Header() http.Header {
 
 func (c *ProjectsTraceSinksGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -656,7 +656,7 @@ func (c *ProjectsTraceSinksGetCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudtrace.projects.traceSinks.get"), c.s.client, req)
 }
 
 // Do executes the "cloudtrace.projects.traceSinks.get" call.
@@ -799,7 +799,7 @@ func (c *ProjectsTraceSinksListCall) Header() http.Header {
 
 func (c *ProjectsTraceSinksListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -820,7 +820,7 @@ func (c *ProjectsTraceSinksListCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"parent": c.parent,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudtrace.projects.traceSinks.list"), c.s.client, req)
 }
 
 // Do executes the "cloudtrace.projects.traceSinks.list" call.
@@ -982,7 +982,7 @@ func (c *ProjectsTraceSinksPatchCall) Header() http.Header {
 
 func (c *ProjectsTraceSinksPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1005,7 +1005,7 @@ func (c *ProjectsTraceSinksPatchCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.nameid,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "cloudtrace.projects.traceSinks.patch"), c.s.client, req)
 }
 
 // Do executes the "cloudtrace.projects.traceSinks.patch" call.

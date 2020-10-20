@@ -1714,7 +1714,7 @@ func (c *BlogUserInfosGetCall) Header() http.Header {
 
 func (c *BlogUserInfosGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1736,7 +1736,7 @@ func (c *BlogUserInfosGetCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.blogUserInfos.get"), c.s.client, req)
 }
 
 // Do executes the "blogger.blogUserInfos.get" call.
@@ -1887,7 +1887,7 @@ func (c *BlogsGetCall) Header() http.Header {
 
 func (c *BlogsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1908,7 +1908,7 @@ func (c *BlogsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.blogs.get"), c.s.client, req)
 }
 
 // Do executes the "blogger.blogs.get" call.
@@ -2062,7 +2062,7 @@ func (c *BlogsGetByUrlCall) Header() http.Header {
 
 func (c *BlogsGetByUrlCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2080,7 +2080,7 @@ func (c *BlogsGetByUrlCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.blogs.getByUrl"), c.s.client, req)
 }
 
 // Do executes the "blogger.blogs.getByUrl" call.
@@ -2259,7 +2259,7 @@ func (c *BlogsListByUserCall) Header() http.Header {
 
 func (c *BlogsListByUserCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2280,7 +2280,7 @@ func (c *BlogsListByUserCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.blogs.listByUser"), c.s.client, req)
 }
 
 // Do executes the "blogger.blogs.listByUser" call.
@@ -2447,7 +2447,7 @@ func (c *CommentsApproveCall) Header() http.Header {
 
 func (c *CommentsApproveCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2467,7 +2467,7 @@ func (c *CommentsApproveCall) doRequest(alt string) (*http.Response, error) {
 		"postId":    c.postId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.comments.approve"), c.s.client, req)
 }
 
 // Do executes the "blogger.comments.approve" call.
@@ -2593,7 +2593,7 @@ func (c *CommentsDeleteCall) Header() http.Header {
 
 func (c *CommentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2613,7 +2613,7 @@ func (c *CommentsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"postId":    c.postId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.comments.delete"), c.s.client, req)
 }
 
 // Do executes the "blogger.comments.delete" call.
@@ -2734,7 +2734,7 @@ func (c *CommentsGetCall) Header() http.Header {
 
 func (c *CommentsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2757,7 +2757,7 @@ func (c *CommentsGetCall) doRequest(alt string) (*http.Response, error) {
 		"postId":    c.postId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.comments.get"), c.s.client, req)
 }
 
 // Do executes the "blogger.comments.get" call.
@@ -2963,7 +2963,7 @@ func (c *CommentsListCall) Header() http.Header {
 
 func (c *CommentsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2985,7 +2985,7 @@ func (c *CommentsListCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"postId": c.postId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.comments.list"), c.s.client, req)
 }
 
 // Do executes the "blogger.comments.list" call.
@@ -3229,7 +3229,7 @@ func (c *CommentsListByBlogCall) Header() http.Header {
 
 func (c *CommentsListByBlogCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3250,7 +3250,7 @@ func (c *CommentsListByBlogCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.comments.listByBlog"), c.s.client, req)
 }
 
 // Do executes the "blogger.comments.listByBlog" call.
@@ -3425,7 +3425,7 @@ func (c *CommentsMarkAsSpamCall) Header() http.Header {
 
 func (c *CommentsMarkAsSpamCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3445,7 +3445,7 @@ func (c *CommentsMarkAsSpamCall) doRequest(alt string) (*http.Response, error) {
 		"postId":    c.postId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.comments.markAsSpam"), c.s.client, req)
 }
 
 // Do executes the "blogger.comments.markAsSpam" call.
@@ -3572,7 +3572,7 @@ func (c *CommentsRemoveContentCall) Header() http.Header {
 
 func (c *CommentsRemoveContentCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3592,7 +3592,7 @@ func (c *CommentsRemoveContentCall) doRequest(alt string) (*http.Response, error
 		"postId":    c.postId,
 		"commentId": c.commentId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.comments.removeContent"), c.s.client, req)
 }
 
 // Do executes the "blogger.comments.removeContent" call.
@@ -3736,7 +3736,7 @@ func (c *PageViewsGetCall) Header() http.Header {
 
 func (c *PageViewsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3757,7 +3757,7 @@ func (c *PageViewsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.pageViews.get"), c.s.client, req)
 }
 
 // Do executes the "blogger.pageViews.get" call.
@@ -3884,7 +3884,7 @@ func (c *PagesDeleteCall) Header() http.Header {
 
 func (c *PagesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -3903,7 +3903,7 @@ func (c *PagesDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"pageId": c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.pages.delete"), c.s.client, req)
 }
 
 // Do executes the "blogger.pages.delete" call.
@@ -4016,7 +4016,7 @@ func (c *PagesGetCall) Header() http.Header {
 
 func (c *PagesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4038,7 +4038,7 @@ func (c *PagesGetCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"pageId": c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.pages.get"), c.s.client, req)
 }
 
 // Do executes the "blogger.pages.get" call.
@@ -4179,7 +4179,7 @@ func (c *PagesInsertCall) Header() http.Header {
 
 func (c *PagesInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4202,7 +4202,7 @@ func (c *PagesInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.pages.insert"), c.s.client, req)
 }
 
 // Do executes the "blogger.pages.insert" call.
@@ -4370,7 +4370,7 @@ func (c *PagesListCall) Header() http.Header {
 
 func (c *PagesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4391,7 +4391,7 @@ func (c *PagesListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.pages.list"), c.s.client, req)
 }
 
 // Do executes the "blogger.pages.list" call.
@@ -4581,7 +4581,7 @@ func (c *PagesPatchCall) Header() http.Header {
 
 func (c *PagesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4605,7 +4605,7 @@ func (c *PagesPatchCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"pageId": c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.pages.patch"), c.s.client, req)
 }
 
 // Do executes the "blogger.pages.patch" call.
@@ -4734,7 +4734,7 @@ func (c *PagesPublishCall) Header() http.Header {
 
 func (c *PagesPublishCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4753,7 +4753,7 @@ func (c *PagesPublishCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"pageId": c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.pages.publish"), c.s.client, req)
 }
 
 // Do executes the "blogger.pages.publish" call.
@@ -4871,7 +4871,7 @@ func (c *PagesRevertCall) Header() http.Header {
 
 func (c *PagesRevertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -4890,7 +4890,7 @@ func (c *PagesRevertCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"pageId": c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.pages.revert"), c.s.client, req)
 }
 
 // Do executes the "blogger.pages.revert" call.
@@ -5022,7 +5022,7 @@ func (c *PagesUpdateCall) Header() http.Header {
 
 func (c *PagesUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5046,7 +5046,7 @@ func (c *PagesUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"pageId": c.pageId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.pages.update"), c.s.client, req)
 }
 
 // Do executes the "blogger.pages.update" call.
@@ -5194,7 +5194,7 @@ func (c *PostUserInfosGetCall) Header() http.Header {
 
 func (c *PostUserInfosGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5217,7 +5217,7 @@ func (c *PostUserInfosGetCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"postId": c.postId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.postUserInfos.get"), c.s.client, req)
 }
 
 // Do executes the "blogger.postUserInfos.get" call.
@@ -5428,7 +5428,7 @@ func (c *PostUserInfosListCall) Header() http.Header {
 
 func (c *PostUserInfosListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5450,7 +5450,7 @@ func (c *PostUserInfosListCall) doRequest(alt string) (*http.Response, error) {
 		"userId": c.userId,
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.postUserInfos.list"), c.s.client, req)
 }
 
 // Do executes the "blogger.postUserInfos.list" call.
@@ -5662,7 +5662,7 @@ func (c *PostsDeleteCall) Header() http.Header {
 
 func (c *PostsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5681,7 +5681,7 @@ func (c *PostsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"postId": c.postId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.delete"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.delete" call.
@@ -5812,7 +5812,7 @@ func (c *PostsGetCall) Header() http.Header {
 
 func (c *PostsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -5834,7 +5834,7 @@ func (c *PostsGetCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"postId": c.postId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.get"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.get" call.
@@ -6011,7 +6011,7 @@ func (c *PostsGetByPathCall) Header() http.Header {
 
 func (c *PostsGetByPathCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6032,7 +6032,7 @@ func (c *PostsGetByPathCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.getByPath"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.getByPath" call.
@@ -6190,7 +6190,7 @@ func (c *PostsInsertCall) Header() http.Header {
 
 func (c *PostsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6213,7 +6213,7 @@ func (c *PostsInsertCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.insert"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.insert" call.
@@ -6426,7 +6426,7 @@ func (c *PostsListCall) Header() http.Header {
 
 func (c *PostsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6447,7 +6447,7 @@ func (c *PostsListCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.list"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.list" call.
@@ -6689,7 +6689,7 @@ func (c *PostsPatchCall) Header() http.Header {
 
 func (c *PostsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6713,7 +6713,7 @@ func (c *PostsPatchCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"postId": c.postId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.patch"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.patch" call.
@@ -6862,7 +6862,7 @@ func (c *PostsPublishCall) Header() http.Header {
 
 func (c *PostsPublishCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -6881,7 +6881,7 @@ func (c *PostsPublishCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"postId": c.postId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.publish"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.publish" call.
@@ -7003,7 +7003,7 @@ func (c *PostsRevertCall) Header() http.Header {
 
 func (c *PostsRevertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7022,7 +7022,7 @@ func (c *PostsRevertCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"postId": c.postId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.revert"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.revert" call.
@@ -7168,7 +7168,7 @@ func (c *PostsSearchCall) Header() http.Header {
 
 func (c *PostsSearchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7189,7 +7189,7 @@ func (c *PostsSearchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"blogId": c.blogId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.search"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.search" call.
@@ -7360,7 +7360,7 @@ func (c *PostsUpdateCall) Header() http.Header {
 
 func (c *PostsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7384,7 +7384,7 @@ func (c *PostsUpdateCall) doRequest(alt string) (*http.Response, error) {
 		"blogId": c.blogId,
 		"postId": c.postId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.posts.update"), c.s.client, req)
 }
 
 // Do executes the "blogger.posts.update" call.
@@ -7536,7 +7536,7 @@ func (c *UsersGetCall) Header() http.Header {
 
 func (c *UsersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -7557,7 +7557,7 @@ func (c *UsersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": c.userId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "blogger.users.get"), c.s.client, req)
 }
 
 // Do executes the "blogger.users.get" call.

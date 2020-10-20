@@ -56,6 +56,7 @@ import (
 	googleapi "google.golang.org/api/googleapi"
 	gensupport "google.golang.org/api/internal/gensupport"
 	option "google.golang.org/api/option"
+	internaloption "google.golang.org/api/option/internaloption"
 	htransport "google.golang.org/api/transport/http"
 )
 
@@ -72,6 +73,7 @@ var _ = googleapi.Version
 var _ = errors.New
 var _ = strings.Replace
 var _ = context.Canceled
+var _ = internaloption.WithDefaultEndpoint
 
 const apiId = "replicapool:v1beta1"
 const apiName = "replicapool"
@@ -113,6 +115,7 @@ func NewService(ctx context.Context, opts ...option.ClientOption) (*Service, err
 	)
 	// NOTE: prepend, so we don't override user-specified scopes.
 	opts = append([]option.ClientOption{scopesOption}, opts...)
+	opts = append(opts, internaloption.WithDefaultEndpoint(basePath))
 	client, endpoint, err := htransport.NewClient(ctx, opts...)
 	if err != nil {
 		return nil, err
@@ -1178,7 +1181,7 @@ func (c *PoolsDeleteCall) Header() http.Header {
 
 func (c *PoolsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1203,7 +1206,7 @@ func (c *PoolsDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"zone":        c.zone,
 		"poolName":    c.poolName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.pools.delete"), c.s.client, req)
 }
 
 // Do executes the "replicapool.pools.delete" call.
@@ -1319,7 +1322,7 @@ func (c *PoolsGetCall) Header() http.Header {
 
 func (c *PoolsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1342,7 +1345,7 @@ func (c *PoolsGetCall) doRequest(alt string) (*http.Response, error) {
 		"zone":        c.zone,
 		"poolName":    c.poolName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.pools.get"), c.s.client, req)
 }
 
 // Do executes the "replicapool.pools.get" call.
@@ -1475,7 +1478,7 @@ func (c *PoolsInsertCall) Header() http.Header {
 
 func (c *PoolsInsertCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1499,7 +1502,7 @@ func (c *PoolsInsertCall) doRequest(alt string) (*http.Response, error) {
 		"projectName": c.projectName,
 		"zone":        c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.pools.insert"), c.s.client, req)
 }
 
 // Do executes the "replicapool.pools.insert" call.
@@ -1650,7 +1653,7 @@ func (c *PoolsListCall) Header() http.Header {
 
 func (c *PoolsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1672,7 +1675,7 @@ func (c *PoolsListCall) doRequest(alt string) (*http.Response, error) {
 		"projectName": c.projectName,
 		"zone":        c.zone,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.pools.list"), c.s.client, req)
 }
 
 // Do executes the "replicapool.pools.list" call.
@@ -1844,7 +1847,7 @@ func (c *PoolsResizeCall) Header() http.Header {
 
 func (c *PoolsResizeCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1864,7 +1867,7 @@ func (c *PoolsResizeCall) doRequest(alt string) (*http.Response, error) {
 		"zone":        c.zone,
 		"poolName":    c.poolName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.pools.resize"), c.s.client, req)
 }
 
 // Do executes the "replicapool.pools.resize" call.
@@ -2002,7 +2005,7 @@ func (c *PoolsUpdatetemplateCall) Header() http.Header {
 
 func (c *PoolsUpdatetemplateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2027,7 +2030,7 @@ func (c *PoolsUpdatetemplateCall) doRequest(alt string) (*http.Response, error) 
 		"zone":        c.zone,
 		"poolName":    c.poolName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.pools.updatetemplate"), c.s.client, req)
 }
 
 // Do executes the "replicapool.pools.updatetemplate" call.
@@ -2136,7 +2139,7 @@ func (c *ReplicasDeleteCall) Header() http.Header {
 
 func (c *ReplicasDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2162,7 +2165,7 @@ func (c *ReplicasDeleteCall) doRequest(alt string) (*http.Response, error) {
 		"poolName":    c.poolName,
 		"replicaName": c.replicaName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.replicas.delete"), c.s.client, req)
 }
 
 // Do executes the "replicapool.replicas.delete" call.
@@ -2315,7 +2318,7 @@ func (c *ReplicasGetCall) Header() http.Header {
 
 func (c *ReplicasGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2339,7 +2342,7 @@ func (c *ReplicasGetCall) doRequest(alt string) (*http.Response, error) {
 		"poolName":    c.poolName,
 		"replicaName": c.replicaName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.replicas.get"), c.s.client, req)
 }
 
 // Do executes the "replicapool.replicas.get" call.
@@ -2506,7 +2509,7 @@ func (c *ReplicasListCall) Header() http.Header {
 
 func (c *ReplicasListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2529,7 +2532,7 @@ func (c *ReplicasListCall) doRequest(alt string) (*http.Response, error) {
 		"zone":        c.zone,
 		"poolName":    c.poolName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.replicas.list"), c.s.client, req)
 }
 
 // Do executes the "replicapool.replicas.list" call.
@@ -2699,7 +2702,7 @@ func (c *ReplicasRestartCall) Header() http.Header {
 
 func (c *ReplicasRestartCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/1.13.7 gdcl/20200203")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2720,7 +2723,7 @@ func (c *ReplicasRestartCall) doRequest(alt string) (*http.Response, error) {
 		"poolName":    c.poolName,
 		"replicaName": c.replicaName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "replicapool.replicas.restart"), c.s.client, req)
 }
 
 // Do executes the "replicapool.replicas.restart" call.

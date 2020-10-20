@@ -75,6 +75,7 @@ const apiId = "commentanalyzer:v1alpha1"
 const apiName = "commentanalyzer"
 const apiVersion = "v1alpha1"
 const basePath = "https://commentanalyzer.googleapis.com/"
+const mtlsBasePath = "https://commentanalyzer.mtls.googleapis.com/"
 
 // OAuth2 scopes used by this API.
 const (
@@ -90,6 +91,7 @@ func NewService(ctx context.Context, opts ...option.ClientOption) (*Service, err
 	// NOTE: prepend, so we don't override user-specified scopes.
 	opts = append([]option.ClientOption{scopesOption}, opts...)
 	opts = append(opts, internaloption.WithDefaultEndpoint(basePath))
+	opts = append(opts, internaloption.WithDefaultMTLSEndpoint(mtlsBasePath))
 	client, endpoint, err := htransport.NewClient(ctx, opts...)
 	if err != nil {
 		return nil, err
@@ -812,7 +814,7 @@ func (c *CommentsAnalyzeCall) Header() http.Header {
 
 func (c *CommentsAnalyzeCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20200506")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -832,7 +834,7 @@ func (c *CommentsAnalyzeCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "commentanalyzer.comments.analyze"), c.s.client, req)
 }
 
 // Do executes the "commentanalyzer.comments.analyze" call.
@@ -937,7 +939,7 @@ func (c *CommentsSuggestscoreCall) Header() http.Header {
 
 func (c *CommentsSuggestscoreCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20200506")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -957,7 +959,7 @@ func (c *CommentsSuggestscoreCall) doRequest(alt string) (*http.Response, error)
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "commentanalyzer.comments.suggestscore"), c.s.client, req)
 }
 
 // Do executes the "commentanalyzer.comments.suggestscore" call.

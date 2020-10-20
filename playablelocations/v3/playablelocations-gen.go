@@ -882,7 +882,7 @@ func (c *V3LogImpressionsCall) Header() http.Header {
 
 func (c *V3LogImpressionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -902,7 +902,7 @@ func (c *V3LogImpressionsCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "playablelocations.logImpressions"), c.s.client, req)
 }
 
 // Do executes the "playablelocations.logImpressions" call.
@@ -1009,7 +1009,7 @@ func (c *V3LogPlayerReportsCall) Header() http.Header {
 
 func (c *V3LogPlayerReportsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1029,7 +1029,7 @@ func (c *V3LogPlayerReportsCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "playablelocations.logPlayerReports"), c.s.client, req)
 }
 
 // Do executes the "playablelocations.logPlayerReports" call.
@@ -1136,7 +1136,7 @@ func (c *V3SamplePlayableLocationsCall) Header() http.Header {
 
 func (c *V3SamplePlayableLocationsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1156,7 +1156,7 @@ func (c *V3SamplePlayableLocationsCall) doRequest(alt string) (*http.Response, e
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "playablelocations.samplePlayableLocations"), c.s.client, req)
 }
 
 // Do executes the "playablelocations.samplePlayableLocations" call.

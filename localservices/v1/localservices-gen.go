@@ -719,7 +719,7 @@ func (c *AccountReportsSearchCall) Header() http.Header {
 
 func (c *AccountReportsSearchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -737,7 +737,7 @@ func (c *AccountReportsSearchCall) doRequest(alt string) (*http.Response, error)
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "localservices.accountReports.search"), c.s.client, req)
 }
 
 // Do executes the "localservices.accountReports.search" call.
@@ -1004,7 +1004,7 @@ func (c *DetailedLeadReportsSearchCall) Header() http.Header {
 
 func (c *DetailedLeadReportsSearchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1022,7 +1022,7 @@ func (c *DetailedLeadReportsSearchCall) doRequest(alt string) (*http.Response, e
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "localservices.detailedLeadReports.search"), c.s.client, req)
 }
 
 // Do executes the "localservices.detailedLeadReports.search" call.

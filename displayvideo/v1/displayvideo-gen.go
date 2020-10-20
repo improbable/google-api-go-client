@@ -12637,7 +12637,7 @@ func (c *AdvertisersAuditCall) Header() http.Header {
 
 func (c *AdvertisersAuditCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12658,7 +12658,7 @@ func (c *AdvertisersAuditCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.audit"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.audit" call.
@@ -12784,7 +12784,7 @@ func (c *AdvertisersBulkEditAdvertiserAssignedTargetingOptionsCall) Header() htt
 
 func (c *AdvertisersBulkEditAdvertiserAssignedTargetingOptionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -12807,7 +12807,7 @@ func (c *AdvertisersBulkEditAdvertiserAssignedTargetingOptionsCall) doRequest(al
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.bulkEditAdvertiserAssignedTargetingOptions"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.bulkEditAdvertiserAssignedTargetingOptions" call.
@@ -12980,7 +12980,7 @@ func (c *AdvertisersBulkListAdvertiserAssignedTargetingOptionsCall) Header() htt
 
 func (c *AdvertisersBulkListAdvertiserAssignedTargetingOptionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13001,7 +13001,7 @@ func (c *AdvertisersBulkListAdvertiserAssignedTargetingOptionsCall) doRequest(al
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.bulkListAdvertiserAssignedTargetingOptions"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.bulkListAdvertiserAssignedTargetingOptions" call.
@@ -13160,7 +13160,7 @@ func (c *AdvertisersCreateCall) Header() http.Header {
 
 func (c *AdvertisersCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13180,7 +13180,7 @@ func (c *AdvertisersCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.create" call.
@@ -13287,7 +13287,7 @@ func (c *AdvertisersDeleteCall) Header() http.Header {
 
 func (c *AdvertisersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13305,7 +13305,7 @@ func (c *AdvertisersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.delete" call.
@@ -13429,7 +13429,7 @@ func (c *AdvertisersGetCall) Header() http.Header {
 
 func (c *AdvertisersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13450,7 +13450,7 @@ func (c *AdvertisersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.get" call.
@@ -13624,7 +13624,7 @@ func (c *AdvertisersListCall) Header() http.Header {
 
 func (c *AdvertisersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13642,7 +13642,7 @@ func (c *AdvertisersListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.list" call.
@@ -13803,7 +13803,7 @@ func (c *AdvertisersPatchCall) Header() http.Header {
 
 func (c *AdvertisersPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -13826,7 +13826,7 @@ func (c *AdvertisersPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.patch" call.
@@ -13992,7 +13992,7 @@ func (c *AdvertisersAssetsUploadCall) Header() http.Header {
 
 func (c *AdvertisersAssetsUploadCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14026,7 +14026,7 @@ func (c *AdvertisersAssetsUploadCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.assets.upload"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.assets.upload" call.
@@ -14174,7 +14174,7 @@ func (c *AdvertisersCampaignsCreateCall) Header() http.Header {
 
 func (c *AdvertisersCampaignsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14197,7 +14197,7 @@ func (c *AdvertisersCampaignsCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.campaigns.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.campaigns.create" call.
@@ -14318,7 +14318,7 @@ func (c *AdvertisersCampaignsDeleteCall) Header() http.Header {
 
 func (c *AdvertisersCampaignsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14337,7 +14337,7 @@ func (c *AdvertisersCampaignsDeleteCall) doRequest(alt string) (*http.Response, 
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"campaignId":   strconv.FormatInt(c.campaignId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.campaigns.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.campaigns.delete" call.
@@ -14473,7 +14473,7 @@ func (c *AdvertisersCampaignsGetCall) Header() http.Header {
 
 func (c *AdvertisersCampaignsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14495,7 +14495,7 @@ func (c *AdvertisersCampaignsGetCall) doRequest(alt string) (*http.Response, err
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"campaignId":   strconv.FormatInt(c.campaignId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.campaigns.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.campaigns.get" call.
@@ -14675,7 +14675,7 @@ func (c *AdvertisersCampaignsListCall) Header() http.Header {
 
 func (c *AdvertisersCampaignsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14696,7 +14696,7 @@ func (c *AdvertisersCampaignsListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.campaigns.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.campaigns.list" call.
@@ -14864,7 +14864,7 @@ func (c *AdvertisersCampaignsPatchCall) Header() http.Header {
 
 func (c *AdvertisersCampaignsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -14888,7 +14888,7 @@ func (c *AdvertisersCampaignsPatchCall) doRequest(alt string) (*http.Response, e
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"campaignId":   strconv.FormatInt(c.campaignId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.campaigns.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.campaigns.patch" call.
@@ -15030,7 +15030,7 @@ func (c *AdvertisersChannelsCreateCall) Header() http.Header {
 
 func (c *AdvertisersChannelsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15053,7 +15053,7 @@ func (c *AdvertisersChannelsCreateCall) doRequest(alt string) (*http.Response, e
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.channels.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.channels.create" call.
@@ -15195,7 +15195,7 @@ func (c *AdvertisersChannelsGetCall) Header() http.Header {
 
 func (c *AdvertisersChannelsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15217,7 +15217,7 @@ func (c *AdvertisersChannelsGetCall) doRequest(alt string) (*http.Response, erro
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"channelId":    strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.channels.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.channels.get" call.
@@ -15405,7 +15405,7 @@ func (c *AdvertisersChannelsListCall) Header() http.Header {
 
 func (c *AdvertisersChannelsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15426,7 +15426,7 @@ func (c *AdvertisersChannelsListCall) doRequest(alt string) (*http.Response, err
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.channels.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.channels.list" call.
@@ -15605,7 +15605,7 @@ func (c *AdvertisersChannelsPatchCall) Header() http.Header {
 
 func (c *AdvertisersChannelsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15629,7 +15629,7 @@ func (c *AdvertisersChannelsPatchCall) doRequest(alt string) (*http.Response, er
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"channelId":    strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.channels.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.channels.patch" call.
@@ -15771,7 +15771,7 @@ func (c *AdvertisersChannelsSitesBulkEditCall) Header() http.Header {
 
 func (c *AdvertisersChannelsSitesBulkEditCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15795,7 +15795,7 @@ func (c *AdvertisersChannelsSitesBulkEditCall) doRequest(alt string) (*http.Resp
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"channelId":    strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.channels.sites.bulkEdit"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.channels.sites.bulkEdit" call.
@@ -15930,7 +15930,7 @@ func (c *AdvertisersChannelsSitesCreateCall) Header() http.Header {
 
 func (c *AdvertisersChannelsSitesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -15954,7 +15954,7 @@ func (c *AdvertisersChannelsSitesCreateCall) doRequest(alt string) (*http.Respon
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"channelId":    strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.channels.sites.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.channels.sites.create" call.
@@ -16095,7 +16095,7 @@ func (c *AdvertisersChannelsSitesDeleteCall) Header() http.Header {
 
 func (c *AdvertisersChannelsSitesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16115,7 +16115,7 @@ func (c *AdvertisersChannelsSitesDeleteCall) doRequest(alt string) (*http.Respon
 		"channelId":    strconv.FormatInt(c.channelId, 10),
 		"urlOrAppId":   c.urlOrAppId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.channels.sites.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.channels.sites.delete" call.
@@ -16310,7 +16310,7 @@ func (c *AdvertisersChannelsSitesListCall) Header() http.Header {
 
 func (c *AdvertisersChannelsSitesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16332,7 +16332,7 @@ func (c *AdvertisersChannelsSitesListCall) doRequest(alt string) (*http.Response
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"channelId":    strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.channels.sites.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.channels.sites.list" call.
@@ -16505,7 +16505,7 @@ func (c *AdvertisersCreativesCreateCall) Header() http.Header {
 
 func (c *AdvertisersCreativesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16528,7 +16528,7 @@ func (c *AdvertisersCreativesCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.creatives.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.creatives.create" call.
@@ -16649,7 +16649,7 @@ func (c *AdvertisersCreativesDeleteCall) Header() http.Header {
 
 func (c *AdvertisersCreativesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16668,7 +16668,7 @@ func (c *AdvertisersCreativesDeleteCall) doRequest(alt string) (*http.Response, 
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"creativeId":   strconv.FormatInt(c.creativeId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.creatives.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.creatives.delete" call.
@@ -16803,7 +16803,7 @@ func (c *AdvertisersCreativesGetCall) Header() http.Header {
 
 func (c *AdvertisersCreativesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -16825,7 +16825,7 @@ func (c *AdvertisersCreativesGetCall) doRequest(alt string) (*http.Response, err
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"creativeId":   strconv.FormatInt(c.creativeId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.creatives.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.creatives.get" call.
@@ -17032,7 +17032,7 @@ func (c *AdvertisersCreativesListCall) Header() http.Header {
 
 func (c *AdvertisersCreativesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -17053,7 +17053,7 @@ func (c *AdvertisersCreativesListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.creatives.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.creatives.list" call.
@@ -17220,7 +17220,7 @@ func (c *AdvertisersCreativesPatchCall) Header() http.Header {
 
 func (c *AdvertisersCreativesPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -17244,7 +17244,7 @@ func (c *AdvertisersCreativesPatchCall) doRequest(alt string) (*http.Response, e
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"creativeId":   strconv.FormatInt(c.creativeId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.creatives.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.creatives.patch" call.
@@ -17378,7 +17378,7 @@ func (c *AdvertisersInsertionOrdersCreateCall) Header() http.Header {
 
 func (c *AdvertisersInsertionOrdersCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -17401,7 +17401,7 @@ func (c *AdvertisersInsertionOrdersCreateCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.insertionOrders.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.insertionOrders.create" call.
@@ -17522,7 +17522,7 @@ func (c *AdvertisersInsertionOrdersDeleteCall) Header() http.Header {
 
 func (c *AdvertisersInsertionOrdersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -17541,7 +17541,7 @@ func (c *AdvertisersInsertionOrdersDeleteCall) doRequest(alt string) (*http.Resp
 		"advertiserId":     strconv.FormatInt(c.advertiserId, 10),
 		"insertionOrderId": strconv.FormatInt(c.insertionOrderId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.insertionOrders.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.insertionOrders.delete" call.
@@ -17677,7 +17677,7 @@ func (c *AdvertisersInsertionOrdersGetCall) Header() http.Header {
 
 func (c *AdvertisersInsertionOrdersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -17699,7 +17699,7 @@ func (c *AdvertisersInsertionOrdersGetCall) doRequest(alt string) (*http.Respons
 		"advertiserId":     strconv.FormatInt(c.advertiserId, 10),
 		"insertionOrderId": strconv.FormatInt(c.insertionOrderId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.insertionOrders.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.insertionOrders.get" call.
@@ -17887,7 +17887,7 @@ func (c *AdvertisersInsertionOrdersListCall) Header() http.Header {
 
 func (c *AdvertisersInsertionOrdersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -17908,7 +17908,7 @@ func (c *AdvertisersInsertionOrdersListCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.insertionOrders.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.insertionOrders.list" call.
@@ -18075,7 +18075,7 @@ func (c *AdvertisersInsertionOrdersPatchCall) Header() http.Header {
 
 func (c *AdvertisersInsertionOrdersPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -18099,7 +18099,7 @@ func (c *AdvertisersInsertionOrdersPatchCall) doRequest(alt string) (*http.Respo
 		"advertiserId":     strconv.FormatInt(c.advertiserId, 10),
 		"insertionOrderId": strconv.FormatInt(c.insertionOrderId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.insertionOrders.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.insertionOrders.patch" call.
@@ -18239,7 +18239,7 @@ func (c *AdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsCall) Heade
 
 func (c *AdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -18263,7 +18263,7 @@ func (c *AdvertisersLineItemsBulkEditLineItemAssignedTargetingOptionsCall) doReq
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"lineItemId":   strconv.FormatInt(c.lineItemId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.bulkEditLineItemAssignedTargetingOptions"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.bulkEditLineItemAssignedTargetingOptions" call.
@@ -18451,7 +18451,7 @@ func (c *AdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsCall) Heade
 
 func (c *AdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -18473,7 +18473,7 @@ func (c *AdvertisersLineItemsBulkListLineItemAssignedTargetingOptionsCall) doReq
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"lineItemId":   strconv.FormatInt(c.lineItemId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.bulkListLineItemAssignedTargetingOptions"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.bulkListLineItemAssignedTargetingOptions" call.
@@ -18642,7 +18642,7 @@ func (c *AdvertisersLineItemsCreateCall) Header() http.Header {
 
 func (c *AdvertisersLineItemsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -18665,7 +18665,7 @@ func (c *AdvertisersLineItemsCreateCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.create" call.
@@ -18786,7 +18786,7 @@ func (c *AdvertisersLineItemsDeleteCall) Header() http.Header {
 
 func (c *AdvertisersLineItemsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -18805,7 +18805,7 @@ func (c *AdvertisersLineItemsDeleteCall) doRequest(alt string) (*http.Response, 
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"lineItemId":   strconv.FormatInt(c.lineItemId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.delete" call.
@@ -18940,7 +18940,7 @@ func (c *AdvertisersLineItemsGetCall) Header() http.Header {
 
 func (c *AdvertisersLineItemsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -18962,7 +18962,7 @@ func (c *AdvertisersLineItemsGetCall) doRequest(alt string) (*http.Response, err
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"lineItemId":   strconv.FormatInt(c.lineItemId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.get" call.
@@ -19155,7 +19155,7 @@ func (c *AdvertisersLineItemsListCall) Header() http.Header {
 
 func (c *AdvertisersLineItemsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -19176,7 +19176,7 @@ func (c *AdvertisersLineItemsListCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.list" call.
@@ -19343,7 +19343,7 @@ func (c *AdvertisersLineItemsPatchCall) Header() http.Header {
 
 func (c *AdvertisersLineItemsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -19367,7 +19367,7 @@ func (c *AdvertisersLineItemsPatchCall) doRequest(alt string) (*http.Response, e
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 		"lineItemId":   strconv.FormatInt(c.lineItemId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.patch" call.
@@ -19505,7 +19505,7 @@ func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateCall) H
 
 func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -19530,7 +19530,7 @@ func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateCall) d
 		"lineItemId":    strconv.FormatInt(c.lineItemId, 10),
 		"targetingType": c.targetingType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.targetingTypes.assignedTargetingOptions.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.targetingTypes.assignedTargetingOptions.create" call.
@@ -19749,7 +19749,7 @@ func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteCall) H
 
 func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -19770,7 +19770,7 @@ func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteCall) d
 		"targetingType":             c.targetingType,
 		"assignedTargetingOptionId": c.assignedTargetingOptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.targetingTypes.assignedTargetingOptions.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.targetingTypes.assignedTargetingOptions.delete" call.
@@ -20005,7 +20005,7 @@ func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetCall) Head
 
 func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -20029,7 +20029,7 @@ func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetCall) doRe
 		"targetingType":             c.targetingType,
 		"assignedTargetingOptionId": c.assignedTargetingOptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.targetingTypes.assignedTargetingOptions.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.targetingTypes.assignedTargetingOptions.get" call.
@@ -20308,7 +20308,7 @@ func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListCall) Hea
 
 func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -20331,7 +20331,7 @@ func (c *AdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListCall) doR
 		"lineItemId":    strconv.FormatInt(c.lineItemId, 10),
 		"targetingType": c.targetingType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.lineItems.targetingTypes.assignedTargetingOptions.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.lineItems.targetingTypes.assignedTargetingOptions.list" call.
@@ -20588,7 +20588,7 @@ func (c *AdvertisersLocationListsCreateCall) Header() http.Header {
 
 func (c *AdvertisersLocationListsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -20611,7 +20611,7 @@ func (c *AdvertisersLocationListsCreateCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.locationLists.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.locationLists.create" call.
@@ -20740,7 +20740,7 @@ func (c *AdvertisersLocationListsGetCall) Header() http.Header {
 
 func (c *AdvertisersLocationListsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -20762,7 +20762,7 @@ func (c *AdvertisersLocationListsGetCall) doRequest(alt string) (*http.Response,
 		"advertiserId":   strconv.FormatInt(c.advertiserId, 10),
 		"locationListId": strconv.FormatInt(c.locationListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.locationLists.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.locationLists.get" call.
@@ -20937,7 +20937,7 @@ func (c *AdvertisersLocationListsListCall) Header() http.Header {
 
 func (c *AdvertisersLocationListsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -20958,7 +20958,7 @@ func (c *AdvertisersLocationListsListCall) doRequest(alt string) (*http.Response
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.locationLists.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.locationLists.list" call.
@@ -21125,7 +21125,7 @@ func (c *AdvertisersLocationListsPatchCall) Header() http.Header {
 
 func (c *AdvertisersLocationListsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -21149,7 +21149,7 @@ func (c *AdvertisersLocationListsPatchCall) doRequest(alt string) (*http.Respons
 		"advertiserId":   strconv.FormatInt(c.advertiserId, 10),
 		"locationListId": strconv.FormatInt(c.locationListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.locationLists.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.locationLists.patch" call.
@@ -21288,7 +21288,7 @@ func (c *AdvertisersLocationListsAssignedLocationsBulkEditCall) Header() http.He
 
 func (c *AdvertisersLocationListsAssignedLocationsBulkEditCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -21312,7 +21312,7 @@ func (c *AdvertisersLocationListsAssignedLocationsBulkEditCall) doRequest(alt st
 		"advertiserId":   strconv.FormatInt(c.advertiserId, 10),
 		"locationListId": strconv.FormatInt(c.locationListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.locationLists.assignedLocations.bulkEdit"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.locationLists.assignedLocations.bulkEdit" call.
@@ -21441,7 +21441,7 @@ func (c *AdvertisersLocationListsAssignedLocationsCreateCall) Header() http.Head
 
 func (c *AdvertisersLocationListsAssignedLocationsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -21465,7 +21465,7 @@ func (c *AdvertisersLocationListsAssignedLocationsCreateCall) doRequest(alt stri
 		"advertiserId":   strconv.FormatInt(c.advertiserId, 10),
 		"locationListId": strconv.FormatInt(c.locationListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.locationLists.assignedLocations.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.locationLists.assignedLocations.create" call.
@@ -21593,7 +21593,7 @@ func (c *AdvertisersLocationListsAssignedLocationsDeleteCall) Header() http.Head
 
 func (c *AdvertisersLocationListsAssignedLocationsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -21613,7 +21613,7 @@ func (c *AdvertisersLocationListsAssignedLocationsDeleteCall) doRequest(alt stri
 		"locationListId":     strconv.FormatInt(c.locationListId, 10),
 		"assignedLocationId": strconv.FormatInt(c.assignedLocationId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.locationLists.assignedLocations.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.locationLists.assignedLocations.delete" call.
@@ -21796,7 +21796,7 @@ func (c *AdvertisersLocationListsAssignedLocationsListCall) Header() http.Header
 
 func (c *AdvertisersLocationListsAssignedLocationsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -21818,7 +21818,7 @@ func (c *AdvertisersLocationListsAssignedLocationsListCall) doRequest(alt string
 		"advertiserId":   strconv.FormatInt(c.advertiserId, 10),
 		"locationListId": strconv.FormatInt(c.locationListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.locationLists.assignedLocations.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.locationLists.assignedLocations.list" call.
@@ -21983,7 +21983,7 @@ func (c *AdvertisersNegativeKeywordListsCreateCall) Header() http.Header {
 
 func (c *AdvertisersNegativeKeywordListsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -22006,7 +22006,7 @@ func (c *AdvertisersNegativeKeywordListsCreateCall) doRequest(alt string) (*http
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.negativeKeywordLists.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.negativeKeywordLists.create" call.
@@ -22125,7 +22125,7 @@ func (c *AdvertisersNegativeKeywordListsDeleteCall) Header() http.Header {
 
 func (c *AdvertisersNegativeKeywordListsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -22144,7 +22144,7 @@ func (c *AdvertisersNegativeKeywordListsDeleteCall) doRequest(alt string) (*http
 		"advertiserId":          strconv.FormatInt(c.advertiserId, 10),
 		"negativeKeywordListId": strconv.FormatInt(c.negativeKeywordListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.negativeKeywordLists.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.negativeKeywordLists.delete" call.
@@ -22280,7 +22280,7 @@ func (c *AdvertisersNegativeKeywordListsGetCall) Header() http.Header {
 
 func (c *AdvertisersNegativeKeywordListsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -22302,7 +22302,7 @@ func (c *AdvertisersNegativeKeywordListsGetCall) doRequest(alt string) (*http.Re
 		"advertiserId":          strconv.FormatInt(c.advertiserId, 10),
 		"negativeKeywordListId": strconv.FormatInt(c.negativeKeywordListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.negativeKeywordLists.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.negativeKeywordLists.get" call.
@@ -22453,7 +22453,7 @@ func (c *AdvertisersNegativeKeywordListsListCall) Header() http.Header {
 
 func (c *AdvertisersNegativeKeywordListsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -22474,7 +22474,7 @@ func (c *AdvertisersNegativeKeywordListsListCall) doRequest(alt string) (*http.R
 	googleapi.Expand(req.URL, map[string]string{
 		"advertiserId": strconv.FormatInt(c.advertiserId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.negativeKeywordLists.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.negativeKeywordLists.list" call.
@@ -22631,7 +22631,7 @@ func (c *AdvertisersNegativeKeywordListsPatchCall) Header() http.Header {
 
 func (c *AdvertisersNegativeKeywordListsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -22655,7 +22655,7 @@ func (c *AdvertisersNegativeKeywordListsPatchCall) doRequest(alt string) (*http.
 		"advertiserId":          strconv.FormatInt(c.advertiserId, 10),
 		"negativeKeywordListId": strconv.FormatInt(c.negativeKeywordListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.negativeKeywordLists.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.negativeKeywordLists.patch" call.
@@ -22795,7 +22795,7 @@ func (c *AdvertisersNegativeKeywordListsNegativeKeywordsBulkEditCall) Header() h
 
 func (c *AdvertisersNegativeKeywordListsNegativeKeywordsBulkEditCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -22819,7 +22819,7 @@ func (c *AdvertisersNegativeKeywordListsNegativeKeywordsBulkEditCall) doRequest(
 		"advertiserId":          strconv.FormatInt(c.advertiserId, 10),
 		"negativeKeywordListId": strconv.FormatInt(c.negativeKeywordListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.negativeKeywordLists.negativeKeywords.bulkEdit"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.negativeKeywordLists.negativeKeywords.bulkEdit" call.
@@ -22947,7 +22947,7 @@ func (c *AdvertisersNegativeKeywordListsNegativeKeywordsCreateCall) Header() htt
 
 func (c *AdvertisersNegativeKeywordListsNegativeKeywordsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -22971,7 +22971,7 @@ func (c *AdvertisersNegativeKeywordListsNegativeKeywordsCreateCall) doRequest(al
 		"advertiserId":          strconv.FormatInt(c.advertiserId, 10),
 		"negativeKeywordListId": strconv.FormatInt(c.negativeKeywordListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.negativeKeywordLists.negativeKeywords.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.negativeKeywordLists.negativeKeywords.create" call.
@@ -23099,7 +23099,7 @@ func (c *AdvertisersNegativeKeywordListsNegativeKeywordsDeleteCall) Header() htt
 
 func (c *AdvertisersNegativeKeywordListsNegativeKeywordsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -23119,7 +23119,7 @@ func (c *AdvertisersNegativeKeywordListsNegativeKeywordsDeleteCall) doRequest(al
 		"negativeKeywordListId": strconv.FormatInt(c.negativeKeywordListId, 10),
 		"keywordValue":          c.keywordValue,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.negativeKeywordLists.negativeKeywords.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.negativeKeywordLists.negativeKeywords.delete" call.
@@ -23302,7 +23302,7 @@ func (c *AdvertisersNegativeKeywordListsNegativeKeywordsListCall) Header() http.
 
 func (c *AdvertisersNegativeKeywordListsNegativeKeywordsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -23324,7 +23324,7 @@ func (c *AdvertisersNegativeKeywordListsNegativeKeywordsListCall) doRequest(alt 
 		"advertiserId":          strconv.FormatInt(c.advertiserId, 10),
 		"negativeKeywordListId": strconv.FormatInt(c.negativeKeywordListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.negativeKeywordLists.negativeKeywords.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.negativeKeywordLists.negativeKeywords.list" call.
@@ -23493,7 +23493,7 @@ func (c *AdvertisersTargetingTypesAssignedTargetingOptionsCreateCall) Header() h
 
 func (c *AdvertisersTargetingTypesAssignedTargetingOptionsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -23517,7 +23517,7 @@ func (c *AdvertisersTargetingTypesAssignedTargetingOptionsCreateCall) doRequest(
 		"advertiserId":  strconv.FormatInt(c.advertiserId, 10),
 		"targetingType": c.targetingType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.targetingTypes.assignedTargetingOptions.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.targetingTypes.assignedTargetingOptions.create" call.
@@ -23725,7 +23725,7 @@ func (c *AdvertisersTargetingTypesAssignedTargetingOptionsDeleteCall) Header() h
 
 func (c *AdvertisersTargetingTypesAssignedTargetingOptionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -23745,7 +23745,7 @@ func (c *AdvertisersTargetingTypesAssignedTargetingOptionsDeleteCall) doRequest(
 		"targetingType":             c.targetingType,
 		"assignedTargetingOptionId": c.assignedTargetingOptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.targetingTypes.assignedTargetingOptions.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.targetingTypes.assignedTargetingOptions.delete" call.
@@ -23969,7 +23969,7 @@ func (c *AdvertisersTargetingTypesAssignedTargetingOptionsGetCall) Header() http
 
 func (c *AdvertisersTargetingTypesAssignedTargetingOptionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -23992,7 +23992,7 @@ func (c *AdvertisersTargetingTypesAssignedTargetingOptionsGetCall) doRequest(alt
 		"targetingType":             c.targetingType,
 		"assignedTargetingOptionId": c.assignedTargetingOptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.targetingTypes.assignedTargetingOptions.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.targetingTypes.assignedTargetingOptions.get" call.
@@ -24257,7 +24257,7 @@ func (c *AdvertisersTargetingTypesAssignedTargetingOptionsListCall) Header() htt
 
 func (c *AdvertisersTargetingTypesAssignedTargetingOptionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -24279,7 +24279,7 @@ func (c *AdvertisersTargetingTypesAssignedTargetingOptionsListCall) doRequest(al
 		"advertiserId":  strconv.FormatInt(c.advertiserId, 10),
 		"targetingType": c.targetingType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.advertisers.targetingTypes.assignedTargetingOptions.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.advertisers.targetingTypes.assignedTargetingOptions.list" call.
@@ -24549,7 +24549,7 @@ func (c *CombinedAudiencesGetCall) Header() http.Header {
 
 func (c *CombinedAudiencesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -24570,7 +24570,7 @@ func (c *CombinedAudiencesGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"combinedAudienceId": strconv.FormatInt(c.combinedAudienceId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.combinedAudiences.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.combinedAudiences.get" call.
@@ -24761,7 +24761,7 @@ func (c *CombinedAudiencesListCall) Header() http.Header {
 
 func (c *CombinedAudiencesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -24779,7 +24779,7 @@ func (c *CombinedAudiencesListCall) doRequest(alt string) (*http.Response, error
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.combinedAudiences.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.combinedAudiences.list" call.
@@ -24961,7 +24961,7 @@ func (c *CustomBiddingAlgorithmsGetCall) Header() http.Header {
 
 func (c *CustomBiddingAlgorithmsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -24982,7 +24982,7 @@ func (c *CustomBiddingAlgorithmsGetCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"customBiddingAlgorithmId": strconv.FormatInt(c.customBiddingAlgorithmId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.customBiddingAlgorithms.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.customBiddingAlgorithms.get" call.
@@ -25184,7 +25184,7 @@ func (c *CustomBiddingAlgorithmsListCall) Header() http.Header {
 
 func (c *CustomBiddingAlgorithmsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -25202,7 +25202,7 @@ func (c *CustomBiddingAlgorithmsListCall) doRequest(alt string) (*http.Response,
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.customBiddingAlgorithms.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.customBiddingAlgorithms.list" call.
@@ -25378,7 +25378,7 @@ func (c *CustomListsGetCall) Header() http.Header {
 
 func (c *CustomListsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -25399,7 +25399,7 @@ func (c *CustomListsGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"customListId": strconv.FormatInt(c.customListId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.customLists.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.customLists.get" call.
@@ -25577,7 +25577,7 @@ func (c *CustomListsListCall) Header() http.Header {
 
 func (c *CustomListsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -25595,7 +25595,7 @@ func (c *CustomListsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.customLists.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.customLists.list" call.
@@ -25773,7 +25773,7 @@ func (c *FirstAndThirdPartyAudiencesGetCall) Header() http.Header {
 
 func (c *FirstAndThirdPartyAudiencesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -25794,7 +25794,7 @@ func (c *FirstAndThirdPartyAudiencesGetCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"firstAndThirdPartyAudienceId": strconv.FormatInt(c.firstAndThirdPartyAudienceId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.firstAndThirdPartyAudiences.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.firstAndThirdPartyAudiences.get" call.
@@ -25988,7 +25988,7 @@ func (c *FirstAndThirdPartyAudiencesListCall) Header() http.Header {
 
 func (c *FirstAndThirdPartyAudiencesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -26006,7 +26006,7 @@ func (c *FirstAndThirdPartyAudiencesListCall) doRequest(alt string) (*http.Respo
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.firstAndThirdPartyAudiences.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.firstAndThirdPartyAudiences.list" call.
@@ -26182,7 +26182,7 @@ func (c *FloodlightGroupsGetCall) Header() http.Header {
 
 func (c *FloodlightGroupsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -26203,7 +26203,7 @@ func (c *FloodlightGroupsGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"floodlightGroupId": strconv.FormatInt(c.floodlightGroupId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.floodlightGroups.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.floodlightGroups.get" call.
@@ -26339,7 +26339,7 @@ func (c *FloodlightGroupsPatchCall) Header() http.Header {
 
 func (c *FloodlightGroupsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -26362,7 +26362,7 @@ func (c *FloodlightGroupsPatchCall) doRequest(alt string) (*http.Response, error
 	googleapi.Expand(req.URL, map[string]string{
 		"floodlightGroupId": strconv.FormatInt(c.floodlightGroupId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.floodlightGroups.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.floodlightGroups.patch" call.
@@ -26514,7 +26514,7 @@ func (c *GoogleAudiencesGetCall) Header() http.Header {
 
 func (c *GoogleAudiencesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -26535,7 +26535,7 @@ func (c *GoogleAudiencesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"googleAudienceId": strconv.FormatInt(c.googleAudienceId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.googleAudiences.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.googleAudiences.get" call.
@@ -26726,7 +26726,7 @@ func (c *GoogleAudiencesListCall) Header() http.Header {
 
 func (c *GoogleAudiencesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -26744,7 +26744,7 @@ func (c *GoogleAudiencesListCall) doRequest(alt string) (*http.Response, error) 
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.googleAudiences.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.googleAudiences.list" call.
@@ -26919,7 +26919,7 @@ func (c *InventorySourceGroupsCreateCall) Header() http.Header {
 
 func (c *InventorySourceGroupsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -26939,7 +26939,7 @@ func (c *InventorySourceGroupsCreateCall) doRequest(alt string) (*http.Response,
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySourceGroups.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySourceGroups.create" call.
@@ -27073,7 +27073,7 @@ func (c *InventorySourceGroupsDeleteCall) Header() http.Header {
 
 func (c *InventorySourceGroupsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -27091,7 +27091,7 @@ func (c *InventorySourceGroupsDeleteCall) doRequest(alt string) (*http.Response,
 	googleapi.Expand(req.URL, map[string]string{
 		"inventorySourceGroupId": strconv.FormatInt(c.inventorySourceGroupId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySourceGroups.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySourceGroups.delete" call.
@@ -27244,7 +27244,7 @@ func (c *InventorySourceGroupsGetCall) Header() http.Header {
 
 func (c *InventorySourceGroupsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -27265,7 +27265,7 @@ func (c *InventorySourceGroupsGetCall) doRequest(alt string) (*http.Response, er
 	googleapi.Expand(req.URL, map[string]string{
 		"inventorySourceGroupId": strconv.FormatInt(c.inventorySourceGroupId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySourceGroups.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySourceGroups.get" call.
@@ -27456,7 +27456,7 @@ func (c *InventorySourceGroupsListCall) Header() http.Header {
 
 func (c *InventorySourceGroupsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -27474,7 +27474,7 @@ func (c *InventorySourceGroupsListCall) doRequest(alt string) (*http.Response, e
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySourceGroups.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySourceGroups.list" call.
@@ -27658,7 +27658,7 @@ func (c *InventorySourceGroupsPatchCall) Header() http.Header {
 
 func (c *InventorySourceGroupsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -27681,7 +27681,7 @@ func (c *InventorySourceGroupsPatchCall) doRequest(alt string) (*http.Response, 
 	googleapi.Expand(req.URL, map[string]string{
 		"inventorySourceGroupId": strconv.FormatInt(c.inventorySourceGroupId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySourceGroups.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySourceGroups.patch" call.
@@ -27822,7 +27822,7 @@ func (c *InventorySourceGroupsAssignedInventorySourcesBulkEditCall) Header() htt
 
 func (c *InventorySourceGroupsAssignedInventorySourcesBulkEditCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -27845,7 +27845,7 @@ func (c *InventorySourceGroupsAssignedInventorySourcesBulkEditCall) doRequest(al
 	googleapi.Expand(req.URL, map[string]string{
 		"inventorySourceGroupId": strconv.FormatInt(c.inventorySourceGroupId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySourceGroups.assignedInventorySources.bulkEdit"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySourceGroups.assignedInventorySources.bulkEdit" call.
@@ -27983,7 +27983,7 @@ func (c *InventorySourceGroupsAssignedInventorySourcesCreateCall) Header() http.
 
 func (c *InventorySourceGroupsAssignedInventorySourcesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -28006,7 +28006,7 @@ func (c *InventorySourceGroupsAssignedInventorySourcesCreateCall) doRequest(alt 
 	googleapi.Expand(req.URL, map[string]string{
 		"inventorySourceGroupId": strconv.FormatInt(c.inventorySourceGroupId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySourceGroups.assignedInventorySources.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySourceGroups.assignedInventorySources.create" call.
@@ -28154,7 +28154,7 @@ func (c *InventorySourceGroupsAssignedInventorySourcesDeleteCall) Header() http.
 
 func (c *InventorySourceGroupsAssignedInventorySourcesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -28173,7 +28173,7 @@ func (c *InventorySourceGroupsAssignedInventorySourcesDeleteCall) doRequest(alt 
 		"inventorySourceGroupId":    strconv.FormatInt(c.inventorySourceGroupId, 10),
 		"assignedInventorySourceId": strconv.FormatInt(c.assignedInventorySourceId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySourceGroups.assignedInventorySources.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySourceGroups.assignedInventorySources.delete" call.
@@ -28378,7 +28378,7 @@ func (c *InventorySourceGroupsAssignedInventorySourcesListCall) Header() http.He
 
 func (c *InventorySourceGroupsAssignedInventorySourcesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -28399,7 +28399,7 @@ func (c *InventorySourceGroupsAssignedInventorySourcesListCall) doRequest(alt st
 	googleapi.Expand(req.URL, map[string]string{
 		"inventorySourceGroupId": strconv.FormatInt(c.inventorySourceGroupId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySourceGroups.assignedInventorySources.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySourceGroups.assignedInventorySources.list" call.
@@ -28586,7 +28586,7 @@ func (c *InventorySourcesGetCall) Header() http.Header {
 
 func (c *InventorySourcesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -28607,7 +28607,7 @@ func (c *InventorySourcesGetCall) doRequest(alt string) (*http.Response, error) 
 	googleapi.Expand(req.URL, map[string]string{
 		"inventorySourceId": strconv.FormatInt(c.inventorySourceId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySources.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySources.get" call.
@@ -28798,7 +28798,7 @@ func (c *InventorySourcesListCall) Header() http.Header {
 
 func (c *InventorySourcesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -28816,7 +28816,7 @@ func (c *InventorySourcesListCall) doRequest(alt string) (*http.Response, error)
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.inventorySources.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.inventorySources.list" call.
@@ -28986,7 +28986,7 @@ func (c *MediaDownloadCall) Header() http.Header {
 
 func (c *MediaDownloadCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -29007,7 +29007,7 @@ func (c *MediaDownloadCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"resourceName": c.resourceName,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.media.download"), c.s.client, req)
 }
 
 // Download fetches the API endpoint's "media" value, instead of the normal
@@ -29144,7 +29144,7 @@ func (c *PartnersBulkEditPartnerAssignedTargetingOptionsCall) Header() http.Head
 
 func (c *PartnersBulkEditPartnerAssignedTargetingOptionsCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -29167,7 +29167,7 @@ func (c *PartnersBulkEditPartnerAssignedTargetingOptionsCall) doRequest(alt stri
 	googleapi.Expand(req.URL, map[string]string{
 		"partnerId": strconv.FormatInt(c.partnerId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.bulkEditPartnerAssignedTargetingOptions"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.bulkEditPartnerAssignedTargetingOptions" call.
@@ -29296,7 +29296,7 @@ func (c *PartnersGetCall) Header() http.Header {
 
 func (c *PartnersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -29317,7 +29317,7 @@ func (c *PartnersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"partnerId": strconv.FormatInt(c.partnerId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.get" call.
@@ -29481,7 +29481,7 @@ func (c *PartnersListCall) Header() http.Header {
 
 func (c *PartnersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -29499,7 +29499,7 @@ func (c *PartnersListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.list" call.
@@ -29654,7 +29654,7 @@ func (c *PartnersChannelsCreateCall) Header() http.Header {
 
 func (c *PartnersChannelsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -29677,7 +29677,7 @@ func (c *PartnersChannelsCreateCall) doRequest(alt string) (*http.Response, erro
 	googleapi.Expand(req.URL, map[string]string{
 		"partnerId": strconv.FormatInt(c.partnerId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.channels.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.channels.create" call.
@@ -29819,7 +29819,7 @@ func (c *PartnersChannelsGetCall) Header() http.Header {
 
 func (c *PartnersChannelsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -29841,7 +29841,7 @@ func (c *PartnersChannelsGetCall) doRequest(alt string) (*http.Response, error) 
 		"partnerId": strconv.FormatInt(c.partnerId, 10),
 		"channelId": strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.channels.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.channels.get" call.
@@ -30029,7 +30029,7 @@ func (c *PartnersChannelsListCall) Header() http.Header {
 
 func (c *PartnersChannelsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -30050,7 +30050,7 @@ func (c *PartnersChannelsListCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"partnerId": strconv.FormatInt(c.partnerId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.channels.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.channels.list" call.
@@ -30229,7 +30229,7 @@ func (c *PartnersChannelsPatchCall) Header() http.Header {
 
 func (c *PartnersChannelsPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -30253,7 +30253,7 @@ func (c *PartnersChannelsPatchCall) doRequest(alt string) (*http.Response, error
 		"partnerId": strconv.FormatInt(c.partnerId, 10),
 		"channelId": strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.channels.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.channels.patch" call.
@@ -30395,7 +30395,7 @@ func (c *PartnersChannelsSitesBulkEditCall) Header() http.Header {
 
 func (c *PartnersChannelsSitesBulkEditCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -30419,7 +30419,7 @@ func (c *PartnersChannelsSitesBulkEditCall) doRequest(alt string) (*http.Respons
 		"partnerId": strconv.FormatInt(c.partnerId, 10),
 		"channelId": strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.channels.sites.bulkEdit"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.channels.sites.bulkEdit" call.
@@ -30554,7 +30554,7 @@ func (c *PartnersChannelsSitesCreateCall) Header() http.Header {
 
 func (c *PartnersChannelsSitesCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -30578,7 +30578,7 @@ func (c *PartnersChannelsSitesCreateCall) doRequest(alt string) (*http.Response,
 		"partnerId": strconv.FormatInt(c.partnerId, 10),
 		"channelId": strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.channels.sites.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.channels.sites.create" call.
@@ -30719,7 +30719,7 @@ func (c *PartnersChannelsSitesDeleteCall) Header() http.Header {
 
 func (c *PartnersChannelsSitesDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -30739,7 +30739,7 @@ func (c *PartnersChannelsSitesDeleteCall) doRequest(alt string) (*http.Response,
 		"channelId":  strconv.FormatInt(c.channelId, 10),
 		"urlOrAppId": c.urlOrAppId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.channels.sites.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.channels.sites.delete" call.
@@ -30934,7 +30934,7 @@ func (c *PartnersChannelsSitesListCall) Header() http.Header {
 
 func (c *PartnersChannelsSitesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -30956,7 +30956,7 @@ func (c *PartnersChannelsSitesListCall) doRequest(alt string) (*http.Response, e
 		"partnerId": strconv.FormatInt(c.partnerId, 10),
 		"channelId": strconv.FormatInt(c.channelId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.channels.sites.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.channels.sites.list" call.
@@ -31131,7 +31131,7 @@ func (c *PartnersTargetingTypesAssignedTargetingOptionsCreateCall) Header() http
 
 func (c *PartnersTargetingTypesAssignedTargetingOptionsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -31155,7 +31155,7 @@ func (c *PartnersTargetingTypesAssignedTargetingOptionsCreateCall) doRequest(alt
 		"partnerId":     strconv.FormatInt(c.partnerId, 10),
 		"targetingType": c.targetingType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.targetingTypes.assignedTargetingOptions.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.targetingTypes.assignedTargetingOptions.create" call.
@@ -31363,7 +31363,7 @@ func (c *PartnersTargetingTypesAssignedTargetingOptionsDeleteCall) Header() http
 
 func (c *PartnersTargetingTypesAssignedTargetingOptionsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -31383,7 +31383,7 @@ func (c *PartnersTargetingTypesAssignedTargetingOptionsDeleteCall) doRequest(alt
 		"targetingType":             c.targetingType,
 		"assignedTargetingOptionId": c.assignedTargetingOptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.targetingTypes.assignedTargetingOptions.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.targetingTypes.assignedTargetingOptions.delete" call.
@@ -31607,7 +31607,7 @@ func (c *PartnersTargetingTypesAssignedTargetingOptionsGetCall) Header() http.He
 
 func (c *PartnersTargetingTypesAssignedTargetingOptionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -31630,7 +31630,7 @@ func (c *PartnersTargetingTypesAssignedTargetingOptionsGetCall) doRequest(alt st
 		"targetingType":             c.targetingType,
 		"assignedTargetingOptionId": c.assignedTargetingOptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.targetingTypes.assignedTargetingOptions.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.targetingTypes.assignedTargetingOptions.get" call.
@@ -31895,7 +31895,7 @@ func (c *PartnersTargetingTypesAssignedTargetingOptionsListCall) Header() http.H
 
 func (c *PartnersTargetingTypesAssignedTargetingOptionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -31917,7 +31917,7 @@ func (c *PartnersTargetingTypesAssignedTargetingOptionsListCall) doRequest(alt s
 		"partnerId":     strconv.FormatInt(c.partnerId, 10),
 		"targetingType": c.targetingType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.partners.targetingTypes.assignedTargetingOptions.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.partners.targetingTypes.assignedTargetingOptions.list" call.
@@ -32170,7 +32170,7 @@ func (c *SdfdownloadtasksCreateCall) Header() http.Header {
 
 func (c *SdfdownloadtasksCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -32190,7 +32190,7 @@ func (c *SdfdownloadtasksCreateCall) doRequest(alt string) (*http.Response, erro
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.sdfdownloadtasks.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.sdfdownloadtasks.create" call.
@@ -32308,7 +32308,7 @@ func (c *SdfdownloadtasksOperationsGetCall) Header() http.Header {
 
 func (c *SdfdownloadtasksOperationsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -32329,7 +32329,7 @@ func (c *SdfdownloadtasksOperationsGetCall) doRequest(alt string) (*http.Respons
 	googleapi.Expand(req.URL, map[string]string{
 		"name": c.name,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.sdfdownloadtasks.operations.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.sdfdownloadtasks.operations.get" call.
@@ -32462,7 +32462,7 @@ func (c *TargetingTypesTargetingOptionsGetCall) Header() http.Header {
 
 func (c *TargetingTypesTargetingOptionsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -32484,7 +32484,7 @@ func (c *TargetingTypesTargetingOptionsGetCall) doRequest(alt string) (*http.Res
 		"targetingType":     c.targetingType,
 		"targetingOptionId": c.targetingOptionId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.targetingTypes.targetingOptions.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.targetingTypes.targetingOptions.get" call.
@@ -32757,7 +32757,7 @@ func (c *TargetingTypesTargetingOptionsListCall) Header() http.Header {
 
 func (c *TargetingTypesTargetingOptionsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -32778,7 +32778,7 @@ func (c *TargetingTypesTargetingOptionsListCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"targetingType": c.targetingType,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.targetingTypes.targetingOptions.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.targetingTypes.targetingOptions.list" call.
@@ -33024,7 +33024,7 @@ func (c *UsersBulkEditAssignedUserRolesCall) Header() http.Header {
 
 func (c *UsersBulkEditAssignedUserRolesCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -33047,7 +33047,7 @@ func (c *UsersBulkEditAssignedUserRolesCall) doRequest(alt string) (*http.Respon
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": strconv.FormatInt(c.userId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.users.bulkEditAssignedUserRoles"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.users.bulkEditAssignedUserRoles" call.
@@ -33165,7 +33165,7 @@ func (c *UsersCreateCall) Header() http.Header {
 
 func (c *UsersCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -33185,7 +33185,7 @@ func (c *UsersCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.users.create"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.users.create" call.
@@ -33290,7 +33290,7 @@ func (c *UsersDeleteCall) Header() http.Header {
 
 func (c *UsersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -33308,7 +33308,7 @@ func (c *UsersDeleteCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": strconv.FormatInt(c.userId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.users.delete"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.users.delete" call.
@@ -33432,7 +33432,7 @@ func (c *UsersGetCall) Header() http.Header {
 
 func (c *UsersGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -33453,7 +33453,7 @@ func (c *UsersGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": strconv.FormatInt(c.userId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.users.get"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.users.get" call.
@@ -33634,7 +33634,7 @@ func (c *UsersListCall) Header() http.Header {
 
 func (c *UsersListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -33652,7 +33652,7 @@ func (c *UsersListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.users.list"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.users.list" call.
@@ -33807,7 +33807,7 @@ func (c *UsersPatchCall) Header() http.Header {
 
 func (c *UsersPatchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -33830,7 +33830,7 @@ func (c *UsersPatchCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"userId": strconv.FormatInt(c.userId, 10),
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "displayvideo.users.patch"), c.s.client, req)
 }
 
 // Do executes the "displayvideo.users.patch" call.

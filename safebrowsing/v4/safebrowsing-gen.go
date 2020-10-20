@@ -1551,7 +1551,7 @@ func (c *EncodedFullHashesGetCall) Header() http.Header {
 
 func (c *EncodedFullHashesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1572,7 +1572,7 @@ func (c *EncodedFullHashesGetCall) doRequest(alt string) (*http.Response, error)
 	googleapi.Expand(req.URL, map[string]string{
 		"encodedRequest": c.encodedRequest,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "safebrowsing.encodedFullHashes.get"), c.s.client, req)
 }
 
 // Do executes the "safebrowsing.encodedFullHashes.get" call.
@@ -1717,7 +1717,7 @@ func (c *EncodedUpdatesGetCall) Header() http.Header {
 
 func (c *EncodedUpdatesGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1738,7 +1738,7 @@ func (c *EncodedUpdatesGetCall) doRequest(alt string) (*http.Response, error) {
 	googleapi.Expand(req.URL, map[string]string{
 		"encodedRequest": c.encodedRequest,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "safebrowsing.encodedUpdates.get"), c.s.client, req)
 }
 
 // Do executes the "safebrowsing.encodedUpdates.get" call.
@@ -1857,7 +1857,7 @@ func (c *FullHashesFindCall) Header() http.Header {
 
 func (c *FullHashesFindCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1877,7 +1877,7 @@ func (c *FullHashesFindCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "safebrowsing.fullHashes.find"), c.s.client, req)
 }
 
 // Do executes the "safebrowsing.fullHashes.find" call.
@@ -1980,7 +1980,7 @@ func (c *ThreatHitsCreateCall) Header() http.Header {
 
 func (c *ThreatHitsCreateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2000,7 +2000,7 @@ func (c *ThreatHitsCreateCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "safebrowsing.threatHits.create"), c.s.client, req)
 }
 
 // Do executes the "safebrowsing.threatHits.create" call.
@@ -2103,7 +2103,7 @@ func (c *ThreatListUpdatesFetchCall) Header() http.Header {
 
 func (c *ThreatListUpdatesFetchCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2123,7 +2123,7 @@ func (c *ThreatListUpdatesFetchCall) doRequest(alt string) (*http.Response, erro
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "safebrowsing.threatListUpdates.fetch"), c.s.client, req)
 }
 
 // Do executes the "safebrowsing.threatListUpdates.fetch" call.
@@ -2234,7 +2234,7 @@ func (c *ThreatListsListCall) Header() http.Header {
 
 func (c *ThreatListsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2252,7 +2252,7 @@ func (c *ThreatListsListCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "safebrowsing.threatLists.list"), c.s.client, req)
 }
 
 // Do executes the "safebrowsing.threatLists.list" call.
@@ -2351,7 +2351,7 @@ func (c *ThreatMatchesFindCall) Header() http.Header {
 
 func (c *ThreatMatchesFindCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2371,7 +2371,7 @@ func (c *ThreatMatchesFindCall) doRequest(alt string) (*http.Response, error) {
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "safebrowsing.threatMatches.find"), c.s.client, req)
 }
 
 // Do executes the "safebrowsing.threatMatches.find" call.

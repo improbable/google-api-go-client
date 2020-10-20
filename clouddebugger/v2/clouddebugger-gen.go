@@ -1435,7 +1435,7 @@ func (c *ControllerDebuggeesRegisterCall) Header() http.Header {
 
 func (c *ControllerDebuggeesRegisterCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1455,7 +1455,7 @@ func (c *ControllerDebuggeesRegisterCall) doRequest(alt string) (*http.Response,
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "clouddebugger.controller.debuggees.register"), c.s.client, req)
 }
 
 // Do executes the "clouddebugger.controller.debuggees.register" call.
@@ -1610,7 +1610,7 @@ func (c *ControllerDebuggeesBreakpointsListCall) Header() http.Header {
 
 func (c *ControllerDebuggeesBreakpointsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1631,7 +1631,7 @@ func (c *ControllerDebuggeesBreakpointsListCall) doRequest(alt string) (*http.Re
 	googleapi.Expand(req.URL, map[string]string{
 		"debuggeeId": c.debuggeeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "clouddebugger.controller.debuggees.breakpoints.list"), c.s.client, req)
 }
 
 // Do executes the "clouddebugger.controller.debuggees.breakpoints.list" call.
@@ -1769,7 +1769,7 @@ func (c *ControllerDebuggeesBreakpointsUpdateCall) Header() http.Header {
 
 func (c *ControllerDebuggeesBreakpointsUpdateCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1793,7 +1793,7 @@ func (c *ControllerDebuggeesBreakpointsUpdateCall) doRequest(alt string) (*http.
 		"debuggeeId": c.debuggeeId,
 		"id":         c.id,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "clouddebugger.controller.debuggees.breakpoints.update"), c.s.client, req)
 }
 
 // Do executes the "clouddebugger.controller.debuggees.breakpoints.update" call.
@@ -1947,7 +1947,7 @@ func (c *DebuggerDebuggeesListCall) Header() http.Header {
 
 func (c *DebuggerDebuggeesListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -1965,7 +1965,7 @@ func (c *DebuggerDebuggeesListCall) doRequest(alt string) (*http.Response, error
 		return nil, err
 	}
 	req.Header = reqHeaders
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "clouddebugger.debugger.debuggees.list"), c.s.client, req)
 }
 
 // Do executes the "clouddebugger.debugger.debuggees.list" call.
@@ -2094,7 +2094,7 @@ func (c *DebuggerDebuggeesBreakpointsDeleteCall) Header() http.Header {
 
 func (c *DebuggerDebuggeesBreakpointsDeleteCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2113,7 +2113,7 @@ func (c *DebuggerDebuggeesBreakpointsDeleteCall) doRequest(alt string) (*http.Re
 		"debuggeeId":   c.debuggeeId,
 		"breakpointId": c.breakpointId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "clouddebugger.debugger.debuggees.breakpoints.delete"), c.s.client, req)
 }
 
 // Do executes the "clouddebugger.debugger.debuggees.breakpoints.delete" call.
@@ -2258,7 +2258,7 @@ func (c *DebuggerDebuggeesBreakpointsGetCall) Header() http.Header {
 
 func (c *DebuggerDebuggeesBreakpointsGetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2280,7 +2280,7 @@ func (c *DebuggerDebuggeesBreakpointsGetCall) doRequest(alt string) (*http.Respo
 		"debuggeeId":   c.debuggeeId,
 		"breakpointId": c.breakpointId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "clouddebugger.debugger.debuggees.breakpoints.get"), c.s.client, req)
 }
 
 // Do executes the "clouddebugger.debugger.debuggees.breakpoints.get" call.
@@ -2472,7 +2472,7 @@ func (c *DebuggerDebuggeesBreakpointsListCall) Header() http.Header {
 
 func (c *DebuggerDebuggeesBreakpointsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2493,7 +2493,7 @@ func (c *DebuggerDebuggeesBreakpointsListCall) doRequest(alt string) (*http.Resp
 	googleapi.Expand(req.URL, map[string]string{
 		"debuggeeId": c.debuggeeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "clouddebugger.debugger.debuggees.breakpoints.list"), c.s.client, req)
 }
 
 // Do executes the "clouddebugger.debugger.debuggees.breakpoints.list" call.
@@ -2670,7 +2670,7 @@ func (c *DebuggerDebuggeesBreakpointsSetCall) Header() http.Header {
 
 func (c *DebuggerDebuggeesBreakpointsSetCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders := make(http.Header)
-	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201016")
+	reqHeaders.Set("x-goog-api-client", "gl-go/"+gensupport.GoVersion()+" gdcl/20201020")
 	for k, v := range c.header_ {
 		reqHeaders[k] = v
 	}
@@ -2693,7 +2693,7 @@ func (c *DebuggerDebuggeesBreakpointsSetCall) doRequest(alt string) (*http.Respo
 	googleapi.Expand(req.URL, map[string]string{
 		"debuggeeId": c.debuggeeId,
 	})
-	return gensupport.SendRequest(c.ctx_, c.s.client, req)
+	return gensupport.SendRequest(googleapi.MethodIDToContext(c.ctx_, "clouddebugger.debugger.debuggees.breakpoints.set"), c.s.client, req)
 }
 
 // Do executes the "clouddebugger.debugger.debuggees.breakpoints.set" call.
